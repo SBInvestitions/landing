@@ -1,9 +1,10 @@
 <template>
-  <el-row>
-    <el-col :span="12">
-      Login Page
-    </el-col>
-  </el-row>
+  <el-container>
+    <el-header>Header</el-header>
+    <el-main>Login Page</el-main>
+    <el-footer>Footer</el-footer>
+  </el-container>
+
 </template>
 
 <style lang="scss" src="./style.scss" scoped></style>
