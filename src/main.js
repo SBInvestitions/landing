@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
+import VueResource from 'vue-resource';
+import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/en';
 import router from './router';
 import store from './store';
@@ -7,6 +9,7 @@ import App from './App';
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI, { locale });
+Vue.use(VueResource);
 let v;
 
 const createVue = () => {

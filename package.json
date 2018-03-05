@@ -11,6 +11,7 @@
     "element-ui": "^2.1.0",
     "node-sass": "^4.7.2",
     "vue": "^2.5.13",
+    "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -53,13 +54,22 @@
       "utils": true
     },
     "rules": {
-      "semi": [2, "always", { "omitLastInOneLineBlock": true}],
+      "semi": [
+        2,
+        "always",
+        {
+          "omitLastInOneLineBlock": true
+        }
+      ],
       "arrow-parens": 0,
       "generator-star-spacing": 0,
-      "prefer-const": ["error", {
-        "destructuring": "any",
-        "ignoreReadBeforeAssign": false
-      }]
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
+        }
+      ]
     }
   },
   "postcss": {
