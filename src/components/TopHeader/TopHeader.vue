@@ -1,0 +1,1 @@
+<template>    <div id="top-header">      <el-row>        <el-col :span="24">          <div class="grid-content bg-purple-dark">          awdawdawdawd          </div>        </el-col>      </el-row>    </div></template><style lang="scss" src="./style.scss" scoped></style><script>  export default {    name: 'TopHeader'  };</script>

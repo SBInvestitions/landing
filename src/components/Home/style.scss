@@ -1,0 +1,24 @@
+.el-header {
+  background: url('./../../assets/top-background.jpg');
+  background-size: cover;
+  min-height: 150vh;
+  padding: 0;
+
+  .menu-row {
+    width: 100%;
+    background-color: #ffffffad;
+
+    .el-menu-sbi {
+      background-color: transparent;
+      .el-menu-item {
+        color: black;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        &.is-active {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}

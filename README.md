@@ -3,4 +3,6 @@
 Frontend - vue, elementIo, web3
 Backend - node.js, mongo, ethereum
 
-Start - npm run serve
+Start -
+npm i
+npm run serve
