@@ -1,0 +1,70 @@
+.five-stones {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  top: 140vh;
+  border-bottom: 1px dotted;
+
+  .stone-block {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+
+    &.stone-block1 {
+      background: url('./../../assets/sbl1.png');
+      .stone {
+        background: url('./../../assets/stone1.png');
+        &::after {
+          background-color: #9bbc8f;
+        }
+      }
+    }
+    &.stone-block2 {
+      background: url('./../../assets/sbl2.png');
+      .stone {
+        background: url('./../../assets/stone2.png');
+      }
+    }
+    &.stone-block3 {
+      background: url('./../../assets/sbl3.png');
+      .stone {
+        background: url('./../../assets/stone3.png');
+      }
+    }
+    &.stone-block4 {
+      background: url('./../../assets/sbl4.png');
+      .stone {
+        background: url('./../../assets/stone4.png');
+      }
+    }
+    &.stone-block5 {
+      background: url('./../../assets/sbl5.png');
+      .stone {
+        background: url('./../../assets/stone5.png');
+      }
+    }
+
+    .stone {
+      height: 142px;
+      background-size: 100px !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      &::after {
+        content: ' ';
+        position: relative;
+        top: 135px;
+        left: 48%;
+        color: #333;
+        background-color: #77a8bb;
+        z-index: 10;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        float: left;
+      }
+    }
+  }
+}

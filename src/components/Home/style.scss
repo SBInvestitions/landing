@@ -10,6 +10,7 @@
 
     .el-menu-sbi {
       background-color: transparent;
+
       .el-menu-item {
         color: black;
         text-transform: uppercase;
@@ -20,6 +21,34 @@
           border-bottom: 1px solid black;
         }
       }
+      .el-sub-menu-sbi {
+        &.is-active {
+          .el-submenu__title {
+            border-bottom: 1px solid black !important;
+          }
+        }
+      }
+    }
+  }
+}
+.el-main {
+  .about-company {
+    margin-top: 100px;
+    text-align: center;
+
+    .granit {
+      .granit-image {
+        // max-height: 450px;
+        width: 100%;
+      }
+    }
+    .granit-samples {
+      background: url('./../../assets/long-place-block.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-top: 55px;
+      padding-bottom: 55px;
     }
   }
 }
