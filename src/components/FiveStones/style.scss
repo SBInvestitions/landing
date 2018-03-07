@@ -16,7 +16,7 @@
     &.stone-block1 {
       background: url('./../../assets/sbl1.png');
       .stone {
-        background: url('./../../assets/stone1.png');
+        background: url('./../../assets/svg/s1.svg');
         &::after {
           background-color: #9bbc8f;
         }
@@ -25,7 +25,7 @@
     &.stone-block2 {
       background: url('./../../assets/sbl2.png');
       .stone {
-        background: url('./../../assets/stone2.png');
+        background: url('./../../assets/svg/s2.svg');
       }
     }
     &.stone-block3 {
