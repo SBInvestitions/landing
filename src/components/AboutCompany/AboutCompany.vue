@@ -1,6 +1,6 @@
 <template>
   <div id="about-company" class="about-company">
-    <el-row>
+    <el-row class="about-company-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
           <el-col :span="16">
@@ -102,7 +102,6 @@
         </el-row>
       </el-col>
     </el-row>
-
   </div>
 </template>
 

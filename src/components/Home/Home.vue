@@ -32,7 +32,9 @@
       <bounty />
       <clients />
     </el-main>
-    <el-footer>Footer</el-footer>
+    <el-footer>
+      <footer-block />
+    </el-footer>
   </el-container>
 </template>
 
@@ -48,6 +50,7 @@
   import Bounty from './../Bounty/Bounty.vue';
   import Faq from './../Faq/Faq.vue';
   import Clients from './../Clients/Clients.vue';
+  import FooterBlock from './../FooterBlock/FooterBlock.vue';
 
   export default {
     name: 'Home',
@@ -74,7 +77,8 @@
       'team': Team,
       'bounty': Bounty,
       'clients': Clients,
-      'faq': Faq
+      'faq': Faq,
+      'footer-block': FooterBlock
     }
   };
 </script>
