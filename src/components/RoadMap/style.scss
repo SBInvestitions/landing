@@ -1,0 +1,110 @@
+.road-map {
+  text-align: center;
+}
+.road-map-line {
+  .road-map-stone {
+    .stone-stage {
+      &.stone-stage1 {
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage1.svg');
+          }
+        }
+      }
+      &.stone-stage2 {
+
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage2.svg');
+          }
+        }
+      }
+      &.stone-stage3 {
+
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage3.svg');
+          }
+        }
+      }
+      &.stone-stage4 {
+
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage4.svg');
+          }
+        }
+      }
+      &.stone-stage5 {
+
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage5.svg');
+          }
+        }
+      }
+      &.stone-stage6 {
+
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage6.svg');
+          }
+        }
+      }
+      &.stone-stage7 {
+
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage7.svg');
+          }
+        }
+      }
+      &.stone-stage8 {
+        .stage {
+          .number {
+            background-image: url('./../../assets/svg/stage8.svg');
+          }
+        }
+      }
+
+
+      .stage {
+        min-height: 450px;
+
+        .number {
+          font-size: 100px;
+          line-height: 130px;
+          font-weight: bold;
+          color: gray;
+
+          background-size: contain;
+          background-position: top;
+          background-repeat: no-repeat;
+        }
+
+        .vertical-line {
+          height: 90px;
+          background-image: linear-gradient(black 7px, transparent 1px);
+          background-position: center;
+          background-size: 1px 11px;
+          background-repeat: repeat-y;
+          margin: 25px;
+        }
+
+        .round {
+          background-color: #c0c0c0;
+          width: 16px;
+          height: 16px;
+          border-radius: 10px;
+          margin: 5px auto;
+        }
+
+        .text {
+          h5 {
+            margin: 5px;
+          }
+        }
+      }
+    }
+  }
+}

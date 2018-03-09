@@ -1,12 +1,30 @@
 .five-stones {
   position: absolute;
-  width: 100%;
   left: 0;
   right: 0;
   margin: 0;
   padding: 0;
   top: 140vh;
-  border-bottom: 1px dotted;
+
+  .stones {
+   &::after {
+     // border-bottom: 2px dotted;
+     background-image: linear-gradient(to right, silver 5px, transparent 3px);
+     background-size: 10px 2px;
+     background-repeat: repeat-x;
+     background-position: 0 bottom;
+
+     content: ' ';
+     position: relative;
+     top: 0;
+     left: 10%;
+     color: #333;
+     z-index: 1;
+     width: 80%;
+     height: 2px;
+     float: left;
+   }
+  }
 
   .stone-block {
     background-size: contain !important;
@@ -14,36 +32,36 @@
     background-position: center !important;
 
     &.stone-block1 {
-      background: url('./../../assets/sbl1.png');
+      background: url('./../../assets/svg/k1.svg');
       .stone {
-        background: url('./../../assets/svg/s1.svg');
+
         &::after {
           background-color: #9bbc8f;
         }
       }
     }
     &.stone-block2 {
-      background: url('./../../assets/sbl2.png');
+      background: url('./../../assets/svg/k2.svg');
       .stone {
-        background: url('./../../assets/svg/s2.svg');
+
       }
     }
     &.stone-block3 {
-      background: url('./../../assets/sbl3.png');
+      background: url('./../../assets/svg/k3.svg');
       .stone {
-        background: url('./../../assets/stone3.png');
+
       }
     }
     &.stone-block4 {
-      background: url('./../../assets/sbl4.png');
+      background: url('./../../assets/svg/k4.svg');
       .stone {
-        background: url('./../../assets/stone4.png');
+
       }
     }
     &.stone-block5 {
-      background: url('./../../assets/sbl5.png');
+      background: url('./../../assets/svg/k5.svg');
       .stone {
-        background: url('./../../assets/stone5.png');
+
       }
     }
 
@@ -58,10 +76,10 @@
         top: 135px;
         left: 48%;
         color: #333;
-        background-color: #77a8bb;
+        background-color: #c0c0c0;
         z-index: 10;
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         border-radius: 10px;
         float: left;
       }

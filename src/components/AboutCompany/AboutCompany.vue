@@ -1,6 +1,6 @@
 <template>
   <div id="about-company" class="about-company">
-    <el-row class="about-company">
+    <el-row>
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
           <el-col :span="16">
@@ -8,7 +8,7 @@
               <el-row type="flex" class="row-bg" justify="space-around">
                 <el-col :span="24">
                   <div class="grid-content bg-purple-light">
-                    <h3>О проекте</h3>
+                    <h2>О проекте</h2>
                     <div class="text-block">
                       <div class="text">
                         <p>Мы располагаем геологической информацией об участках недр в Суоярвском районе Республики Карелия
@@ -48,7 +48,7 @@
                     Сырье на уже существующих месторождениях заканчивается.</p>
                   <p>
                     Поскольку камень, найденный нашими специалистами, высокого качества и востребованных цветов,
-                    стоимость продажи каждого месторождения на рынке на сегодняшний день превышает 100 миллионов рублей.
+                    стоимость продажи каждого месторождения на рынке на сегодняшний день превышает 80 миллионов рублей.
                   </p>
                 </div>
               </div>
