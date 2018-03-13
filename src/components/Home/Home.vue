@@ -3,57 +3,48 @@
     <el-header>
       <el-row type="flex" class="row-bg menu-row" justify="center">
 
-        <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-          <el-radio-button :label="false">expand</el-radio-button>
-          <el-radio-button :label="true">collapse</el-radio-button>
-        </el-radio-group>
-
-        <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" :collapse="isCollapse" @select="handleSelect">
+        <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
           <el-menu-item index="1">
             <i class="el-icon-sb-invest"></i>
-            <span slot="title">SBInvestitions</span>
+            <span slot="title" class="hidden-md-and-down">SBInvestitions</span>
           </el-menu-item>
           <el-menu-item index="2">
-            <i class="el-icon-menu"></i>
-            <span slot="title">About Project</span>
+            <i class="el-icon-info"></i>
+            <span slot="title" class="hidden-md-and-down">О проекте</span>
           </el-menu-item>
           <el-menu-item index="3">
-            <i class="el-icon-menu"></i>
-            <span slot="title">DAICO conditions</span>
+            <i class="el-icon-tickets"></i>
+            <span slot="title" class="hidden-md-and-down">условия DAICO</span>
           </el-menu-item>
           <el-menu-item index="4">
-            <i class="el-icon-menu"></i>
-            <span slot="title">Roadmap</span>
+            <i class="el-icon-date"></i>
+            <span slot="title" class="hidden-md-and-down">Хронология проекта</span>
           </el-menu-item>
           <el-menu-item index="5">
-            <i class="el-icon-menu"></i>
-            <span slot="title">Team</span>
+            <i class="el-icon-service"></i>
+            <span slot="title" class="hidden-md-and-down">Команда</span>
           </el-menu-item>
           <el-menu-item index="6">
-            <i class="el-icon-menu"></i>
-            <span slot="title">Bounty</span>
+            <i class="el-icon-goods"></i>
+            <span slot="title" class="hidden-md-and-down">Бонусы</span>
           </el-menu-item>
           <el-menu-item index="7">
-            <i class="el-icon-menu"></i>
-            <span slot="title">Clients</span>
+            <i class="el-icon-news"></i>
+            <span slot="title" class="hidden-md-and-down">Клиенты</span>
           </el-menu-item>
           <!--<el-menu-item index="8">FAQ</el-menu-item>-->
           <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
-          <el-submenu index="9" class="el-sub-menu-sbi">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span slot="title">Docs</span>
-            </template>
-            <el-menu-item index="9-1">Whitepaper</el-menu-item>
-            <el-menu-item index="9-2">Business Summary</el-menu-item>
-          </el-submenu>
+          <el-menu-item index="9">
+            <i class="el-icon-document"></i>
+            <span slot="title" class="hidden-md-and-down">Коммерческое предложение</span>
+          </el-menu-item>
           <el-menu-item index="10">
-            <i class="el-icon-menu"></i>
-            <span slot="title">Sign-in</span>
+            <i class="el-icon-upload2"></i>
+            <span slot="title" class="hidden-md-and-down">Войти</span>
           </el-menu-item>
           <el-menu-item index="11">
-            <i class="el-icon-menu"></i>
-            <span slot="title">Sign-up</span>
+            <i class="el-icon-edit-outline"></i>
+            <span slot="title" class="hidden-md-and-down">Регистрация</span>
           </el-menu-item>
         </el-menu>
 
@@ -78,6 +69,7 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
+  import 'element-ui/lib/theme-chalk/display.css';
   import TopHeader from './../TopHeader/TopHeader.vue';
   import FiveStones from './../FiveStones/FiveStones.vue';
   import AboutCompany from './../AboutCompany/AboutCompany.vue';
@@ -105,12 +97,6 @@
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
       },
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
     },
     components: {
       'top-header': TopHeader,

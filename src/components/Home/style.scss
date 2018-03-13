@@ -67,6 +67,8 @@
 .el-icon-sb-invest {
   background-image: url('./../../../src/assets/logo.png');
   background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
@@ -75,5 +77,21 @@
 .el-menu--collapse {
   .el-menu-item {
     width: 62px;
+  }
+}
+
+@media (max-width: 1568px) {
+  .el-menu-item {
+    font-size: 12px !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+  i {
+    font-size: 12px !important;
+  }
+  .el-menu-item {
+    padding: 0 5px !important;
   }
 }

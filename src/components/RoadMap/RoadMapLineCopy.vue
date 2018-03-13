@@ -1,5 +1,5 @@
 <template>
-  <div id="road-map-line" class="road-map-line">
+  <div id="road-map-line-copy" class="road-map-line">
     <div class="road-map-stone">
       <el-row :gutter="40">
         <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
@@ -10,7 +10,7 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Март 2018</h5>
+                  <h5>Октябрь 2020</h5>
                   Выбор и согласование  перспективных участков.
                   Подача заявки на лицензирование.
                 </div>
@@ -26,7 +26,7 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Май 2018</h5>
+                  <h5>Ноябрь 2020</h5>
                   Получение лицензии с правом пользования недрами с целью геологического изучения участка недр местного значения.
                 </div>
               </div>
@@ -132,7 +132,7 @@
 
 <script>
   export default {
-    name: 'RoadMapLine',
+    name: 'RoadMapLineCopy',
     props: ['order'],
   };
 </script>

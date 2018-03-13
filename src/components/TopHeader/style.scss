@@ -63,7 +63,6 @@
     .sbi-scale-container {
       height: 283px;
       margin: 0 auto;
-      width: 900px;
       background: url('../../assets/svg/scale-container.svg');
       background-size: contain;
       background-repeat: no-repeat;
@@ -126,6 +125,53 @@
           height: 8px;
           width: 8px;
           border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .sbi-scale-container {
+    width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .sbi-logo-container {
+    margin-top: 0 !important;
+  }
+
+  .sbi-scale-container {
+    width: 100%;
+    .scale-row {
+      padding-top: 90px !important;
+
+      .header {
+        font-size: 12px !important;
+      }
+
+      .scale-line-block {
+        padding-top: 10px !important;
+      }
+    }
+
+    h4 {
+      font-size: 18px !important;
+      margin: 10px;
+
+      span {
+        display: block;
+        float: left;
+        width: 30px !important;
+        &.points {
+          width: auto !important;
+        }
+        .value {
+          position: relative;
+          font-size: 10px;
+          top: -5px;
         }
       }
     }
