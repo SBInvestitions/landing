@@ -3,11 +3,11 @@
     <el-row class="team-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
-          <el-col :span="16">
+          <el-col :xs="24" :sm="24" :md="20" :lg="16" :xl="16">
             <div class="grid-content bg-purple-light">
               <h2>Команда</h2>
-              <el-row :gutter="40" type="flex" class="row-bg" justify="space-around">
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+              <el-row :gutter="20">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">1</div>
@@ -18,7 +18,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple-light">
                     <div class="member">
                       <div class="ava">2</div>
@@ -29,7 +29,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">3</div>
@@ -40,7 +40,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">4</div>
@@ -51,7 +51,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">5</div>
@@ -62,7 +62,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">6</div>
@@ -73,7 +73,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col :xs="8" :sm="6" :md="4" :lg="4" :xl="3">
+                <el-col class="team-block" :xs="12" :sm="8" :md="6" :lg="4" :xl="3">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">7</div>

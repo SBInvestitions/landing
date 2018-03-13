@@ -6,7 +6,7 @@
     height: calc(60vh - 60px);
 
     .sbi-logo-container {
-      margin-top: 80px;
+      margin-top: 8rem;
 
       .sbi-logo {
         width: 70px;
@@ -17,21 +17,21 @@
       text-align: center;
 
       h1 {
-        font-size: 34px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
+        // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
         font-weight: 900;
       }
       h2 {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
+        // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
 
         a {
-          color: #a4fb80 !important;
+          color: #0465ac;
+          text-decoration: none;
         }
       }
 
       h3 {
-        color: #e42323;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
+        color: #e40707;
+        // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
 
         img {
           width: 20px;
@@ -60,14 +60,73 @@
     background-size: cover;
     height: 90vh;
 
-    .sbi-scale {
-      .sbi-scale-container {
-        height: 283px;
-        background: url('../../assets/svg/scale-container.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-top: 45vh;
-        background-position: center;
+    .sbi-scale-container {
+      height: 283px;
+      margin: 0 auto;
+      width: 900px;
+      background: url('../../assets/svg/scale-container.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-top: 45vh;
+      background-position: center;
+      text-align: center;
+
+      .scale-row {
+        padding-top: 60px;
+
+        .scale-line-block {
+          padding-top: 20px;
+        }
+      }
+
+      h4 {
+        font-size: 40px;
+        margin: 10px;
+
+        span {
+          display: block;
+          float: left;
+          width: 50px;
+          &.points {
+            width: 15px;
+          }
+          .value {
+            position: relative;
+            font-size: 10px;
+            top: -5px;
+          }
+        }
+      }
+
+      .scale-line {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        overflow: hidden;
+        background: white;
+        border-radius: 5px;
+      }
+
+      .line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 79%;
+        // background-image: linear-gradient(to right, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+        background: linear-gradient(to right, #0673c3 0%,#2686a2 33%,#53a175 66%,#8ac33c 100%);
+        border-radius: 5px;
+
+        &::after {
+          background: white;
+          position: relative;
+          left: 77.5%;
+          top: 1px;
+          height: 8px;
+          width: 8px;
+          border-radius: 5px;
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 .el-header {
-  background: url('./../../assets/top-background.jpg');
+  background: url('./../../assets/top-back-jpg.jpg');
   background-size: cover;
   min-height: 150vh;
   padding: 0;
@@ -51,5 +51,29 @@
       padding-top: 55px;
       padding-bottom: 55px;
     }
+  }
+}
+
+.el-footer {
+  height: auto !important;
+  min-height: 760px !important;
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background: url('./../../assets/footer.png');
+  background-size: cover;
+  background-position: top center;
+}
+
+.el-icon-sb-invest {
+  background-image: url('./../../../src/assets/logo.png');
+  background-size: 24px 24px;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
+.el-menu--collapse {
+  .el-menu-item {
+    width: 62px;
   }
 }

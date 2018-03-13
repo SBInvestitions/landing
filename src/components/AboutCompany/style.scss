@@ -3,4 +3,34 @@
   margin-top: 2rem;
   padding-bottom: 3rem;
   margin-bottom: 2rem;
+
+  .image-block {
+    padding: 5rem;
+    svg {
+      fill: white;
+      stroke: #0f0f0f;
+      stroke-opacity: 0.7;
+    }
+  }
+  .text-block {
+    text-align: left;
+    line-height: 2rem;
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .text-block-center {
+    line-height: 2rem;
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .stone-samples {
+    img {
+      width: 100%;
+    }
+  }
 }

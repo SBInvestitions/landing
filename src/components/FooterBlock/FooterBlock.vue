@@ -1,7 +1,7 @@
 <template>
   <div id="footer-block" class="footer-block">
     <el-row :gutter="20">
-      <el-col :span="12" :offset="6">
+      <el-col :xs="{span: 18, offset: 3}" :sm="{span: 18, offset: 3}" :md="{span: 12, offset: 6}" :lg="{span: 12, offset: 6}" :xl="{span: 12, offset: 6}">
         <div class="grid-content bg-purple">
           <p>В соответствии с законом о недрах Российской Федерации, полномочия по распределению недр местного назначения, так называемые
           общедоступные полезные ископаемые, относятся к власти Республики Карелия.</p>

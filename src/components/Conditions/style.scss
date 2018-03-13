@@ -2,11 +2,172 @@
   text-align: center;
   background-image: url('./../../assets/svg/conditions.svg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: contain;
   min-height: 400px;
   padding-top: 3rem;
   margin-top: 2rem;
   padding-bottom: 3rem;
   margin-bottom: 2rem;
+
+  .footer-text {
+    font-size: 20px;
+    p {
+      margin-top: 50px;
+    }
+  }
+
+  .graph-block {
+
+    .top {
+      text-align: left;
+      padding-bottom: 2rem;
+      font-size: 12px;
+
+      strong {
+        // font-size: 30px;
+      }
+
+      &.top-1 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &:before {
+        content: ' ';
+        position: relative;
+        top: 0;
+        left: -24px;
+        color: #333;
+        z-index: 10;
+        width: 16px;
+        height: 16px;
+        border-radius: 10px;
+        float: left;
+      }
+      &.top-1 {
+        &::before {
+          background-color: #c0c0c0;
+        }
+      }
+
+      &.top-2 {
+        &::before {
+          background-color: #1a7dae;
+        }
+      }
+
+      &.top-3 {
+        &::before {
+          background-color: #2f8b98;
+        }
+      }
+
+      &.top-4 {
+        &::before {
+          background-color: #53a173;
+        }
+      }
+
+      &.top-5 {
+        &::before {
+          background-color: #65ac61;
+        }
+      }
+
+      &.top-6 {
+        &::before {
+          background-color: #8fc476;
+        }
+      }
+
+      &.top-7 {
+        &::before {
+          background-color: black;
+        }
+      }
+    }
+
+    .graph-left-block {
+      background-color: white;
+      padding: 2rem;
+      height: 650px;
+
+      .graph-left {
+
+        .graph-svg {
+          background: url('./../../assets/svg/graph-left.svg');
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: contain;
+          padding-left: 20px;
+          height: 300px;
+          margin-bottom: 1rem;
+        }
+
+        .top-1 {
+          padding-bottom: 1rem;
+        }
+
+        &::before {
+          background-image: linear-gradient(silver 5px, transparent 3px);
+          background-position: right;
+          background-size: 2px 8px;
+          background-repeat: repeat-y;
+
+          content: ' ';
+          position: relative;
+          top: 0;
+          left: -15px;
+          color: #333;
+          z-index: 1;
+          width: 3px;
+          height: 595px;
+          float: left;
+        }
+      }
+    }
+
+    .graph-right-block {
+      background-color: white;
+      padding: 2rem;
+      height: 650px;
+
+      .graph-right {
+
+        .graph-svg {
+          background: url('./../../assets/svg/graph-right.svg');
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: contain;
+          padding-left: 20px;
+          height: 280px;
+          margin-bottom: 1rem;
+        }
+
+        &::before {
+          background-image: linear-gradient(silver 5px, transparent 3px);
+          background-position: right;
+          background-size: 2px 8px;
+          background-repeat: repeat-y;
+
+          content: ' ';
+          position: relative;
+          top: 0;
+          left: -15px;
+          color: #333;
+          z-index: 1;
+          width: 3px;
+          height: 545px;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .graph-svg {
+    // height: 230px !important;
+  }
 }
