@@ -133,6 +133,6 @@
 <script>
   export default {
     name: 'RoadMapLineCopy',
-    props: ['order'],
+    props: ['order']
   };
 </script>

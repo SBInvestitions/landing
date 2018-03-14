@@ -10,37 +10,37 @@
           </el-menu-item>
           <el-menu-item index="2">
             <i class="el-icon-info"></i>
-            <span slot="title" class="hidden-md-and-down">О проекте</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.about") }}</span>
           </el-menu-item>
           <el-menu-item index="3">
             <i class="el-icon-tickets"></i>
-            <span slot="title" class="hidden-md-and-down">условия DAICO</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.daico") }}</span>
           </el-menu-item>
           <el-menu-item index="4">
             <i class="el-icon-date"></i>
-            <span slot="title" class="hidden-md-and-down">Хронология проекта</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.chronology") }}</span>
           </el-menu-item>
           <el-menu-item index="5">
             <i class="el-icon-service"></i>
-            <span slot="title" class="hidden-md-and-down">Команда</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.team") }}</span>
           </el-menu-item>
           <el-menu-item index="6">
             <i class="el-icon-goods"></i>
-            <span slot="title" class="hidden-md-and-down">Бонусы</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </el-menu-item>
           <el-menu-item index="7">
             <i class="el-icon-news"></i>
-            <span slot="title" class="hidden-md-and-down">Клиенты</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.clients") }}</span>
           </el-menu-item>
           <!--<el-menu-item index="8">FAQ</el-menu-item>-->
           <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
           <el-menu-item index="9">
             <i class="el-icon-document"></i>
-            <span slot="title" class="hidden-md-and-down">Коммерческое предложение</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
           </el-menu-item>
           <el-menu-item index="10">
             <i class="el-icon-upload2"></i>
-            <span slot="title" class="hidden-md-and-down">Войти</span>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
           </el-menu-item>
           <el-menu-item index="11">
             <i class="el-icon-edit-outline"></i>
@@ -96,7 +96,7 @@
     methods: {
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
-      },
+      }
     },
     components: {
       'top-header': TopHeader,

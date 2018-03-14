@@ -133,6 +133,6 @@
 <script>
   export default {
     name: 'RoadMapLine',
-    props: ['order'],
+    props: ['order']
   };
 </script>
