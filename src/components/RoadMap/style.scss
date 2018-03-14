@@ -3,11 +3,13 @@
 }
 .road-map-line {
   .road-map-stone {
+    margin-bottom: 50px;
+
     .stone-stage {
       &.stone-stage1 {
         .stage {
           .number {
-            background-image: url('./../../assets/svg/stage1.svg');
+            background-image: url('./../../assets/svg/first-stone.svg');
           }
         }
       }
@@ -105,6 +107,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .stone-stage {
+    .stage {
+      height: 520px !important;
     }
   }
 }

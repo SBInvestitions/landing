@@ -65,7 +65,7 @@
                 </div>
               </div>
 
-              <el-row type="flex" class="row-bg granit-samples" justify="space-around">
+              <!--<el-row type="flex" class="row-bg granit-samples" justify="space-around">
                 <el-col :span="6">
                   <div class="grid-content bg-purple">
                     <img src="./../../../src/assets/i1.png" alt="granit sample 1">
@@ -86,7 +86,7 @@
                     <img src="./../../../src/assets/i4.png" alt="granit sample 4">
                   </div>
                 </el-col>
-              </el-row>
+              </el-row>-->
 
               <div class="text-block-center">
                 <div class="text">

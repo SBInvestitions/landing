@@ -4,47 +4,39 @@
       <el-row type="flex" class="row-bg menu-row" justify="center">
 
         <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
-          <el-menu-item index="1">
-            <i class="el-icon-sb-invest"></i>
-            <span slot="title" class="hidden-md-and-down">SBInvestitions</span>
-          </el-menu-item>
           <el-menu-item index="2">
-            <i class="el-icon-info"></i>
+            <i class="el-icon-sb-invest hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.about") }}</span>
           </el-menu-item>
           <el-menu-item index="3">
-            <i class="el-icon-tickets"></i>
+            <i class="el-icon-tickets hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.daico") }}</span>
           </el-menu-item>
           <el-menu-item index="4">
-            <i class="el-icon-date"></i>
+            <i class="el-icon-date hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.chronology") }}</span>
           </el-menu-item>
           <el-menu-item index="5">
-            <i class="el-icon-service"></i>
+            <i class="el-icon-service hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.team") }}</span>
           </el-menu-item>
           <el-menu-item index="6">
-            <i class="el-icon-goods"></i>
+            <i class="el-icon-goods hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </el-menu-item>
           <el-menu-item index="7">
-            <i class="el-icon-news"></i>
+            <i class="el-icon-news hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.clients") }}</span>
           </el-menu-item>
           <!--<el-menu-item index="8">FAQ</el-menu-item>-->
           <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
           <el-menu-item index="9">
-            <i class="el-icon-document"></i>
+            <i class="el-icon-document hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
           </el-menu-item>
           <el-menu-item index="10">
-            <i class="el-icon-upload2"></i>
+            <i class="el-icon-upload2 hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
-          </el-menu-item>
-          <el-menu-item index="11">
-            <i class="el-icon-edit-outline"></i>
-            <span slot="title" class="hidden-md-and-down">Регистрация</span>
           </el-menu-item>
         </el-menu>
 

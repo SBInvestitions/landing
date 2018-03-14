@@ -89,6 +89,17 @@
 
 @media (max-width: 768px) {
   i {
+    font-size: 16px !important;
+  }
+  .el-menu-item {
+    padding: 0 10px !important;
+  }
+}
+@media (max-width: 500px) {
+  .el-header {
+    min-height: 120vh;
+  }
+  i {
     font-size: 12px !important;
   }
   .el-menu-item {

@@ -9,7 +9,7 @@
       margin-top: 8rem;
 
       .sbi-logo {
-        width: 70px;
+        width: 100%;
       }
     }
 
@@ -136,6 +136,20 @@
   .sbi-scale-container {
     width: 900px;
   }
+  .sbi-logo-container {
+    margin-top: 2rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .sbi-logo-container {
+    margin-top: 2rem !important;
+  }
+}
+@media (max-width: 1024px) {
+
+  .sbi-logo-container {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -175,6 +189,50 @@
           top: -5px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .sbi-logo {
+    margin-top: 30px !important;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .sbi-text-container {
+    h3 {
+      font-size: 16px !important;
+    }
+  }
+  .top-top {
+    height: calc(50vh - 60px);
+  }
+  .top-bottom {
+    height: 60vh !important;
+
+    .sbi-scale-container {
+      margin-top: 15vh !important;
+    }
+  }
+  .sbi-scale-container {
+    h4 {
+      font-size: 16px !important;
+      span {
+        width: 24px !important;
+
+        .value {
+          font-size: 9px !important;
+        }
+      }
+    }
+
+    .scale-line {
+      width: 90% !important;
+      margin: 0 auto !important;
     }
   }
 }

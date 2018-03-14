@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
-  min-height: 400px;
   padding-top: 3rem;
   margin-top: 2rem;
   padding-bottom: 3rem;
@@ -167,7 +166,28 @@
 }
 
 @media (max-width: 500px) {
-  .graph-svg {
-    // height: 230px !important;
+  .graph-left-block {
+    height: 570px !important;
+
+    .graph-left {
+      .graph-svg {
+        height: 180px !important;
+      }
+      &::before {
+        height: 550px !important;
+      }
+    }
+  }
+  .graph-right-block {
+    height: 450px !important;
+
+    .graph-right {
+      .graph-svg {
+        height: 170px !important;
+      }
+      &::before {
+        height: 465px !important;
+      }
+    }
   }
 }
