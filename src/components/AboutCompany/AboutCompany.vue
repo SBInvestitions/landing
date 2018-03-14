@@ -6,7 +6,7 @@
           <el-col :xs="24" :sm="24" :md="20" :lg="18" :xl="16">
             <div class="grid-content bg-purple-light">
               <el-row type="flex" class="row-bg about" justify="space-around">
-                <el-col :md="12" :lg="12" :xl="12" class="hidden-sm-and-down">
+                <el-col :md="12" :lg="12" :xl="12" class="hidden-sm-and-down svg">
                   <div class="grid-content bg-purple-light image-block">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 421.66 444.75">
                       <g id="Слой_2" data-name="Слой 2">
