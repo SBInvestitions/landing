@@ -7,7 +7,7 @@
             <div class="grid-content bg-purple-light">
               <h2>Наши клиенты</h2>
               <el-row :gutter="20">
-                <el-col class="client-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="clients">
                       <div class="client">
@@ -20,7 +20,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col class="client-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple-light">
                     <div class="clients">
                       <div class="client">
@@ -33,7 +33,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col class="client-block" :xs="12" :sm="6" :md="4" :lg="4" :xl="6">
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="clients">
                       <div class="client">
@@ -46,7 +46,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col class="client-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="clients">
                       <div class="client">

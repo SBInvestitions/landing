@@ -2,7 +2,7 @@
   <div id="road-map-line" class="road-map-line">
     <div class="road-map-stone">
       <el-row :gutter="40">
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage1">
               <div class="stage">
@@ -18,7 +18,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple-light">
             <div class="stone-stage stone-stage2">
               <div class="stage">
@@ -33,7 +33,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage3">
               <div class="stage">
@@ -48,7 +48,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage4">
               <div class="stage">
@@ -63,7 +63,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage5">
               <div class="stage">
@@ -78,7 +78,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage6">
               <div class="stage">
@@ -93,7 +93,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage7">
               <div class="stage">
@@ -108,7 +108,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="3">
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage8">
               <div class="stage">
