@@ -6,7 +6,7 @@
           <el-col :xs="20" :sm="24" :md="20" :lg="16" :xl="16">
             <div class="grid-content bg-purple-light">
               <h2>Команда</h2>
-              <el-row :gutter="20" type="flex" justify="center">
+              <el-row :gutter="20">
                 <el-col class="team-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
@@ -40,6 +40,8 @@
                     </div>
                   </div>
                 </el-col>
+              </el-row>
+              <el-row :gutter="20">
                 <el-col class="team-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
@@ -51,15 +53,13 @@
                     </div>
                   </div>
                 </el-col>
-              </el-row>
-              <el-row :gutter="20" type="flex" justify="center">
                 <el-col class="team-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">5</div>
                       <div class="name">Мухин Арсений</div>
                       <div class="text">
-                        Талантливый программист международного уровня.
+                        Ведущий программист
                       </div>
                     </div>
                   </div>
@@ -75,6 +75,8 @@
                     </div>
                   </div>
                 </el-col>
+              </el-row>
+              <el-row :gutter="20" type="flex" justify="center">
                 <el-col class="team-block" :xs="12" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
