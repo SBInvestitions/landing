@@ -5,8 +5,8 @@
         <el-row type="flex" class="row-bg" justify="space-around">
           <el-col :xs="24" :sm="24" :md="20" :lg="18" :xl="16">
             <div class="grid-content bg-purple-light">
-              <el-row type="flex" class="row-bg about" justify="space-around">
-                <el-col :md="12" :lg="12" :xl="12" class="hidden-sm-and-down svg">
+              <el-row>
+                <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" class="svg">
                   <div class="grid-content bg-purple-light image-block">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 421.66 444.75">
                       <g id="Слой_2" data-name="Слой 2">
@@ -64,29 +64,11 @@
                   </p>
                 </div>
               </div>
-
-              <!--<el-row type="flex" class="row-bg granit-samples" justify="space-around">
-                <el-col :span="6">
-                  <div class="grid-content bg-purple">
-                    <img src="./../../../src/assets/i1.png" alt="granit sample 1">
-                  </div>
-                </el-col>
-                <el-col :span="6">
-                  <div class="grid-content bg-purple-light">
-                    <img src="./../../../src/assets/i2.png" alt="granit sample 2">
-                  </div>
-                </el-col>
-                <el-col :span="6">
-                  <div class="grid-content bg-purple">
-                    <img src="./../../../src/assets/i3.png" alt="granit sample 3">
-                  </div>
-                </el-col>
-                <el-col :span="6">
-                  <div class="grid-content bg-purple">
-                    <img src="./../../../src/assets/i4.png" alt="granit sample 4">
-                  </div>
-                </el-col>
-              </el-row>-->
+              <el-carousel :interval="4000" type="card" height="550px">
+                <el-carousel-item v-for="item in photos" :key="item">
+                  <img :src="item">
+                </el-carousel-item>
+              </el-carousel>
 
               <div class="text-block-center">
                 <div class="text">
@@ -121,7 +103,18 @@
 
 <script>
   import 'element-ui/lib/theme-chalk/display.css';
+  import photo1 from './../../assets/photos/11.jpg';
+  import photo2 from './../../assets/photos/22.jpg';
+  import photo3 from './../../assets/photos/33.jpg';
+  import photo4 from './../../assets/photos/44.jpg';
+  import photo5 from './../../assets/photos/55.jpg';
+
   export default {
-    name: 'AboutCompany'
+    name: 'AboutCompany',
+    data () {
+      return {
+        photos: [photo1, photo2, photo3, photo4, photo5]
+      };
+    }
   };
 </script>

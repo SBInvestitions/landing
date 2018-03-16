@@ -4,6 +4,12 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 
+  .el-carousel {
+    background: url('./../../assets/svg/slider.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .svg {
     display: flex;
     align-items: center;
@@ -39,6 +45,14 @@
   .stone-samples {
     img {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-company {
+    .image-block {
+      padding: 0 5rem 0 5rem;
     }
   }
 }

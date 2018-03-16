@@ -5,7 +5,18 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 
+  .member {
+    height: 300px;
+    .ava {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+
   .team-block {
-    height: 280px;
+    height: 400px;
   }
 }

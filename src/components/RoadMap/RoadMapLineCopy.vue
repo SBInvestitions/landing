@@ -11,8 +11,7 @@
                 <div class="round"></div>
                 <div class="text">
                   <h5>Октябрь 2020</h5>
-                  Выбор и согласование  перспективных участков.
-                  Подача заявки на лицензирование.
+                  Получение лицензии на разведку и добычу блочного камня.
                 </div>
               </div>
             </div>
@@ -27,7 +26,7 @@
                 <div class="round"></div>
                 <div class="text">
                   <h5>Ноябрь 2020</h5>
-                  Получение лицензии с правом пользования недрами с целью геологического изучения участка недр местного значения.
+                  Инженерно-геодезические и прочие изыскания по промышленный проект.
                 </div>
               </div>
             </div>
@@ -41,23 +40,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июнь 2018</h5>
-                  Составление и согласование проекта на проведение поисково-оценочных работ, получение экспертного заключения на проект.
-                </div>
-              </div>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
-          <div class="grid-content bg-purple">
-            <div class="stone-stage stone-stage4">
-              <div class="stage">
-                <div class="number">4</div>
-                <div class="vertical-line"></div>
-                <div class="round"></div>
-                <div class="text">
-                  <h5>Июль 2018</h5>
-                  Оформление  разрешительной документации на проведение поисково-оценочных  работ.
+                  <h5>Март 2021</h5>
+                  Разработка проекта промышленной отработки месторождения безвзрывным способом.
                 </div>
               </div>
             </div>
@@ -67,12 +51,27 @@
           <div class="grid-content bg-purple">
             <div class="stone-stage stone-stage5">
               <div class="stage">
+                <div class="number">4</div>
+                <div class="vertical-line"></div>
+                <div class="round"></div>
+                <div class="text">
+                  <h5>Май 2021</h5>
+                  Согласование проекта промышленной отработки месторождения в Минприроды РК.
+                </div>
+              </div>
+            </div>
+          </div>
+        </el-col>
+        <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3">
+          <div class="grid-content bg-purple">
+            <div class="stone-stage stone-stage4">
+              <div class="stage">
                 <div class="number">5</div>
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Август 2018 - Март 2020</h5>
-                  Полевые работы по геологическому изучению участка недр.
+                  <h5>Июнь 2021</h5>
+                  Оформление прав пользования земельным участком для промышленной разработки месторождения.
                 </div>
               </div>
             </div>
@@ -86,8 +85,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Март 2020</h5>
-                  Представление отчета на экспертизу в Минприроды Республики Карелия.
+                  <h5>Июнь 2021</h5>
+                  Получение горноотводного акта.
                 </div>
               </div>
             </div>
@@ -101,8 +100,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июнь 2020</h5>
-                  Оформление свидетельств о первооткрывательстве выявленных объектов облицовочного камня.
+                  <h5>Август 2021</h5>
+                  Разработка и согласование Плана развития горных работ по объекту.
                 </div>
               </div>
             </div>
@@ -116,8 +115,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Март 2018</h5>
-                  Подача заявки на получение лицензии на разведку и добычу облицовочного камня.
+                  <h5>Август 2021</h5>
+                  Начало горных работ.
                 </div>
               </div>
             </div>
