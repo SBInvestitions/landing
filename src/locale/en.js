@@ -10,5 +10,17 @@ export default {
       proporsal: 'Commercial Proposal',
       logIn: 'Log in'
     }
+  },
+  aboutCompany: {
+    using: {
+      one: 'About',
+      daico: 'conditions DAICO',
+      chronology: 'Chronology',
+      team: 'Team',
+      bonuses: 'Bonuses',
+      clients: 'Clients',
+      proporsal: 'Commercial Proposal',
+      logIn: 'Log in'
+    }
   }
 };
