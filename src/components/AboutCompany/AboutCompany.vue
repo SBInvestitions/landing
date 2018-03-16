@@ -64,7 +64,13 @@
                   </p>
                 </div>
               </div>
-              <el-carousel :interval="4000" type="card" height="550px">
+              <el-carousel class="hidden-md-and-down" :interval="4000" type="card" height="550px">
+                <el-carousel-item v-for="item in photos" :key="item">
+                  <img :src="item">
+                </el-carousel-item>
+              </el-carousel>
+
+              <el-carousel class="hidden-lg-and-up" :interval="4000" height="550px">
                 <el-carousel-item v-for="item in photos" :key="item">
                   <img :src="item">
                 </el-carousel-item>

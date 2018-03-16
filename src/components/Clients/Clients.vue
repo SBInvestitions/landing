@@ -11,10 +11,8 @@
                   <div class="grid-content bg-purple">
                     <div class="clients">
                       <div class="client">
-                        <div class="logo"></div>
-                        <div class="name"><a target="_blank" href="http://pntrans.info">ООО Промнерудтранс</a></div>
-                        <div class="text">
-                          Крупнейшая транспортно-логистическая по карьерным грузоперевозкам в Карелии.
+                        <div class="logo">
+                          <a target="_blank" href="http://pntrans.info"><img src="./../../assets/clients/logo-pntrans.png" alt="promnerudtrans"></a>
                         </div>
                       </div>
                     </div>
@@ -24,10 +22,8 @@
                   <div class="grid-content bg-purple-light">
                     <div class="clients">
                       <div class="client">
-                        <div class="logo"></div>
-                        <div class="name"><a target="_blank" href="http://petrokam.pro">ООО ПетроКам</a></div>
-                        <div class="text">
-                          Владелец карьеров по добыче блочного камня и цехов камнеобработки.
+                        <div class="logo">
+                          <a target="_blank" href="http://petrokam.pro"><img src="./../../assets/clients/petrokam.png" alt="promnerudtrans"></a>
                         </div>
                       </div>
                     </div>
@@ -37,10 +33,8 @@
                   <div class="grid-content bg-purple">
                     <div class="clients">
                       <div class="client">
-                        <div class="logo"></div>
-                        <div class="name"><a target="_blank" href="http://nerudtrade.ru">ООО Щебень Карелии</a></div>
-                        <div class="text">
-                          Продажа щебня с доставкой с любых карьеров в Карелии.
+                        <div class="logo">
+                          <a target="_blank" href="http://nerudtrade.ru"><img src="./../../assets/clients/logo-scheben.png" alt="ООО Щебень Карелии"></a>
                         </div>
                       </div>
                     </div>
@@ -50,10 +44,8 @@
                   <div class="grid-content bg-purple">
                     <div class="clients">
                       <div class="client">
-                        <div class="logo"></div>
-                        <div class="name"><a target="_blank" href="http://eco-tehnologii.ru">ООО ЭкоТехнологии</a></div>
-                        <div class="text">
-                          Экологическое проектирование, строительство.
+                        <div class="logo">
+                          <a target="_blank" href="http://eco-tehnologii.ru"><img src="./../../assets/clients/eco.png" alt="promnerudtrans"></a>
                         </div>
                       </div>
                     </div>

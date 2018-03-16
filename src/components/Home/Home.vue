@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header>
+    <div class="header-block">
       <el-row type="flex" class="row-bg menu-row" justify="center">
 
         <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
@@ -42,8 +42,11 @@
 
       </el-row>
       <top-header/>
-    </el-header>
-    <el-main>
+    </div>
+   <!-- <el-header>
+
+    </el-header>-->
+    <!--<el-main>
       <five-stones/>
       <about-company />
       <conditions />
@@ -51,7 +54,16 @@
       <team />
       <bounty />
       <clients />
-    </el-main>
+    </el-main>-->
+    <div class="main-block">
+      <five-stones/>
+      <about-company />
+      <conditions />
+      <road-map />
+      <team />
+      <bounty />
+      <clients />
+    </div>
     <el-footer>
       <footer-block />
     </el-footer>

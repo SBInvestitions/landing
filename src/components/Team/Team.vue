@@ -7,7 +7,7 @@
             <div class="grid-content bg-purple-light">
               <h2>Команда</h2>
               <el-row :gutter="20">
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">
@@ -16,13 +16,17 @@
                       <div class="name">Белоногов Александр</div>
                       <div class="text">
                         CEO проекта. Бизнесмен, эколог, меценат.
-                        <a href="https://www.facebook.com/profile.php?id=100011838558872" target="_blank">Facebook</a>
-                        <a href="https://vk.com/id163627615" target="_blank">Vkontakte</a>
                       </div>
+                      <a href="https://www.facebook.com/profile.php?id=100011838558872" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/facebook.jpg" alt="facebook profile">
+                      </a>
+                      <a href="https://vk.com/id163627615" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple-light">
                     <div class="member">
                       <div class="ava">
@@ -30,13 +34,15 @@
                       </div>
                       <div class="name">Пироженко Геннадий</div>
                       <div class="text">
-                        Геолог с огромным опытом, первооткрыватель многих месторождений Карелии.
-                        <a href="https://vk.com/id23330904" target="_blank">Vkontakte</a>
+                        Геолог, первооткрыватель месторождений в Карелии.
                       </div>
+                      <a href="https://vk.com/id23330904" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">
@@ -44,13 +50,15 @@
                       </div>
                       <div class="name">Глариантов Антон</div>
                       <div class="text">
-                        Главный инженер-проектировщик.
-                        <a href="https://vk.com/id6166835" target="_blank">Vkontakte</a>
+                        Главный инженер-проектировщик, землеустроитель.
                       </div>
+                      <a href="https://vk.com/id6166835" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">
@@ -59,31 +67,36 @@
                       <div class="name">Поздникин Константин</div>
                       <div class="text">
                         Программист, аналитик.
-                        <a href="https://www.facebook.com/profile.php?id=100011838558872" target="_blank">Facebook</a>
-                        <a href="https://vk.com/id163627615" target="_blank">Vkontakte</a>
                       </div>
+                      <a href="https://www.facebook.com/profile.php?id=100010511285400" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/facebook.jpg" alt="facebook profile">
+                      </a>
+                      <a href="https://vk.com/ponyman" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>
               </el-row>
               <el-row :gutter="20">
-                <el-col class="team-block" :xs="24" :sm="12" :md="3" :lg="3" :xl="3">
-                  <div class="grid-content bg-purple"></div>
-                </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
-                      <div class="ava">5</div>
+                      <div class="ava"><img src="./../../assets/avas/77.jpg" alt="Mukhin"></div>
                       <div class="name">Мухин Арсений</div>
                       <div class="text">
                         Ведущий программист
-                        <a href="https://www.facebook.com/krappt" target="_blank">Facebook</a>
-                        <a href="https://www.linkedin.com/in/krappt/" target="_blank">LinkedIn</a>
                       </div>
+                      <a href="https://www.facebook.com/krappt" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/facebook.jpg" alt="facebook profile">
+                      </a>
+                      <a href="https://www.linkedin.com/in/krappt/" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/linkedin.png" alt="linkedin profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">
@@ -92,12 +105,14 @@
                       <div class="name">Лузгин Сергей</div>
                       <div class="text">
                         Инженер, администратор.
-                        <a href="https://vk.com/sysoff" target="_blank">Vkontakte</a>
                       </div>
+                      <a href="https://vk.com/sysoff" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                <el-col class="team-block" :xs="24" :sm="6" :md="6" :lg="6" :xl="6">
                   <div class="grid-content bg-purple">
                     <div class="member">
                       <div class="ava">
@@ -106,13 +121,12 @@
                       <div class="name">Игнатьева Александра</div>
                       <div class="text">
                         Арт-директор, дизайнер.
-                        <a href="https://vk.com/mandy_yeagle" target="_blank">Vkontakte</a>
                       </div>
+                      <a href="https://vk.com/mandy_yeagle" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
+                      </a>
                     </div>
                   </div>
-                </el-col>
-                <el-col class="team-block" :xs="24" :sm="12" :md="3" :lg="3" :xl="3">
-                  <div class="grid-content bg-purple"></div>
                 </el-col>
               </el-row>
             </div>

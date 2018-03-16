@@ -14,6 +14,25 @@
         </div>
       </el-col>
     </el-row>
+    <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="1">
+        <div class="grid-content bg-purple">
+          <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/github.png" alt="github"></a>
+        </div>
+      </el-col>
+      <el-col :span="1">
+        <div class="grid-content bg-purple">
+          <div class="vertical-line"></div>
+        </div>
+      </el-col>
+      <el-col :span="1">
+        <div class="grid-content bg-purple">
+          <a href="https://t.me/sbinvest" class="social-link" target="_blank">
+            <img src="./../../assets/socail/telegram.png" alt="telegram channel">
+          </a>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
