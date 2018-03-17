@@ -8,38 +8,38 @@
               <el-row type="flex" class="row-bg" justify="space-around">
                 <el-col :span="24">
                   <div class="grid-content bg-purple-light">
-                    <h2>Условия продажи</h2>
+                    <h2>{{ $t("conditions.text.1") }}</h2>
                     <el-row class="graph-block" :gutter="20">
                       <el-col :xs="{span: 20, offset: 2}" :sm="12" :md="12" :lg="12" :xl="{span: 8, offset: 4}">
                         <div class="grid-content bg-purple graph-left-block">
                           <div class="graph-left">
-                            <div class="top top-1">Распределение инвестиций</div>
+                            <div class="top top-1">{{ $t("conditions.text.2") }}</div>
                             <div class="graph-svg" />
-                            <div class="top top-2">Разработка месторождений - <strong>16,000,000 рублей.</strong></div>
-                            <div class="top top-3">Маркетинг - <strong>2,000,000 рублей.</strong></div>
-                            <div class="top top-4">Административные затраты - <strong>2,200,000 рублей.</strong></div>
-                            <div class="top top-5">Представительские расходы - <strong>1,600,000 рублей.</strong></div>
-                            <div class="top top-6">Аудит и безопасность - <strong>1,000,000 рублей.</strong></div>
-                            <div class="top top-7"><strong>Всего необходимо 22,800,000 рублей инвестиций.</strong></div>
+                            <div class="top top-2">{{ $t("conditions.text.3") }}<strong>{{ $t("conditions.text.4") }}</strong></div>
+                            <div class="top top-3">{{ $t("conditions.text.5") }}<strong>{{ $t("conditions.text.6") }}</strong></div>
+                            <div class="top top-4">{{ $t("conditions.text.7") }}<strong>{{ $t("conditions.text.8") }}</strong></div>
+                            <div class="top top-5">{{ $t("conditions.text.9") }}<strong>{{ $t("conditions.text.10") }}</strong></div>
+                            <div class="top top-6">{{ $t("conditions.text.11") }}<strong>{{ $t("conditions.text.12") }}</strong></div>
+                            <div class="top top-7"><strong>{{ $t("conditions.text.13") }}</strong></div>
                           </div>
                         </div>
                       </el-col>
                       <el-col :xs="{span: 20, offset: 2}" :sm="12" :md="12" :lg="12" :xl="8">
                         <div class="grid-content bg-purple graph-right-block" >
                           <div class="graph-right">
-                            <div class="top top-1">Распределение SBI</div>
+                            <div class="top top-1">{{ $t("conditions.text.14") }}</div>
                             <div class="graph-svg" />
-                            <div class="top top-2">Продажа - <strong>22,800,000 SBI.</strong></div>
-                            <div class="top top-3">Команда - <strong>12,000,000 SBI.</strong></div>
-                            <div class="top top-4">Стратегические партнеры - <strong>3,200,000 рублей.</strong></div>
-                            <div class="top top-5">Реклама (Bounty, Promo) - <strong>2,000,000 SBI.</strong></div>
-                            <div class="top top-7"><strong>Всего 40,000,000 SBI.</strong></div>
+                            <div class="top top-2">{{ $t("conditions.text.15") }}<strong>{{ $t("conditions.text.16") }}</strong></div>
+                            <div class="top top-3">{{ $t("conditions.text.17") }}<strong>{{ $t("conditions.text.18") }}</strong></div>
+                            <div class="top top-4">{{ $t("conditions.text.19") }}<strong>{{ $t("conditions.text.20") }}</strong></div>
+                            <div class="top top-5">{{ $t("conditions.text.21") }}<strong>{{ $t("conditions.text.22") }}</strong></div>
+                            <div class="top top-7"><strong>{{ $t("conditions.text.23") }}</strong></div>
                           </div>
                         </div>
                       </el-col>
                     </el-row>
                     <div class="footer-text">
-                      <p>После продажи месторождений и обратного выкупа SBI, мы планируем использовать токены для работы над новыми проектами.</p>
+                      <p>{{ $t("conditions.text.13") }}</p>
                     </div>
                   </div>
                 </el-col>
