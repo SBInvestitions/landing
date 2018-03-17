@@ -17,7 +17,7 @@ Vue.use(VueI18n);
 
 let v;
 const i18n = new VueI18n({
-  locale: 'ru',
+  locale: 'en',
   messages
 });
 

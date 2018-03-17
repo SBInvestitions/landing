@@ -10,9 +10,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Март 2018</h5>
-                  Выбор и согласование  перспективных участков.
-                  Подача заявки на лицензирование.
+                  <h5>{{ $t("roadMapLine.firstStage.1") }}</h5>
+                  {{ $t("roadMapLine.firstStage.2") }}
                 </div>
               </div>
             </div>
@@ -26,8 +25,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Май 2018</h5>
-                  Получение лицензии с правом пользования недрами с целью геологического изучения участка недр местного значения.
+                  <h5>{{ $t("roadMapLine.firstStage.3") }}</h5>
+                  {{ $t("roadMapLine.firstStage.4") }}
                 </div>
               </div>
             </div>
@@ -41,8 +40,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июнь 2018</h5>
-                  Составление и согласование проекта на проведение поисково-оценочных работ, получение экспертного заключения на проект.
+                  <h5>{{ $t("roadMapLine.firstStage.5") }}</h5>
+                  {{ $t("roadMapLine.firstStage.6") }}
                 </div>
               </div>
             </div>
@@ -56,8 +55,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июль 2018</h5>
-                  Оформление  разрешительной документации на проведение поисково-оценочных  работ.
+                  <h5>{{ $t("roadMapLine.firstStage.7") }}</h5>
+                  {{ $t("roadMapLine.firstStage.8") }}
                 </div>
               </div>
             </div>
@@ -71,8 +70,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Август 2018 - Март 2020</h5>
-                  Полевые работы по геологическому изучению участка недр.
+                  <h5>{{ $t("roadMapLine.firstStage.9") }}</h5>
+                  {{ $t("roadMapLine.firstStage.10") }}
                 </div>
               </div>
             </div>
@@ -86,8 +85,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Март 2020</h5>
-                  Представление отчета на экспертизу в Минприроды Республики Карелия.
+                  <h5>{{ $t("roadMapLine.firstStage.11") }}</h5>
+                  {{ $t("roadMapLine.firstStage.12") }}
                 </div>
               </div>
             </div>
@@ -101,8 +100,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июнь 2020</h5>
-                  Оформление свидетельств о первооткрывательстве выявленных объектов облицовочного камня.
+                  <h5>{{ $t("roadMapLine.firstStage.13") }}</h5>
+                  {{ $t("roadMapLine.firstStage.14") }}
                 </div>
               </div>
             </div>
@@ -116,8 +115,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июль 2020</h5>
-                  Подача заявки на получение лицензии на разведку и добычу облицовочного камня.
+                  <h5>{{ $t("roadMapLine.firstStage.15") }}</h5>
+                  {{ $t("roadMapLine.firstStage.16") }}
                 </div>
               </div>
             </div>

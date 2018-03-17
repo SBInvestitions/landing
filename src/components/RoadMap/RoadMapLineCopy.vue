@@ -10,8 +10,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Октябрь 2020</h5>
-                  Получение лицензии на разведку и добычу блочного камня.
+                  <h5>{{ $t("roadMapLine.secondStage.1") }}</h5>
+                  {{ $t("roadMapLine.secondStage.2") }}
                 </div>
               </div>
             </div>
@@ -25,8 +25,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Ноябрь 2020</h5>
-                  Инженерно-геодезические и прочие изыскания по промышленный проект.
+                  <h5>{{ $t("roadMapLine.secondStage.3") }}</h5>
+                  {{ $t("roadMapLine.secondStage.4") }}
                 </div>
               </div>
             </div>
@@ -40,8 +40,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Март 2021</h5>
-                  Разработка проекта промышленной отработки месторождения безвзрывным способом.
+                  <h5>{{ $t("roadMapLine.secondStage.5") }}</h5>
+                  {{ $t("roadMapLine.secondStage.6") }}
                 </div>
               </div>
             </div>
@@ -55,8 +55,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Май 2021</h5>
-                  Согласование проекта промышленной отработки месторождения в Минприроды РК.
+                  <h5>{{ $t("roadMapLine.secondStage.7") }}</h5>
+                  {{ $t("roadMapLine.secondStage.8") }}
                 </div>
               </div>
             </div>
@@ -70,8 +70,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июнь 2021</h5>
-                  Оформление прав пользования земельным участком для промышленной разработки месторождения.
+                  <h5>{{ $t("roadMapLine.secondStage.9") }}</h5>
+                  {{ $t("roadMapLine.secondStage.10") }}
                 </div>
               </div>
             </div>
@@ -85,8 +85,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Июнь 2021</h5>
-                  Получение горноотводного акта.
+                  <h5>{{ $t("roadMapLine.secondStage.11") }}</h5>
+                  {{ $t("roadMapLine.secondStage.12") }}
                 </div>
               </div>
             </div>
@@ -100,8 +100,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Август 2021</h5>
-                  Разработка и согласование Плана развития горных работ по объекту.
+                  <h5>{{ $t("roadMapLine.secondStage.13") }}</h5>
+                  {{ $t("roadMapLine.secondStage.14") }}
                 </div>
               </div>
             </div>
@@ -115,8 +115,8 @@
                 <div class="vertical-line"></div>
                 <div class="round"></div>
                 <div class="text">
-                  <h5>Август 2021</h5>
-                  Начало горных работ.
+                  <h5>{{ $t("roadMapLine.secondStage.15") }}</h5>
+                  {{ $t("roadMapLine.secondStage.16") }}
                 </div>
               </div>
             </div>
