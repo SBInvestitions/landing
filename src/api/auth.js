@@ -8,6 +8,7 @@ import { API_PATH } from './../config';
  *    and maybe nginx in production (cleaner calls and avoids CORS issues).
  */
 const LOGIN_URL = API_PATH + '/v1/login';
+const REGISTER_URL = API_PATH + '/v1/register';
 
 /**
  * @var{string} REFRESH_TOKEN_URL The endpoint for refreshing an access_token. This endpoint should be proxied
@@ -79,24 +80,46 @@ export default {
    * @return {Promise}
    */
   login (creds, redirect) {
-    const params = { 'grant_type': 'password', 'username': creds.username, 'password': creds.password };
+    const params = { 'email': creds.email, 'password': creds.password };
     store.dispatch('user/SET_LOADING', true);
     return Vue.http.post(LOGIN_URL, params, AUTH_BASIC_HEADERS)
       .then((response) => {
-        // console.log('login response:', response)
         this._storeToken(response);
-
-        utils.train.open();
 
         if (redirect) {
           router.push({ name: redirect });
         }
-
+        store.dispatch('user/SET_LOADING', false);
         return response;
       })
       .catch((errorResponse) => {
         store.dispatch('user/SET_LOADING', false);
-        store.dispatch('errors/add', { title: 'Log in', msg: errorResponse.body });
+        store.dispatch('errors/add', { title: 'Log in', msg: errorResponse.body.message });
+        return errorResponse;
+      });
+  },
+
+  /**
+   * Register
+   *
+   * @param {Object.<string>} creds The username and password for logging in.
+   * @param {string|null} redirect The name of the Route to redirect to.
+   * @return {Promise}
+   */
+  register (creds, redirect) {
+    const params = { 'email': creds.email, 'password': creds.pass, 'name': creds.name, 'secondName': creds.secondName };
+    store.dispatch('user/SET_LOADING', true);
+    return Vue.http.post(REGISTER_URL, params, AUTH_BASIC_HEADERS)
+      .then((response) => {
+        if (redirect) {
+          router.push({ name: redirect });
+        }
+        store.dispatch('user/SET_LOADING', false);
+        return response;
+      })
+      .catch((errorResponse) => {
+        store.dispatch('user/SET_LOADING', false);
+        store.dispatch('errors/add', { title: 'User not created', msg: errorResponse.body.message });
         return errorResponse;
       });
   },
@@ -111,7 +134,6 @@ export default {
    */
   logout () {
     store.dispatch('CLEAR_ALL_DATA');
-    utils.train.close();
     router.push({ name: 'login' });
   },
 
@@ -190,7 +212,7 @@ export default {
     let user = null;
 
     auth.isLoggedIn = true;
-    auth.accessToken = response.body.access_token;
+    auth.accessToken = response.body.token;
     auth.refreshToken = response.body.refresh_token;
     user = response.body.user;
     // TODO: get user's name from response from server.

@@ -13,8 +13,22 @@ const router = new Router({
       }
     },
     {
+      path: '/register',
+      name: 'register',
+      component: function (resolve) {
+        require(['@/components/register/Register.vue'], resolve);
+      }
+    },
+    {
       path: '/',
       name: 'home',
+      component: function (resolve) {
+        require(['@/components/Home/Home.vue'], resolve);
+      }
+    },
+    {
+      path: '/account',
+      name: 'account',
       component: function (resolve) {
         require(['@/components/Home/Home.vue'], resolve);
       }

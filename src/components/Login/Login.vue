@@ -5,7 +5,7 @@
         <h3 class="header">Sign in</h3>
         <el-form v-loading="loading" label-width="170px" class="login" @keyup.enter.native="submit">
           <el-form-item label="Login">
-            <el-input type="text" v-model="credentials.username"></el-input>
+            <el-input type="text" v-model="credentials.email"></el-input>
           </el-form-item>
           <el-form-item label="Password">
             <el-input type="password" v-model="credentials.password"></el-input>
@@ -33,7 +33,7 @@
     data () {
       return {
         credentials: {
-          username: '',
+          email: '',
           password: ''
         },
         loggingIn: false,
@@ -49,15 +49,14 @@
       submit () {
         this.loggingIn = true;
         const credentials = {
-          username: this.credentials.username,
+          email: this.credentials.email,
           password: this.credentials.password
         };
         // Auth.login() returns a promise. A redirect will happen on success.
         // For errors, use .then() to capture the response to output
         // error_description (if exists) as shown below:
-        auth.login(credentials, 'dashboard').then((response) => {
+        auth.login(credentials, 'account').then(() => {
           this.loggingIn = false;
-          this.error = utils.getError(response);
         });
       },
 

@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { state } from './state';
+import * as mutations from './mutations';
 import home from './modules/home/';
 import user from './modules/user/';
 import errors from './modules/errors/';
@@ -12,7 +14,9 @@ const store = new Vuex.Store({
     errors,
     user,
     home
-  }
+  },
+  state,
+  mutations
 });
 
 export default store;
