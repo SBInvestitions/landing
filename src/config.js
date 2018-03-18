@@ -1,1 +1,1 @@
-export const API_PATH = 'http://localhost:8081/api';
+export const API_PATH = 'https://sbinvest.pro/api';

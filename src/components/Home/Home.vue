@@ -36,7 +36,7 @@
           </el-menu-item>
           <el-menu-item index="10">
             <i class="el-icon-upload2 hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
+            <span slot="title" class="hidden-md-and-down"><a href="/#/login">{{ $t("home.menu.logIn") }}</a></span>
           </el-menu-item>
         </el-menu>
 
