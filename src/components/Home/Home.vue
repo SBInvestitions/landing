@@ -43,18 +43,6 @@
       </el-row>
       <top-header/>
     </div>
-   <!-- <el-header>
-
-    </el-header>-->
-    <!--<el-main>
-      <five-stones/>
-      <about-company />
-      <conditions />
-      <road-map />
-      <team />
-      <bounty />
-      <clients />
-    </el-main>-->
     <div class="main-block">
       <five-stones/>
       <about-company />
