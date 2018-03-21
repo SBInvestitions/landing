@@ -1,5 +1,12 @@
 .register {
+  .register-container {
+    text-align: center;
+    height: 100vh;
 
+    .el-form-item {
+      text-align: center;
+    }
+  }
 }
 
 .button {

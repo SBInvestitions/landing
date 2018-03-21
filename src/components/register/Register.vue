@@ -1,31 +1,35 @@
 <template>
   <div id="login" class="register">
-    <el-row type="flex" align="middle" class="login-container" justify="center">
-      <el-col :span="8" class="login-form">
-        <h3 class="header">Create account</h3>
-        <el-form v-loading="loading" label-width="170px" class="login" :rules="rules" :model="credentials" ref="credentials">
-          <el-form-item prop="email" label="Enter your email">
-            <el-input type="text" v-model="credentials.email"></el-input>
-          </el-form-item>
-          <el-form-item prop="pass" label="Enter your password">
-            <el-input type="password" v-model="credentials.pass"></el-input>
-          </el-form-item>
-          <el-form-item prop="checkPass" label="Confirm">
-            <el-input type="password" v-model="credentials.checkPass"></el-input>
-          </el-form-item>
-          <el-form-item prop="name" label="Enter your name">
-            <el-input type="text" v-model="credentials.name"></el-input>
-          </el-form-item>
-          <el-form-item prop="secondName" label="Enter your last name">
-            <el-input type="text" v-model="credentials.secondName"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button class="button" type="primary" @click="submit()">Finish</el-button>
-          </el-form-item>
-          <el-form-item class="bottom-line">
-            <el-button type="text" @click="onLogin">Sign in</el-button>
-          </el-form-item>
-        </el-form>
+    <el-row type="flex" class="row-bg register-container" justify="center">
+      <el-col :xs="24" :sm="20" :md="12" :lg="8" :xl="6">
+        <div class="grid-content bg-purple">
+          <el-card class="box-card">
+            <h3 class="header">{{ $t("register.text.1") }}</h3>
+            <el-form v-loading="loading" label-width="170px" class="login" :rules="rules" :model="credentials" ref="credentials" :label-position="labelPosition">
+              <el-form-item prop="email" v-bind:label="$t('register.text.2')">
+                <el-input type="text" v-model="credentials.email"></el-input>
+              </el-form-item>
+              <el-form-item prop="pass" v-bind:label="$t('register.text.3')">
+                <el-input type="password" v-model="credentials.pass"></el-input>
+              </el-form-item>
+              <el-form-item prop="checkPass" v-bind:label="$t('register.text.4')">
+                <el-input type="password" v-model="credentials.checkPass"></el-input>
+              </el-form-item>
+              <el-form-item prop="name" v-bind:label="$t('register.text.5')">
+                <el-input type="text" v-model="credentials.name"></el-input>
+              </el-form-item>
+              <el-form-item prop="secondName" v-bind:label="$t('register.text.6')">
+                <el-input type="text" v-model="credentials.secondName"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-button class="button" type="primary" @click="submit()">{{ $t("register.text.7") }}</el-button>
+              </el-form-item>
+              <el-form-item class="bottom-line">
+                <el-button type="text" @click="onLogin">{{ $t("register.text.8") }}</el-button>
+              </el-form-item>
+            </el-form>
+          </el-card>
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -43,19 +47,19 @@
     data () {
       const validatePass = (rule, value, callback) => {
         if (value === '') {
-          callback(new Error('Please input the password'));
+          callback(new Error(this.$t('register.text.9')));
         } else {
           if (this.credentials.checkPass !== '') {
-            this.$refs.credentials.validateField('checkPass');
+            this.$refs.credentials.validateField(this.$t('register.text.10'));
           }
           callback();
         }
       };
       const validatePass2 = (rule, value, callback) => {
         if (value === '') {
-          callback(new Error('Please input the password again'));
+          callback(new Error(this.$t('register.text.11')));
         } else if (value !== this.credentials.pass) {
-          callback(new Error('Two inputs don\'t match!'));
+          callback(new Error(this.$t('register.text.12')));
         } else {
           callback();
         }
@@ -84,7 +88,8 @@
           secondName: ''
         },
         loggingIn: false,
-        error: ''
+        error: '',
+        labelPosition: 'top'
       };
     },
     computed: {

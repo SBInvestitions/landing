@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
+import vuescroll from 'vue-scroll'
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -11,13 +12,14 @@ import messages from './locale/messages';
 
 Vue.use(VueI18n);
 Vue.config.productionTip = false;
+Vue.use(vuescroll, { debounce: 500 });
 Vue.use(ElementUI, { locale });
 Vue.use(VueResource);
 Vue.use(VueI18n);
 
 let v;
-const i18n = new VueI18n({
-  locale: 'en',
+export const i18n = new VueI18n({
+  locale: 'ru',
   messages
 });
 

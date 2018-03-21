@@ -17,6 +17,10 @@
         font-weight: 400;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
 
+        a {
+          text-decoration: none;
+        }
+
         &.is-active {
           border-bottom: 1px solid black;
         }
@@ -77,6 +81,7 @@
 .el-menu--collapse {
   .el-menu-item {
     width: 62px;
+
   }
 }
 

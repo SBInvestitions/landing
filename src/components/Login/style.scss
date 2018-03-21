@@ -1,8 +1,18 @@
-.button {
-  width: 100%;
-}
+.login {
+  .login-container {
+    height: 100vh;
 
-.bottom-line {
-  margin-top: -20px;
-  text-align: right;
+    .el-form-item {
+      text-align: center;
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .bottom-line {
+    margin-top: -20px;
+    text-align: right;
+  }
 }

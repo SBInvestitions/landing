@@ -37,7 +37,7 @@ export default {
       1: 'Bounties',
       2: 'We have provided additional bonuses for strategic partners in the amount of 3,200,000 SBI.',
       3: 'To become a strategic partner, you need to purchase more than 1,000,000 SBI inclusively.',
-      4: 'Each strategic partner will be paid an additional 140,000 SBI for each million purchased by him.',
+      4: 'Each strategic partner will be paid an additional 100,000 SBI for each million purchased by him.',
       5: 'Anyone who purchases more than 2,000,000 SBI will be included in the founders of Invest Technologies, a company that owns deposits,',
       6: 'at will and subject to the availability of citizenship of the Russian Federation.'
     }
@@ -164,6 +164,37 @@ export default {
       8: 'hours',
       9: 'minutes',
       10: 'seconds'
+    }
+  },
+  login: {
+    text: {
+      1: 'Account',
+      2: 'Login',
+      3: 'Password',
+      4: 'Enter',
+      5: 'Create Account'
+    }
+  },
+  register: {
+    text: {
+      1: 'Create account',
+      2: 'Enter your email',
+      3: 'Enter your password',
+      4: 'Confirm',
+      5: 'Enter your name',
+      6: 'Enter your last name',
+      7: 'Finish',
+      8: 'Sign in',
+      9: 'Please input the password',
+      10: 'Please input the password again',
+      11: 'Two inputs don\'t match!'
+    }
+  },
+  theme: {
+    text: {
+      1: 'Please input email address',
+      2: 'Please input correct email address',
+      3: 'Please input number'
     }
   }
 };

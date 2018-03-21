@@ -30,7 +30,7 @@ const router = new Router({
       path: '/account',
       name: 'account',
       component: function (resolve) {
-        require(['@/components/Home/Home.vue'], resolve);
+        require(['@/components/Account/Account.vue'], resolve);
       }
     }
   ]

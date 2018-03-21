@@ -1,22 +1,26 @@
 <template>
-  <div id="login">
-    <el-row type="flex" align="middle" class="login-container" justify="center">
-      <el-col :span="8" class="login-form">
-        <h3 class="header">Sign in</h3>
-        <el-form v-loading="loading" label-width="170px" class="login" @keyup.enter.native="submit">
-          <el-form-item label="Login">
-            <el-input type="text" v-model="credentials.email"></el-input>
-          </el-form-item>
-          <el-form-item label="Password">
-            <el-input type="password" v-model="credentials.password"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button class="button" type="primary" @click="submit()">Enter</el-button>
-          </el-form-item>
-          <el-form-item class="bottom-line">
-            <el-button type="text" @click="onRegister">Create account</el-button>
-          </el-form-item>
-        </el-form>
+  <div id="login" class="login">
+    <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
+      <el-col :xs="24" :sm="20" :md="12" :lg="8" :xl="6">
+        <div class="grid-content bg-purple">
+          <el-card class="box-card">
+            <h3 class="header">{{ $t("login.text.1") }}</h3>
+            <el-form v-loading="loading" label-width="170px" class="login" @keyup.enter.native="submit" :label-position="labelPosition">
+              <el-form-item v-bind:label="$t('login.text.2')">
+                <el-input type="text" v-model="credentials.email"></el-input>
+              </el-form-item>
+              <el-form-item v-bind:label="$t('login.text.3')">
+                <el-input type="password" v-model="credentials.password"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-button class="button" type="primary" @click="submit()">{{ $t("login.text.4") }}</el-button>
+              </el-form-item>
+              <el-form-item class="bottom-line">
+                <el-button type="text" @click="onRegister">{{ $t("login.text.5") }}</el-button>
+              </el-form-item>
+            </el-form>
+          </el-card>
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -32,6 +36,7 @@
     name: 'Login',
     data () {
       return {
+        labelPosition: 'top',
         credentials: {
           email: '',
           password: ''

@@ -74,6 +74,9 @@
                       <a href="https://vk.com/ponyman" class="social-link" target="_blank">
                         <img src="./../../assets/socail/vkontakte.png" alt="vkontakte profile">
                       </a>
+                      <a href="https://www.linkedin.com/in/konstantin-pozdnikin-90929a111/" class="social-link" target="_blank">
+                        <img src="./../../assets/socail/linkedin.png" alt="linkedin profile">
+                      </a>
                     </div>
                   </div>
                 </el-col>

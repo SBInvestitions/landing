@@ -2,41 +2,56 @@
   <el-container>
     <div class="header-block">
       <el-row type="flex" class="row-bg menu-row" justify="center">
-
         <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
           <el-menu-item index="2">
-            <i class="el-icon-sb-invest hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.about") }}</span>
+            <a href="#about-company">
+              <i class="el-icon-sb-invest hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.about") }}</span>
+            </a>
           </el-menu-item>
           <el-menu-item index="3">
-            <i class="el-icon-tickets hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.daico") }}</span>
+            <a href="#conditions">
+              <i class="el-icon-tickets hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.daico") }}</span>
+            </a>
           </el-menu-item>
           <el-menu-item index="4">
-            <i class="el-icon-date hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.chronology") }}</span>
+            <a href="#road-map" v-scroll="onScroll" >
+              <i class="el-icon-date hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.chronology") }}</span>
+            </a>
           </el-menu-item>
           <el-menu-item index="5">
-            <i class="el-icon-service hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.team") }}</span>
+            <a href="#team">
+              <i class="el-icon-service hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.team") }}</span>
+            </a>
           </el-menu-item>
           <el-menu-item index="6">
-            <i class="el-icon-goods hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
+            <a href="#bounty">
+              <i class="el-icon-goods hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
+            </a>
           </el-menu-item>
           <el-menu-item index="7">
-            <i class="el-icon-news hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.clients") }}</span>
+            <a href="#clients">
+              <i class="el-icon-news hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.clients") }}</span>
+            </a>
           </el-menu-item>
           <!--<el-menu-item index="8">FAQ</el-menu-item>-->
           <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
           <el-menu-item index="9">
-            <i class="el-icon-document hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
+            <a href="#team">
+              <i class="el-icon-document hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
+            </a>
           </el-menu-item>
           <el-menu-item index="10">
-            <i class="el-icon-upload2 hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down"><a href="/#/login">{{ $t("home.menu.logIn") }}</a></span>
+            <a href="/#/login">
+              <i class="el-icon-upload2 hidden-lg-and-up"></i>
+              <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
+            </a>
           </el-menu-item>
         </el-menu>
 
@@ -82,12 +97,17 @@
       return {
         isCollapse: false,
         activeIndex: '1',
-        activeIndex2: '1'
+        activeIndex2: '1',
+        position: {scrollTop: 0, scrollLeft: 0}
       };
     },
     methods: {
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
+      },
+      onScroll:function(e, position){
+        console.log('position = ', position);
+        this.position = position;
       }
     },
     components: {

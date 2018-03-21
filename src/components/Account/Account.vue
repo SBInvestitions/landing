@@ -1,0 +1,49 @@
+<template>
+  <div id="account" class="account">
+    <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
+      <el-col :xs="24" :sm="20" :md="18" :lg="16" :xl="16">
+        <div class="grid-content bg-purple">
+          <el-card class="box-card">
+            <el-row :gutter="10">
+              <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">123213</el-col>
+              <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16">
+                <div class="grid-content bg-purple">
+                  <el-tabs v-model="activeName" @tab-click="handleClick">
+                    <el-tab-pane label="User" name="first">User</el-tab-pane>
+                    <el-tab-pane label="Config" name="second">Config</el-tab-pane>
+                    <el-tab-pane label="Role" name="third">Role</el-tab-pane>
+                  </el-tabs>
+                </div>
+              </el-col>
+              <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">123213</el-col>
+            </el-row>
+          </el-card>
+        </div>
+      </el-col>
+    </el-row>
+  </div>
+</template>
+
+<style lang="scss" src="./style.scss" scoped></style>
+
+<script>
+
+  export default {
+    name: 'Account',
+    props: {
+      msg: String
+    },
+    data () {
+      return {
+        activeName: 'first'
+      };
+    },
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      }
+    },
+    components: {
+    }
+  };
+</script>
