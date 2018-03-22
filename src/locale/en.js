@@ -23,7 +23,7 @@ export default {
       8: 'Black granite',
       9: 'Application of stone',
       10: 'Demand for block stone in Russia and abroad is constantly growing, the number of deposits of quality stone is decreasing. Raw materials on already existing deposits are coming to an end.',
-      11: 'Since the stone found by our specialists, of high quality and sought after colors, the cost of selling each field on the market today exceeds 80 million rubles.',
+      11: 'Since the stone found by our specialists, of high quality and sought after colors, the cost of selling each field on the market today exceeds $1,400,000.',
       12: 'For citizens of the Russian Federation who have decided to invest in our company, we propose, at your request, to join the founders of InvestTechnology LLC.',
       13: 'Foreign investors can provide their representative with Russian citizenship.',
       14: 'By investing in our project, you gain control over the investments with the help of specially created smart contracts, and in a vote with other investors you determine whether you will continue to participate in the project or decide to withdraw the funds publicly.',
@@ -90,9 +90,9 @@ export default {
       3: '1. Geological study (search and evaluation stage).',
       4: '2. Exploration and extraction of facing stone.',
       5: 'After the end of each stage, the value of the target asset-deposits will increase.',
-      6: 'Geologically studied field on average in the market is worth 15 million rubles. The cost of 4 deposits, respectively, 60 million.',
-      7: 'The explored deposit with samples of mined stone blocks, which prove the high quality of raw materials, costs more than 80 million rubles on the market.',
-      8: 'Thus, the final cost of the target asset will be more than 320 million rubles, providing an 8-fold increase in the value of the SBI token.'
+      6: 'Geologically studied field on average in the market is worth $270,000. The cost of 4 deposits, respectively, $1,000,000.',
+      7: 'The explored deposit with samples of mined stone blocks, which prove the high quality of raw materials, costs more than $1,400,000 on the market.',
+      8: 'Thus, the final cost of the target asset will be more than $5,700,000, providing an 8-fold increase in the value of the SBI token.'
     }
   },
   roadMapLine: {
