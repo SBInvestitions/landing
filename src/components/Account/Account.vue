@@ -1,49 +1,1 @@
-<template>
-  <div id="account" class="account">
-    <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
-      <el-col :xs="24" :sm="20" :md="18" :lg="16" :xl="16">
-        <div class="grid-content bg-purple">
-          <el-card class="box-card">
-            <el-row :gutter="10">
-              <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">123213</el-col>
-              <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16">
-                <div class="grid-content bg-purple">
-                  <el-tabs v-model="activeName" @tab-click="handleClick">
-                    <el-tab-pane label="User" name="first">User</el-tab-pane>
-                    <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-                    <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-                  </el-tabs>
-                </div>
-              </el-col>
-              <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">123213</el-col>
-            </el-row>
-          </el-card>
-        </div>
-      </el-col>
-    </el-row>
-  </div>
-</template>
-
-<style lang="scss" src="./style.scss" scoped></style>
-
-<script>
-
-  export default {
-    name: 'Account',
-    props: {
-      msg: String
-    },
-    data () {
-      return {
-        activeName: 'first'
-      };
-    },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
-    },
-    components: {
-    }
-  };
-</script>
+<template>  <div id="account" class="account">    <el-container>      <div class="header-block">        <el-row type="flex" class="row-bg menu-row" justify="center">          <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">            <el-menu-item index="1">              <a href="#my-investments">                <i class="el-icon-sb-invest hidden-lg-and-up"></i>                <span slot="title" class="hidden-md-and-down">{{ $t("account.menu.1") }}</span>              </a>            </el-menu-item>            <el-menu-item index="5">              <a href="#help">                <i class="el-icon-service hidden-lg-and-up"></i>                <span slot="title" class="hidden-md-and-down">{{ $t("account.menu.2") }}</span>              </a>            </el-menu-item>            <el-menu-item index="6">              <a href="#logout">                <i class="el-icon-goods hidden-lg-and-up"></i>                <span slot="title" class="hidden-md-and-down">{{ $t("account.menu.3") }}</span>              </a>            </el-menu-item>          </el-menu>        </el-row>      </div>      <div class="main-block">       main      </div>      <el-footer>       footer      </el-footer>    </el-container>  </div></template><style lang="scss" src="./style.scss" scoped></style><script>  export default {    name: 'Account',    props: {      msg: String    },    data () {      return {        activeName: 'first'      };    },    methods: {      handleClick(tab, event) {        console.log(tab, event);      }    },    components: {    }  };</script>

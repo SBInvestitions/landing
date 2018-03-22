@@ -196,5 +196,15 @@ export default {
       2: 'Please input correct email address',
       3: 'Please input number'
     }
+  },
+  account: {
+    menu: {
+      1: 'Мои вложения',
+      2: 'Помощь',
+      3: 'Выйти'
+    },
+    text: {
+      1: ''
+    }
   }
 };
