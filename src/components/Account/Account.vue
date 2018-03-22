@@ -27,7 +27,6 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
-
   export default {
     name: 'Account',
     props: {
@@ -39,7 +38,7 @@
       };
     },
     methods: {
-      handleClick(tab, event) {
+      handleClick (tab, event) {
         console.log(tab, event);
       }
     },

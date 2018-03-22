@@ -105,7 +105,7 @@
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
       },
-      onScroll:function(e, position){
+      onScroll: function (e, position) {
         console.log('position = ', position);
         this.position = position;
       }

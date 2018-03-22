@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
-import vuescroll from 'vue-scroll'
+import vuescroll from 'vue-scroll';
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
 import 'element-ui/lib/theme-chalk/index.css';
