@@ -1,1 +1,129 @@
-<template>  <div id="account" class="account">    <el-container>      <div class="header-block">        <el-row type="flex" class="row-bg menu-row" justify="center">          <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">            <el-menu-item index="1">              <a href="#my-investments">                <i class="el-icon-sb-invest hidden-lg-and-up"></i>                <span slot="title" class="hidden-md-and-down">{{ $t("account.menu.1") }}</span>              </a>            </el-menu-item>            <el-menu-item index="5">              <a href="#help">                <i class="el-icon-service hidden-lg-and-up"></i>                <span slot="title" class="hidden-md-and-down">{{ $t("account.menu.2") }}</span>              </a>            </el-menu-item>            <el-menu-item index="6">              <a href="#logout">                <i class="el-icon-goods hidden-lg-and-up"></i>                <span slot="title" class="hidden-md-and-down">{{ $t("account.menu.3") }}</span>              </a>            </el-menu-item>          </el-menu>        </el-row>      </div>      <div class="main-block">        <el-row type="flex" align="middle" class="row-bg login-container" justify="center">          <el-col :xs="24" :sm="20" :md="18" :lg="16" :xl="16">            <div class="grid-content bg-purple">              <el-card class="box-card">                <el-row :gutter="10">                  <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">123213</el-col>                  <el-col :xs="24" :sm="24" :md="16" :lg="16" :xl="16">                    <div class="grid-content bg-purple">                      <el-tabs v-model="activeName" @tab-click="handleClick">                        <el-tab-pane label="User" name="first">User</el-tab-pane>                        <el-tab-pane label="Config" name="second">Config</el-tab-pane>                        <el-tab-pane label="Role" name="third">Role</el-tab-pane>                      </el-tabs>                    </div>                  </el-col>                  <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">123213</el-col>                </el-row>              </el-card>            </div>          </el-col>        </el-row>      </div>      <el-footer>        footer      </el-footer>    </el-container>  </div></template><style lang="scss" src="./style.scss" scoped></style><script>  export default {    name: 'Account',    props: {      msg: String    },    data () {      return {        activeName: 'first'      };    },    methods: {      handleClick(tab, event) {        console.log(tab, event);      }    },    components: {    }  };</script>
+<template>
+  <div id="account" class="account">
+    <el-container>
+      <div class="header-block">
+       <account-menu />
+      </div>
+      <div class="main-block">
+        <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
+          <el-col :xs="24" :sm="20" :md="18" :lg="16" :xl="16">
+            <div class="grid-content bg-purple">
+              <el-card class="box-card block-card">
+                <h1>{{ $t("account.text.1") }} Владимир Владимирович</h1>
+                <el-tabs type="card" @tab-click="handleClick">
+
+                  <!--Предварительная оценка-->
+                  <el-tab-pane v-bind:label="$t('account.text.2')">
+
+                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
+                      <el-form-item v-bind:label="$t('account.text.3')">
+                        <el-input v-model="ownForm.address"></el-input>
+                      </el-form-item>
+                      <el-form-item v-bind:label="$t('account.text.12')">
+                        <el-tag type="info">100500</el-tag>
+                      </el-form-item>
+                    </el-form>
+
+                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
+                      <el-form-item v-bind:label="$t('account.text.4')">
+                        <el-input v-model="ownForm.address"></el-input>
+                      </el-form-item>
+                      <el-form-item v-bind:label="$t('account.text.12')">
+                        <el-tag type="info">100500</el-tag>
+                      </el-form-item>
+                    </el-form>
+                  </el-tab-pane>
+
+                  <!--Есть кошелек-->
+                  <el-tab-pane v-bind:label="$t('account.text.5')">
+
+                    <el-form ref="form" :inline="true" label-position="left" class="metaForm" :model="metaForm">
+                      <el-form-item v-bind:label="$t('account.text.11')">
+                        <el-input v-model="metaForm.address"></el-input>
+                      </el-form-item>
+                      <el-form-item>
+                        <el-button type="primary" @click="onSubmit">Сохранить</el-button>
+                      </el-form-item>
+                      <el-form-item v-bind:label="$t('account.text.10')">
+                        <el-tag type="info">100500</el-tag>
+                      </el-form-item>
+                    </el-form>
+                  </el-tab-pane>
+
+                  <!--Метамаск-->
+                  <el-tab-pane v-bind:label="$t('account.text.6')">
+
+                    <el-form ref="form" label-position="left" class="metaForm" :model="metaForm" label-width="20%">
+                      <el-form-item v-bind:label="$t('account.text.13')">
+                        <el-input disabled v-model="metaForm.address"></el-input>
+                      </el-form-item>
+                      <el-form-item v-bind:label="$t('account.text.10')">
+                        <el-input disabled v-model="metaForm.address"></el-input>
+                      </el-form-item>
+                    </el-form>
+                  </el-tab-pane>
+
+                  <!--Иное-->
+                  <el-tab-pane v-bind:label="$t('account.text.7')">
+
+                    <el-form ref="form" class="feedBackForm" :model="feedBackForm">
+                      <el-form-item v-bind:label="$t('account.text.8')">
+                        <el-input type="textarea" v-model="feedBackForm.messageText"></el-input>
+                      </el-form-item>
+                      <el-button type="primary" @click="onSubmit">{{ $t("account.text.9") }}</el-button>
+
+                    </el-form>
+                  </el-tab-pane>
+
+                </el-tabs>
+              </el-card>
+            </div>
+          </el-col>
+        </el-row>
+      </div>
+      <el-footer>
+        footer
+      </el-footer>
+    </el-container>
+  </div>
+</template>
+
+<style lang="scss" src="./style.scss" scoped></style>
+
+<script>
+  import AccountMenu from './components/AccountMenu/AccountMenu.vue';
+  export default {
+    name: 'Account',
+    props: {
+      msg: String
+    },
+    data () {
+      return {
+        activeName: 'first',
+        ownForm: {
+          address: ''
+        },
+        metaForm: {
+          address: ''
+        },
+        feedBackForm: {
+          messageText: ''
+        }
+      };
+    },
+    methods: {
+      handleSelect (key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClick (tab, event) {
+        console.log(tab, event);
+      },
+      onSubmit () {
+        console.log('submit!');
+      }
+    },
+    components: {
+      'account-menu': AccountMenu
+    }
+  };
+</script>

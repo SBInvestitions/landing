@@ -13,10 +13,10 @@
                 <el-input type="password" v-model="credentials.password"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button class="button" type="primary" @click="submit()">{{ $t("login.text.4") }}</el-button>
+                <el-button class="button sbi-button" type="primary" @click="submit()">{{ $t("login.text.4") }}</el-button>
               </el-form-item>
               <el-form-item class="bottom-line">
-                <el-button type="text" @click="onRegister">{{ $t("login.text.5") }}</el-button>
+                <el-button class="sbi-button-link" type="text" @click="onRegister">{{ $t("login.text.5") }}</el-button>
               </el-form-item>
             </el-form>
           </el-card>

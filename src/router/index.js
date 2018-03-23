@@ -32,6 +32,13 @@ const router = new Router({
       component: function (resolve) {
         require(['@/components/Account/Account.vue'], resolve);
       }
+    },
+    {
+      path: '/account/help',
+      name: 'help',
+      component: function (resolve) {
+        require(['@/components/Account/components/Help/Help.vue'], resolve);
+      }
     }
   ]
 });

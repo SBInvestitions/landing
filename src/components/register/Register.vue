@@ -22,10 +22,10 @@
                 <el-input type="text" v-model="credentials.secondName"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button class="button" type="primary" @click="submit()">{{ $t("register.text.7") }}</el-button>
+                <el-button class="button sbi-button" type="primary" @click="submit()">{{ $t("register.text.7") }}</el-button>
               </el-form-item>
               <el-form-item class="bottom-line">
-                <el-button type="text" @click="onLogin">{{ $t("register.text.8") }}</el-button>
+                <el-button class="sbi-button-link" type="text" @click="onLogin">{{ $t("register.text.8") }}</el-button>
               </el-form-item>
             </el-form>
           </el-card>

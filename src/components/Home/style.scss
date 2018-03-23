@@ -3,37 +3,6 @@
   background-size: cover;
   min-height: 150vh;
   padding: 0;
-
-  .menu-row {
-    width: 100%;
-    background-color: #ffffffad;
-
-    .el-menu-sbi {
-      background-color: transparent;
-
-      .el-menu-item {
-        color: black;
-        text-transform: uppercase;
-        font-weight: 400;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
-
-        a {
-          text-decoration: none;
-        }
-
-        &.is-active {
-          border-bottom: 1px solid black;
-        }
-      }
-      .el-sub-menu-sbi {
-        &.is-active {
-          .el-submenu__title {
-            border-bottom: 1px solid black !important;
-          }
-        }
-      }
-    }
-  }
 }
 .main-block {
 
@@ -66,13 +35,6 @@
   background: url('./../../assets/footer.png');
   background-size: cover;
   background-position: top center;
-}
-
-.el-icon-sb-invest {
-  background-image: url('./../../../src/assets/logo.png');
-  background-size: 24px 24px;
-  width: 24px;
-  height: 24px;
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;

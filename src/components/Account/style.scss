@@ -1,0 +1,20 @@
+.account {
+  background: url('./../../assets/top-back-jpg.jpg');
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+
+  .header-block {
+    .el-menu-item {
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .block-card {
+    min-height: 50vh;
+    margin-top: 3rem;
+  }
+}

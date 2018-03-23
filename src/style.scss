@@ -25,3 +25,67 @@ h2 {
 .el-notification {
   font-family: OpenSans, "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
+
+.el-icon-sb-invest {
+  background-image: url('./../src/assets/logo.png');
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.menu-row {
+  width: 100%;
+  background-color: #ffffffad;
+
+  .el-menu-sbi {
+    background-color: transparent;
+
+    .el-menu-item {
+      color: black;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
+
+      a {
+        text-decoration: none;
+      }
+
+      &.is-active {
+        border-bottom: 1px solid black;
+      }
+    }
+    .el-sub-menu-sbi {
+      &.is-active {
+        .el-submenu__title {
+          border-bottom: 1px solid black !important;
+        }
+      }
+    }
+  }
+}
+.sbi-button {
+  font-size: 21px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.478431);
+  border: 1px solid black;
+  color: white;
+  font-weight: 300;
+  margin-top: 1rem;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.67);
+    border-color: black;
+  }
+  &:active, &:focus {
+    background: #7dbb49;
+    border-color: black;
+  }
+}
+.sbi-button-link {
+  color: #7dbb49;
+}
+.register, .login {
+  .el-form-item__error {
+    width: 100%;
+  }
+}

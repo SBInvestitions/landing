@@ -67,9 +67,13 @@
       background: url('../../assets/svg/scale-container.svg');
       background-size: contain;
       background-repeat: no-repeat;
-      margin-top: 45vh;
       background-position: center;
       text-align: center;
+
+      .left-block {
+        padding-top: 10px;
+        text-align: right;
+      }
 
       .scale-row {
         padding-top: 60px;
@@ -133,6 +137,12 @@
 @media (min-width: 1024px) {
   .sbi-scale-container {
     width: 900px;
+    margin-top: -100px !important;
+
+    .scale-line {
+      width: 90% !important;
+      margin: 0 auto !important;
+    }
   }
   .sbi-logo-container {
     margin-top: 2rem !important;
