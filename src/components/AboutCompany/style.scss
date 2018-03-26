@@ -29,6 +29,22 @@
   .text-block {
     text-align: left;
     line-height: 2rem;
+
+    &.center {
+      text-align: center !important;
+
+      li {
+        list-style-type: none;
+        p {
+
+        }
+      }
+    }
+
+    .problem {
+      font-weight: bold;
+    }
+
     p {
       margin-top: 2rem;
       margin-bottom: 2rem;

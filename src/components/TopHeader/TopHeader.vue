@@ -27,7 +27,7 @@
         <el-col :span="24" class="top-bottom">
           <div class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
-              <el-col :xs="22" :sm="22" :md="20" :lg="16" :xl="16">
+              <el-col :xs="20" :sm="20" :md="20" :lg="16" :xl="16">
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
                     <el-col :span="10" class="left-block">
@@ -46,7 +46,7 @@
                         <el-col :span="4" class="scale seconds">48<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
-                    <el-col :span="24" class="scale-line-block">
+                    <el-col :offset="1" :xs="22" :sm="22" :md="22" :lg="22" :xl="22" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
                         <div class="line"></div>
                       </div>

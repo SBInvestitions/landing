@@ -12,6 +12,16 @@ export default {
     }
   },
   aboutCompany: {
+    theProblem: {
+      1: 'The Goal',
+      2: '',
+      3: '',
+      4: '',
+      5: '',
+      6: '',
+      7: '',
+      8: ''
+    },
     using: {
       1: 'About Project',
       2: 'We have geological information on the subsoil plots in the Suojärvi district of the Republic of Karelia with resources of block stone in the amount of 4 pieces with an estimated reserves of blocks of 100,000 m3 each. This reserve will last for 40-50 years of development.',
