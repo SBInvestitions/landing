@@ -14,14 +14,14 @@ export default {
   aboutCompany: {
     theProblem: {
       0: 'Наша цель',
-      1: 'Currently, there is a growing speculative demand for ready-made deposits of block granite in the Russian Federation market due to the lack of quality stone.',
-      2: 'We want to partially meet this demand, receiving multiple returns for us and our investors.',
-      3: 'Along the way, we want to deal with the following problems:',
-      4: '1. The bowels of the Russian Federation, with all their wealth, belong to the people (according to the law) and are distributed by the state. In fact, only major businessmen and officials have access to them. And the further, the richer the rich become, the poorer the poor.',
-      5: 'With the help of the blockbuster, we want to enable small and medium-sized investors to participate in the process of using the people`s wealth and get a profit from it.',
-      6: '2. By attracting a wide range of possible investors and facilitating communication between the participants in the process, automation of allocation of investments and profits, we want to increase the efficiency and reduce the time of search and collection of investments for our project, then applying the model for any subsoil use project in Russia.',
-      7: '3. In the life cycle of the field there are multiple changes of owners. We want to create an information and document base on the deposits of this and the following projects in the detachment, which in future will make it easier for potential buyers to make the right decisions on buying and selling, transferring rights, pledge and other activities related to the project`s fields.',
-      8: 'The use of blocking will make it possible to work more efficiently in the market, ensuring a qualitative and quantitative breakthrough in the entire sphere of subsoil use in Russia.'
+      1: 'На текущий момент на рынке Российской Федерации существует растущий спекулятивный спрос на готовые месторождения блочного гранита в связи с дефицитом качественного камня.',
+      2: 'Мы хотим частично удовлетворить этот спрос, получая многократные прибыли для нас и наших инвесторов.',
+      3: 'Попутно, мы хотим разобраться со следующими проблемами:',
+      4: '1. Недра Российской Федерации, со всеми своими богатствами, принадлежат народу (по закону) и распределяются госсударством. По факту, к ним имеют доступ только крупные бизнесмены и чиновники. И чем дальше, тем богаче становятся богатые, беднее - бедные.',
+      5: 'С помощью блокчейна мы хотим дать возможность мелким и средним инвесторам поучаствовать в процессе пользования народными богатсвами и получить с этого доход.',
+      6: '2. Путем привлечения широкого круга возможных инвесторов и облегчения коммуникаций между участниками процесса, автоматизации распределения вложений и прибыли, мы хотим увеличить эфективность и уменьшить срок поиска и сбора инвестиций для нашего проекта, в последствии, применяя обкатанную модель для любого проекта по недропользованию в России.',
+      7: '3. В жизненном цикле месторождения происходят многократные смены владельцев. Мы хотим создать в блокчейне информационную и документарную базу по месторождениям этого и следующих проектов, что в дальнейшем облегчит потенциальным покупателям принятие правильных решений по купле-продаже, передаче прав, залоге и другим действиям связанным с месторождениями проекта.',
+      8: 'Применение блокчейна позволит более эффективно работать на рынке, обеспечивая качественный и количественный прорыв всей сферы недропользования России.'
     },
     using: {
       1: 'О проекте',
