@@ -11,7 +11,7 @@
               </el-col>
             </el-row>
             <el-row type="flex" class="row-bg sbi-text-container" justify="space-around">
-              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="16" :xl="16">
+              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="16">
                 <div class="grid-content bg-purple-light">
                   <h1>{{ $t("topHeader.text.1") }}</h1>
                   <h2><a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a> {{ $t("topHeader.text.2") }}</h2>
