@@ -1,7 +1,7 @@
 <template>
   <div id="account-menu" class="account-menu">
     <el-row type="flex" class="row-bg menu-row" justify="center">
-      <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
+      <el-menu class="el-menu-sbi" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">
           <a href="/#/Account/my-investments">
             <i class="el-icon-goods"></i>

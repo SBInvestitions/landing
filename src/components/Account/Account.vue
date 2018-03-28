@@ -6,14 +6,14 @@
       </div>
       <div class="main-block">
         <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
-          <el-col :xs="24" :sm="20" :md="18" :lg="16" :xl="16">
+          <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
             <div class="grid-content bg-purple">
               <el-card class="box-card block-card">
                 <h1>{{ $t("account.text.1") }} Владимир Владимирович</h1>
                 <el-tabs type="card" @tab-click="handleClick">
 
                   <!--Предварительная оценка-->
-                  <el-tab-pane v-bind:label="$t('account.text.2')">
+                  <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
@@ -88,7 +88,7 @@
   </div>
 </template>
 
-<style lang="scss" src="./style.scss" scoped></style>
+<style lang="scss" src="./style.scss"></style>
 
 <script>
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
