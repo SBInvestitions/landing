@@ -9,7 +9,7 @@
           <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
             <div class="grid-content bg-purple">
               <el-card class="box-card block-card">
-                <h1>{{ $t("account.text.1") }} Владимир Владимирович</h1>
+                <h1>{{ $t("account.text.1") }} {{user.firstName}} {{user.lastName}}</h1>
                 <el-tabs type="card" @tab-click="handleClick">
 
                   <!--Предварительная оценка-->
@@ -91,14 +91,9 @@
 <style lang="scss" src="./style.scss"></style>
 
 <script>
-  import Vue from 'vue';
-  import {
-      ETHERSCAN_API_KEY,
-      ETHERSCAN_API_URL,
-      ETHERSCAN_STATS_PATH,
-      YAHOO_RATE_PATH,
-  } from './../../config';
+  import { mapActions, mapGetters } from 'vuex';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
+
   export default {
     name: 'Account',
     props: {
@@ -120,24 +115,11 @@
     },
     mounted: () => {
       console.log('mounted');
-
-      /* Vue.http.get(`${ETHERSCAN_API_URL}${ETHERSCAN_STATS_PATH}${ETHERSCAN_API_KEY}`)
-          .then((response) => {
-            console.log('response', response);
-          })
-          .catch((errorResponse) => {
-            console.log('errorResponse', errorResponse);
-          });
-      Vue.http.get(YAHOO_RATE_PATH)
-          .then((response) => {
-            console.log('response yahoo', response);
-          })
-          .catch((errorResponse) => {
-            console.log('errorResponse', errorResponse);
-          }); */
-
     },
     methods: {
+      ...mapActions({
+        load: 'user/LOAD'
+      }),
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
       },
@@ -150,6 +132,14 @@
     },
     components: {
       'account-menu': AccountMenu
+    },
+    computed: {
+      ...mapGetters({
+        user: 'user/user'
+      })
+    },
+    created: function () {
+      this.load();
     }
   };
 </script>

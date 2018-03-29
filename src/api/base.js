@@ -1,14 +1,5 @@
 import Vue from 'vue';
-import router from './../router';
 import store from './../store';
-import { API_PATH } from './../config';
-
-/**
- * @var{string} LOGIN_URL The endpoint for logging in. This endpoint should be proxied by Webpack dev server
- *    and maybe nginx in production (cleaner calls and avoids CORS issues).
- */
-const LOGIN_URL = API_PATH + '/v1/login';
-const REGISTER_URL = API_PATH + '/v1/register';
 
 /**
  * @var{string} REFRESH_TOKEN_URL The endpoint for refreshing an access_token. This endpoint should be proxied
@@ -42,69 +33,67 @@ const AUTH_BASIC_HEADERS = {
 * Handles login and token authentication using OAuth2.
 */
 export default {
-  /**
-   * Login
-   *
-   * @param {Object.<string>} creds The username and password for logging in.
-   * @param {string|null} redirect The name of the Route to redirect to.
-   * @return {Promise}
-   */
-  login (creds, redirect) {
-    const params = { 'email': creds.email, 'password': creds.password };
-    store.dispatch('user/SET_LOADING', true);
-    return Vue.http.post(LOGIN_URL, params, AUTH_BASIC_HEADERS)
-      .then((response) => {
-        this._storeToken(response);
-
-        if (redirect) {
-          router.push({ name: redirect });
-        }
-        store.dispatch('user/SET_LOADING', false);
-        return response;
-      })
-      .catch((errorResponse) => {
-        store.dispatch('user/SET_LOADING', false);
-        store.dispatch('errors/add', { title: 'Log in', msg: errorResponse.body.message });
-        return errorResponse;
-      });
-  },
 
   /**
-   * Register
+   * Install the Auth class.
    *
-   * @param {Object.<string>} creds The username and password for logging in.
-   * @param {string|null} redirect The name of the Route to redirect to.
-   * @return {Promise}
-   */
-  register (creds, redirect) {
-    const params = { 'email': creds.email, 'password': creds.pass, 'name': creds.name, 'secondName': creds.secondName };
-    store.dispatch('user/SET_LOADING', true);
-    return Vue.http.post(REGISTER_URL, params, AUTH_BASIC_HEADERS)
-      .then((response) => {
-        if (redirect) {
-          router.push({ name: redirect });
-        }
-        store.dispatch('user/SET_LOADING', false);
-        return response;
-      })
-      .catch((errorResponse) => {
-        store.dispatch('user/SET_LOADING', false);
-        store.dispatch('errors/add', { title: 'User not created', msg: errorResponse.body.message });
-        return errorResponse;
-      });
-  },
-
-  /**
-   * Logout
+   * Creates a Vue-resource http interceptor to handle automatically adding auth headers
+   * and refreshing tokens. Then attaches this object to the global Vue (as Vue.auth).
    *
-   * Clear all data in our Vuex store (which resets logged-in status) and redirect back
-   * to login form.
-   *
+   * @param {Object} Vue The global Vue.
+   * @param {Object} options Any options we want to have in our plugin.
    * @return {void}
    */
-  logout () {
-    store.dispatch('CLEAR_ALL_DATA');
-    router.push({ name: 'login' });
+  install (Vue, options) {
+    Vue.http.interceptors.push((request, next) => {
+      const token = store.state.auth.accessToken;
+      const hasAuthHeader = request.headers.has('Authorization');
+
+      if (token && !hasAuthHeader) {
+        this.setAuthHeader(request);
+      }
+
+      next((response) => {
+        if (this._isInvalidToken(response)) {
+          return this._refreshToken(request);
+        }
+      });
+    });
+
+    // Vue.prototype.$auth = Vue.auth = this
+  },
+  /**
+   * Set the Authorization header on a Vue-resource Request.
+   *
+   * @param {Request} request The Vue-Resource Request instance to set the header on.
+   * @return {void}
+   */
+  setAuthHeader (request) {
+    request.headers.set('Authorization', 'Bearer ' + store.state.auth.accessToken);
+    // The demo Oauth2 server we are using requires this param, but normally you only set the header.
+    /* eslint-disable camelcase */
+    // request.params.access_token = store.state.auth.accessToken;
+  },
+
+  /**
+   * Retry the original request.
+   *
+   * Let's retry the user's original target request that had recieved a invalid token response
+   * (which we fixed with a token refresh).
+   *
+   * @param {Request} request The Vue-resource Request instance to use to repeat an http call.
+   * @return {Promise}
+   */
+  _retry (request) {
+    this.setAuthHeader(request);
+
+    return Vue.http(request)
+      .then((response) => {
+        return response;
+      })
+      .catch((response) => {
+        return response;
+      });
   },
 
   /**
