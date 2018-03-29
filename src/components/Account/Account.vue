@@ -17,19 +17,19 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input v-model="ownForm.address"></el-input>
+                        <el-input v-model="ownForm.rubAmount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
-                        <el-tag type="info">100500</el-tag>
+                        <el-tag type="info">{{ ownForm.sbiCount }}</el-tag>
                       </el-form-item>
                     </el-form>
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input v-model="ownForm.address"></el-input>
+                        <el-input v-model="ownForm.ethAmount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
-                        <el-tag type="info">100500</el-tag>
+                        <el-tag type="info">{{ ownForm.sbiCount }}</el-tag>
                       </el-form-item>
                     </el-form>
                   </el-tab-pane>
@@ -91,6 +91,13 @@
 <style lang="scss" src="./style.scss"></style>
 
 <script>
+  import Vue from 'vue';
+  import {
+      ETHERSCAN_API_KEY,
+      ETHERSCAN_API_URL,
+      ETHERSCAN_STATS_PATH,
+      YAHOO_RATE_PATH,
+  } from './../../config';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
   export default {
     name: 'Account',
@@ -110,6 +117,25 @@
           messageText: ''
         }
       };
+    },
+    mounted: () => {
+      console.log('mounted');
+
+      /* Vue.http.get(`${ETHERSCAN_API_URL}${ETHERSCAN_STATS_PATH}${ETHERSCAN_API_KEY}`)
+          .then((response) => {
+            console.log('response', response);
+          })
+          .catch((errorResponse) => {
+            console.log('errorResponse', errorResponse);
+          });
+      Vue.http.get(YAHOO_RATE_PATH)
+          .then((response) => {
+            console.log('response yahoo', response);
+          })
+          .catch((errorResponse) => {
+            console.log('errorResponse', errorResponse);
+          }); */
+
     },
     methods: {
       handleSelect (key, keyPath) {
