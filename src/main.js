@@ -7,6 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/en';
 import router from './router';
 import store from './store';
+import base from './api/base';
 import App from './App';
 import messages from './locale/messages';
 
@@ -16,6 +17,8 @@ Vue.use(vuescroll, { debounce: 500 });
 Vue.use(ElementUI, { locale });
 Vue.use(VueResource);
 Vue.use(VueI18n);
+
+base.install(Vue);
 
 let v;
 export const i18n = new VueI18n({
