@@ -5,6 +5,7 @@
   padding: 0;
 
   .header-block {
+    padding: 0 !important;
     .el-menu-item {
       a {
         text-transform: uppercase;
@@ -71,4 +72,7 @@
       border-right: 1px solid #8f8f8f;
     }
   }
+}
+.el-collapse-item__header {
+  font-size: 18px;
 }

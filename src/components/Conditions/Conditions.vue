@@ -40,6 +40,7 @@
                     </el-row>
                     <div class="footer-text">
                       <p>{{ $t("conditions.text.13") }}</p>
+                      <span>SoftCap = 16 000 000/HardCap = 22 800 000</span>
                     </div>
                   </div>
                 </el-col>

@@ -3,6 +3,7 @@ import VueI18n from 'vue-i18n';
 import vuescroll from 'vue-scroll';
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
+import VueClipboard from 'vue-clipboard2';
 import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/en';
 import router from './router';
@@ -17,6 +18,7 @@ Vue.use(vuescroll, { debounce: 500 });
 Vue.use(ElementUI, { locale });
 Vue.use(VueResource);
 Vue.use(VueI18n);
+Vue.use(VueClipboard);
 
 base.install(Vue);
 

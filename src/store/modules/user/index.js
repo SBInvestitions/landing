@@ -1,6 +1,6 @@
 import * as types from './mutation-types';
 import users from '../../../api/users';
-import store from '../../index'
+// import store from '../../index';
 
 const state = {
   loading: null,

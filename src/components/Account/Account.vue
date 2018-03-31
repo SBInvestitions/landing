@@ -1,10 +1,10 @@
 <template>
   <div id="account" class="account">
     <el-container>
-      <div class="header-block">
+      <el-header class="header-block">
        <account-menu />
-      </div>
-      <div class="main-block">
+      </el-header>
+      <el-main class="main-block">
         <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
           <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
             <div class="grid-content bg-purple">
@@ -17,7 +17,7 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input v-model="ownForm.rubAmount"></el-input>
+                        <el-input tabIndex="1" v-model="ownForm.rubAmount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ ownForm.sbiCount }}</el-tag>
@@ -26,12 +26,21 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input v-model="ownForm.ethAmount"></el-input>
+                        <el-input tabIndex="2" v-model="ownForm.ethAmount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ ownForm.sbiCount }}</el-tag>
                       </el-form-item>
                     </el-form>
+
+                    <div class="text-block">
+                      <el-collapse v-model="activeNames" @change="handleChange">
+                        <el-collapse-item title="Для инвесторов, желающих вложить 2 000 000 рублей и более" name="1">
+                          <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                          <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                        </el-collapse-item>
+                      </el-collapse>
+                    </div>
                   </el-tab-pane>
 
                   <!--Есть кошелек-->
@@ -65,14 +74,28 @@
 
                   <!--Иное-->
                   <el-tab-pane v-bind:label="$t('account.text.7')">
-
-                    <el-form ref="form" class="feedBackForm" :model="feedBackForm">
+                    <div class="text-block">
+                      <strong>Номер карты сбербанка для перечислений</strong>
+                      <el-button
+                          type="success"
+                          v-clipboard:copy="message"
+                          v-clipboard:success="onCopy"
+                          v-clipboard:error="onError">
+                        4276 2500 1083 2871
+                      </el-button>
+                      <p>Получатель <strong>Константин Евненьевич П.</strong></p>
+                      <p>В комментарии укажите {{ ownForm.sbiCount }}</p>
+                      <p>Я свяжусь с Вами, создам вам кошелек и перечислю на него SBI.</p>
+                    </div>
+                    <!--<el-form ref="form" class="feedBackForm" :model="feedBackForm">
                       <el-form-item v-bind:label="$t('account.text.8')">
                         <el-input type="textarea" v-model="feedBackForm.messageText"></el-input>
                       </el-form-item>
                       <el-button type="primary" @click="onSubmit">{{ $t("account.text.9") }}</el-button>
 
-                    </el-form>
+                    </el-form>-->
+
+
                   </el-tab-pane>
 
                 </el-tabs>
@@ -80,10 +103,7 @@
             </div>
           </el-col>
         </el-row>
-      </div>
-      <el-footer>
-        footer
-      </el-footer>
+      </el-main>
     </el-container>
   </div>
 </template>
@@ -101,7 +121,9 @@
     },
     data () {
       return {
+        message: '4276250010832871',
         activeName: 'first',
+        // user: {},
         ownForm: {
           address: ''
         },
@@ -113,9 +135,9 @@
         }
       };
     },
-    mounted: () => {
+    /* mounted: () => {
       console.log('mounted');
-    },
+    }, */
     methods: {
       ...mapActions({
         load: 'user/LOAD'
@@ -126,8 +148,23 @@
       handleClick (tab, event) {
         console.log(tab, event);
       },
+      handleChange(val) {
+        console.log(val);
+      },
       onSubmit () {
         console.log('submit!');
+      },
+      showInput () {
+
+      },
+      onError: (e) => {
+        alert('Failed to copy texts');
+      },
+      onCopy () {
+        this.$message({
+          message: 'Вы скопировали!',
+          type: 'success'
+        });
       }
     },
     components: {
