@@ -46,14 +46,17 @@
                   <!--Есть кошелек-->
                   <el-tab-pane v-bind:label="$t('account.text.5')">
 
-                    <el-form ref="form" :inline="true" label-position="left" class="metaForm" :model="metaForm">
+                    <el-form ref="form" :inline="true" label-position="left" class="metaForm" :model="wallet">
                       <el-form-item v-bind:label="$t('account.text.11')">
-                        <el-input v-model="metaForm.address"></el-input>
+                        <el-input v-if="!wallet.address || walletEditing" v-model="wallet.address"></el-input>
+                        <span v-if="wallet.address && !walletEditing" class="address">{{wallet.address}}</span>
+                        <el-button v-if="wallet.address && !walletEditing" size="mini" type="primary" icon="el-icon-edit" circle @click="onEditWallet"></el-button>
+                        <el-button v-if="wallet.address && !walletEditing" size="mini" type="danger" icon="el-icon-delete" circle @click="onRemoveWallet"></el-button>
                       </el-form-item>
-                      <el-form-item>
-                        <el-button type="primary" @click="onSubmit">Сохранить</el-button>
+                      <el-form-item v-if="!wallet.address || walletEditing">
+                        <el-button type="success" icon="el-icon-check" circle @click="onSubmit"></el-button>
                       </el-form-item>
-                      <el-form-item v-bind:label="$t('account.text.10')">
+                      <el-form-item v-if="wallet.address" v-bind:label="$t('account.text.10')">
                         <el-tag type="info">100500</el-tag>
                       </el-form-item>
                     </el-form>
@@ -62,12 +65,12 @@
                   <!--Метамаск-->
                   <el-tab-pane v-bind:label="$t('account.text.6')">
 
-                    <el-form ref="form" label-position="left" class="metaForm" :model="metaForm" label-width="20%">
+                    <el-form ref="form" label-position="left" class="metaForm" :model="wallet" label-width="20%">
                       <el-form-item v-bind:label="$t('account.text.13')">
-                        <el-input disabled v-model="metaForm.address"></el-input>
+                        <el-input disabled v-model="wallet.address"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.10')">
-                        <el-input disabled v-model="metaForm.address"></el-input>
+                        <el-input disabled v-model="wallet.address"></el-input>
                       </el-form-item>
                     </el-form>
                   </el-tab-pane>
@@ -124,11 +127,9 @@
         activeNames: ['1'],
         message: '4276250010832871',
         activeName: 'first',
+        walletEditing: false,
         // user: {},
         ownForm: {
-          address: ''
-        },
-        metaForm: {
           address: ''
         },
         feedBackForm: {
@@ -142,7 +143,10 @@
     },
     methods: {
       ...mapActions({
-        load: 'user/LOAD'
+        getUser: 'user/LOAD',
+        getWallet: 'account/GET_WALLET',
+        createWallet: 'account/CREATE_WALLET',
+        deleteWallet: 'account/DELETE_WALLET'
       }),
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
@@ -154,7 +158,14 @@
         console.log(val);
       },
       onSubmit () {
-        console.log('submit!');
+        this.createWallet(this.wallet.address);
+        this.walletEditing = false;
+      },
+      onEditWallet () {
+        this.walletEditing = true;
+      },
+      onRemoveWallet () {
+        this.deleteWallet();
       },
       showInput () {
 
@@ -174,11 +185,13 @@
     },
     computed: {
       ...mapGetters({
-        user: 'user/user'
+        user: 'user/user',
+        wallet: 'account/wallet'
       })
     },
     created: function () {
-      this.load();
+      this.getUser();
+      this.getWallet();
     }
   };
 </script>
