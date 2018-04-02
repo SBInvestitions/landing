@@ -1,7 +1,7 @@
 .header-block {
   background: url('./../../assets/top-back-jpg.jpg');
   background-size: cover;
-  min-height: 150vh;
+  height: 1080px;
   padding: 0;
 }
 .main-block {
@@ -64,7 +64,7 @@
 }
 @media (max-width: 500px) {
   .header-block {
-    min-height: 120vh;
+    height: 510px;
   }
   i {
     font-size: 12px !important;

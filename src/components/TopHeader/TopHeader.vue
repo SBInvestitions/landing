@@ -1,5 +1,8 @@
 <template>
     <div id="top-header" class="top-header">
+      <div class="videoContainer">
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0"></iframe>
+      </div>
       <el-row>
         <el-col :span="24" class="top-top">
           <div class="grid-content bg-purple-dark">

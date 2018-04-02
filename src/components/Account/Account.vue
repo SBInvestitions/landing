@@ -109,9 +109,9 @@
 </template>
 
 <style lang="scss" src="./style.scss"></style>
-
 <script>
   import { mapActions, mapGetters } from 'vuex';
+  import getBalance from './../../samples/getBalance';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
 
   export default {
@@ -135,9 +135,10 @@
         }
       };
     },
-    /* mounted: () => {
+    mounted: () => {
+      getBalance();
       console.log('mounted');
-    }, */
+    },
     methods: {
       ...mapActions({
         load: 'user/LOAD'
@@ -148,7 +149,7 @@
       handleClick (tab, event) {
         console.log(tab, event);
       },
-      handleChange(val) {
+      handleChange (val) {
         console.log(val);
       },
       onSubmit () {
