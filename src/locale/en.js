@@ -198,7 +198,10 @@ export default {
       8: 'Sign in',
       9: 'Please input the password',
       10: 'Please input the password again',
-      11: 'Two inputs don\'t match!'
+      11: 'Two inputs don\'t match!',
+      12: 'I have read and agree',
+      13: 'Terms of use',
+      14: 'Privacy policy'
     }
   },
   theme: {

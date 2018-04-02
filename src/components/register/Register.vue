@@ -21,8 +21,36 @@
               <el-form-item prop="secondName" v-bind:label="$t('register.text.6')">
                 <el-input type="text" v-model="credentials.secondName"></el-input>
               </el-form-item>
+              <el-form-item v-bind:label="$t('register.text.12')">
+                <el-checkbox name="type" v-model="credentials.userAgree">
+                  <a @click="openDialog('userAgree')">{{ $t('register.text.13') }}</a>
+                </el-checkbox>
+              </el-form-item>
+
+              <el-dialog title="Shipping address" :visible.sync="dialogUserAgreeVisible">
+                <div class="text-block">Text</div>
+                <span slot="footer" class="dialog-footer">
+                  <el-button @click="closeDialog">Cancel</el-button>
+                  <el-button type="primary" @click="confirmDialog">Confirm</el-button>
+                </span>
+              </el-dialog>
+
               <el-form-item>
-                <el-button class="button sbi-button" type="primary" @click="submit()">{{ $t("register.text.7") }}</el-button>
+                <el-checkbox name="type" v-model="credentials.personalData">
+                  <a @click="openDialog('personalData')">{{ $t('register.text.14') }}</a>
+                </el-checkbox>
+              </el-form-item>
+
+              <el-dialog title="Shipping address" :visible.sync="dialogPersonalDataVisible">
+                <div class="text-block">Text</div>
+                <span slot="footer" class="dialog-footer">
+                  <el-button @click="closeDialog">Cancel</el-button>
+                  <el-button type="primary" @click="confirmDialog">Confirm</el-button>
+                </span>
+              </el-dialog>
+
+              <el-form-item>
+                <el-button :disabled="!credentials.userAgree || !credentials.personalData" class="button sbi-button" type="primary" @click="submit()">{{ $t("register.text.7") }}</el-button>
               </el-form-item>
               <el-form-item class="bottom-line">
                 <el-button class="sbi-button-link" type="text" @click="onLogin">{{ $t("register.text.8") }}</el-button>
@@ -65,6 +93,8 @@
         }
       };
       return {
+        dialogPersonalDataVisible: false,
+        dialogUserAgreeVisible: false,
         rules: {
           pass: [
             { required: true, validator: validatePass, trigger: 'blur' }
@@ -85,7 +115,9 @@
           pass: '',
           checkPass: '',
           name: '',
-          secondName: ''
+          secondName: '',
+          userAgree: false,
+          personalData: false
         },
         loggingIn: false,
         error: '',
@@ -111,6 +143,32 @@
       },
       onLogin () {
         this.$router.push({ path: 'login' });
+      },
+      openDialog (type) {
+        this.type = type;
+        if (type === 'userAgree') {
+          this.dialogUserAgreeVisible = true;
+        } else {
+          this.dialogPersonalDataVisible = true;
+        }
+      },
+      closeDialog () {
+        if (this.type === 'personalData') {
+          this.dialogPersonalDataVisible = false;
+          this.credentials.personalData = false;
+        } else {
+          this.dialogUserAgreeVisible = false;
+          this.credentials.userAgree = false;
+        }
+      },
+      confirmDialog () {
+        if (this.type === 'personalData') {
+          this.dialogPersonalDataVisible = false;
+          this.credentials.personalData = true;
+        } else {
+          this.dialogUserAgreeVisible = false;
+          this.credentials.userAgree = true;
+        }
       }
     }
   };
