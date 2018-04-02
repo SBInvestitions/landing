@@ -121,6 +121,7 @@
     },
     data () {
       return {
+        activeNames: ['1'],
         message: '4276250010832871',
         activeName: 'first',
         // user: {},

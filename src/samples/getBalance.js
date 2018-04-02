@@ -10,8 +10,8 @@ if (typeof web3 !== 'undefined') {
 } else {
   console.log('Web3 not detected!');
   // set the provider
-  // web3 = new Web3('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ'); // http://178.19.249.133:8545/
-  web3 = new Web3('https://178.19.249.133:8545');
+  web3 = new Web3('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ'); // http://178.19.249.133:8545/
+  // web3 = new Web3('https://178.19.249.133:8545');
 }
 // const BigNumber = web3.BigNumber;
 const sbiAddress = '0xf47fcf487177a1f39c4c4f26da5cf762d02bf2ca';
