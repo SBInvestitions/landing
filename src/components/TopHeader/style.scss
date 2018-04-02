@@ -4,7 +4,7 @@
   background: rgba(255, 255, 255, 0.44);
 
   .top-top {
-    height: 400px;
+    height: 450px;
 
     .sbi-logo-container {
       margin-top: 8rem;
@@ -60,7 +60,7 @@
   .top-bottom {
     background: url('./../../assets/svg/wave.svg');
     background-size: cover;
-    height: 680px;
+    height: 630px;
 
     .sbi-scale-container {
       height: 283px;
@@ -132,6 +132,14 @@
           border-radius: 5px;
         }
       }
+
+      .before-ico {
+        .header {
+          margin-bottom: 20px;
+          display: block;
+          font-size: 25px;
+        }
+      }
     }
   }
 }
@@ -155,12 +163,12 @@
     }
   }
   .sbi-logo-container {
-    margin-top: 2rem !important;
+    margin-top: 5rem !important;
   }
 }
 @media (min-width: 1280px) {
   .sbi-logo-container {
-    margin-top: 2rem !important;
+    margin-top: 5rem !important;
   }
 }
 @media (max-width: 1024px) {
@@ -173,7 +181,7 @@
 @media (max-width: 768px) {
 
   .sbi-logo-container {
-    margin-top: 0 !important;
+    margin-top: 5rem !important;
   }
 
   .sbi-scale-container {
@@ -208,6 +216,11 @@
 }
 
 @media (max-width: 500px) {
+  .videoContainer {
+    iframe {
+      width: 100%;
+    }
+  }
   .sbi-logo {
     margin-top: 30px !important;
   }
@@ -225,13 +238,13 @@
   .top-header {
     height: 510px;
     .top-top {
-      height: 200px
+      height: 300px
     }
     .top-bottom {
-      height: 310px;
+      height: 240px;
 
       .sbi-scale-container {
-        margin-top: 15vh !important;
+        margin-top: 7vh !important;
       }
     }
   }

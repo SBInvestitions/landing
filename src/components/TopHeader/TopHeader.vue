@@ -28,7 +28,7 @@
       </el-row>
       <el-row>
         <el-col :span="24" class="top-bottom">
-          <div class="grid-content bg-purple-light sbi-scale-container">
+          <div v-if="isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
               <el-col :xs="20" :sm="20" :md="20" :lg="16" :xl="16">
                 <div class="grid-content bg-purple-light">
@@ -59,6 +59,28 @@
               </el-col>
             </el-row>
           </div>
+          <div v-if="!isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
+            <el-row type="flex" class="row-bg scale-row" justify="space-around">
+              <el-col :xs="20" :sm="20" :md="20" :lg="16" :xl="16">
+                <div class="grid-content bg-purple-light">
+                  <el-row :gutter="20">
+                    <el-col :span="24" class="before-ico">
+                      <span class="header">{{ $t("topHeader.text.6") }}</span>
+                      <el-row class="h4">
+                        <el-col :span="4" :offset="1" class="scale days">01<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale hours">12<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
+                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale minutes">13<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
+                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale seconds">48<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                      </el-row>
+                    </el-col>
+                  </el-row>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -67,7 +89,18 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
+  import { getStarted } from './../../samples/getWeb3';
   export default {
-    name: 'TopHeader'
+    name: 'TopHeader',
+    data () {
+      return {
+        isIcoStarted: false
+      };
+    },
+    methods: {
+      async icoStarted () {
+        this.isIcoStarted = await getStarted();
+      }
+    }
   };
 </script>

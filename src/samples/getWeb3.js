@@ -24,4 +24,11 @@ export const getBalance = async () => {
   console.log('balance = ', parseInt(balance / Math.pow(10, 18)));
 };
 
-export default getBalance;
+export const getStarted = async () => {
+  return false;
+};
+
+export default {
+  getBalance,
+  getStarted
+};

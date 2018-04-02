@@ -1,7 +1,12 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,600,700");
+html {
+  width: 100%;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
+  width: 100%;
 }
 h1 {
   font-size: 30px;
@@ -36,7 +41,10 @@ h2 {
 
 .menu-row {
   width: 100%;
-  background-color: #ffffffad;
+  background-color: #ffffff36;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 
   .el-menu-sbi {
     background-color: transparent;

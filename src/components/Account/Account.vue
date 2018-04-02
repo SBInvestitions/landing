@@ -111,7 +111,7 @@
 <style lang="scss" src="./style.scss"></style>
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import getBalance from './../../samples/getBalance';
+  import { getBalance } from './../../samples/getWeb3';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
 
   export default {
