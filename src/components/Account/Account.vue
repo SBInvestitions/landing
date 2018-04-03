@@ -80,6 +80,7 @@
                     <div class="text-block">
                       <strong>Номер карты сбербанка для перечислений</strong>
                       <el-button
+                          class="copy-button"
                           type="success"
                           v-clipboard:copy="message"
                           v-clipboard:success="onCopy"

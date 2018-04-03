@@ -28,17 +28,22 @@ const router = new Router({
       }
     },
     {
+      path: '/news',
+      name: 'news',
+      component: function (resolve) {
+        require(['@/components/News/News.vue'], resolve);
+      }
+    },
+    {
       path: '/account',
       name: 'account',
       component: function (resolve) {
         require(['@/components/Account/Account.vue'], resolve);
       }
     },
-    {
-      path: '/account/help',
-      name: 'help',
+    { path: '*',
       component: function (resolve) {
-        require(['@/components/Account/components/Help/Help.vue'], resolve);
+        require(['@/components/NotFound/NotFound.vue'], resolve);
       }
     }
   ]

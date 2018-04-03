@@ -1,7 +1,7 @@
 <template>
     <div id="top-header" class="top-header">
-      <div class="videoContainer">
-        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0"></iframe>
+      <div class="videoContainer hidden-md-and-down">
+        <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div>
       <el-row>
         <el-col :span="24" class="top-top">
@@ -67,13 +67,13 @@
                     <el-col :span="24" class="before-ico">
                       <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
-                        <el-col :span="4" :offset="1" class="scale days">01<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale hours">12<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
+                        <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale minutes">13<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
+                        <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale seconds">48<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
                   </el-row>
@@ -89,18 +89,56 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
+  import moment from 'moment';
   import { getStarted } from './../../samples/getWeb3';
+
   export default {
     name: 'TopHeader',
     data () {
       return {
-        isIcoStarted: false
+        date: moment([2018, 3, 20]),
+        isIcoStarted: false,
+        before: {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        }
       };
     },
     methods: {
+      changeTime: (date) => {
+        const days = moment(date).diff(moment(), 'days');
+        const hours = moment(date).diff(moment(), 'hours') - days * 24;
+        const minutes = moment(date).diff(moment(), 'minutes') - days * 24 * 60 - hours * 60;
+        const seconds = moment(date).diff(moment(), 'seconds') - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60;
+        return {
+          days,
+          hours,
+          minutes,
+          seconds
+        };
+      },
+      vidRescale: () => {
+        const video = document.getElementById('video-background');
+        const windowWidth = window.innerWidth;
+        if (video) {
+          video.style.width = `${windowWidth}px`;
+          video.style.height = `${windowWidth * 0.5625}px`;
+        }
+      },
       async icoStarted () {
         this.isIcoStarted = await getStarted();
       }
+    },
+    mounted () {
+      this.vidRescale();
+      window.setInterval(() => {
+        this.before = this.changeTime(this.date);
+      }, 1000);
+    },
+    beforeDestroy () {
+      clearInterval(this.timer);
     }
   };
 </script>

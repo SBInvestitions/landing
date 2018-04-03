@@ -1,5 +1,6 @@
 export default {
   home: {
+    lang: 'en',
     menu: {
       about: 'About',
       daico: 'conditions DAICO',
@@ -8,7 +9,8 @@ export default {
       bonuses: 'Bounty',
       clients: 'Clients',
       proporsal: 'White Paper',
-      logIn: 'Log in'
+      logIn: 'Log in',
+      news: 'News'
     }
   },
   aboutCompany: {
@@ -213,10 +215,11 @@ export default {
   },
   account: {
     menu: {
-      1: 'Мои вложения',
-      2: 'Помощь',
-      3: 'Новости',
-      4: 'Выйти'
+      1: 'Home',
+      2: 'News',
+      3: 'Account',
+      4: 'Help',
+      5: 'Logout'
     },
     text: {
       1: 'Здравствуйте,',

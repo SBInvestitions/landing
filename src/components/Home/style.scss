@@ -1,7 +1,7 @@
 .header-block {
   background: url('./../../assets/top-back-jpg.jpg');
   background-size: cover;
-  height: 1080px;
+  // height: 1080px;
   padding: 0;
 }
 .main-block {
@@ -40,36 +40,12 @@
   width: 200px;
   min-height: 400px;
 }
-.el-menu--collapse {
-  .el-menu-item {
-    width: 62px;
 
-  }
-}
-
-@media (max-width: 1568px) {
-  .el-menu-item {
-    font-size: 12px !important;
-  }
-
-}
-
-@media (max-width: 768px) {
-  i {
-    font-size: 16px !important;
-  }
-  .el-menu-item {
-    padding: 0 10px !important;
-  }
-}
 @media (max-width: 500px) {
   .header-block {
-    height: 510px;
+    // height: 510px;
   }
   i {
     font-size: 12px !important;
-  }
-  .el-menu-item {
-    padding: 0 5px !important;
   }
 }

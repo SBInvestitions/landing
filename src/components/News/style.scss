@@ -1,0 +1,11 @@
+.news {
+  height: 100vh;
+  background: url('./../../assets/top-back-jpg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+  .main-block {
+    width: 100%;
+    margin-top: 70px;
+  }
+}

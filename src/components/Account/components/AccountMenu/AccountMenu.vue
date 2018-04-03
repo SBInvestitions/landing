@@ -3,28 +3,34 @@
     <el-row type="flex" class="row-bg menu-row" justify="center">
       <el-menu class="el-menu-sbi" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">
-          <a href="/#/Account/my-investments">
-            <i class="el-icon-goods"></i>
-            <span slot="title" class="">{{ $t("account.menu.1") }}</span>
-          </a>
+          <router-link to="/">
+            <i class="el-icon-sb-invest"></i>
+            {{ $t("account.menu.1") }}
+          </router-link>
         </el-menu-item>
         <el-menu-item index="2">
-          <a href="#help">
-            <i class="el-icon-service"></i>
-            <span slot="title" class="">{{ $t("account.menu.2") }}</span>
-          </a>
+          <router-link to="/news">
+            <i class="el-icon-tickets"></i>
+            {{ $t("account.menu.2") }}
+          </router-link>
         </el-menu-item>
         <el-menu-item index="3">
-          <a href="#help">
-            <i class="el-icon-tickets"></i>
-            <span slot="title" class="">{{ $t("account.menu.3") }}</span>
-          </a>
+          <router-link to="/account">
+            <i class="el-icon-goods"></i>
+            {{ $t("account.menu.3") }}
+          </router-link>
         </el-menu-item>
         <el-menu-item index="4">
-          <a href="#logout">
+          <router-link to="/account">
+            <i class="el-icon-service"></i>
+            {{ $t("account.menu.4") }}
+          </router-link>
+        </el-menu-item>
+        <el-menu-item index="5">
+          <router-link to="/logout">
             <i class="el-icon-close"></i>
-            <span slot="title" class="">{{ $t("account.menu.4") }}</span>
-          </a>
+            {{ $t("account.menu.5") }}
+          </router-link>
         </el-menu-item>
       </el-menu>
     </el-row>
