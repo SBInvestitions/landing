@@ -17,19 +17,19 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input tabIndex="1" v-model="ownForm.rubAmount"></el-input>
+                        <el-input-number @input="calculateRub" :min="1" :max="22800000" tabIndex="1" :value="sbiRubCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
-                        <el-tag type="info">{{ ownForm.sbiCount }}</el-tag>
+                        <el-tag type="info">{{ sbiRubCount }}</el-tag>
                       </el-form-item>
                     </el-form>
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input tabIndex="2" v-model="ownForm.ethAmount"></el-input>
+                        <el-input-number @input="calculateEth" :min="1" :max="22800000" tabIndex="2" v-model="ethAmount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
-                        <el-tag type="info">{{ ownForm.sbiCount }}</el-tag>
+                        <el-tag type="info">{{ sbiEthCount }}</el-tag>
                       </el-form-item>
                     </el-form>
 
@@ -131,21 +131,23 @@
         walletEditing: false,
         // user: {},
         ownForm: {
-          address: ''
+          address: '',
+          rubAmount: null,
+          sbiRubCount: null,
+          sbiEthCount: null,
+          ethAmount: null
         },
         feedBackForm: {
           messageText: ''
         }
       };
     },
-    mounted: () => {
-      getBalance();
-      console.log('mounted');
-    },
     methods: {
       ...mapActions({
+        getComputedRate: 'rate/GET_COMPUTED',
         getUser: 'user/LOAD',
         getWallet: 'account/GET_WALLET',
+        getRates: 'rate/LOAD',
         createWallet: 'account/CREATE_WALLET',
         deleteWallet: 'account/DELETE_WALLET'
       }),
@@ -179,6 +181,12 @@
           message: 'Вы скопировали!',
           type: 'success'
         });
+      },
+      calculateRub (e) {
+        this.$store.commit('SET_SBI_RUB', e.target.value);
+      },
+      calculateEth (e) {
+        this.$store.commit('SET_SBI_ETH', e.target.value);
       }
     },
     components: {
@@ -187,12 +195,18 @@
     computed: {
       ...mapGetters({
         user: 'user/user',
+        rub: 'rate/rub',
+        eth: 'rate/eth',
+        sbiRubCount: 'rate/sbiRubCount',
+        sbiEthCount: 'rate/sbiEthCount',
         wallet: 'account/wallet'
       })
     },
     created: function () {
       this.getUser();
       this.getWallet();
+      this.getRates();
+      getBalance();
     }
   };
 </script>

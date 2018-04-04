@@ -10,7 +10,8 @@ export default {
       clients: 'Clients',
       proporsal: 'White Paper',
       logIn: 'Log in',
-      news: 'News'
+      news: 'News',
+      account: 'Account'
     }
   },
   aboutCompany: {

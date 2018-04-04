@@ -57,9 +57,13 @@
           </a>
         </el-menu-item>
         <el-menu-item index="10">
-          <a href="/login">
+          <a href="/login" v-if="!user.id">
             <i class="el-icon-upload2 hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
+          </a>
+          <a href="/account" v-if="user.id">
+            <i class="el-icon-upload2 hidden-lg-and-up"></i>
+            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.account") }}</span>
           </a>
         </el-menu-item>
       </el-menu>
@@ -71,6 +75,7 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
+  import { mapActions, mapGetters } from 'vuex';
   export default {
     name: 'MainMenu',
     data () {
@@ -82,6 +87,9 @@
       };
     },
     methods: {
+      ...mapActions({
+        getUser: 'user/LOAD'
+      }),
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
       },
@@ -90,8 +98,13 @@
         this.position = position;
       }
     },
-    components: {
-
+    computed: {
+      ...mapGetters({
+        user: 'user/user'
+      })
+    },
+    created: function () {
+      this.getUser();
     }
   };
 </script>

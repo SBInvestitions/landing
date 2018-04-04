@@ -10,7 +10,8 @@ export default {
       clients: 'Клиенты',
       proporsal: 'Коммерческое предложение',
       logIn: 'Логин',
-      news: 'Новости'
+      news: 'Новости',
+      account: 'Профиль'
     }
   },
   aboutCompany: {

@@ -1,6 +1,5 @@
 import * as types from './mutation-types';
 import users from '../../../api/users';
-// import store from '../../index';
 
 const state = {
   loading: null,
@@ -30,6 +29,7 @@ const mutations = {
     state.lastName = null;
     state.role = null;
   }
+
 };
 
 const actions = {
@@ -51,7 +51,7 @@ const actions = {
 
 const getters = {
   user: state => {
-    return { firstName: state.firstName, lastName: state.lastName };
+    return { firstName: state.firstName, lastName: state.lastName, id: state.id };
   },
   role: state => state.role,
   loading: state => state.loading

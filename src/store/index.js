@@ -4,6 +4,7 @@ import { state } from './state';
 import * as mutations from './mutations';
 import home from './modules/home/';
 import user from './modules/user/';
+import rate from './modules/rate/';
 import account from './modules/account/';
 import errors from './modules/errors/';
 
@@ -15,7 +16,8 @@ const store = new Vuex.Store({
     errors,
     user,
     account,
-    home
+    home,
+    rate
   },
   state,
   mutations

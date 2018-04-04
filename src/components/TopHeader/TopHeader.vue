@@ -1,6 +1,6 @@
 <template>
     <div id="top-header" class="top-header">
-      <div class="videoContainer hidden-md-and-down">
+      <div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div>
       <el-row>
@@ -61,7 +61,7 @@
           </div>
           <div v-if="!isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
-              <el-col :xs="20" :sm="20" :md="20" :lg="16" :xl="16">
+              <el-col :xs="20" :sm="18" :md="16" :lg="16" :xl="16">
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
                     <el-col :span="24" class="before-ico">

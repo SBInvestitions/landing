@@ -65,7 +65,7 @@
     .sbi-scale-container {
       height: 283px;
       margin: 0 auto;
-      margin-top: 50px !important;
+      margin-top: 50px;
       background: url('../../assets/svg/scale-container.svg');
       background-size: contain;
       background-repeat: no-repeat;
@@ -145,7 +145,11 @@
 }
 @media (max-width: 1280px) {
   .sbi-scale-container {
-    margin-top: 20px !important;
+    height: 200px !important;
+    margin-top: 0!important;
+    .scale-row {
+      padding-top: 30px !important;
+    }
   }
 }
 @media (max-width: 1024px) {
@@ -187,7 +191,7 @@
   .sbi-scale-container {
     width: 100%;
     .scale-row {
-      padding-top: 90px !important;
+      padding-top: 60px !important;
 
       .header {
         font-size: 12px !important;
