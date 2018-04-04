@@ -3,31 +3,41 @@ import rate from '../../../api/rate';
 
 const state = {
   loading: null,
-  rub: 1,
-  eth: 1,
-  sbiRubCount: null,
-  sbiEthCount: null
+  rate: {
+    rubRate: null,
+    ethRate: null,
+    rubCount: 1,
+    ethCount: 1,
+    sbiRubCount: null,
+    sbiEthCount: null
+  }
 };
 
 const mutations = {
   [types.LOAD] (state, data) {
-    state.rub = data.rub;
-    state.eth = data.eth;
+    state.rate.rubRate = data.rub;
+    state.rate.ethRate = data.eth;
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
   },
   [types.CLEAR_ALL_DATA] (state) {
-    state.rub = null;
-    state.eth = null;
+    state.rubRate = null;
+    state.ethRate = null;
+    state.rubCount = null;
+    state.ethCount = null;
     state.sbiRubCount = null;
     state.sbiEthCount = null;
   },
-  [types.SET_SBI_RUB] (state) {
-    state.sbiRubCount = 10;
+  [types.SET_SBI_RUB] (state, value) {
+    const rubCount = value || getters.rate(state).rubCount;
+    state.rate = { ...state.rate, sbiRubCount: rubCount };
   },
-  [types.SET_SBI_ETH] (state) {
-    state.sbiEthCount = 20;
+  [types.SET_SBI_ETH] (state, value) {
+    const rate = getters.rate(state);
+    const ethCount = value * Number(rate.rubRate) * Number(rate.ethRate);
+    console.log('ethCount', ethCount);
+    state.rate = { ...state.rate, sbiEthCount: ethCount };
   }
 };
 
@@ -46,11 +56,11 @@ const actions = {
   [types.SET_LOADING] ({ commit }, loading) {
     commit(types.SET_LOADING, loading);
   },
-  [types.SET_SBI_RUB] ({ commit }) {
-    commit(types.SET_SBI_RUB);
+  [types.SET_SBI_RUB] ({ commit }, value) {
+    commit(types.SET_SBI_RUB, value);
   },
-  [types.SET_SBI_ETH] ({ commit }) {
-    commit(types.SET_SBI_ETH);
+  [types.SET_SBI_ETH] ({ commit }, value) {
+    commit(types.SET_SBI_ETH, value);
   }
 };
 

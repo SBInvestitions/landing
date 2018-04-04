@@ -17,21 +17,21 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input-number @input="onChange" :min="1" :max="22800000" tabIndex="1" v-model="rate.rub"></el-input-number>
+                        <el-input-number @change="onChange(rate.rubCount, 'rubCount')" :min="1" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
                       </el-form-item>
                     </el-form>
 
-                    <!-- <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
+                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input-number @input="calculateEth" :min="1" :max="22800000" tabIndex="2" v-model="rate.eth"></el-input-number>
+                        <el-input-number @change="onChange(rate.rubCount, 'ethCount')" :min="1" :max="22800000" tabIndex="2" v-model="rate.ethCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
-                        <el-tag type="info">{{ sbiEthCount }}</el-tag>
+                        <el-tag type="info">{{ rate.sbiEthCount }}</el-tag>
                       </el-form-item>
-                    </el-form> -->
+                    </el-form>
 
                     <div class="text-block">
                       <el-collapse v-model="activeNames" @change="handleChange">
@@ -138,6 +138,14 @@
     },
     data () {
       return {
+        editRate: {
+          rubRate: null,
+          ethRate: null,
+          rubCount: null,
+          ethCount: null,
+          sbiRubCount: null,
+          sbiEthCount: null
+        },
         activeNames: ['1'],
         message: '4276250010832871',
         activeName: 'first',
@@ -189,9 +197,13 @@
           type: 'success'
         });
       },
-      onChange () {
-        console.log('onChange');
-        this.calculateRub();
+      onChange (value, type) {
+        console.log('onChange value', value, type);
+        if (type === 'rubCount') {
+          this.calculateRub(value);
+        } else {
+          this.calculateEth(value);
+        }
       }
     },
     components: {
@@ -200,9 +212,13 @@
     computed: {
       ...mapGetters({
         user: 'user/user',
-        rate: 'rate/rate',
         wallet: 'account/wallet'
-      })
+      }),
+      rate: function () {
+        this.editRate = this.$store.getters['rate/rate'];
+        console.log('this.editRate', this.editRate);
+        return this.editRate;
+      }
     },
     created: function () {
       this.getUser();

@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 import ABI from './abi';
-// import Accounts from 'web3-eth-accounts';
+import Accounts from 'web3-eth-accounts';
 
 let web3;
 
@@ -16,6 +16,8 @@ if (typeof web3 !== 'undefined') {
 // const BigNumber = web3.BigNumber;
 const sbiAddress = '0xf47fcf487177a1f39c4c4f26da5cf762d02bf2ca';
 const SbiToken = new web3.eth.Contract(ABI, sbiAddress);
+const accounts = new Accounts('ws://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ');
+console.log('accounts', accounts);
 
 export const getBalance = async () => {
   const balance = await web3.eth.call({to: sbiAddress, data: SbiToken.methods.balanceOf('0x5acdaef4fa410f38bc26003d0f441d99bb19265a').encodeABI()}); // await SbiToken.methods.balanceOf('0x18ae8A771e006110a97581Da01052026cC9bB8c2');
