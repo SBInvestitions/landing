@@ -3,23 +3,25 @@ import rate from '../../../api/rate';
 
 const state = {
   loading: null,
-  rub: 1,
-  eth: 1,
+  rate: {
+    rub: 1,
+    eth: 1
+  },
   sbiRubCount: null,
   sbiEthCount: null
 };
 
 const mutations = {
   [types.LOAD] (state, data) {
-    state.rub = data.rub;
-    state.eth = data.eth;
+    state.rate.rub = data.rub;
+    state.rate.eth = data.eth;
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
   },
   [types.CLEAR_ALL_DATA] (state) {
-    state.rub = null;
-    state.eth = null;
+    state.rate.rub = null;
+    state.rate.eth = null;
     state.sbiRubCount = null;
     state.sbiEthCount = null;
   },
@@ -33,7 +35,7 @@ const mutations = {
 
 const actions = {
   [types.LOAD] ({ commit, state }) {
-    if (!state.rub || !state.eth) {
+    if (!state.rate.rub || !state.rate.eth) {
       commit(types.SET_LOADING, true);
       rate.rate().then((data) => {
         commit(types.SET_LOADING, false);

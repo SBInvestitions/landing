@@ -138,6 +138,9 @@
     },
     data () {
       return {
+        editRate: {
+          rub: 1
+        },
         activeNames: ['1'],
         message: '4276250010832871',
         activeName: 'first',
@@ -200,9 +203,12 @@
     computed: {
       ...mapGetters({
         user: 'user/user',
-        rate: 'rate/rate',
         wallet: 'account/wallet'
-      })
+      }),
+      rate: function () {
+        this.editRate = this.$store.getters['rate/rate'];
+        return this.editRate;
+      }
     },
     created: function () {
       this.getUser();
