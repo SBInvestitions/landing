@@ -15,23 +15,23 @@
                   <!--Предварительная оценка-->
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
 
-                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
+                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input-number @input="calculateRub" :min="1" :max="22800000" tabIndex="1" :value="sbiRubCount"></el-input-number>
+                        <el-input-number @input="calculateRub()" :min="1" :max="22800000" tabIndex="1" v-model="rate.rub"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
-                        <el-tag type="info">{{ sbiRubCount }}</el-tag>
+                        <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
                       </el-form-item>
                     </el-form>
 
-                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
+                    <!-- <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input-number @input="calculateEth" :min="1" :max="22800000" tabIndex="2" :value="ethAmount"></el-input-number>
+                        <el-input-number @input="calculateEth" :min="1" :max="22800000" tabIndex="2" v-model="rate.eth"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ sbiEthCount }}</el-tag>
                       </el-form-item>
-                    </el-form>
+                    </el-form> -->
 
                     <div class="text-block">
                       <el-collapse v-model="activeNames" @change="handleChange">
@@ -50,12 +50,23 @@
                       <el-form-item v-bind:label="$t('account.text.11')">
                         <el-input v-if="!wallet.address || walletEditing" v-model="wallet.address"></el-input>
                         <span v-if="wallet.address && !walletEditing" class="address">{{wallet.address}}</span>
-                        <el-button v-if="wallet.address && !walletEditing" size="mini" type="primary" icon="el-icon-edit" circle @click="onEditWallet"></el-button>
-                        <el-button v-if="wallet.address && !walletEditing" size="mini" type="danger" icon="el-icon-delete" circle @click="onRemoveWallet"></el-button>
+
+                        <el-tooltip v-if="wallet.address && !walletEditing" content="Редактировать" placement="right" effect="light">
+                          <el-button size="mini" type="primary" icon="el-icon-edit" circle @click="onEditWallet"></el-button>
+                        </el-tooltip>
+
+                        <el-tooltip v-if="wallet.address && !walletEditing" content="Удалить" placement="right" effect="light">
+                          <el-button size="mini" type="danger" icon="el-icon-delete" circle @click="onRemoveWallet"></el-button>
+                        </el-tooltip>
+
                       </el-form-item>
+
                       <el-form-item v-if="!wallet.address || walletEditing">
-                        <el-button type="success" icon="el-icon-check" circle @click="onSubmit"></el-button>
+                        <el-tooltip content="Сохранить" placement="right" effect="light">
+                          <el-button :disabled="!(wallet.address)" type="success" icon="el-icon-check" circle @click="onSubmit"></el-button>
+                        </el-tooltip>
                       </el-form-item>
+
                       <el-form-item v-if="wallet.address" v-bind:label="$t('account.text.10')">
                         <el-tag type="info">100500</el-tag>
                       </el-form-item>
@@ -64,15 +75,18 @@
 
                   <!--Метамаск-->
                   <el-tab-pane v-bind:label="$t('account.text.6')">
-
-                    <el-form ref="form" label-position="left" class="metaForm" :model="wallet" label-width="20%">
-                      <el-form-item v-bind:label="$t('account.text.13')">
-                        <el-input disabled v-model="wallet.address"></el-input>
-                      </el-form-item>
-                      <el-form-item v-bind:label="$t('account.text.10')">
-                        <el-input disabled v-model="wallet.address"></el-input>
-                      </el-form-item>
-                    </el-form>
+                    <el-row class="row-bg">
+                      <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+                        <el-form ref="form" label-position="left" class="metaForm" :model="wallet" label-width="30%">
+                          <el-form-item v-bind:label="$t('account.text.13')">
+                            <el-input disabled v-model="wallet.address"></el-input>
+                          </el-form-item>
+                          <el-form-item v-bind:label="$t('account.text.10')">
+                            <el-input disabled v-model="wallet.address"></el-input>
+                          </el-form-item>
+                        </el-form>
+                      </el-col>
+                    </el-row>
                   </el-tab-pane>
 
                   <!--Иное-->
@@ -88,20 +102,19 @@
                         4276 2500 1083 2871
                       </el-button>
                       <p>Получатель <strong>Константин Евненьевич П.</strong></p>
-                      <p>В комментарии укажите {{ ownForm.sbiCount }}</p>
+                      <p>В комментарии укажите
+                        <el-button
+                            class="copy-button"
+                            type="success"
+                            v-clipboard:copy="message"
+                            v-clipboard:success="onCopy"
+                            v-clipboard:error="onError">
+                          {{ user.id }}
+                        </el-button>
+                      </p>
                       <p>Я свяжусь с Вами, создам вам кошелек и перечислю на него SBI.</p>
                     </div>
-                    <!--<el-form ref="form" class="feedBackForm" :model="feedBackForm">
-                      <el-form-item v-bind:label="$t('account.text.8')">
-                        <el-input type="textarea" v-model="feedBackForm.messageText"></el-input>
-                      </el-form-item>
-                      <el-button type="primary" @click="onSubmit">{{ $t("account.text.9") }}</el-button>
-
-                    </el-form>-->
-
-
                   </el-tab-pane>
-
                 </el-tabs>
               </el-card>
             </div>
@@ -129,14 +142,6 @@
         message: '4276250010832871',
         activeName: 'first',
         walletEditing: false,
-        // user: {},
-        ownForm: {
-          address: '',
-          rubAmount: null,
-          sbiRubCount: null,
-          sbiEthCount: null,
-          ethAmount: null
-        },
         feedBackForm: {
           messageText: ''
         }
@@ -182,11 +187,12 @@
           type: 'success'
         });
       },
-      calculateRub (e) {
-        this.$store.commit('SET_SBI_RUB', e.target.value);
+      calculateRub () {
+        console.log('calculateRub');
+        this.$store.commit('rate/SET_SBI_RUB');
       },
-      calculateEth (e) {
-        this.$store.commit('SET_SBI_ETH', e.target.value);
+      calculateEth () {
+        this.$store.commit('rate/SET_SBI_ETH');
       }
     },
     components: {
@@ -195,10 +201,7 @@
     computed: {
       ...mapGetters({
         user: 'user/user',
-        rub: 'rate/rub',
-        eth: 'rate/eth',
-        sbiRubCount: 'rate/sbiRubCount',
-        sbiEthCount: 'rate/sbiEthCount',
+        rate: 'rate/rate',
         wallet: 'account/wallet'
       })
     },

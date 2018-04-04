@@ -3,8 +3,8 @@ import rate from '../../../api/rate';
 
 const state = {
   loading: null,
-  rub: null,
-  eth: null,
+  rub: 1,
+  eth: 1,
   sbiRubCount: null,
   sbiEthCount: null
 };
@@ -23,12 +23,10 @@ const mutations = {
     state.sbiRubCount = null;
     state.sbiEthCount = null;
   },
-  [types.SET_SBI_RUB] (state, data) {
-    console.log('data =', data);
+  [types.SET_SBI_RUB] (state) {
     state.sbiRubCount = 10;
   },
-  [types.SET_SBI_ETH] (state, data) {
-    console.log('data =', data);
+  [types.SET_SBI_ETH] (state) {
     state.sbiEthCount = 20;
   }
 };
@@ -52,10 +50,9 @@ const actions = {
 
 const getters = {
   loading: state => state.loading,
-  rub: state => state.rate ? state.rate.rub : 0,
-  eth: state => state.rate ? state.rate.eth : 0,
-  sbiRubCount: state => state.rate ? state.rate.sbiRubCount : 0,
-  sbiEthCount: state => state.rate ? state.rate.sbiEthCount : 0
+  rate: (state) => {
+    return { ...state.rate };
+  }
 };
 
 export default {

@@ -22,7 +22,7 @@ const mutations = {
     state.loading = loading;
   },
   [types.CLEAR_ALL_DATA] (state) {
-    state.wallet = [];
+    state.wallet = {};
   }
 };
 
