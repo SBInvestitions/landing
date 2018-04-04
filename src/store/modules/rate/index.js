@@ -45,6 +45,12 @@ const actions = {
   },
   [types.SET_LOADING] ({ commit }, loading) {
     commit(types.SET_LOADING, loading);
+  },
+  [types.SET_SBI_RUB] ({ commit }) {
+    commit(types.SET_SBI_RUB);
+  },
+  [types.SET_SBI_ETH] ({ commit }) {
+    commit(types.SET_SBI_ETH);
   }
 };
 

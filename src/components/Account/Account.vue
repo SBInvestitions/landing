@@ -17,7 +17,7 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input-number @input="calculateRub()" :min="1" :max="22800000" tabIndex="1" v-model="rate.rub"></el-input-number>
+                        <el-input-number @input="onChange" :min="1" :max="22800000" tabIndex="1" v-model="rate.rub"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
@@ -154,7 +154,9 @@
         getWallet: 'account/GET_WALLET',
         getRates: 'rate/LOAD',
         createWallet: 'account/CREATE_WALLET',
-        deleteWallet: 'account/DELETE_WALLET'
+        deleteWallet: 'account/DELETE_WALLET',
+        calculateRub: 'rate/SET_SBI_RUB',
+        calculateEth: 'rate/SET_SBI_ETH'
       }),
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
@@ -187,12 +189,9 @@
           type: 'success'
         });
       },
-      calculateRub () {
-        console.log('calculateRub');
-        this.$store.commit('rate/SET_SBI_RUB');
-      },
-      calculateEth () {
-        this.$store.commit('rate/SET_SBI_ETH');
+      onChange () {
+        console.log('onChange');
+        this.calculateRub();
       }
     },
     components: {
