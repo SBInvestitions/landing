@@ -26,7 +26,7 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="ownForm" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input-number @input="calculateEth" :min="1" :max="22800000" tabIndex="2" v-model="ethAmount"></el-input-number>
+                        <el-input-number @input="calculateEth" :min="1" :max="22800000" tabIndex="2" :value="ethAmount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ sbiEthCount }}</el-tag>
