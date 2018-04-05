@@ -14,10 +14,20 @@
 
                   <!--Предварительная оценка-->
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
-
+                    <div class="text-block">
+                      <strong>Адрес контракта для перечисления ETH</strong>
+                      <el-button
+                          class="copy-button"
+                          type="success"
+                          v-clipboard:copy="crowdsaleAddress"
+                          v-clipboard:success="onCopy"
+                          v-clipboard:error="onError">
+                        0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45
+                      </el-button>
+                    </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input-number @change="onChange(rate.rubCount, 'rubCount')" :min="1" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
+                        <el-input-number @change="onChangeRub" :step="1000" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
@@ -26,7 +36,7 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.4')">
-                        <el-input-number @change="onChange(rate.rubCount, 'ethCount')" :min="1" :max="22800000" tabIndex="2" v-model="rate.ethCount"></el-input-number>
+                        <el-input-number @change="onChangeEth" :min="1" :max="22800000" tabIndex="2" v-model="rate.ethCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiEthCount }}</el-tag>
@@ -68,7 +78,7 @@
                       </el-form-item>
 
                       <el-form-item v-if="wallet.address" v-bind:label="$t('account.text.10')">
-                        <el-tag type="info">100500</el-tag>
+                        <el-tag type="info">{{ wallet.balance }}</el-tag>
                       </el-form-item>
                     </el-form>
                   </el-tab-pane>
@@ -79,10 +89,10 @@
                       <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
                         <el-form ref="form" label-position="left" class="metaForm" :model="wallet" label-width="30%">
                           <el-form-item v-bind:label="$t('account.text.13')">
-                            <el-input disabled v-model="wallet.address"></el-input>
+                            <el-input disabled v-model="metamaskAddress"></el-input>
                           </el-form-item>
                           <el-form-item v-bind:label="$t('account.text.10')">
-                            <el-input disabled v-model="wallet.address"></el-input>
+                            <el-input disabled v-model="metamaskBalance"></el-input>
                           </el-form-item>
                         </el-form>
                       </el-col>
@@ -96,7 +106,7 @@
                       <el-button
                           class="copy-button"
                           type="success"
-                          v-clipboard:copy="message"
+                          v-clipboard:copy="sberbank"
                           v-clipboard:success="onCopy"
                           v-clipboard:error="onError">
                         4276 2500 1083 2871
@@ -106,7 +116,7 @@
                         <el-button
                             class="copy-button"
                             type="success"
-                            v-clipboard:copy="message"
+                            v-clipboard:copy="user.id"
                             v-clipboard:success="onCopy"
                             v-clipboard:error="onError">
                           {{ user.id }}
@@ -128,7 +138,7 @@
 <style lang="scss" src="./style.scss"></style>
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import { getBalance } from './../../samples/getWeb3';
+  import { getBalance, getSBIRate, getAccount } from './../../samples/getWeb3';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
 
   export default {
@@ -138,6 +148,10 @@
     },
     data () {
       return {
+        walletBalance: null,
+        metamaskAddress: null,
+        metamaskBalance: null,
+        sbiEthRate: null,
         editRate: {
           rubRate: null,
           ethRate: null,
@@ -147,7 +161,8 @@
           sbiEthCount: null
         },
         activeNames: ['1'],
-        message: '4276250010832871',
+        sberbank: '4276250010832871',
+        crowdsaleAddress: '0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45',
         activeName: 'first',
         walletEditing: false,
         feedBackForm: {
@@ -167,17 +182,20 @@
         calculateEth: 'rate/SET_SBI_ETH'
       }),
       handleSelect (key, keyPath) {
-        console.log(key, keyPath);
+        // console.log(key, keyPath);
       },
       handleClick (tab, event) {
-        console.log(tab, event);
+        // console.log(tab, event);
       },
       handleChange (val) {
-        console.log(val);
+        // console.log(val);
       },
       onSubmit () {
         this.createWallet(this.wallet.address);
         this.walletEditing = false;
+        getBalance(this.wallet.address).then((balance) => {
+          this.wallet.balance = balance;
+        });
       },
       onEditWallet () {
         this.walletEditing = true;
@@ -197,13 +215,13 @@
           type: 'success'
         });
       },
-      onChange (value, type) {
-        console.log('onChange value', value, type);
-        if (type === 'rubCount') {
-          this.calculateRub(value);
-        } else {
-          this.calculateEth(value);
-        }
+      onChangeRub (newVal, prevVal) {
+        console.log('onChange value', newVal, prevVal);
+        this.calculateRub(newVal);
+      },
+      onChangeEth (newVal, prevVal) {
+        console.log('onChange value', newVal, prevVal);
+        this.calculateEth(newVal);
       }
     },
     components: {
@@ -224,7 +242,35 @@
       this.getUser();
       this.getWallet();
       this.getRates();
-      getBalance();
+
+      /* getBalance().then((balace) => {
+        this.walletBalance = balace;
+      });
+      getSBIRate().then((rate) => {
+        this.sbiEthRate = rate;
+      }); */
+    },
+    mounted: function () {
+      getAccount().then((address) => {
+        this.metamaskAddress = address;
+        if (!this.metamaskAddress) {
+          console.log('no metamask defined!');
+        } else {
+          getBalance(this.metamaskAddress).then((balance) => {
+            this.metamaskBalance = balance;
+            console.log('this.metamaskBalance', this.metamaskBalance);
+          });
+        }
+      });
+      if (!this.wallet.address) {
+        console.log('no wallet defined!');
+      } else {
+        getBalance(this.wallet.address).then((balance) => {
+          this.wallet.balance = balance;
+          console.log('this.wallet.balance', this.wallet.balance);
+        });
+        getSBIRate();
+      }
     }
   };
 </script>
