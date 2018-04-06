@@ -45,7 +45,6 @@
     methods: {
       data () {
         return {
-          activeIndex: '1'
         };
       },
       handleSelect (key, keyPath) {

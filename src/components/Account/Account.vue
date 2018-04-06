@@ -19,7 +19,7 @@
                   <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
                     <div class="grid-content bg-purple">
                       <el-row type="flex" align="middle" class="row-bg rates" justify="end">
-                        <el-col :span="4" class="rate">
+                        <el-col :span="4" class="rate" v-loading="!rate.sbiRate">
                           <div class="rate-sym">SBI / ETH</div>
                           <div class="rate-num">{{ rate.sbiRate }}</div>
                         </el-col>
