@@ -24,28 +24,12 @@ export const getAccount = async () => {
 };
 
 export const getBalance = async (defaultAcc) => {
-  let defaultAccount = await getAccount();
-  if (!defaultAccount) {
-    defaultAccount = defaultAcc;
-    console.log('No web3? You should consider trying MetaMask!');
-    web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
-  }
-  /* if (typeof web3 !== 'undefined' && typeof Web3 !== 'undefined') {
-    // Use Mist/MetaMask's provider
-    console.log('Web3 detected!');
-    web3 = new Web3(web3.currentProvider); // eslint-disable-line no-undef
-    defaultAccount = web3.eth.defaultAccount; // eslint-disable-line no-undef
-  } else {
-    defaultAccount = defaultAcc;
-    console.log('No web3? You should consider trying MetaMask!');
-    web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
-  } */
-  if (!defaultAccount) {
+  if (!defaultAcc) {
     return null;
   }
   const sbiTokenAddress = '0xf47fcf487177a1f39c4c4f26da5cf762d02bf2ca';
   const sbiTokenContract = web3.eth.contract(tokenAbi).at(sbiTokenAddress); // eslint-disable-line no-undef
-  const data = await sbiTokenContract.balanceOf(defaultAccount);
+  const data = await sbiTokenContract.balanceOf(defaultAcc);
   return data['c'][0];
 };
 

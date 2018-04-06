@@ -1,6 +1,7 @@
 import * as cTypes from './mutation-types';
 import * as types from '../mutation-types';
 import account from '../../../api/account';
+import { getBalance } from './../../../samples/getWeb3';
 // import store from '../../index';
 
 const state = {
@@ -10,7 +11,11 @@ const state = {
 
 const mutations = {
   [cTypes.GET_WALLET] (state, data) {
-    state.wallet = data.walletData;
+    state.wallet = {
+      address: data.walletAddress,
+      balance: data.balance / 10000
+    };
+    console.log('data', data, 'state.wallet', state.wallet);
   },
   [cTypes.CREATE_WALLET] (state, data) {
     state.wallet = data;
@@ -31,8 +36,11 @@ const actions = {
     if (!state.id) {
       commit(types.SET_LOADING, true);
       account.getWallet().then((data) => {
-        commit(types.SET_LOADING, false);
-        commit(cTypes.GET_WALLET, data);
+        const walletAddress = data.walletData.address;
+        getBalance(walletAddress).then((balance) => {
+          commit(types.SET_LOADING, false);
+          commit(cTypes.GET_WALLET, { walletAddress, balance });
+        });
       }).catch((errorResponse) => {
         commit(types.SET_LOADING, false);
       });

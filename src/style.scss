@@ -103,3 +103,15 @@ h2 {
 .el-message__content {
   font-size: 20px !important;
 }
+.el-button--success {
+  color: #fff;
+  background-color: #67ae61;
+  border-color: #67ae61
+}
+.el-message--success .el-message__content {
+  color: #67ae61;
+  font-family: OpenSans, "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+.el-tooltip__popper.is-light {
+  font-family: OpenSans, "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}

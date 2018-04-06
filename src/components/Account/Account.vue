@@ -16,14 +16,16 @@
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
                     <div class="text-block">
                       <strong>Адрес контракта для перечисления ETH</strong>
-                      <el-button
-                          class="copy-button"
-                          type="success"
-                          v-clipboard:copy="crowdsaleAddress"
-                          v-clipboard:success="onCopy"
-                          v-clipboard:error="onError">
-                        0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45
-                      </el-button>
+                      <el-tooltip content="Копировать" placement="top" effect="light">
+                        <el-button
+                            class="copy-button"
+                            type="success"
+                            v-clipboard:copy="crowdsaleAddress"
+                            v-clipboard:success="onCopy"
+                            v-clipboard:error="onError">
+                          0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45
+                        </el-button>
+                      </el-tooltip>
                     </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
                       <el-form-item v-bind:label="$t('account.text.3')">
@@ -70,10 +72,11 @@
                         </el-tooltip>
 
                       </el-form-item>
-
+                    </el-form>
+                    <el-form ref="form" :inline="true" label-position="left" class="metaForm" :model="wallet">
                       <el-form-item v-if="!wallet.address || walletEditing">
                         <el-tooltip content="Сохранить" placement="right" effect="light">
-                          <el-button :disabled="!(wallet.address)" type="success" icon="el-icon-check" circle @click="onSubmit"></el-button>
+                          <el-button type="success" icon="el-icon-check" circle @click="onSubmit"></el-button>
                         </el-tooltip>
                       </el-form-item>
 
@@ -103,24 +106,28 @@
                   <el-tab-pane v-bind:label="$t('account.text.7')">
                     <div class="text-block">
                       <strong>Номер карты сбербанка для перечислений</strong>
-                      <el-button
-                          class="copy-button"
-                          type="success"
-                          v-clipboard:copy="sberbank"
-                          v-clipboard:success="onCopy"
-                          v-clipboard:error="onError">
-                        4276 2500 1083 2871
-                      </el-button>
-                      <p>Получатель <strong>Константин Евненьевич П.</strong></p>
-                      <p>В комментарии укажите
+                      <el-tooltip content="Копировать" placement="top" effect="light">
                         <el-button
                             class="copy-button"
                             type="success"
-                            v-clipboard:copy="user.id"
+                            v-clipboard:copy="sberbank"
                             v-clipboard:success="onCopy"
                             v-clipboard:error="onError">
-                          {{ user.id }}
+                          4276 2500 1083 2871
                         </el-button>
+                      </el-tooltip>
+                      <p>Получатель <strong>Константин Евненьевич П.</strong></p>
+                      <p>В комментарии укажите
+                        <el-tooltip content="Копировать" placement="top" effect="light">
+                          <el-button
+                              class="copy-button"
+                              type="success"
+                              v-clipboard:copy="user.id"
+                              v-clipboard:success="onCopy"
+                              v-clipboard:error="onError">
+                            {{ user.id }}
+                          </el-button>
+                        </el-tooltip>
                       </p>
                       <p>Я свяжусь с Вами, создам вам кошелек и перечислю на него SBI.</p>
                     </div>
@@ -195,6 +202,7 @@
         this.walletEditing = false;
         getBalance(this.wallet.address).then((balance) => {
           this.wallet.balance = balance;
+          console.log('this.wallet.balanc', this.wallet.balance);
         });
       },
       onEditWallet () {
@@ -262,7 +270,7 @@
           });
         }
       });
-      if (!this.wallet.address) {
+      /* if (!this.wallet.address) {
         console.log('no wallet defined!');
       } else {
         getBalance(this.wallet.address).then((balance) => {
@@ -270,7 +278,7 @@
           console.log('this.wallet.balance', this.wallet.balance);
         });
         getSBIRate();
-      }
+      } */
     }
   };
 </script>
