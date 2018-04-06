@@ -90,7 +90,7 @@
 
 <script>
   import moment from 'moment';
-  import { getStarted } from './../../samples/getWeb3';
+  import { getStarted } from './../../samples/web3Lib';
 
   export default {
     name: 'TopHeader',

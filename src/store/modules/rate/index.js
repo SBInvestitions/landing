@@ -1,6 +1,6 @@
 import * as types from './mutation-types';
 import rate from '../../../api/rate';
-import { getSBIRate } from './../../../samples/getWeb3';
+import { getSBIRate } from './../../../samples/web3Lib';
 
 const state = {
   loading: null,

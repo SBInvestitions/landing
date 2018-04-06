@@ -1,7 +1,7 @@
 import * as cTypes from './mutation-types';
 import * as types from './../mutation-types';
 import account from '../../../api/account';
-import { getBalance } from './../../../samples/getWeb3';
+import { getBalance } from './../../../samples/web3Lib';
 
 const state = {
   loading: false,
