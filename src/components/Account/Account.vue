@@ -70,8 +70,23 @@
                     <div class="text-block">
                       <el-collapse v-model="activeNames" @change="handleChange">
                         <el-collapse-item title="Для инвесторов, желающих вложить 2 000 000 рублей и более" name="1">
-                          <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
-                          <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                          <div>Вы, или ваш представитель с гражданством Российской Федерации, можете войти в состав учредителей нашей компании</div>
+                          <div>Свяжитесь с нами по телефонам <strong>+7-921-450-66-73 / (8142) 59-20-33</strong></div>
+                          <div>
+                            <h3>Реквизиты ООО «Инвест-Технологии»</h3>
+                            <p>Общество с ограниченной ответственностью «Инвест-Технологии»</p>
+                            <p>Юридический адрес: 185031 , Республика Карелия, г. Петрозаводск, наб. Варкауса, д.27, корп. 2</p>
+                            <p>Тел/факс: (814 2) 592033</p>
+                            <p>e-mail: invtec@mail.ru</p>
+                            <p>ОКПО 81898419</p>
+                            <p>ОГРН 1071001012917</p>
+                            <p>ИНН/КПП 1001195450/100101001</p>
+                            <p>ОКВЭД 71.12.3, 43.12.4, 43.13, 71.12.4, 71.12.45</p>
+                            <p>р/сч. № 40702-810-4-0300-0-007161 в Филиале  «Северная столица» АО «Райффайзенбанк»  г. Санкт-Петербург</p>
+                            <p>БИК  044030723</p>
+                            <p>к/с 30101810100000000723</p>
+                            <p>Директор Белоногов Александр Юрьевич (действует на основании Устава)</p>
+                          </div>
                         </el-collapse-item>
                       </el-collapse>
                     </div>
@@ -189,7 +204,7 @@
           sbiRubCount: null,
           sbiEthCount: null
         },
-        activeNames: ['1'],
+        activeNames: ['0'],
         sberbank: '4276250010832871',
         crowdsaleAddress: '0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45',
         activeName: 'first',
