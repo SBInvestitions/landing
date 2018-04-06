@@ -36,7 +36,6 @@ const mutations = {
   [types.SET_SBI_ETH] (state, value) {
     const rate = getters.rate(state);
     const ethCount = value * Number(rate.rubRate) * Number(rate.ethRate);
-    console.log('ethCount', ethCount);
     state.rate = { ...state.rate, sbiEthCount: ethCount };
   }
 };
