@@ -1,17 +1,6 @@
 import tokenAbi from './tokenAbi.json';
 import crowdsaleAbi from './crawdsaleAbi.json';
-/* window.addEventListener('load', function () {
-  if (typeof web3 !== 'undefined') {
-    // Use Mist/MetaMask's provider
-    console.log('Web3 detected!');
-    web3 = new Web3(web3.currentProvider); // eslint-disable-line no-undef
-  } else {
-    console.log('No web3? You should consider trying MetaMask!');
-    web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
-  }
-  // const defaultAcc = web3.eth.defaultAccount; // eslint-disable-line no-undef
-  // getBalance(defaultAcc);
-}); */
+
 export const getAccount = async () => {
   if (typeof web3 !== 'undefined' && typeof Web3 !== 'undefined') {
     // Use Mist/MetaMask's provider
@@ -42,7 +31,7 @@ export const getSBIRate = async () => {
   const sbiCrowdsaleAddress = '0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45';
   const sbiCrowdsaleContract = web3.eth.contract(crowdsaleAbi).at(sbiCrowdsaleAddress); // eslint-disable-line no-undef
   const data = await sbiCrowdsaleContract.tokensPerEth.call();
-  return data;
+  return data['c'][0];
 };
 
 export const getStarted = async () => {

@@ -5,11 +5,33 @@
        <account-menu />
       </el-header>
       <el-main class="main-block">
-        <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
+        <el-row type="flex" align="middle" class="row-bg" justify="center">
           <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
             <div class="grid-content bg-purple">
               <el-card class="box-card block-card">
-                <h1>{{ $t("account.text.1") }} {{user.firstName}} {{user.lastName}}</h1>
+
+                <el-row type="flex" align="middle" class="row-bg" justify="center">
+                  <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+                    <div class="grid-content bg-purple">
+                      <h1>{{ $t("account.text.1") }} {{user.firstName}} {{user.lastName}}</h1>
+                    </div>
+                  </el-col>
+                  <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+                    <div class="grid-content bg-purple">
+                      <el-row type="flex" align="middle" class="row-bg rates" justify="end">
+                        <el-col :span="4" class="rate">
+                          <div class="rate-sym">SBI / ETH</div>
+                          <div class="rate-num">{{ rate.sbiRate }}</div>
+                        </el-col>
+                        <el-col :span="4" class="rate">
+                          <div class="rate-sym">SBI / RUB</div>
+                          <div class="rate-num">1</div>
+                        </el-col>
+                      </el-row>
+                    </div>
+                  </el-col>
+                </el-row>
+
                 <el-tabs type="card" @tab-click="handleClick">
 
                   <!--Предварительная оценка-->
@@ -63,11 +85,11 @@
                         <el-input v-if="!wallet.address || walletEditing" v-model="wallet.address"></el-input>
                         <span v-if="wallet.address && !walletEditing" class="address">{{wallet.address}}</span>
 
-                        <el-tooltip v-if="wallet.address && !walletEditing" content="Редактировать" placement="right" effect="light">
+                        <el-tooltip v-if="wallet.address && !walletEditing" content="Редактировать" placement="top" effect="light">
                           <el-button size="mini" type="primary" icon="el-icon-edit" circle @click="onEditWallet"></el-button>
                         </el-tooltip>
 
-                        <el-tooltip v-if="wallet.address && !walletEditing" content="Удалить" placement="right" effect="light">
+                        <el-tooltip v-if="wallet.address && !walletEditing" content="Удалить" placement="top" effect="light">
                           <el-button size="mini" type="danger" icon="el-icon-delete" circle @click="onRemoveWallet"></el-button>
                         </el-tooltip>
 
@@ -81,7 +103,7 @@
                       </el-form-item>
 
                       <el-form-item v-if="wallet.address" v-bind:label="$t('account.text.10')">
-                        <el-tag type="info">{{ wallet.balance }}</el-tag>
+                        <el-tag type="info">{{ wallet.balance }} SBI</el-tag>
                       </el-form-item>
                     </el-form>
                   </el-tab-pane>
@@ -145,7 +167,7 @@
 <style lang="scss" src="./style.scss"></style>
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import { getBalance, getSBIRate, getAccount } from './../../samples/getWeb3';
+  import { getBalance, getAccount } from './../../samples/getWeb3';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
 
   export default {
@@ -179,7 +201,6 @@
     },
     methods: {
       ...mapActions({
-        getComputedRate: 'rate/GET_COMPUTED',
         getUser: 'user/LOAD',
         getWallet: 'account/GET_WALLET',
         getRates: 'rate/LOAD',
@@ -214,7 +235,7 @@
       showInput () {
 
       },
-      onError: (e) => {
+      onError: () => {
         alert('Failed to copy texts');
       },
       onCopy () {
@@ -250,15 +271,12 @@
       this.getUser();
       this.getWallet();
       this.getRates();
-
-      /* getBalance().then((balace) => {
-        this.walletBalance = balace;
-      });
-      getSBIRate().then((rate) => {
-        this.sbiEthRate = rate;
-      }); */
     },
     mounted: function () {
+      // calculate started params
+      this.calculateRub(1000);
+      this.calculateEth(1);
+
       getAccount().then((address) => {
         this.metamaskAddress = address;
         if (!this.metamaskAddress) {
@@ -270,15 +288,6 @@
           });
         }
       });
-      /* if (!this.wallet.address) {
-        console.log('no wallet defined!');
-      } else {
-        getBalance(this.wallet.address).then((balance) => {
-          this.wallet.balance = balance;
-          console.log('this.wallet.balance', this.wallet.balance);
-        });
-        getSBIRate();
-      } */
     }
   };
 </script>

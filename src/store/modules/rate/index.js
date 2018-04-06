@@ -1,9 +1,11 @@
 import * as types from './mutation-types';
 import rate from '../../../api/rate';
+import { getSBIRate } from './../../../samples/getWeb3';
 
 const state = {
   loading: null,
   rate: {
+    sbiRate: null,
     rubRate: null,
     ethRate: null,
     rubCount: 1,
@@ -15,8 +17,13 @@ const state = {
 
 const mutations = {
   [types.LOAD] (state, data) {
+    const rate = getters.rate(state);
     state.rate.rubRate = data.rub;
     state.rate.ethRate = data.eth;
+    state.rate.sbiRate = data.rate;
+    state.sbiRubCount = rate.rubCount;
+    state.sbiEthCount = parseInt(rate.ethCount * Number(data.rub) * Number(data.eth));
+    // console.log('state.sbiEthCount', state.sbiEthCount);
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
@@ -35,8 +42,8 @@ const mutations = {
   },
   [types.SET_SBI_ETH] (state, value) {
     const rate = getters.rate(state);
-    const ethCount = value * Number(rate.rubRate) * Number(rate.ethRate);
-    state.rate = { ...state.rate, sbiEthCount: ethCount };
+    rate.sbiEthCount = parseInt(value * Number(rate.rubRate) * Number(rate.ethRate));
+    state.rate = { ...state.rate, sbiEthCount: rate.sbiEthCount };
   }
 };
 
@@ -45,8 +52,10 @@ const actions = {
     if (!state.rub || !state.eth) {
       commit(types.SET_LOADING, true);
       rate.rate().then((data) => {
-        commit(types.SET_LOADING, false);
-        commit(types.LOAD, data);
+        getSBIRate().then((rate) => {
+          commit(types.SET_LOADING, false);
+          commit(types.LOAD, { ...data, rate });
+        });
       }).catch((errorResponse) => {
         commit(types.SET_LOADING, false);
       });
