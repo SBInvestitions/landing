@@ -8,24 +8,24 @@
             {{ $t("account.menu.1") }}
           </router-link>
         </el-menu-item>
-        <el-menu-item index="2">
+        <!-- <el-menu-item index="2">
           <router-link to="/news">
             <i class="el-icon-tickets"></i>
             {{ $t("account.menu.2") }}
           </router-link>
-        </el-menu-item>
+        </el-menu-item> -->
         <el-menu-item index="3">
           <router-link to="/account">
             <i class="el-icon-goods"></i>
             {{ $t("account.menu.3") }}
           </router-link>
         </el-menu-item>
-        <el-menu-item index="4">
+        <!-- <el-menu-item index="4">
           <router-link to="/account">
             <i class="el-icon-service"></i>
             {{ $t("account.menu.4") }}
           </router-link>
-        </el-menu-item>
+        </el-menu-item> -->
         <el-menu-item index="5">
           <router-link to="/logout">
             <i class="el-icon-close"></i>
