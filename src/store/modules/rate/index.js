@@ -49,7 +49,7 @@ const mutations = {
 
 const actions = {
   [types.LOAD] ({ commit, state }) {
-    if (!state.rub || !state.eth) {
+    if (!state.rate.rub || !state.rate.eth) {
       commit(types.SET_LOADING, true);
       rate.rate().then((data) => {
         getSBIRate().then((rate) => {
