@@ -65,7 +65,7 @@
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
                     <el-col :span="24" class="before-ico">
-                      <span class="header">{{ $t("topHeader.text.6") }}</span>
+                      <span class="header">{{ $t("topHeader.text.11") }}</span>
                       <el-row class="h4">
                         <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>

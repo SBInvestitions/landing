@@ -177,7 +177,8 @@ export default {
       7: 'days',
       8: 'hours',
       9: 'minutes',
-      10: 'seconds'
+      10: 'seconds',
+      11: 'BEFORE THE ICO START'
     }
   },
   login: {
