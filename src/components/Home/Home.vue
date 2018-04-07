@@ -4,7 +4,6 @@
       <main-menu v-bind:class="{ 'small': scrolled }" />
       <top-header/>
     </div>
-    <div id="ob">scrollTop:{{position.scrollTop}}</div>
     <div class="main-block">
       <five-stones/>
       <about-company />
@@ -43,7 +42,7 @@
     },
     data () {
       return {
-        position: { scrollTop: 0, scrollLeft: 0 },
+        position: null,
         scrolled: false
       };
     },
