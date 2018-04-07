@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
-import vuescroll from 'vue-scroll';
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
 import VueClipboard from 'vue-clipboard2';
@@ -14,7 +13,6 @@ import messages from './locale/messages';
 
 Vue.use(VueI18n);
 Vue.config.productionTip = false;
-Vue.use(vuescroll, { debounce: 500 });
 Vue.use(ElementUI, { locale });
 Vue.use(VueResource);
 Vue.use(VueI18n);
@@ -24,7 +22,7 @@ base.install(Vue);
 
 let v;
 export const i18n = new VueI18n({
-  locale: 'ru',
+  locale: 'en',
   messages
 });
 

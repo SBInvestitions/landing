@@ -1,8 +1,9 @@
 .account {
   background: url('./../../assets/top-back-jpg.jpg');
   background-size: cover;
+  background-attachment: fixed;
 
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
 
   .text-block {

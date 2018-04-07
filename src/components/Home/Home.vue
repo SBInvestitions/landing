@@ -1,9 +1,10 @@
 <template>
-  <el-container>
-    <div class="header-block">
-      <main-menu />
+  <el-container class="home">
+    <div class="header-block" id="header-block">
+      <main-menu v-bind:class="{ 'small': scrolled }" />
       <top-header/>
     </div>
+    <div id="ob">scrollTop:{{position.scrollTop}}</div>
     <div class="main-block">
       <five-stones/>
       <about-company />
@@ -42,8 +43,26 @@
     },
     data () {
       return {
-
+        position: { scrollTop: 0, scrollLeft: 0 },
+        scrolled: false
       };
+    },
+    mounted: function () {
+      document.addEventListener('scroll', this.onScroll, true);
+    },
+    methods: {
+      onScroll: function (e) {
+        this.position = e;
+        // set menu class
+        const headerBlock = document.getElementById('header-block');
+        const headerOffset = headerBlock.offsetHeight;
+        const scrollTop = window.scrollY;
+        this.scrolled = scrollTop > headerOffset;
+        // console.log('position', this.position, 'scrollTop', scrollTop, 'headerOffset', headerOffset);
+      }
+    },
+    beforeDestroy: function () {
+      document.removeEventListener('scroll', this.onScroll, true);
     },
     components: {
       'main-menu': MainMenu,

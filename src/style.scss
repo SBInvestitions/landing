@@ -55,6 +55,10 @@ h2 {
       font-weight: 400;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
 
+      a:active {
+        border: none;
+      }
+
       a {
         text-decoration: none;
         display: block;

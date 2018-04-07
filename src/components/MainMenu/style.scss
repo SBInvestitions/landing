@@ -1,5 +1,21 @@
 .main-menu {
-
+  transition: all .3s ease;
+  &.small {
+    .menu-row {
+      background: rgba(0, 0, 0, 0.478431);
+      .el-menu-item {
+        color: white;
+        &:hover, &:active {
+          color: black;
+        }
+      }
+    }
+    .el-menu--horizontal>.el-menu-item {
+      height: 32px;
+      line-height: 32px;
+      transition: all .3s ease;
+    }
+  }
 }
 
 .el-menu--collapse {

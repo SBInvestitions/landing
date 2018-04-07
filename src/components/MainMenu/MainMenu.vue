@@ -2,43 +2,43 @@
   <div id="main-menu" class="main-menu">
     <el-row type="flex" class="row-bg menu-row" justify="center">
       <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="2">
-          <a href="/#about-company">
+        <el-menu-item index="1">
+          <a tabindex="1">
             <i class="el-icon-sb-invest hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.about") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="3">
-          <a href="/#conditions">
+        <el-menu-item index="2">
+          <a tabindex="2">
             <i class="el-icon-tickets hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.daico") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="4">
-          <a href="/#road-map" v-scroll="onScroll" >
+        <el-menu-item index="3">
+          <a tabindex="3">
             <i class="el-icon-date hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.chronology") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="5">
-          <a href="/#team">
+        <el-menu-item index="4">
+          <a tabindex="4">
             <i class="el-icon-service hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.team") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="6">
-          <a href="/#bounty">
+        <el-menu-item index="5">
+          <a tabindex="5">
             <i class="el-icon-goods hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <!--<el-menu-item index="7">
-          <a href="#clients">
+        <!--<el-menu-item index="6">
+          <a tabindex="6">
             <i class="el-icon-news hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.clients") }}</span>
           </a>
         </el-menu-item>-->
-        <el-menu-item index="8">
+        <el-menu-item index="7">
           <router-link to="/news">
             <i class="el-icon-news hidden-lg-and-up"></i>
             <span class="hidden-md-and-down">{{ $t("home.menu.news") }}</span>
@@ -46,7 +46,7 @@
         </el-menu-item>
         <!-- this.$i18n.locale -->
         <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
-        <el-menu-item index="9">
+        <el-menu-item index="8">
           <a target="_blank" href="./../../assets/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <i class="el-icon-document hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
@@ -56,7 +56,7 @@
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="10">
+        <el-menu-item index="9">
           <a href="/login" v-if="!user.id">
             <i class="el-icon-upload2 hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
@@ -82,20 +82,49 @@
       return {
         isCollapse: false,
         activeIndex: '1',
-        activeIndex2: '1',
-        position: {scrollTop: 0, scrollLeft: 0}
+        activeIndex2: '1'
       };
     },
     methods: {
       ...mapActions({
         getUser: 'user/LOAD'
       }),
+      scrollTo (position) {
+        window.scroll({
+          top: position,
+          left: 0,
+          behavior: 'smooth'
+        });
+      },
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
-      },
-      onScroll: function (e, position) {
-        console.log('position = ', position);
-        this.position = position;
+        let block = null;
+        let offset = null;
+        switch (key) {
+          case '1':
+            block = document.getElementById('about-company');
+            offset = block.offsetTop;
+            break;
+          case '2':
+            block = document.getElementById('conditions');
+            offset = block.offsetTop;
+            break;
+          case '3':
+            block = document.getElementById('road-map');
+            offset = block.offsetTop;
+            break;
+          case '4':
+            block = document.getElementById('team');
+            offset = block.offsetTop;
+            break;
+          case '5':
+            block = document.getElementById('bounty');
+            offset = block.offsetTop;
+            break;
+          default:
+            break;
+        }
+        this.scrollTo(offset);
       }
     },
     computed: {

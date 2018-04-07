@@ -1,51 +1,56 @@
-.header-block {
-  background: url('./../../assets/top-back-jpg.jpg');
-  background-size: cover;
-  // height: 1080px;
-  padding: 0;
-}
-.main-block {
+.home {
+  position: relative;
 
-  .about-company {
-    margin-top: 50px;
-    text-align: center;
+  .header-block {
+    background: url('./../../assets/top-back-jpg.jpg');
+    background-size: cover;
+    // height: 1080px;
+    padding: 0;
 
-    .granit {
-      .granit-image {
-        // max-height: 450px;
-        width: 100%;
+  }
+  .main-block {
+
+    .about-company {
+      margin-top: 50px;
+      text-align: center;
+
+      .granit {
+        .granit-image {
+          // max-height: 450px;
+          width: 100%;
+        }
+      }
+      .granit-samples {
+        background: url('./../../assets/long-place-block.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 55px;
+        padding-bottom: 55px;
       }
     }
-    .granit-samples {
-      background: url('./../../assets/long-place-block.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      padding-top: 55px;
-      padding-bottom: 55px;
+  }
+
+  .el-footer {
+    height: auto !important;
+    min-height: 760px !important;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    background: url('./../../assets/footer.png');
+    background-size: cover;
+    background-position: top center;
+  }
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
+
+  @media (max-width: 500px) {
+    .header-block {
+      // height: 510px;
     }
-  }
-}
-
-.el-footer {
-  height: auto !important;
-  min-height: 760px !important;
-  padding-top: 150px;
-  padding-bottom: 200px;
-  background: url('./../../assets/footer.png');
-  background-size: cover;
-  background-position: top center;
-}
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 400px;
-}
-
-@media (max-width: 500px) {
-  .header-block {
-    // height: 510px;
-  }
-  i {
-    font-size: 12px !important;
+    i {
+      font-size: 12px !important;
+    }
   }
 }

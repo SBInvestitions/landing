@@ -37,8 +37,8 @@
                   <!--Предварительная оценка-->
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
                     <div class="text-block">
-                      <strong>Адрес контракта для перечисления ETH</strong>
-                      <el-tooltip content="Копировать" placement="top" effect="light">
+                      <strong>{{ $t("account.text.14") }}</strong>
+                      <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
                             class="copy-button"
                             type="success"
@@ -69,23 +69,23 @@
 
                     <div class="text-block">
                       <el-collapse v-model="activeNames" @change="handleChange">
-                        <el-collapse-item title="Для инвесторов, желающих вложить 2 000 000 рублей и более" name="1">
-                          <div>Вы, или ваш представитель с гражданством Российской Федерации, можете войти в состав учредителей нашей компании</div>
-                          <div>Свяжитесь с нами по телефонам <strong>+7-921-450-66-73 / (8142) 59-20-33</strong></div>
+                        <el-collapse-item v-bind:title="$t('account.text.16')" name="1">
+                          <div>{{ $t('account.text.17') }}</div>
+                          <div>{{ $t('account.text.18') }}<strong>+7-921-450-66-73 / (8142) 59-20-33</strong></div>
                           <div>
-                            <h3>Реквизиты ООО «Инвест-Технологии»</h3>
-                            <p>Общество с ограниченной ответственностью «Инвест-Технологии»</p>
-                            <p>Юридический адрес: 185031 , Республика Карелия, г. Петрозаводск, наб. Варкауса, д.27, корп. 2</p>
-                            <p>Тел/факс: (814 2) 592033</p>
-                            <p>e-mail: invtec@mail.ru</p>
-                            <p>ОКПО 81898419</p>
-                            <p>ОГРН 1071001012917</p>
-                            <p>ИНН/КПП 1001195450/100101001</p>
-                            <p>ОКВЭД 71.12.3, 43.12.4, 43.13, 71.12.4, 71.12.45</p>
-                            <p>р/сч. № 40702-810-4-0300-0-007161 в Филиале  «Северная столица» АО «Райффайзенбанк»  г. Санкт-Петербург</p>
-                            <p>БИК  044030723</p>
-                            <p>к/с 30101810100000000723</p>
-                            <p>Директор Белоногов Александр Юрьевич (действует на основании Устава)</p>
+                            <h3>{{ $t('account.text.19') }}</h3>
+                            <p>{{ $t('account.text.20') }}</p>
+                            <p>{{ $t('account.text.21') }}</p>
+                            <p>{{ $t('account.text.22') }} (814 2) 592033</p>
+                            <p>e-mail: invest@sbinvest.pro</p>
+                            <p>{{ $t('account.text.23') }} 81898419</p>
+                            <p>{{ $t('account.text.24') }} 1071001012917</p>
+                            <p>{{ $t('account.text.25') }} 1001195450/100101001</p>
+                            <p>{{ $t('account.text.26') }} 71.12.3, 43.12.4, 43.13, 71.12.4, 71.12.45</p>
+                            <p>{{ $t('account.text.27') }}</p>
+                            <p>{{ $t('account.text.28') }} 044030723</p>
+                            <p>{{ $t('account.text.29') }} 30101810100000000723</p>
+                            <p>{{ $t('account.text.30') }}</p>
                           </div>
                         </el-collapse-item>
                       </el-collapse>
@@ -100,11 +100,11 @@
                         <el-input v-if="!wallet.address || walletEditing" v-model="wallet.address"></el-input>
                         <span v-if="wallet.address && !walletEditing" class="address">{{wallet.address}}</span>
 
-                        <el-tooltip v-if="wallet.address && !walletEditing" content="Редактировать" placement="top" effect="light">
+                        <el-tooltip v-if="wallet.address && !walletEditing" content="$t('account.text.36')" placement="top" effect="light">
                           <el-button size="mini" type="primary" icon="el-icon-edit" circle @click="onEditWallet"></el-button>
                         </el-tooltip>
 
-                        <el-tooltip v-if="wallet.address && !walletEditing" content="Удалить" placement="top" effect="light">
+                        <el-tooltip v-if="wallet.address && !walletEditing" content="$t('account.text.37')" placement="top" effect="light">
                           <el-button size="mini" type="danger" icon="el-icon-delete" circle @click="onRemoveWallet"></el-button>
                         </el-tooltip>
 
@@ -142,7 +142,7 @@
                   <!--Иное-->
                   <el-tab-pane v-bind:label="$t('account.text.7')">
                     <div class="text-block">
-                      <strong>Номер карты сбербанка для перечислений</strong>
+                      <strong>{{ $t('account.text.31') }}</strong>
                       <el-tooltip content="Копировать" placement="top" effect="light">
                         <el-button
                             class="copy-button"
@@ -153,8 +153,8 @@
                           4276 2500 1083 2871
                         </el-button>
                       </el-tooltip>
-                      <p>Получатель <strong>Константин Евненьевич П.</strong></p>
-                      <p>В комментарии укажите
+                      <p>{{ $t('account.text.32') }} <strong>{{ $t('account.text.33') }}</strong></p>
+                      <p>{{ $t('account.text.34') }}
                         <el-tooltip content="Копировать" placement="top" effect="light">
                           <el-button
                               class="copy-button"
@@ -166,7 +166,7 @@
                           </el-button>
                         </el-tooltip>
                       </p>
-                      <p>Я свяжусь с Вами, создам вам кошелек и перечислю на него SBI.</p>
+                      <p>{{ $t('account.text.35') }}</p>
                     </div>
                   </el-tab-pane>
                 </el-tabs>
