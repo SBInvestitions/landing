@@ -47,11 +47,11 @@
         <!-- this.$i18n.locale -->
         <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
         <el-menu-item index="8">
-          <a target="_blank" href="./../../assets/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
+          <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <i class="el-icon-document hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
           </a>
-          <a target="_blank" href="./../../assets/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
+          <a target="_blank"  href="https://sbinvest.pro/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
             <i class="el-icon-document hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
           </a>
@@ -76,6 +76,7 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex';
+
   export default {
     name: 'MainMenu',
     data () {

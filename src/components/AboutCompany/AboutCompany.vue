@@ -105,7 +105,9 @@
                     {{ $t("aboutCompany.using.15") }}
                   </p>
                   <p>
-                    {{ $t("aboutCompany.using.16") }} <a href="https://sbinvest.pro/docs/white-paper.ru.pdf">{{ $t("aboutCompany.using.17") }}</a>.
+                    {{ $t("aboutCompany.using.16") }}
+                    <a target="_blank" v-if="this.$i18n.locale === 'ru'" href="https://sbinvest.pro/documents/wp-ru.pdf">{{ $t("aboutCompany.using.17") }}</a>
+                    <a target="_blank" v-if="this.$i18n.locale !== 'ru'" href="https://sbinvest.pro/documents/wp-en.pdf">{{ $t("aboutCompany.using.17") }}</a>.
                   </p>
                 </div>
 

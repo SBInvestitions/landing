@@ -53,10 +53,10 @@
       onScroll: function (e) {
         this.position = e;
         // set menu class
-        const headerBlock = document.getElementById('header-block');
-        const headerOffset = headerBlock.offsetHeight;
+        // const headerBlock = document.getElementById('header-block');
+        // const headerOffset = headerBlock.offsetHeight;
         const scrollTop = window.scrollY;
-        this.scrolled = scrollTop > headerOffset;
+        this.scrolled = scrollTop > 40;
         // console.log('position', this.position, 'scrollTop', scrollTop, 'headerOffset', headerOffset);
       }
     },
