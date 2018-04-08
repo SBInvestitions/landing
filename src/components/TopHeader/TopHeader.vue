@@ -67,13 +67,14 @@
                     <el-col :span="24" class="before-ico">
                       <span class="header">{{ $t("topHeader.text.11") }}</span>
                       <el-row class="h4">
-                        <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        {{ $t("topHeader.text.12") }}
+                        <!-- <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
                         <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
                         <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col> -->
                       </el-row>
                     </el-col>
                   </el-row>

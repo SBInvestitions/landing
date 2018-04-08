@@ -24,7 +24,7 @@ export default {
       5: 'With the help of the blockchain, we want to enable small and medium-sized investors to participate in the process of using the people`s wealth and get a profit from it.',
       6: '2. By attracting a wide range of possible investors and facilitating communication between the participants in the process, automation of allocation of investments and profits, we want to increase the efficiency and reduce the time of search and collection of investments for our project, then applying the model for any subsoil use project in Russia.',
       7: '3. In the life cycle of the field there are multiple changes of owners. We want to create an information and document base on the deposits of this and the following projects in the detachment, which in future will make it easier for potential buyers to make the right decisions on buying and selling, transferring rights, pledge and other activities related to the project`s fields.',
-      8: 'The use of blocking will make it possible to work more efficiently in the market, ensuring a qualitative and quantitative breakthrough in the entire sphere of subsoil use in Russia.'
+      8: 'The using of blockchain technology will make it possible to work more efficiently in the market, ensuring a qualitative and quantitative breakthrough in the entire sphere of subsoil use in Russia.'
     },
     using: {
       1: 'About Project',
@@ -178,7 +178,8 @@ export default {
       8: 'hours',
       9: 'minutes',
       10: 'seconds',
-      11: 'BEFORE THE ICO START'
+      11: 'BEFORE THE ICO START',
+      12: 'SOON WILL BE KNOWN'
     }
   },
   login: {
@@ -186,7 +187,7 @@ export default {
       1: 'Account',
       2: 'Login',
       3: 'Password',
-      4: 'Enter',
+      4: 'Log-in',
       5: 'Create Account'
     }
   },
