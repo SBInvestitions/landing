@@ -2,6 +2,7 @@ import Vue from 'vue';
 import router from './../router';
 import store from './../store';
 import { API_PATH } from './../config';
+import { i18n } from './../main';
 
 /**
  * @var{string} LOGIN_URL The endpoint for logging in. This endpoint should be proxied by Webpack dev server
@@ -9,6 +10,8 @@ import { API_PATH } from './../config';
  */
 const LOGIN_URL = API_PATH + '/v1/login';
 const REGISTER_URL = API_PATH + '/v1/register';
+const RESTORE_URL = API_PATH + '/v1/restore';
+const CONFIRM_URL = API_PATH + '/v1/confirm';
 
 /**
  * @var{string} REFRESH_TOKEN_URL The endpoint for refreshing an access_token. This endpoint should be proxied
@@ -63,8 +66,9 @@ export default {
         return response;
       })
       .catch((errorResponse) => {
+        const title = i18n.locale === 'en' ? 'Log in' : 'Авторизация';
         store.dispatch('user/SET_LOADING', false);
-        store.dispatch('errors/add', { title: 'Log in', msg: errorResponse.body.message });
+        store.dispatch('errors/add', { title: title, msg: errorResponse.body.message });
         return errorResponse;
       });
   },
@@ -88,8 +92,57 @@ export default {
         return response;
       })
       .catch((errorResponse) => {
+        const title = i18n.locale === 'en' ? 'User not created' : 'Пользователь не создан';
         store.dispatch('user/SET_LOADING', false);
-        store.dispatch('errors/add', { title: 'User not created', msg: errorResponse.body.message });
+        store.dispatch('errors/add', { title: title, msg: errorResponse.body.message });
+        return errorResponse;
+      });
+  },
+
+  /**
+   * Confirm registration
+   *
+   * @param {Object.<string>} emailToRestore The email to restore.
+   * @return {Promise}
+   */
+
+  confirm (confirmationString) {
+    const params = {'confirmationString': confirmationString};
+    store.dispatch('user/SET_LOADING', true);
+    return Vue.http.post(CONFIRM_URL, params, AUTH_BASIC_HEADERS)
+      .then((response) => {
+        router.push({name: '/account'});
+        store.dispatch('user/SET_LOADING', false);
+        return response;
+      })
+      .catch((errorResponse) => {
+        const title = i18n.locale === 'en' ? 'Confirmation registration' : 'Подтверждение регистрации';
+        store.dispatch('user/SET_LOADING', false);
+        store.dispatch('errors/add', {title: title, msg: errorResponse.body.message});
+        return errorResponse;
+      });
+  },
+
+  /**
+   * Restore
+   *
+   * @param {Object.<string>} emailToRestore The email to restore.
+   * @return {Promise}
+   */
+
+  restore (emailToRestore) {
+    const params = {'email': emailToRestore};
+    store.dispatch('user/SET_LOADING', true);
+    return Vue.http.post(RESTORE_URL, params, AUTH_BASIC_HEADERS)
+      .then((response) => {
+        router.push({name: '/'});
+        store.dispatch('user/SET_LOADING', false);
+        return response;
+      })
+      .catch((errorResponse) => {
+        const title = i18n.locale === 'en' ? 'We sent restore link to your email address' : 'На указанную вами почту отправлена ссылка для восстановления пароля';
+        store.dispatch('user/SET_LOADING', false);
+        store.dispatch('errors/add', {title: title, msg: errorResponse.body.message});
         return errorResponse;
       });
   },

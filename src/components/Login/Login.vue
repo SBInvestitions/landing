@@ -5,7 +5,7 @@
         <div class="grid-content bg-purple">
           <el-card class="box-card">
             <h3 class="header">{{ $t("login.text.1") }}</h3>
-            <el-form v-loading="loading" label-width="170px" class="login" @keyup.enter.native="submit" :label-position="labelPosition">
+            <el-form v-if="!forgotPassword" v-loading="loading" label-width="170px" class="login" @keyup.enter.native="submit" :label-position="labelPosition">
               <el-form-item v-bind:label="$t('login.text.2')">
                 <el-input type="text" v-model="credentials.email"></el-input>
               </el-form-item>
@@ -17,6 +17,18 @@
               </el-form-item>
               <el-form-item class="bottom-line">
                 <el-button class="sbi-button-link" type="text" @click="onRegister">{{ $t("login.text.5") }}</el-button>
+              </el-form-item>
+              <el-form-item class="bottom-line">
+                <el-button class="sbi-button-link" type="text" @click="onForgotPassword">Забыли пароль?</el-button>
+              </el-form-item>
+            </el-form>
+
+            <el-form v-if="forgotPassword" v-loading="loading" label-width="170px" class="login" @keyup.enter.native="restore" :label-position="labelPosition">
+              <el-form-item label="Введите email">
+                <el-input type="text" v-model="emailRestore"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <el-button class="button sbi-button" type="primary" @click="restore()">Восстановить</el-button>
               </el-form-item>
             </el-form>
           </el-card>
@@ -36,11 +48,13 @@
     name: 'Login',
     data () {
       return {
+        forgotPassword: false,
         labelPosition: 'top',
         credentials: {
           email: '',
           password: ''
         },
+        emailRestore: '',
         loggingIn: false,
         error: ''
       };
@@ -67,6 +81,16 @@
 
       onRegister () {
         this.$router.push({ path: 'register' });
+      },
+
+      onForgotPassword () {
+        this.forgotPassword = true;
+      },
+
+      restore () {
+        auth.restore(this.emailRestore, 'account').then(() => {
+          this.loggingIn = false;
+        });
       }
     }
   };

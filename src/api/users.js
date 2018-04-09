@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import store from './../store';
 import { API_PATH } from './../config';
-import router from '../router'
+import router from '../router';
 
 const USER_URL = API_PATH + '/v1/user';
 
