@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import store from './../store';
+import router from '../router';
 
 /**
  * @var{string} REFRESH_TOKEN_URL The endpoint for refreshing an access_token. This endpoint should be proxied
@@ -54,8 +55,12 @@ export default {
       }
 
       next((response) => {
-        if (this._isInvalidToken(response)) {
-          return this._refreshToken(request);
+        if (response.status >= 400 && response.status < 500) {
+          const path = router.app._route.path;
+          store.dispatch('CLEAR_ALL_DATA');
+          if (path !== '/') {
+            router.push({ name: 'login' });
+          }
         }
       });
     });
