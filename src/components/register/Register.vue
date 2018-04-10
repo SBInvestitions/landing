@@ -1,5 +1,5 @@
 <template>
-  <div id="login" class="register">
+  <div id="register" class="register">
     <el-row type="flex" class="row-bg register-container" justify="center">
       <el-col :xs="24" :sm="20" :md="12" :lg="8" :xl="6">
         <div class="grid-content bg-purple">

@@ -1,0 +1,16 @@
+.confirm {
+  min-height: 100vh;
+  background: #81b8e2; /* Old browsers */
+  background: -moz-linear-gradient(top, #81b8e2 0%, #c5e19d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #81b8e2 0%,#c5e19d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #81b8e2 0%,#c5e19d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81b8e2', endColorstr='#c5e19d',GradientType=0 ); /* IE6-9 */
+
+  .box-card {
+    margin-top: 100px;
+
+    .confirm-container {
+      text-align: center;
+    }
+  }
+}

@@ -21,6 +21,13 @@ const router = new Router({
       }
     },
     {
+      path: '/confirm',
+      name: 'confirm',
+      component: function (resolve) {
+        require(['@/components/confirm/Confirm.vue'], resolve);
+      }
+    },
+    {
       path: '/',
       name: 'home',
       component: function (resolve) {

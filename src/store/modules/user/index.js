@@ -7,7 +7,8 @@ const state = {
   email: null,
   firstName: null,
   lastName: null,
-  role: null
+  role: null,
+  confirmation: null
 };
 
 const mutations = {
@@ -21,6 +22,12 @@ const mutations = {
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
+  },
+  [types.SET_LOADING] (state, loading) {
+    state.loading = loading;
+  },
+  [types.CONFIRMED] (state, status) {
+    state.confirmation = status;
   },
   [types.CLEAR_ALL_DATA] (state) {
     state.id = null;
@@ -46,12 +53,24 @@ const actions = {
   },
   [types.SET_LOADING] ({ commit }, loading) {
     commit(types.SET_LOADING, loading);
+  },
+  [types.CONFIRM] ({ commit }, token) {
+    commit(types.SET_LOADING, true);
+    const user = getters.user(state);
+    console.log('token', token, 'user', user);
+    users.confirm(token, user.email).then(() => {
+      commit(types.SET_LOADING, false);
+      commit(types.CONFIRMED, 'success');
+    }).catch(() => {
+      commit(types.SET_LOADING, false);
+      commit(types.CONFIRMED, 'error');
+    });
   }
 };
 
 const getters = {
   user: state => {
-    return { firstName: state.firstName, lastName: state.lastName, id: state.id };
+    return { firstName: state.firstName, lastName: state.lastName, id: state.id, email: state.email };
   },
   role: state => state.role,
   loading: state => state.loading
