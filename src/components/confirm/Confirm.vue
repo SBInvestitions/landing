@@ -12,10 +12,10 @@
             </el-col>
           </el-row>
           <el-row type="flex" class="row-bg confirm-container" justify="center">
-            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" v-loading={loading}>
+            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" v-loading="loading">
               <h2>Подтверждение регистрации</h2>
-              <p v-if="user.confirmation === 'success'">Регистрация успешно подтверждена. Теперь вы можете <a href="/login">войти</a></p>
-              <p v-if="user.confirmation === 'error'">Проблемы с подтверждением регистрации</p>
+              <p v-if="confirmation === 'success'">Регистрация успешно подтверждена. Теперь вы можете <a href="/login">войти</a></p>
+              <p v-if="confirmation === 'error'">Проблемы с подтверждением регистрации</p>
             </el-col>
           </el-row>
         </el-card>
@@ -39,7 +39,8 @@
     computed: {
       ...mapGetters({
         loading: ['user/loading'],
-        user: 'user/user'
+        user: 'user/user',
+        confirmation: 'user/confirmation'
       })
     },
     methods: {
@@ -48,7 +49,9 @@
       })
     },
     created: function () {
-      this.confirmAccount();
+      const url = new URL(window.location.href);
+      const key = url.searchParams.get('key');
+      this.confirmAccount(key);
     }
   };
 </script>

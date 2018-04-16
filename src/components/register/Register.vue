@@ -74,20 +74,21 @@
     name: 'Register',
     data () {
       const validatePass = (rule, value, callback) => {
+        console.log('t', this.$t('register.text.11'));
         if (value === '') {
-          callback(new Error(this.$t('register.text.9')));
+          callback(new Error('Please input the password'));
         } else {
           if (this.credentials.checkPass !== '') {
-            this.$refs.credentials.validateField(this.$t('register.text.10'));
+            this.$refs.credentials.validateField('checkPass');
           }
           callback();
         }
       };
       const validatePass2 = (rule, value, callback) => {
         if (value === '') {
-          callback(new Error(this.$t('register.text.11')));
+          callback(new Error('Please input the password again'));
         } else if (value !== this.credentials.pass) {
-          callback(new Error(this.$t('register.text.12')));
+          callback(new Error('Two inputs don\'t match!'));
         } else {
           callback();
         }

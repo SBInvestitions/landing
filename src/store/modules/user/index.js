@@ -56,9 +56,7 @@ const actions = {
   },
   [types.CONFIRM] ({ commit }, token) {
     commit(types.SET_LOADING, true);
-    const user = getters.user(state);
-    console.log('token', token, 'user', user);
-    users.confirm(token, user.email).then(() => {
+    users.confirm(token).then(() => {
       commit(types.SET_LOADING, false);
       commit(types.CONFIRMED, 'success');
     }).catch(() => {
@@ -72,6 +70,7 @@ const getters = {
   user: state => {
     return { firstName: state.firstName, lastName: state.lastName, id: state.id, email: state.email };
   },
+  confirmation: state => state.confirmation,
   role: state => state.role,
   loading: state => state.loading
 };

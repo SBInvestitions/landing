@@ -1,8 +1,8 @@
 <template>
     <div id="top-header" class="top-header">
-      <div class="videoContainer hidden-sm-and-down">
+      <!-- <div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
-      </div>
+      </div> -->
       <el-row>
         <el-col :span="24" class="top-top">
           <div class="grid-content bg-purple-dark">
@@ -40,13 +40,13 @@
                     <el-col :span="14">
                       <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
-                        <el-col :span="4" :offset="1" class="scale days">01<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale hours">12<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
+                        <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale minutes">13<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
+                        <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
                         <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale seconds">48<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
                     <el-col :offset="1" :xs="22" :sm="22" :md="22" :lg="22" :xl="22" class="scale-line-block">

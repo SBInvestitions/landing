@@ -84,6 +84,8 @@ export default {
     store.dispatch('user/SET_LOADING', true);
     return Vue.http.post(REGISTER_URL, params, AUTH_BASIC_HEADERS)
       .then((response) => {
+        this._storeToken(response);
+
         if (redirect) {
           router.push({ name: redirect });
         }

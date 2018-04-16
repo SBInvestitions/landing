@@ -37,12 +37,11 @@ export default {
    * @return {Promise}
    */
 
-  confirm (confirmationString, email) {
-    const params = { 'confirmationString': confirmationString, email: email };
+  confirm (confirmationString) {
+    const params = { 'confirmationString': confirmationString };
     store.dispatch('user/SET_LOADING', true);
     return Vue.http.post(CONFIRM_URL, params, AUTH_BASIC_HEADERS)
       .then((response) => {
-        router.push({name: '/account'});
         store.dispatch('user/SET_LOADING', false);
         return response;
       })
