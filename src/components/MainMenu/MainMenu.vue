@@ -32,38 +32,24 @@
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <!--<el-menu-item index="6">
-          <a tabindex="6">
-            <i class="el-icon-news hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.clients") }}</span>
-          </a>
-        </el-menu-item>-->
-        <el-menu-item index="7">
-          <router-link to="/news">
-            <i class="el-icon-news hidden-lg-and-up"></i>
-            <span class="hidden-md-and-down">{{ $t("home.menu.news") }}</span>
-          </router-link>
+        <el-menu-item index="7" class="lang">
+          <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
+          <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
         </el-menu-item>
-        <!-- this.$i18n.locale -->
-        <!-- WHAT IS DAICO https://cointelegraph.com/explained/what-is-a-daico-explained -->
-        <el-menu-item index="8">
-          <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
-            <i class="el-icon-document hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
-          </a>
-          <a target="_blank"  href="https://sbinvest.pro/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
-            <i class="el-icon-document hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.proporsal") }}</span>
-          </a>
-        </el-menu-item>
-        <el-menu-item index="9">
+        <el-menu-item index="7" class="sign-in">
           <a href="/login" v-if="!user.id">
-            <i class="el-icon-upload2 hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.logIn") }}</span>
+            <span slot="title">{{ $t("home.menu.logIn") }}</span>
           </a>
           <a href="/account" v-if="user.id">
-            <i class="el-icon-upload2 hidden-lg-and-up"></i>
-            <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.account") }}</span>
+            <span slot="title">{{ $t("home.menu.account") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="6" class="white-paper">
+          <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
+            <span slot="title">{{ $t("home.menu.proporsal") }}</span>
+          </a>
+          <a target="_blank"  href="https://sbinvest.pro/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
+            <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
         </el-menu-item>
       </el-menu>

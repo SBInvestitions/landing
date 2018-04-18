@@ -1,8 +1,27 @@
 .main-menu {
   transition: all .3s ease;
   &.small {
+
+    .el-menu-sbi {
+      .white-paper {
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        span {
+          padding: 3px 30px;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+
     .menu-row {
-      background: rgba(0, 0, 0, 0.74);
+      background: #383838;
       .el-menu-item {
         color: white;
         &:hover, &:active {
@@ -14,6 +33,37 @@
       height: 32px;
       line-height: 32px;
       transition: all .3s ease;
+    }
+  }
+
+  .el-menu-sbi {
+
+    .white-paper {
+      float: right;
+      position: fixed;
+      right:200px;
+
+      span {
+        background-color: #565858;
+        border-radius: 30px;
+        color: white;
+        padding: 10px 30px;
+
+        &:hover {
+          background-color: rgba(86, 88, 88, 0.66);
+        }
+      }
+    }
+    .sign-in {
+      float: right;
+      position: fixed;
+      right:100px;
+    }
+
+    .lang {
+      float: right;
+      position: fixed;
+      right:50px;
     }
   }
 }
