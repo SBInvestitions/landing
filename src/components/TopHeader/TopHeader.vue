@@ -9,7 +9,7 @@
             <el-row type="flex" class="row-bg sbi-logo-container" justify="space-around">
               <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
-                  <img src="./../../../src/assets/logo.png" class="sbi-logo" alt="sb-investitions">
+                  <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
                 </div>
               </el-col>
             </el-row>
@@ -28,9 +28,9 @@
       </el-row>
       <el-row>
         <el-col :span="24" class="top-bottom">
-          <div v-if="isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
+          <div v-if="!isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
-              <el-col :xs="20" :sm="20" :md="20" :lg="16" :xl="16">
+              <el-col :span="24">
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
                     <el-col :span="10" class="left-block">
@@ -49,7 +49,7 @@
                         <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
-                    <el-col :offset="1" :xs="22" :sm="22" :md="22" :lg="22" :xl="22" class="scale-line-block">
+                    <el-col :span="24" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
                         <div class="line"></div>
                       </div>
@@ -59,23 +59,30 @@
               </el-col>
             </el-row>
           </div>
-          <div v-if="!isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
+          <div v-if="isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
-              <el-col :xs="20" :sm="18" :md="16" :lg="16" :xl="16">
+              <el-col :span="24">
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
                     <el-col :span="24" class="before-ico">
                       <span class="header">{{ $t("topHeader.text.11") }}</span>
                       <el-row class="h4">
                         {{ $t("topHeader.text.12") }}
-                        <!-- <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col> -->
                       </el-row>
+                      <el-row class="h4">
+                        <el-col :span="4" :offset="1" class="scale days">-<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale hours">-<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
+                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale minutes">-<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
+                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale seconds">-<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                      </el-row>
+                    </el-col>
+                    <el-col :span="24" class="scale-line-block">
+                      <div id="scale-line-2" class="scale-line">
+                        <div class="line"></div>
+                      </div>
                     </el-col>
                   </el-row>
                 </div>

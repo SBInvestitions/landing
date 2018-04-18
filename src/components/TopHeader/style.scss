@@ -72,7 +72,7 @@
     .sbi-scale-container {
       height: 283px;
       margin: 0 auto;
-      margin-top: 50px;
+      margin-top: 400px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -125,7 +125,7 @@
         bottom: 0;
         width: 79%;
         // background-image: linear-gradient(to right, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
-        background: linear-gradient(to right, #0673c3 0%,#2686a2 33%,#53a175 66%,#8ac33c 100%);
+        background: linear-gradient(to right, #96fe02 0%,#51cb76 33%,#21a6c8 66%,#0491f8 100%);
         border-radius: 5px;
 
         &::after {
@@ -165,12 +165,7 @@
 }
 @media (min-width: 1024px) {
   .sbi-scale-container {
-    width: 900px;
-
-    .scale-line {
-      width: 90% !important;
-      margin: 0 auto !important;
-    }
+    width: 60%;
   }
   .sbi-logo-container {
     margin-top: 5rem !important;

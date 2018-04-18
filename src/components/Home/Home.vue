@@ -5,7 +5,6 @@
       <top-header/>
     </div>
     <div class="main-block">
-      <five-stones/>
       <about-company />
       <conditions />
       <road-map />
