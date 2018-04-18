@@ -1,52 +1,90 @@
-<svg id="низ_волна" data-name="низ волна" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="662.125" viewBox="0 0 1280 662.125">
+<svg id="Группа_6" data-name="Группа 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="882" viewBox="0 0 1280 588">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
 <defs>
     <style>
       .cls-1, .cls-2, .cls-3 {
         fill-rule: evenodd;
-        opacity: 0.5;
       }
 
       .cls-1 {
         fill: url(#linear-gradient);
+        filter: url(#filter);
       }
 
       .cls-2, .cls-3 {
         fill: none;
+        stroke-width: 1px;
       }
 
       .cls-2 {
-        stroke-width: 2px;
-        stroke: url(#linear-gradient-2);
+        stroke: #fff;
+        stroke-dasharray: 4 2;
+        opacity: 0.5;
       }
 
       .cls-3 {
-        stroke: #fff;
-        stroke-width: 1px;
-        stroke-dasharray: 4 2;
+        stroke: url(#linear-gradient-2);
       }
 
       .cls-4 {
         fill: #fff;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="1660" y1="643.407" x2="-386.938" y2="643.406" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="1341.06" y1="576.907" x2="-55.938" y2="576.906" gradientUnits="userSpaceOnUse">
+      <stop offset="-0.25" stop-color="#0884c0"/>
+      <stop offset="1.25" stop-color="#5bec83"/>
+    </linearGradient>
+    <filter id="filter" x="-86" y="275" width="1459" height="588" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="-8" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="5.385"/>
+      <feFlood result="flood" flood-opacity="0.19"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="1337.75" y1="425.844" x2="-55.938" y2="425.844" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0270c7"/>
       <stop offset="1" stop-color="#8cc43b"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="1655.75" y1="425.844" y2="425.844" xlink:href="#linear-gradient"/>
   </defs>
-  <path id="Фигура_1" data-name="Фигура 1" class="cls-1" d="M-381,973.977l-5.922-497.617S-23,424-5,424c98,0,211,108.336,261,108.336s78.558-57.5,133.3-57.5,100.7,64,166.7,64,98.868-84,152-84,82.387,62.505,148.4,62.505,77.3-48.5,167.3-48.5,158.48-156,258.3-156c26.44,0,373.74,114.566,373.74,114.566l4.26,546.58H-381Z" transform="translate(0 -311.844)"/>
-  <path id="Фигура_1_копия_2" data-name="Фигура 1 копия 2" class="cls-2" d="M-386.922,476.36S-23,424-5,424c98,0,211,108.336,261,108.336s78.558-57.5,133.3-57.5,100.7,64,166.7,64,98.868-84,152-84,82.387,62.505,148.4,62.505,77.3-48.5,167.3-48.5,158.48-156,258.3-156c26.44,0,373.74,114.566,373.74,114.566" transform="translate(0 -311.844)"/>
-  <path id="Прямоугольник_544" data-name="Прямоугольник 544" class="cls-3" d="M256,710.092V534" transform="translate(0 -311.844)"/>
-  <path id="Прямоугольник_544_копия" data-name="Прямоугольник 544 копия" class="cls-3" d="M389,596.842V474" transform="translate(0 -311.844)"/>
-  <path id="Прямоугольник_544_копия_2" data-name="Прямоугольник 544 копия 2" class="cls-3" d="M555,590.717V534" transform="translate(0 -311.844)"/>
-  <path id="Прямоугольник_544_копия_3" data-name="Прямоугольник 544 копия 3" class="cls-3" d="M706,607.442V454" transform="translate(0 -311.844)"/>
-  <path id="Прямоугольник_544_копия_4" data-name="Прямоугольник 544 копия 4" class="cls-3" d="M855,611.259V517" transform="translate(0 -311.844)"/>
-  <path id="Прямоугольник_544_копия_5" data-name="Прямоугольник 544 копия 5" class="cls-3" d="M1023,733.092V473" transform="translate(0 -311.844)"/>
-  <circle id="Эллипс_2" data-name="Эллипс 2" class="cls-4" cx="256" cy="222.156" r="6"/>
-  <circle id="Эллипс_2_копия" data-name="Эллипс 2 копия" class="cls-4" cx="389" cy="162.156" r="6"/>
-  <circle id="Эллипс_2_копия_2" data-name="Эллипс 2 копия 2" class="cls-4" cx="556" cy="226.156" r="6"/>
-  <circle id="Эллипс_2_копия_2-2" data-name="Эллипс 2 копия 2" class="cls-4" cx="707" cy="142.156" r="6"/>
-  <circle id="Эллипс_2_копия_3" data-name="Эллипс 2 копия 3" class="cls-4" cx="856" cy="206.156" r="6"/>
-  <circle id="Эллипс_2_копия_3-2" data-name="Эллипс 2 копия 3" class="cls-4" cx="1024" cy="157.156" r="6"/>
+  <path id="Фигура_1" data-name="Фигура 1" class="cls-1" d="M-50,839.976l-5.918-362.618S-23.026,425-5.034,425C92.9,425,205.824,533.336,255.791,533.336S334.3,475.83,389,475.83s100.633,64,166.589,64,98.8-84,151.9-84,82.333,62.505,148.3,62.505,77.248-48.5,167.192-48.5,158.37-156,258.12-156c26.42,0,55.71,114.566,55.71,114.566l4.25,411.58H-50Z" transform="translate(0 -275)"/>
+  <path id="Прямоугольник_544_копия" data-name="Прямоугольник 544 копия" class="cls-2" d="M389,577.841V474" transform="translate(0 -275)"/>
+  <path id="Фигура_1_копия_2" data-name="Фигура 1 копия 2" class="cls-3" d="M-55.922,476.358S-23,424-5,424c98,0,211,108.338,261,108.338s78.558-57.506,133.3-57.506,100.7,64,166.7,64,98.868-84,152-84,82.387,62.505,148.4,62.505,77.3-48.505,167.3-48.505,158.48-156,258.3-156c26.44,0,55.74,114.566,55.74,114.566" transform="translate(0 -275)"/>
+  <path id="Прямоугольник_544_копия_2" data-name="Прямоугольник 544 копия 2" class="cls-2" d="M555,577.716V534" transform="translate(0 -275)"/>
+  <path id="Прямоугольник_544_копия_3" data-name="Прямоугольник 544 копия 3" class="cls-2" d="M706,578.441V454" transform="translate(0 -275)"/>
+  <path id="Прямоугольник_544_копия_4" data-name="Прямоугольник 544 копия 4" class="cls-2" d="M855,578.258V517" transform="translate(0 -275)"/>
+  <path id="Прямоугольник_544" data-name="Прямоугольник 544" class="cls-2" d="M256,691.091V534" transform="translate(0 -275)"/>
+  <path id="Прямоугольник_544_копия_5" data-name="Прямоугольник 544 копия 5" class="cls-2" d="M1023,692.09V473" transform="translate(0 -275)"/>
+  <circle id="Эллипс_2" data-name="Эллипс 2" class="cls-4" cx="256" cy="259" r="6"/>
+  <circle id="Эллипс_2_копия" data-name="Эллипс 2 копия" class="cls-4" cx="389" cy="199" r="6"/>
+  <circle id="Эллипс_2_копия_2" data-name="Эллипс 2 копия 2" class="cls-4" cx="556" cy="263" r="6"/>
+  <circle id="Эллипс_2_копия_2-2" data-name="Эллипс 2 копия 2" class="cls-4" cx="707" cy="179" r="6"/>
+  <circle id="Эллипс_2_копия_3" data-name="Эллипс 2 копия 3" class="cls-4" cx="856" cy="243" r="6"/>
+  <circle id="Эллипс_2_копия_3-2" data-name="Эллипс 2 копия 3" class="cls-4" cx="1024" cy="194" r="6"/>
 </svg>
