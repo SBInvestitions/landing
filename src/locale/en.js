@@ -171,7 +171,7 @@ export default {
       1: 'The project of development and sale of deposits of block stone',
       2: 'on the Ethereum block-platform',
       3: '8-X profit, full control over investments',
-      4: 'Invest',
+      4: 'register',
       5: 'SOLD SBI',
       6: 'TO THE END OF ICO',
       7: 'days',

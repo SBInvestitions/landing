@@ -1,5 +1,20 @@
 .main-menu {
   transition: all .3s ease;
+
+  .menu-row {
+
+    .el-menu-item {
+
+      a {
+        outline: none;
+      }
+
+      &:hover {
+        border-bottom: 1px solid black !important;
+      }
+    }
+  }
+
   &.small {
 
     .el-menu-sbi {
@@ -22,8 +37,10 @@
 
     .menu-row {
       background: #383838;
+
       .el-menu-item {
         color: white;
+
         &:hover, &:active {
           color: black;
         }

@@ -6,6 +6,12 @@
   .top-top {
     height: 250px;
 
+    .bg-purple-dark {
+      position: absolute;
+      width: 100%;
+      z-index: 100;
+    }
+
     .sbi-logo-container {
       margin-top: 8rem;
 
@@ -44,15 +50,16 @@
       button.invest {
         font-size: 21px;
         text-transform: uppercase;
-        background: rgba(0, 0, 0, 0.47843137254901963);
-        border: 1px solid black;
+        background: #44b9a0;
+        border: 1px solid #44b9a0;
+        box-shadow: 0 0 5px #44b9a0;
         color: white;
         font-weight: 300;
         margin-top: 1rem;
 
         &:hover {
-          background: rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          background: #0d8bbc;
+          box-shadow: 0 0 5px #0d8bbc;
         }
       }
     }
