@@ -164,20 +164,11 @@
           seconds
         };
       },
-      vidRescale: () => {
-        const video = document.getElementById('video-background');
-        const windowWidth = window.innerWidth;
-        if (video) {
-          video.style.width = `${windowWidth}px`;
-          video.style.height = `${windowWidth * 0.5625}px`;
-        }
-      },
       async icoStarted () {
         this.isIcoStarted = await getStarted();
       }
     },
     mounted () {
-      this.vidRescale();
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
       }, 1000);

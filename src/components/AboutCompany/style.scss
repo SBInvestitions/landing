@@ -4,6 +4,19 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 
+  .video {
+    background: linear-gradient(#57e687, #0e8dbb);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    background-position: right bottom;
+
+    iframe {
+      position: relative;
+      width: 90%;
+    }
+  }
+
   .el-carousel {
     background: url('./../../assets/svg/slider.svg');
     background-position: center;

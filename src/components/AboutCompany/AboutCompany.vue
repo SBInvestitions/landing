@@ -6,11 +6,14 @@
           <el-col :xs="24" :sm="24" :md="20" :lg="18" :xl="16">
             <div class="grid-content bg-purple-light">
               <el-row>
-                <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="idea">
+                <el-col :span="24" class="header">
+                  <h2>{{ $t("aboutCompany.theProblem.0") }}</h2>
+                  <p>{{ $t("aboutCompany.theProblem.1") }}</p>
+                  <p class="problem">{{ $t("aboutCompany.theProblem.2") }}</p>
+                </el-col>
+
+                <el-col :span="12" class="idea">
                   <div class="grid-content bg-purple-light text-block center">
-                    <h2>{{ $t("aboutCompany.theProblem.0") }}</h2>
-                    <p>{{ $t("aboutCompany.theProblem.1") }}</p>
-                    <p class="problem">{{ $t("aboutCompany.theProblem.2") }}</p>
                     <p>{{ $t("aboutCompany.theProblem.3") }}</p>
                     <ul>
                       <li>{{ $t("aboutCompany.theProblem.4") }}
@@ -22,6 +25,10 @@
                     <p class="problem">{{ $t("aboutCompany.theProblem.8") }}</p>
                   </div>
                 </el-col>
+                <el-col :span="12" class="video">
+                  <iframe width="600px" height="370px" id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
+                </el-col>
+
                 <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12" class="svg">
                   <div class="grid-content bg-purple-light image-block">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 421.66 444.75">
@@ -136,6 +143,19 @@
       return {
         photos: [photo1, photo2, photo3, photo4, photo5]
       };
+    },
+    methods: {
+      vidRescale: () => {
+        const video = document.getElementById('video-background');
+        // const windowWidth = window.innerWidth;
+        if (video) {
+          video.style.width = '500px';
+          video.style.height = `${500 * 0.5625}px`;
+        }
+      },
+    },
+    mounted () {
+      this.vidRescale();
     }
   };
 </script>
