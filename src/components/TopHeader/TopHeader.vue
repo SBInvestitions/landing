@@ -33,27 +33,64 @@
               <el-col :span="24">
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
-                    <el-col :span="10" class="left-block">
-                      <span class="header">{{ $t("topHeader.text.5") }}</span>
-                      <div class="h4">2,500,000</div>
-                    </el-col>
-                    <el-col :span="14">
+
+                    <el-col :span="10" class="timer">
                       <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
                         <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="1" class="scale points">:</el-col>
                         <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="1" class="scale points">:</el-col>
                         <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
+                        <el-col :span="1" class="scale points">:</el-col>
                         <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
+
+                    <el-col :span="10" class="rized">
+                      <span class="header">{{ $t("topHeader.text.5") }}</span>
+                      <div class="h4">2,500,000</div>
+                    </el-col>
+
+                    <el-col :span="4" class="discount">
+                      <span class="header">{{ $t("topHeader.text.13") }}</span>
+                      <div class="h4">20%</div>
+                    </el-col>
+
+
                     <el-col :span="24" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
                         <div class="line"></div>
                       </div>
                     </el-col>
+
+                    <el-col :span="24" class="comment-block">
+                      <div class="start">
+                        <header>0</header>
+                        <span>{{ $t("topHeader.text.14") }}</span>
+                      </div>
+                      <div class="one-place">
+                        <header>$130 000</header>
+                        <span>{{ $t("topHeader.text.15") }}</span>
+                      </div>
+                      <div class="two-place">
+                        <header>$260 000</header>
+                        <span>{{ $t("topHeader.text.16") }}</span>
+                      </div>
+                      <div class="three-place">
+                        <header>$390 000</header>
+                        <span>{{ $t("topHeader.text.17") }}</span>
+                      </div>
+                      <div class="four-place">
+                        <header>$420 000</header>
+                        <span>{{ $t("topHeader.text.18") }}</span>
+                      </div>
+                      <div class="database">
+                        <header>$1 M</header>
+                        <span>{{ $t("topHeader.text.19") }}</span>
+                      </div>
+                    </el-col>
+
                   </el-row>
                 </div>
               </el-col>

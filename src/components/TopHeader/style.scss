@@ -70,6 +70,7 @@
     height: 830px;
 
     .sbi-scale-container {
+      width: 1142px;
       height: 283px;
       margin: 0 auto;
       margin-top: 400px;
@@ -77,11 +78,6 @@
       background-repeat: no-repeat;
       background-position: center;
       text-align: center;
-
-      .left-block {
-        padding-top: 10px;
-        text-align: right;
-      }
 
       .scale-row {
         padding-top: 60px;
@@ -91,11 +87,106 @@
         }
       }
 
+      .header {
+        font-size: 22px;
+      }
+
+      .timer {
+
+        .value {
+          text-transform: uppercase;
+          color: black;
+        }
+      }
+
+      .comment-block {
+        position: relative;
+
+        .start, .one-place, .two-place, .three-place, .four-place, .database {
+          position: absolute;
+          top: 50px;
+
+          header {
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+          }
+
+          &:before {
+            position: absolute;
+            content: '';
+            top: -50px;
+            width: 2px;
+            height: 45px;
+            display: block;
+            background-color: black;
+          }
+        }
+
+        .start {
+          width: 40px;
+          left: 10px;
+          text-align: left;
+
+          &:before {
+            left: 0;
+          }
+        }
+
+        .one-place {
+          width: 110px;
+          left: 150px;
+
+          &:before {
+            left: 55px;
+          }
+        }
+
+        .two-place {
+          width: 113px;
+          left: 300px;
+
+          &:before {
+            left: 55px;
+          }
+        }
+
+        .three-place {
+          width: 110px;
+          left: 45%;
+
+          &:before {
+            left: 55px;
+          }
+        }
+
+        .four-place {
+          width: 200px;
+          left: 60%;
+
+          &:before {
+            left: 100px;
+          }
+        }
+
+        .database {
+          width: 250px;
+          left: calc(77% + 5px);
+          text-align: right;
+
+          &:before {
+            left: 250px;
+          }
+        }
+      }
+
       .h4 {
         font-size: 40px;
         float: left;
         margin: 0 auto;
         width: 100%;
+        font-weight: bold;
+        color: white;
 
         .scale {
           display: block;

@@ -172,14 +172,21 @@ export default {
       2: 'on the Ethereum block-platform',
       3: '8-X profit, full control over investments',
       4: 'register',
-      5: 'SOLD SBI',
-      6: 'TO THE END OF ICO',
+      5: 'Funds raised',
+      6: 'Current discount ends in',
       7: 'days',
       8: 'hours',
       9: 'minutes',
       10: 'seconds',
       11: 'BEFORE THE ICO START',
-      12: 'SOON WILL BE KNOWN'
+      12: 'SOON WILL BE KNOWN',
+      13: 'Current discount',
+      14: 'Start',
+      15: 'First Deposit',
+      16: 'Second Deposit',
+      17: 'Third Deposti',
+      18: 'Fourth Deposit',
+      19: 'Deposit marketplace'
     }
   },
   login: {
