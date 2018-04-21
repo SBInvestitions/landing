@@ -5,15 +5,42 @@
   margin-bottom: 2rem;
 
   .video {
+
+    &.right {
+      background-position: right bottom;
+    }
+    &.left {
+      background-position: left bottom;
+    }
+
     background: linear-gradient(#57e687, #0e8dbb);
-    background-size: 90%;
     background-repeat: no-repeat;
     padding-bottom: 50px;
-    background-position: right bottom;
-
+    background-size: 80%;
     iframe {
       position: relative;
-      width: 90%;
+      width: 80%;
+    }
+  }
+
+  .idea {
+
+    h2 {
+      display: inline-block;
+      border-bottom: 1px solid;
+      padding: 0 15px 10px 15px;
+    }
+
+    &.left {
+
+      .text-block {
+        text-align: right;
+      }
+    }
+    &.right {
+      .text-block {
+        text-align: left;
+      }
     }
   }
 

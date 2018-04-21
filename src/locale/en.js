@@ -63,7 +63,7 @@ export default {
   },
   conditions: {
     text: {
-      1: 'Terms of sale',
+      1: 'ICO Conditions',
       2: 'Distribution of funds',
       3: 'Mining - ',
       4: '$286,000',

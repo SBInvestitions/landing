@@ -9,10 +9,36 @@
                 <el-col :span="24">
                   <div class="grid-content bg-purple-light">
                     <h2>{{ $t("conditions.text.1") }}</h2>
+
+                    <el-row class="conditions-block" :gutter="20">
+                      <div class="text-block">
+                        <p>После продажи и обратного выкупа SBI, оставшуюся часть прибыли мы</p>
+                        <p>Планируем направить на дальнейшие проекты по согласованию с оставшимися держателями SBI</p>
+                      </div>
+                    </el-row>
+                    <el-row class="pre-sale-block" :gutter="20">
+                      <el-col :span="12">
+                        Цена на preICO - 100500
+                      </el-col>
+                      <el-col :span="12">
+                        Даты preICO - 01.01.01 - 02.02.02
+                      </el-col>
+                    </el-row>
+                    <el-row class="sale-block" :gutter="20">
+                      <el-col :span="12">
+                        <p>Цена на ICO - <strong>2000000</strong></p>
+                        <p>Даты ICO - <strong>01.01.01 - 02.02.02</strong></p>
+                      </el-col>
+                      <el-col :span="12">
+                        <p>Soft-Cap - <strong>22,800,000.00</strong></p>
+                        <p>Hard-Cap - <strong>60,000,000.00</strong></p>
+                      </el-col>
+                    </el-row>
+
                     <el-row class="graph-block" :gutter="20">
-                      <el-col :xs="{span: 20, offset: 2}" :sm="12" :md="12" :lg="12" :xl="{span: 8, offset: 4}">
+                      <el-col :xs="{span: 20, offset: 2}" :sm="12" :md="12" :lg="12" :xl="12">
                         <div class="grid-content bg-purple graph-left-block">
-                          <div class="graph-left">
+                          <div class="graph-left" id="graph-left">
                             <div class="top top-1">{{ $t("conditions.text.2") }}</div>
                             <div class="graph-svg" />
                             <div class="top top-2">{{ $t("conditions.text.3") }}<strong>{{ $t("conditions.text.4") }}</strong></div>
@@ -24,9 +50,9 @@
                           </div>
                         </div>
                       </el-col>
-                      <el-col :xs="{span: 20, offset: 2}" :sm="12" :md="12" :lg="12" :xl="8">
+                      <el-col :xs="{span: 20, offset: 2}" :sm="12" :md="12" :lg="12" :xl="12">
                         <div class="grid-content bg-purple graph-right-block" >
-                          <div class="graph-right">
+                          <div class="graph-right" id="graph-right">
                             <div class="top top-1">{{ $t("conditions.text.14") }}</div>
                             <div class="graph-svg" />
                             <div class="top top-2">{{ $t("conditions.text.15") }}<strong>{{ $t("conditions.text.16") }}</strong></div>
@@ -38,10 +64,6 @@
                         </div>
                       </el-col>
                     </el-row>
-                    <div class="footer-text">
-                      <p>{{ $t("conditions.text.13") }}</p>
-                      <span>SoftCap = 16 000 000/HardCap = 22 800 000</span>
-                    </div>
                   </div>
                 </el-col>
               </el-row>
@@ -57,6 +79,23 @@
 
 <script>
   export default {
-    name: 'Conditions'
+    name: 'Conditions',
+    methods: {
+      lineRescale: function () {
+        const left = document.getElementById('graph-left');
+        const right = document.getElementById('graph-right');
+        if (left) {
+          const leftHeight = left.offsetHeight;
+          left.pseudoStyle('before', 'height', `${leftHeight - 35}px !important`, 'left-class');
+        }
+        if (right) {
+          const rightHeight = right.offsetHeight;
+          right.pseudoStyle('before', 'height', `${rightHeight - 30}px !important`, 'right-class');
+        }
+      }
+    },
+    mounted () {
+      this.lineRescale();
+    }
   };
 </script>

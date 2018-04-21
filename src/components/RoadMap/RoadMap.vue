@@ -7,17 +7,8 @@
             <div class="grid-content bg-purple-light">
               <h2>{{ $t("roadMap.text.1") }}</h2>
               <div class="text-block">
-                <div class="text">
-                  <h3>{{ $t("roadMap.text.2") }}</h3>
-                  <h4>{{ $t("roadMap.text.3") }}</h4>
-                  <road-map-line order="1" />
-                  <h4>{{ $t("roadMap.text.4") }}</h4>
-                  <road-map-line-copy order="2" />
-                  <p><strong>{{ $t("roadMap.text.5") }}</strong></p>
-                  <p>{{ $t("roadMap.text.6") }}</p>
-                  <p>{{ $t("roadMap.text.7") }}</p>
-                  <p>{{ $t("roadMap.text.8") }}</p>
-                </div>
+                <p>Каждый этап завершается ростом цены SBI.</p>
+                <p>В конце каждой продажи месторождений осуществляется обратный выкуп SBI по указанной в графике цене.</p>
               </div>
             </div>
           </el-col>
