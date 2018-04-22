@@ -79,7 +79,7 @@
         const windowWidth = video.offsetWidth;
         console.log('windowWidth', windowWidth);
         // video.style.width = '500px';
-        video.style.height = `${windowWidth * 0.5625}px`;
+        video.style.height = `${windowWidth * 0.56}px`;
       },
       vidRescale: function () {
         const video1 = document.getElementById('video-background-1');

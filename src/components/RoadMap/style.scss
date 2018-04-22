@@ -1,109 +1,186 @@
 .road-map {
   text-align: center;
-}
-.road-map-line {
-  .road-map-stone {
+  background-image: url('./../../assets/svg/back-road-map-rounds.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  // background-size: 100% 70%;
+  background-size: 100%;
+  padding-top: 3rem;
+  margin-top: 2rem;
+  padding-bottom: 24rem;
+  margin-bottom: 2rem;
+
+  h2 {
+    color: white;
+  }
+
+  .text-block {
+
+    p {
+      margin: 10px 0;
+    }
+  }
+
+  .road-map-header {
     margin-bottom: 50px;
+  }
 
-    .stone-stage {
-      &.stone-stage1 {
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/first-stone.svg');
+  .stages-middle-line {
+    background-image: linear-gradient(to right, black 5px, transparent 3px);
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+
+    position: relative;
+    width: 65% !important;
+    margin: 0 auto;
+    height: 2px;
+    top: 72px;
+  }
+
+  .road-map-stages {
+    width: 87%!important;
+    margin: 0 auto;
+
+    .round {
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 20px;
+      margin: 0 auto;
+    }
+
+    .number {
+      font-size: 40px;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .vertical-line {
+      background-image: linear-gradient(white 5px, transparent 3px);
+      background-position: right;
+      background-size: 2px 8px;
+      background-repeat: repeat-y;
+      margin: 0 auto;
+      top: 0;
+      color: white;
+      z-index: 1;
+      width: 3px;
+      height: 30px;
+    }
+
+    .header {
+      font-size: 22px;
+      color: white;
+      margin: 10px 0;
+    }
+  }
+
+  .road-map-line {
+    .road-map-stone {
+      margin-bottom: 50px;
+
+      .stone-stage {
+        &.stone-stage1 {
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/first-stone.svg');
+            }
           }
         }
-      }
-      &.stone-stage2 {
+        &.stone-stage2 {
 
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage2.svg');
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage2.svg');
+            }
           }
         }
-      }
-      &.stone-stage3 {
+        &.stone-stage3 {
 
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage3.svg');
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage3.svg');
+            }
           }
         }
-      }
-      &.stone-stage4 {
+        &.stone-stage4 {
 
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage4.svg');
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage4.svg');
+            }
           }
         }
-      }
-      &.stone-stage5 {
+        &.stone-stage5 {
 
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage5.svg');
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage5.svg');
+            }
           }
         }
-      }
-      &.stone-stage6 {
+        &.stone-stage6 {
 
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage6.svg');
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage6.svg');
+            }
           }
         }
-      }
-      &.stone-stage7 {
+        &.stone-stage7 {
 
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage7.svg');
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage7.svg');
+            }
           }
         }
-      }
-      &.stone-stage8 {
-        .stage {
-          .number {
-            background-image: url('./../../assets/svg/stage8.svg');
+        &.stone-stage8 {
+          .stage {
+            .number {
+              background-image: url('./../../assets/svg/stage8.svg');
+            }
           }
         }
-      }
 
 
-      .stage {
-        min-height: 450px;
+        .stage {
+          min-height: 450px;
 
-        .number {
-          font-size: 100px;
-          line-height: 120px;
-          font-weight: bold;
-          color: gray;
+          .number {
+            font-size: 100px;
+            line-height: 120px;
+            font-weight: bold;
+            color: gray;
 
-          background-size: contain;
-          background-position: top;
-          background-repeat: no-repeat;
-        }
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+          }
 
-        .vertical-line {
-          height: 90px;
-          background-image: linear-gradient(black 7px, transparent 1px);
-          background-position: center;
-          background-size: 1px 11px;
-          background-repeat: repeat-y;
-          margin: 25px;
-        }
+          .vertical-line {
+            height: 90px;
+            background-image: linear-gradient(black 7px, transparent 1px);
+            background-position: center;
+            background-size: 1px 11px;
+            background-repeat: repeat-y;
+            margin: 25px;
+          }
 
-        .round {
-          background-color: #c0c0c0;
-          width: 16px;
-          height: 16px;
-          border-radius: 10px;
-          margin: 5px auto;
-        }
+          .round {
+            background-color: #c0c0c0;
+            width: 16px;
+            height: 16px;
+            border-radius: 10px;
+            margin: 5px auto;
+          }
 
-        .text {
-          h5 {
-            margin: 5px;
+          .text {
+            h5 {
+              margin: 5px;
+            }
           }
         }
       }
