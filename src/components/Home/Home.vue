@@ -9,6 +9,7 @@
       <conditions />
       <road-map />
       <team />
+      <prev-projects />
       <bounty />
       <clients />
     </div>
@@ -28,6 +29,7 @@
   import AboutCompany from './../AboutCompany/AboutCompany.vue';
   import Conditions from './../Conditions/Conditions.vue';
   import RoadMap from './../RoadMap/RoadMap.vue';
+  import PrevProjects from './../PrevProjects/PrevProjects.vue';
   import Team from './../Team/Team.vue';
   import Bounty from './../Bounty/Bounty.vue';
   import Faq from './../Faq/Faq.vue';
@@ -73,7 +75,8 @@
       'bounty': Bounty,
       'clients': Clients,
       'faq': Faq,
-      'footer-block': FooterBlock
+      'footer-block': FooterBlock,
+      'prev-projects': PrevProjects
     }
   };
 </script>

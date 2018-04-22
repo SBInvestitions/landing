@@ -1,22 +1,62 @@
 .team {
-  text-align: center;
-  padding-top: 3rem;
   margin-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
 
-  .member {
-    height: 300px;
-    .ava {
-      img {
+  .team-row {
+    text-align: center;
+
+    .stages-middle-line {
+      background-image: linear-gradient(to right, black 5px, transparent 3px);
+      background-size: 10px 2px;
+      background-repeat: repeat-x;
+      background-position: 0 bottom;
+
+      position: relative;
+      width: 65% !important;
+      margin: 0 auto;
+      height: 2px;
+      top: 100px;
+    }
+
+    .road-map-stages {
+      width: 87%!important;
+      margin: 0 auto;
+
+      .round {
         width: 200px;
+        height: 200px;
+        background: gray;
+        border-radius: 200px;
+        margin: 0 auto;
+      }
+
+      .number {
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .vertical-line {
+        background-image: linear-gradient(white 5px, transparent 3px);
+        background-position: right;
+        background-size: 2px 8px;
+        background-repeat: repeat-y;
+        margin: 0 auto;
+        top: 0;
+        color: white;
+        z-index: 1;
+        width: 3px;
+        height: 30px;
+      }
+
+      .header {
+        font-size: 22px;
+        color: white;
+        margin: 10px 0;
       }
     }
-  }
-
-
-
-  .team-block {
-    height: 400px;
   }
 }

@@ -41,8 +41,18 @@
       .el-menu-item {
         color: white;
 
+        &.is-active {
+          color: white;
+          border-bottom: 1px solid white;
+        }
+
         &:hover, &:active {
           color: black;
+
+          &.is-active {
+            color: black;
+            border-bottom: 1px solid white;
+          }
         }
       }
     }

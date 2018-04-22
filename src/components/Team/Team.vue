@@ -1,6 +1,6 @@
 <template>
   <div id="team" class="team">
-    <el-row class="team-row">
+   <!-- <el-row class="team-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
           <el-col :xs="20" :sm="24" :md="20" :lg="16" :xl="16">
@@ -132,6 +132,61 @@
                   </div>
                 </el-col>
               </el-row>
+            </div>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row> -->
+    <el-row class="team-row">
+      <el-col :span="24" class="top-bottom">
+        <el-row type="flex" class="row-bg" justify="space-around">
+          <el-col class="road-map-header" :xs="24" :sm="24" :md="20" :lg="16" :xl="16">
+            <h2>{{ $t("team.text.15") }}</h2>
+          </el-col>
+        </el-row>
+        <el-row type="flex" class="row-bg stages-middle-line" justify="space-around"></el-row>
+        <el-row type="flex" class="row-bg road-map-stages" justify="space-around">
+          <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
+            <div class="round"></div>
+            <div class="vertical-line"></div>
+            <div class="header">
+              До 30 июня 2018 года
+            </div>
+            <div class="description">
+              preICO со скидкой 100500%
+            </div>
+          </el-col>
+
+          <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
+            <div class="round"></div>
+            <div class="vertical-line"></div>
+            <div class="header">
+              До 30 июня 2018 года
+            </div>
+            <div class="description">
+              preICO со скидкой 100500%
+            </div>
+          </el-col>
+
+          <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
+            <div class="round"></div>
+            <div class="vertical-line"></div>
+            <div class="header">
+              До 30 июня 2018 года
+            </div>
+            <div class="description">
+              preICO со скидкой 100500%
+            </div>
+          </el-col>
+
+          <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
+            <div class="round"></div>
+            <div class="vertical-line"></div>
+            <div class="header">
+              До 30 июня 2018 года
+            </div>
+            <div class="description">
+              preICO со скидкой 100500%
             </div>
           </el-col>
         </el-row>

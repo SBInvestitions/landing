@@ -1,0 +1,42 @@
+.prev-projects {
+  background-image: url('./../../assets/projects-background.png');
+
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+
+  .projects-header {
+
+  }
+
+  .projects {
+    width: 90%;
+    margin: 100px auto;
+
+    .project {
+      padding: 30px;
+
+      .round {
+
+      }
+
+      .divider {
+        background-image: linear-gradient(to right, black 5px, transparent 3px);
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
+        height: 1px;
+        width: 30%;
+        margin: 30px auto;
+        margin-bottom: 20px;
+      }
+
+      .header {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+}
