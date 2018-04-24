@@ -2,8 +2,7 @@
   text-align: center;
 
   .grid-content {
-    margin-top: 20px;
-    margin-bottom: 20px;
+
   }
 
   .vertical-line {
@@ -11,5 +10,18 @@
     background-color: black;
     height: 18px;
     margin: 0 auto;
+  }
+
+  .stones-top {
+    margin-bottom: 50px;
+  }
+
+  .stones-bottom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .row-bg {
+    margin-bottom: 20px;
   }
 }

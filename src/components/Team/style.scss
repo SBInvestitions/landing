@@ -7,56 +7,20 @@
   .team-row {
     text-align: center;
 
-    .stages-middle-line {
-      background-image: linear-gradient(to right, black 5px, transparent 3px);
-      background-size: 10px 2px;
-      background-repeat: repeat-x;
-      background-position: 0 bottom;
-
-      position: relative;
-      width: 65% !important;
-      margin: 0 auto;
-      height: 2px;
-      top: 100px;
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 30px 0 15px 0;
     }
 
-    .road-map-stages {
-      width: 87%!important;
-      margin: 0 auto;
+    .text {
+      margin-bottom: 20px;
+      height: 50px;
+    }
 
-      .round {
-        width: 200px;
-        height: 200px;
-        background: gray;
-        border-radius: 200px;
-        margin: 0 auto;
-      }
-
-      .number {
-        font-size: 40px;
-        color: white;
-        font-weight: bold;
-        margin-bottom: 15px;
-      }
-
-      .vertical-line {
-        background-image: linear-gradient(white 5px, transparent 3px);
-        background-position: right;
-        background-size: 2px 8px;
-        background-repeat: repeat-y;
-        margin: 0 auto;
-        top: 0;
-        color: white;
-        z-index: 1;
-        width: 3px;
-        height: 30px;
-      }
-
-      .header {
-        font-size: 22px;
-        color: white;
-        margin: 10px 0;
-      }
+    .social-link {
+      margin-right: 5px;
+      margin-left: 5px;
     }
   }
 }

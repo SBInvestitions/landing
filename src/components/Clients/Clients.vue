@@ -45,12 +45,65 @@
                     <div class="clients">
                       <div class="client">
                         <div class="logo">
-                          <a target="_blank" href="http://eco-tehnologii.ru"><img src="./../../assets/clients/eco.png" alt="promnerudtrans"></a>
+                          <a target="_blank" href="http://www.fsk-ees.ru/about/affiliates/mes_north_west/news/">
+                            <img src="./../../assets/clients/mes.jpg" alt="fsk-es">
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </el-col>
+              </el-row>
+              <el-row :gutter="20">
+
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                  <div class="grid-content bg-purple">
+                    <div class="clients">
+                      <div class="client">
+                        <div class="logo">
+                          <a target="_blank" href="http://www.oaokondopoga.ru/"><img src="./../../assets/clients/kondopoga.jpg" alt="kondopoga"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </el-col>
+
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                  <div class="grid-content bg-purple">
+                    <div class="clients">
+                      <div class="client">
+                        <div class="logo">
+                          <a target="_blank" href="http://pks-vodokanal.ru/"><img src="./../../assets/clients/vodokanal.jpg" alt="vodokanal"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </el-col>
+
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                  <div class="grid-content bg-purple">
+                    <div class="clients">
+                      <div class="client">
+                        <div class="logo">
+                          <a target="_blank" href="http://www.karel-kamen.com/"><img src="./../../assets/clients/karelkamen.jpg" alt="karelkamen"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </el-col>
+
+                <el-col class="client-block" :xs="24" :sm="12" :md="6" :lg="6" :xl="6">
+                  <div class="grid-content bg-purple">
+                    <div class="clients">
+                      <div class="client">
+                        <div class="logo">
+                          <a target="_blank" href="http://www.storaensopack.com.ru/"><img src="./../../assets/clients/storaenso.jpeg" alt="storaenso"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </el-col>
+
               </el-row>
             </div>
           </el-col>
