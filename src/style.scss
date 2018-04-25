@@ -125,3 +125,11 @@ h2 {
 .el-tooltip__popper.is-light {
   font-family: OpenSans, "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
+
+.el-button.is-round {
+  border-radius: 100px;
+}
+
+a {
+  text-decoration: none;
+}

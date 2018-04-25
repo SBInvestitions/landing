@@ -3,6 +3,14 @@
   height: 1080px;
   background: rgba(255, 255, 255, 0.44);
 
+  .divider {
+    width: 25%;
+    height: 1px;
+    margin: 0 auto;
+    padding: 0;
+    background: black;
+  }
+
   .top-top {
     height: 250px;
 
@@ -33,12 +41,14 @@
         a {
           color: #0465ac;
         }
+        margin-bottom: 0.5rem;
       }
 
       h3 {
         color: #0465ac;
         font-weight: 300;
         font-size: 30px;
+        margin-top: 0.5rem;
         // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
 
         img {
@@ -65,7 +75,7 @@
     }
   }
   .top-bottom {
-    background: url('./../../assets/svg/wave.svg');
+    background: url('./../../assets/svg/wave-pure2.svg');
     background-size: cover;
     height: 830px;
 
@@ -119,7 +129,13 @@
             width: 2px;
             height: 45px;
             display: block;
-            background-color: black;
+            background-image: linear-gradient(white 5px, transparent 3px);
+            background-position: right;
+            background-size: 2px 8px;
+            background-repeat: repeat-y;
+            margin: 0 auto;
+            color: white;
+            z-index: 1;
           }
         }
 

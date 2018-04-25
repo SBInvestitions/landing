@@ -18,20 +18,20 @@
                     </el-row>
                     <el-row class="pre-sale-block" :gutter="20">
                       <el-col :span="12">
-                        Цена на preICO - 100500
+                        Цена на preICO: <strong>100500</strong>
                       </el-col>
                       <el-col :span="12">
-                        Даты preICO - 01.01.01 - 02.02.02
+                        Даты preICO: <strong>01.06.18 - 30.06.18</strong>
                       </el-col>
                     </el-row>
                     <el-row class="sale-block" :gutter="20">
                       <el-col :span="12">
-                        <p>Цена на ICO - <strong>2000000</strong></p>
-                        <p>Даты ICO - <strong>01.01.01 - 02.02.02</strong></p>
+                        <p>Цена на ICO: <strong>2000000</strong></p>
+                        <p>Даты ICO: <strong>01.07.18 - 31.08.18</strong></p>
                       </el-col>
                       <el-col :span="12">
-                        <p>Soft-Cap - <strong>22,800,000.00</strong></p>
-                        <p>Hard-Cap - <strong>60,000,000.00</strong></p>
+                        <p>Soft-Cap: <strong>$380,000.00</strong></p>
+                        <p>Hard-Cap: <strong>$1,000,000.00</strong></p>
                       </el-col>
                     </el-row>
 
