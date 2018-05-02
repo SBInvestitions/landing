@@ -1,0 +1,114 @@
+.video-block {
+  padding-top: 3rem;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  .video {
+
+    &.right {
+      background-position: right bottom;
+    }
+    &.left {
+      background-position: left bottom;
+    }
+
+    background: linear-gradient(#57e687, #0e8dbb);
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    background-size: 80%;
+    iframe {
+      position: relative;
+      width: 80%;
+    }
+  }
+
+  .idea {
+
+    h2 {
+      display: inline-block;
+      border-bottom: 1px solid;
+      padding: 0 15px 10px 15px;
+    }
+
+    &.left {
+
+      .text-block {
+        text-align: right;
+      }
+    }
+    &.right {
+      .text-block {
+        text-align: left;
+      }
+    }
+  }
+
+  .el-carousel {
+    background: url('./../../assets/svg/slider.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-block {
+    padding: 0 5rem 0 0;
+    width: 100%;
+    svg {
+      width: 100%;
+      fill: white;
+      stroke: #0f0f0f;
+      stroke-opacity: 0.7;
+    }
+  }
+  .text-block {
+    text-align: left;
+    line-height: 2rem;
+
+    &.center {
+      text-align: center !important;
+
+      li {
+        list-style-type: none;
+        p {
+
+        }
+      }
+    }
+
+    .problem {
+      font-weight: bold;
+    }
+
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .text-block-center {
+    line-height: 2rem;
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .stone-samples {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-company {
+    .image-block {
+      padding: 0 5rem 0 5rem;
+    }
+  }
+}

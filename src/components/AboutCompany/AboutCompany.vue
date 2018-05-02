@@ -7,32 +7,37 @@
             <div class="grid-content bg-purple-light">
               <el-row>
                 <el-col :span="24" class="header">
-                  <h2>{{ $t("aboutCompany.theProblem.0") }}</h2>
-                  <p>{{ $t("aboutCompany.theProblem.1") }}</p>
-                  <p class="problem">{{ $t("aboutCompany.theProblem.2") }}</p>
+                  <h2>В чем наш бизнес?</h2>
                 </el-col>
               </el-row>
 
               <el-row>
                 <el-col :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.theProblem.3") }}</p>
-                    <p>{{ $t("aboutCompany.theProblem.4") }}</p>
+                    <p>Мы регистрируем пионерскую компанию.</p>
+                    <p>Используя свой опыт и знания мы находим участок с месторождениями блочного камня, оформляем на него лицензию на недропользование 25 лет,
+                    проводим геологическую разведку, получаем образцы камня и продаем компанию с лицензией крупным инвесторам готовым разрабатывать месторождение.</p>
                   </div>
                 </el-col>
-                <el-col :span="12" class="video right">
-                  <iframe width="600px" height="370px" id="video-background-1" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
+                <el-col :span="12" class="gif right">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-1" width="600px" height="300px">
+                    <source src="./../../assets/videos/1.mp4" type="video/mp4" />
+                    <img src="./../../assets/videos/1_1.gif" />
+                  </video>
                 </el-col>
               </el-row>
 
               <el-row>
-                <el-col :span="12" class="video left">
-                  <iframe width="600px" height="370px" id="video-background-2" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
+                <el-col :span="12" class="gif left">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-2" width="600px" height="300px">
+                    <source src="./../../assets/videos/2.mp4" type="video/mp4" />
+                    <img src="./../../assets/videos/2-2.gif" />
+                  </video>
                 </el-col>
                 <el-col :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.theProblem.5") }}</p>
-                    <p>{{ $t("aboutCompany.theProblem.6") }}</p>
+                    <p>Один крупный инвестор несет проекту риски в стабильном финансировании и уменьшает количество месторождений для продажи.</p>
+                    <p>Привлекая большое количество инвесторов мы делаем проект гибче и стабильнее, а также увеличиваем объемы работ и <strong>добавленная стоимость вложенного доллара растет в разы!</strong></p>
                   </div>
                 </el-col>
               </el-row>
@@ -40,12 +45,31 @@
               <el-row>
                 <el-col :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.theProblem.7") }}</p>
-                    <p>{{ $t("aboutCompany.theProblem.8") }}</p>
+                    <p>Мы даем своим инвесторам возможность участия в руководстве финансированием проекта <strong>на каждом этапе</strong> и тем самым <strong>уменьшаем риски.</strong></p>
+                    <p>Работая по проекту мы создаем <strong>полностью открытую и честную базу данных</strong> по участкам недр предлагаемых покупателям месторождений и продукции.</p>
+                    <p>Кроме наших участков туда будут занесены месторождения предлагаемые к продаже, а также продукция любых компаний и частных лиц.</p>
                   </div>
                 </el-col>
-                <el-col :span="12" class="video right">
-                  <iframe width="600px" height="370px" id="video-background-3" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
+                <el-col :span="12" class="gif right">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-3" width="600px" height="300px">
+                    <source src="./../../assets/videos/2.mp4" type="video/mp4" />
+                    <img src="./../../assets/videos/2-2.gif" />
+                  </video>
+                </el-col>
+              </el-row>
+
+              <el-row>
+                <el-col :span="12" class="gif left">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-4" width="600px" height="300px">
+                    <source src="./../../assets/videos/2.mp4" type="video/mp4" />
+                    <img src="./../../assets/videos/2-2.gif" />
+                  </video>
+                </el-col>
+                <el-col :span="12" class="idea right">
+                  <div class="grid-content bg-purple-light text-block">
+                    <p>Естественно они должны будут пройти нашу или любую другую независимую экспертизу и оценку. Результаты экспертизы, как и рейтинги экспертов, <strong>будут храниться в блокчейне.</strong></p>
+                    <p>Любой заинтересованый участник рынка, по всему миру, <strong>воспользовавшись токенами SBI</strong>, сможет получить информацию, оценку или поместить необходимую информацию в базу.</p>
+                  </div>
                 </el-col>
               </el-row>
 
@@ -61,50 +85,16 @@
 
 <script>
   import 'element-ui/lib/theme-chalk/display.css';
-  import photo1 from './../../assets/photos/11.jpg';
-  import photo2 from './../../assets/photos/22.jpg';
-  import photo3 from './../../assets/photos/33.jpg';
-  import photo4 from './../../assets/photos/44.jpg';
-  import photo5 from './../../assets/photos/55.jpg';
 
   export default {
     name: 'AboutCompany',
     data () {
       return {
-        photos: [photo1, photo2, photo3, photo4, photo5]
       };
     },
     methods: {
-      setVideoHeight: function (video) {
-        const windowWidth = video.offsetWidth;
-        console.log('windowWidth', windowWidth);
-        // video.style.width = '500px';
-        video.style.height = `${windowWidth * 0.56}px`;
-      },
-      vidRescale: function () {
-        const video1 = document.getElementById('video-background-1');
-        const video2 = document.getElementById('video-background-2');
-        const video3 = document.getElementById('video-background-3');
-        if (video1) {
-          this.setVideoHeight(video1);
-        }
-        if (video2) {
-          this.setVideoHeight(video2);
-        }
-        if (video3) {
-          this.setVideoHeight(video3);
-        }
-
-        /* function setVideoHeight (video) {
-          const windowWidth = video.offsetWidth;
-          console.log('windowWidth', windowWidth);
-          // video.style.width = '500px';
-          video.style.height = `${windowWidth * 0.5625}px`;
-        } */
-      }
     },
     mounted () {
-      this.vidRescale();
     }
   };
 </script>

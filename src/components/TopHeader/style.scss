@@ -80,7 +80,7 @@
     height: 830px;
 
     .sbi-scale-container {
-      width: 1142px;
+      width: 60%;
       height: 283px;
       margin: 0 auto;
       margin-top: 400px;
@@ -150,48 +150,48 @@
         }
 
         .one-place {
-          width: 110px;
-          left: 150px;
+          width: 10%;
+          left: 10%;
 
           &:before {
-            left: 55px;
+            left: 60px;
           }
         }
 
         .two-place {
-          width: 113px;
-          left: 300px;
+          width: 10%;
+          left: 25%;
 
           &:before {
-            left: 55px;
+            left: 60px;
           }
         }
 
         .three-place {
-          width: 110px;
-          left: 45%;
+          width: 10%;
+          left: 40%;
 
           &:before {
-            left: 55px;
+            left: 60px;
           }
         }
 
         .four-place {
-          width: 200px;
+          width: 12%;
           left: 60%;
 
           &:before {
-            left: 100px;
+            left: 73px;
           }
         }
 
         .database {
-          width: 250px;
-          left: calc(77% + 5px);
+          width: 15%;
+          left: 84%;
           text-align: right;
 
           &:before {
-            left: 250px;
+            left: 140px;
           }
         }
       }
@@ -259,7 +259,6 @@
 @media (max-width: 1280px) {
   .sbi-scale-container {
     height: 200px !important;
-    margin-top: 0!important;
     .scale-row {
       padding-top: 30px !important;
     }

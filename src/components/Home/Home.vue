@@ -9,6 +9,7 @@
       <conditions />
       <road-map />
       <team />
+      <video-block />
       <prev-projects />
       <bounty />
       <clients />
@@ -35,6 +36,7 @@
   import Faq from './../Faq/Faq.vue';
   import Clients from './../Clients/Clients.vue';
   import FooterBlock from './../FooterBlock/FooterBlock.vue';
+  import VideoBlock from './../VideoBlock/VideoBlock.vue';
 
   export default {
     name: 'Home',
@@ -76,7 +78,8 @@
       'clients': Clients,
       'faq': Faq,
       'footer-block': FooterBlock,
-      'prev-projects': PrevProjects
+      'prev-projects': PrevProjects,
+      'video-block': VideoBlock
     }
   };
 </script>

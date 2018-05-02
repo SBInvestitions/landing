@@ -150,19 +150,19 @@ export default {
   team: {
     text: {
       1: 'Belonogov Alexander',
-      2: 'CEO. Businessman, ecologist, maecenas.',
+      2: 'CEO. Businessman, ecologist, maecenas',
       3: 'Pyrozhenko Gennady',
-      4: 'Geologist, discoverer of deposits in Karelia.',
+      4: 'Geologist, discoverer of deposits in Karelia',
       5: 'Gliarianov Anton',
-      6: 'Chief engineer-planner, land surveyor.',
+      6: 'Chief engineer-planner, land surveyor',
       7: 'Pozdnikin Konstantin',
-      8: 'Javascript, solidity developer, analyst.',
+      8: 'Javascript, solidity developer, analyst',
       9: 'Mukhin Arseny',
       10: 'Lead javascript developer',
       11: 'Luzgin Sergey',
       12: 'Engineer, administrator.',
       13: 'Ignatieva Alexandra',
-      14: 'Designer.',
+      14: 'Designer',
       15: 'Team'
     }
   },
