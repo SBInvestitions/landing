@@ -4,10 +4,18 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 
+  .video-row {
+    margin-bottom: 5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .video {
 
     &.right {
       background-position: right bottom;
+      padding-left: 2rem;
     }
     &.left {
       background-position: left bottom;
@@ -19,7 +27,7 @@
     background-size: 80%;
     iframe {
       position: relative;
-      width: 80%;
+      width: 90%;
     }
   }
 

@@ -6,11 +6,15 @@
           <el-col :xs="24" :sm="24" :md="20" :lg="16" :xl="16">
             <div class="grid-content bg-purple-light">
               <h2>{{ $t("bounty.text.1") }}</h2>
-              <p>{{ $t("bounty.text.2") }}</p>
-              <p>{{ $t("bounty.text.3") }}</p>
-              <p>{{ $t("bounty.text.4") }}</p>
-              <p>{{ $t("bounty.text.5") }}</p>
-              <p>{{ $t("bounty.text.6") }}</p>
+              <p>{{ $t("bounty.text.2") }} <span>3.200.000,00 SBI</span></p>
+              <span class="round"></span>
+              <p>{{ $t("bounty.text.3") }} <span>1.000.000,00 SBI</span></p>
+              <span class="round"></span>
+              <p>{{ $t("bounty.text.4") }} <span>100.000,00 SBI</span> {{ $t("bounty.text.5") }}  <span>1.000.000,00 SBI</span></p>
+              <span class="round"></span>
+              <p><span>{{ $t("bounty.text.6") }} 2.000.000,00 SBI</span></p>
+              <p>{{ $t("bounty.text.7") }}</p>
+              <p>{{ $t("bounty.text.8") }}</p>
             </div>
           </el-col>
         </el-row>

@@ -190,10 +190,8 @@
   }
 }
 
-@media (max-width: 500px) {
-  .stone-stage {
-    .stage {
-      height: auto !important;
-    }
+@media (max-width: 1280px) {
+  .road-map {
+    padding-bottom: 10rem;
   }
 }

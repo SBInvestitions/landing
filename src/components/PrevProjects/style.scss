@@ -1,10 +1,11 @@
 .prev-projects {
   background-image: url('./../../assets/projects-background.png');
-
+  background-position: bottom center;
+  background-repeat: no-repeat;
   text-align: center;
   margin-top: 2rem;
   padding-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   padding-bottom: 1rem;
 
   .projects-header {
@@ -13,7 +14,7 @@
 
   .projects {
     width: 90%;
-    margin: 100px auto;
+    margin: 80px auto;
 
     .project {
       padding: 30px;

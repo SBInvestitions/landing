@@ -4,6 +4,13 @@
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 
+  .road-map-stages {
+    padding-bottom: 5rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
   .team-row {
     text-align: center;
 

@@ -7,17 +7,14 @@
             <div class="grid-content bg-purple-light">
               <el-row>
                 <el-col :span="24" class="header">
-                  <h2>{{ $t("aboutCompany.theProblem.0") }}</h2>
-                  <p>{{ $t("aboutCompany.theProblem.1") }}</p>
-                  <p class="problem">{{ $t("aboutCompany.theProblem.2") }}</p>
+                  <h2>{{ $t("videoBlock.text.1") }}</h2>
                 </el-col>
               </el-row>
 
-              <el-row>
+              <el-row class="video-row">
                 <el-col :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.theProblem.3") }}</p>
-                    <p>{{ $t("aboutCompany.theProblem.4") }}</p>
+                    <p>{{ $t("videoBlock.text.2") }}</p>
                   </div>
                 </el-col>
                 <el-col :span="12" class="video right">
@@ -25,30 +22,17 @@
                 </el-col>
               </el-row>
 
-              <el-row>
+              <el-row class="video-row">
                 <el-col :span="12" class="video left">
                   <iframe width="600px" height="370px" id="video-background-2" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
                 </el-col>
                 <el-col :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.theProblem.5") }}</p>
-                    <p>{{ $t("aboutCompany.theProblem.6") }}</p>
+                    <p>{{ $t("videoBlock.text.3") }}</p>
+                    <p>{{ $t("videoBlock.text.4") }}</p>
                   </div>
                 </el-col>
               </el-row>
-
-              <el-row>
-                <el-col :span="12" class="idea left">
-                  <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.theProblem.7") }}</p>
-                    <p>{{ $t("aboutCompany.theProblem.8") }}</p>
-                  </div>
-                </el-col>
-                <el-col :span="12" class="video right">
-                  <iframe width="600px" height="370px" id="video-background-3" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
-                </el-col>
-              </el-row>
-
             </div>
           </el-col>
         </el-row>

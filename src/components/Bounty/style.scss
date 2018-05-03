@@ -1,7 +1,40 @@
 .bounty {
   text-align: center;
+  background-image: url('./../../assets/svg/back-road-map-rounds.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  // background-size: 100% 70%;
+  background-size: 100%;
   padding-top: 3rem;
-  margin-top: 2rem;
-  padding-bottom: 3rem;
+  margin-top: 0;
+  padding-bottom: 24rem;
   margin-bottom: 2rem;
+
+  h2 {
+    color: white;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-size: 18px;
+    span {
+      color: white;
+    }
+  }
+
+  .round {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 1280px) {
+  .bounty {
+    padding-bottom: 10rem;
+  }
 }

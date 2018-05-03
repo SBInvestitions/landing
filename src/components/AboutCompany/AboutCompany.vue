@@ -11,7 +11,7 @@
                 </el-col>
               </el-row>
 
-              <el-row>
+              <el-row class="block-row">
                 <el-col :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
                     <p>Мы регистрируем пионерскую компанию.</p>
@@ -20,16 +20,16 @@
                   </div>
                 </el-col>
                 <el-col :span="12" class="gif right">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-1" width="600px" height="300px">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-1" width="80%" height="60%">
                     <source src="./../../assets/videos/1.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/1_1.gif" />
                   </video>
                 </el-col>
               </el-row>
 
-              <el-row>
+              <el-row class="block-row">
                 <el-col :span="12" class="gif left">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-2" width="600px" height="300px">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/2-2.gif" />
                   </video>
@@ -42,7 +42,7 @@
                 </el-col>
               </el-row>
 
-              <el-row>
+              <el-row class="block-row">
                 <el-col :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
                     <p>Мы даем своим инвесторам возможность участия в руководстве финансированием проекта <strong>на каждом этапе</strong> и тем самым <strong>уменьшаем риски.</strong></p>
@@ -51,16 +51,16 @@
                   </div>
                 </el-col>
                 <el-col :span="12" class="gif right">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-3" width="600px" height="300px">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/2-2.gif" />
                   </video>
                 </el-col>
               </el-row>
 
-              <el-row>
+              <el-row class="block-row">
                 <el-col :span="12" class="gif left">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-4" width="600px" height="300px">
+                  <video autoplay="autoplay" loop="loop" id="video-gif-4" width="80%" height="60%">
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/2-2.gif" />
                   </video>
@@ -91,10 +91,6 @@
     data () {
       return {
       };
-    },
-    methods: {
-    },
-    mounted () {
     }
   };
 </script>
