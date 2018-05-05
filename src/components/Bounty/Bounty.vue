@@ -8,13 +8,13 @@
               <h2>{{ $t("bounty.text.1") }}</h2>
               <p>{{ $t("bounty.text.2") }} <span>3.200.000,00 SBI</span></p>
               <span class="round"></span>
-              <p>{{ $t("bounty.text.3") }} <span>1.000.000,00 SBI</span></p>
+              <p>{{ $t("bounty.text.3") }} <span>1.000.000,00 SBI</span> {{ $t("bounty.text.4") }}</p>
               <span class="round"></span>
-              <p>{{ $t("bounty.text.4") }} <span>100.000,00 SBI</span> {{ $t("bounty.text.5") }}  <span>1.000.000,00 SBI</span></p>
+              <p>{{ $t("bounty.text.5") }} <span>100.000,00 SBI</span> {{ $t("bounty.text.6") }}  <span>1.000.000,00 SBI</span></p>
               <span class="round"></span>
-              <p><span>{{ $t("bounty.text.6") }} 2.000.000,00 SBI</span></p>
-              <p>{{ $t("bounty.text.7") }}</p>
+              <p><span>{{ $t("bounty.text.7") }} 2.000.000,00 SBI</span></p>
               <p>{{ $t("bounty.text.8") }}</p>
+              <p>{{ $t("bounty.text.9") }}</p>
             </div>
           </el-col>
         </el-row>
