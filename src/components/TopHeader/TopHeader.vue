@@ -70,25 +70,21 @@
                         <header>0</header>
                         <span>{{ $t("topHeader.text.14") }}</span>
                       </div>
-                      <div class="one-place">
+                      <div class="pre-ico">
                         <header>$130 000</header>
                         <span>{{ $t("topHeader.text.15") }}</span>
                       </div>
-                      <div class="two-place">
+                      <div class="ico">
                         <header>$260 000</header>
                         <span>{{ $t("topHeader.text.16") }}</span>
                       </div>
-                      <div class="three-place">
-                        <header>$390 000</header>
-                        <span>{{ $t("topHeader.text.17") }}</span>
+                      <div class="soft-cap">
+                        <header>$260 000</header>
+                        <span>{{ $t("topHeader.text.16") }}</span>
                       </div>
-                      <div class="four-place">
-                        <header>$420 000</header>
-                        <span>{{ $t("topHeader.text.18") }}</span>
-                      </div>
-                      <div class="database">
+                      <div class="hard-cap">
                         <header>$1 M</header>
-                        <span>{{ $t("topHeader.text.19") }}</span>
+                        <span>{{ $t("topHeader.text.17") }}</span>
                       </div>
                     </el-col>
 

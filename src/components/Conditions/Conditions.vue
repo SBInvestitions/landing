@@ -90,7 +90,7 @@
         }
         if (right) {
           const rightHeight = right.offsetHeight;
-          right.pseudoStyle('before', 'height', `${rightHeight - 30}px !important`, 'right-class');
+          right.pseudoStyle('before', 'height', `${rightHeight - 35}px !important`, 'right-class');
         }
       }
     },

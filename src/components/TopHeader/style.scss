@@ -12,7 +12,7 @@
   }
 
   .top-top {
-    height: 250px;
+    height: 400px;
 
     .bg-purple-dark {
       position: absolute;
@@ -77,13 +77,13 @@
   .top-bottom {
     background: url('./../../assets/svg/wave-pure2.svg');
     background-size: cover;
-    height: 830px;
+    height: 680px;
 
     .sbi-scale-container {
       width: 60%;
       height: 283px;
       margin: 0 auto;
-      margin-top: 400px;
+      margin-top: 340px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -112,7 +112,7 @@
       .comment-block {
         position: relative;
 
-        .start, .one-place, .two-place, .three-place, .four-place, .database {
+        .start, .pre-ico, .ico, .soft-cap, .hard-cap {
           position: absolute;
           top: 50px;
 
@@ -149,7 +149,7 @@
           }
         }
 
-        .one-place {
+        .pre-ico {
           width: 10%;
           left: 10%;
 
@@ -158,7 +158,7 @@
           }
         }
 
-        .two-place {
+        .ico {
           width: 10%;
           left: 25%;
 
@@ -167,7 +167,7 @@
           }
         }
 
-        .three-place {
+        .soft-cap {
           width: 10%;
           left: 40%;
 
@@ -176,16 +176,7 @@
           }
         }
 
-        .four-place {
-          width: 12%;
-          left: 60%;
-
-          &:before {
-            left: 73px;
-          }
-        }
-
-        .database {
+        .hard-cap {
           width: 15%;
           left: 84%;
           text-align: right;

@@ -65,6 +65,10 @@
 
   .el-menu-sbi {
 
+    .el-menu--horizontal {
+      margin: 0 auto!important;
+    }
+
     .white-paper {
       float: right;
       position: fixed;
