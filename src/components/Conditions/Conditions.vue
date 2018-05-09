@@ -18,7 +18,7 @@
                     </el-row>
                     <el-row class="pre-sale-block" :gutter="20">
                       <el-col :span="12">
-                        Цена на preICO: <strong>100500</strong>
+                        Цена на preICO: <strong>1 SBI = $0.02</strong> (скидка 60%)
                       </el-col>
                       <el-col :span="12">
                         Даты preICO: <strong>01.06.18 - 30.06.18</strong>
@@ -26,11 +26,11 @@
                     </el-row>
                     <el-row class="sale-block" :gutter="20">
                       <el-col :span="12">
-                        <p>Цена на ICO: <strong>2000000</strong></p>
+                        <p>Цена на ICO: <strong>1 SBI = $0.052</strong></p>
                         <p>Даты ICO: <strong>01.07.18 - 31.08.18</strong></p>
                       </el-col>
                       <el-col :span="12">
-                        <p>Soft-Cap: <strong>$380,000.00</strong></p>
+                        <p>Soft-Cap: <strong>-</strong></p>
                         <p>Hard-Cap: <strong>$1,000,000.00</strong></p>
                       </el-col>
                     </el-row>
