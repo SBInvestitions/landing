@@ -76,12 +76,14 @@
       ...mapActions({
         getUser: 'user/LOAD'
       }),
-      scrollTo (position) {
-        window.scroll({
+      scrollTo (position, element) {
+        console.log('position', position);
+        /* window.scroll({
           top: position,
           left: 0,
           behavior: 'smooth'
-        });
+        }); */
+        element.scrollIntoView({ behavior: 'smooth' });
       },
       handleSelect (key, keyPath) {
         console.log(key, keyPath);
@@ -111,7 +113,7 @@
           default:
             break;
         }
-        this.scrollTo(offset);
+        this.scrollTo(offset, block);
       }
     },
     computed: {

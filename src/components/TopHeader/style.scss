@@ -150,8 +150,8 @@
         }
 
         .pre-ico {
-          width: 10%;
-          left: 10%;
+          width: 11%;
+          left: 11%;
 
           &:before {
             left: 60px;
@@ -254,6 +254,15 @@
     height: 200px !important;
     .scale-row {
       padding-top: 30px !important;
+
+      .rized, .discount {
+        .header {
+          font-size: 17px !important;
+        }
+        .h4 {
+          font-size: 20px !important;
+        }
+      }
     }
   }
 }
@@ -266,14 +275,9 @@
   .sbi-scale-container {
     width: 60%;
   }
-  .sbi-logo-container {
-    margin-top: 5rem !important;
-  }
 }
 @media (min-width: 1280px) {
-  .sbi-logo-container {
-    margin-top: 5rem !important;
-  }
+
 }
 @media (max-width: 1024px) {
 

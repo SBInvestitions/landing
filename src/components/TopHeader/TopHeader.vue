@@ -35,7 +35,7 @@
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
 
-                    <el-col :span="8" class="timer">
+                    <el-col :xs="12" :sm="12" :md="14" :lg="12" :xl="8" class="timer">
                       <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
                         <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
@@ -48,12 +48,12 @@
                       </el-row>
                     </el-col>
 
-                    <el-col :span="8" class="rized">
+                    <el-col :xs="12" :sm="12" :md="4" :lg="6" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
                       <div class="h4">2,500,000</div>
                     </el-col>
 
-                    <el-col :span="8" class="discount">
+                    <el-col :xs="12" :sm="12" :md="4" :lg="6" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
                       <div class="h4">20%</div>
                     </el-col>
@@ -71,16 +71,8 @@
                         <span>{{ $t("topHeader.text.14") }}</span>
                       </div>
                       <div class="pre-ico">
-                        <header>$130 000</header>
+                        <header>$116 000</header>
                         <span>{{ $t("topHeader.text.15") }}</span>
-                      </div>
-                      <div class="ico">
-                        <header>$260 000</header>
-                        <span>{{ $t("topHeader.text.16") }}</span>
-                      </div>
-                      <div class="soft-cap">
-                        <header>$260 000</header>
-                        <span>{{ $t("topHeader.text.16") }}</span>
                       </div>
                       <div class="hard-cap">
                         <header>$1 M</header>
