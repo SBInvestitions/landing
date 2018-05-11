@@ -11,7 +11,8 @@
             </div>
           </el-col>
         </el-row>
-        <el-row type="flex" class="row-bg stages-middle-line" justify="space-around"></el-row>
+
+        <el-row type="flex" class="row-bg stages-middle-line hidden-md-and-down" justify="space-around"></el-row>
         <el-row type="flex" class="row-bg road-map-stages hidden-md-and-down" justify="space-around">
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">1</div>
@@ -87,7 +88,8 @@
           </el-col>
         </el-row>
 
-        <el-row type="flex" class="row-bg road-map-stages hidden-sm-and-down" justify="space-around">
+        <el-row type="flex" class="row-bg stages-middle-line hidden-xs-only hidden-lg-and-up" justify="space-around"></el-row>
+        <el-row type="flex" class="row-bg road-map-stages hidden-xs-only hidden-lg-and-up" justify="space-around">
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">1</div>
             <div class="round"></div>
@@ -125,7 +127,8 @@
             <div class="price">1 SBI = $0.053</div>
           </el-col>
         </el-row>
-        <el-row type="flex" class="row-bg road-map-stages hidden-sm-and-down" justify="space-around">
+        <el-row type="flex" class="row-bg stages-middle-line hidden-xs-only hidden-lg-and-up" justify="space-around"></el-row>
+        <el-row type="flex" class="row-bg road-map-stages hidden-xs-only hidden-lg-and-up" justify="space-around">
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">4</div>
             <div class="round"></div>
@@ -164,7 +167,8 @@
           </el-col>
         </el-row>
 
-        <el-row type="flex" class="row-bg road-map-stages hidden-xs-only" justify="space-around">
+        <el-row type="flex" class="row-bg stages-middle-line hidden-sm-and-up" justify="space-around"></el-row>
+        <el-row type="flex" class="row-bg road-map-stages hidden-sm-and-up" justify="space-around">
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">1</div>
             <div class="round"></div>
@@ -190,7 +194,8 @@
             <div class="price">1 SBI = $0.052</div>
           </el-col>
         </el-row>
-        <el-row type="flex" class="row-bg road-map-stages hidden-xs-only" justify="space-around">
+        <el-row type="flex" class="row-bg stages-middle-line hidden-sm-and-up" justify="space-around"></el-row>
+        <el-row type="flex" class="row-bg road-map-stages hidden-sm-and-up" justify="space-around">
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">3</div>
             <div class="round"></div>
@@ -216,7 +221,8 @@
             <div class="price">1 SBI = $0.21</div>
           </el-col>
         </el-row>
-        <el-row type="flex" class="row-bg road-map-stages hidden-xs-only" justify="space-around">
+        <el-row type="flex" class="row-bg stages-middle-line hidden-sm-and-up" justify="space-around"></el-row>
+        <el-row type="flex" class="row-bg road-map-stages hidden-sm-and-up" justify="space-around">
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">5</div>
             <div class="round"></div>

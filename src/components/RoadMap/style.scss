@@ -96,8 +96,57 @@
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 767px) {
   .road-map {
+    background-size: 1250%;
+    .stages-middle-line {
+      width: 46% !important;
+    }
+  }
+  .road-map-stages {
+    margin-bottom: 90px !important;
+  }
+  .price {
+    bottom: -50px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .road-map {
+    background-size: 320%;
+    .stages-middle-line {
+      width: 57% !important;
+    }
+  }
+  .road-map-stages {
+    margin-bottom: 90px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .road-map {
+    padding-bottom: 12rem;
+    background-size: 180%;
+    .stages-middle-line {
+      width: 57% !important;
+    }
+  }
+  .road-map-stages {
+    margin-bottom: 45px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .road-map {
+    height: 600px;
+    background-size: 130%
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .road-map {
+    height: 600px;
     padding-bottom: 10rem;
+    background-size: 110%;
   }
 }

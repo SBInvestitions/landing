@@ -249,6 +249,7 @@
     }
   }
 }
+/*
 @media (max-width: 1280px) {
   .sbi-scale-container {
     height: 200px !important;
@@ -370,6 +371,7 @@
     }
   }
 }
+*/
 
 .videoContainer {
   position: absolute;
@@ -393,5 +395,32 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .top-header {
+    .timer {
+      .header {
+        font-size: 20px !important;
+      }
+      .h4 {
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .top-header {
+
   }
 }
