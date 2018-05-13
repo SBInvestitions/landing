@@ -3,7 +3,7 @@
     <el-row class="road-map-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
-          <el-col class="road-map-header" :xs="24" :sm="24" :md="20" :lg="16" :xl="16">
+          <el-col class="road-map-header" :xs="22" :sm="22" :md="20" :lg="16" :xl="16">
             <h2>{{ $t("roadMap.text.1") }}</h2>
             <div class="text-block">
               <p>Каждый этап завершается ростом цены SBI.</p>

@@ -121,12 +121,16 @@
   .road-map-stages {
     margin-bottom: 90px !important;
   }
+  .header {
+    font-size: 18px !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .road-map {
     padding-bottom: 12rem;
-    background-size: 180%;
+    background-size: 205%;
+
     .stages-middle-line {
       width: 57% !important;
     }

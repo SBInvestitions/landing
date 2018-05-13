@@ -1,6 +1,6 @@
 <template>
   <div id="bounty" class="bounty">
-    <el-row class="team-row">
+    <el-row class="bounty-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
           <el-col :xs="24" :sm="24" :md="20" :lg="16" :xl="16">

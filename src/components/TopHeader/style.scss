@@ -399,11 +399,28 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-
+  .sbi-scale-container {
+    width: 90% !important;
+  }
+  .h4 {
+    .scale {
+      font-size: 30px;
+    }
+  }
+  .pre-ico {
+    width: 20% !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-
+  .h4 {
+    .scale {
+      font-size: 30px;
+    }
+  }
+  .pre-ico {
+    width: 20% !important;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {

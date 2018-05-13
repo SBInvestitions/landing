@@ -21,6 +21,10 @@
 
       .round {
 
+        img {
+          max-width: 320px;
+          width: 100%;
+        }
       }
 
       .divider {
@@ -54,13 +58,17 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   .prev-projects {
-
+    .projects {
+      margin-top: 20px !important;
+    }
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .prev-projects {
-
+    .projects {
+      margin-top: 20px !important;
+    }
   }
 }
 
