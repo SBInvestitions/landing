@@ -114,6 +114,21 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-company {
+    margin-top: 0 !important;
+  }
+  .idea {
+
+    .text-block {
+      text-align: center !important;
+    }
+  }
+  .block-row {
+    margin-bottom: 2rem !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .about-company {
     .image-block {

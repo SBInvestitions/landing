@@ -11,22 +11,22 @@
                 </el-col>
               </el-row>
 
-              <el-row class="video-row row-bg" type="flex" justify="center">
-                <el-col :span="12" class="idea left">
+              <el-row class="video-row row-bg">
+                <el-col :xs="24" :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("videoBlock.text.2") }}</p>
                   </div>
                 </el-col>
-                <el-col :span="12" class="video right">
+                <el-col :xs="24" :span="12" class="video right">
                   <iframe width="600px" height="370px" id="video-background-1" src="https://www.youtube.com/embed/ZP3DXmDJ-xk?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
                 </el-col>
               </el-row>
 
               <el-row class="video-row">
-                <el-col :span="12" class="video left">
+                <el-col :xs="24" :span="12" class="video left">
                   <iframe width="600px" height="370px" id="video-background-2" src="https://www.youtube.com/embed/d005PC3zqVA?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
                 </el-col>
-                <el-col :span="12" class="idea right">
+                <el-col :xs="24" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("videoBlock.text.3") }}</p>
                     <p>{{ $t("videoBlock.text.4") }}</p>

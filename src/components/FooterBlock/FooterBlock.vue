@@ -51,7 +51,7 @@
         </div>
       </el-col>
     </el-row>
-    <el-row :gutter="20" type="flex" class="row-bg" justify="center">
+    <el-row :gutter="20" type="flex" class="row-bg hidden-xs-only" justify="center">
       <el-col :span="20">
         <el-row :gutter="20" type="flex" class="row-bg" justify="center">
           <el-col>
@@ -83,8 +83,34 @@
       </el-col>
     </el-row>
 
-    <el-row :gutter="20" type="flex" class="row-bg" justify="center">
+    <el-row :gutter="20" class="row-bg hidden-sm-and-up">
+      <el-col>
+        <div class="text-block">
+          <a href="" target="_blank">Условия использования</a>
+        </div>
+      </el-col>
       <el-col :span="1">
+        <div class="grid-content bg-purple">
+        </div>
+      </el-col>
+      <el-col>
+        <div class="text-block">
+          <a href="" target="_blank">Политика конфиденциальности</a>
+        </div>
+      </el-col>
+      <el-col :span="1">
+        <div class="grid-content bg-purple">
+        </div>
+      </el-col>
+      <el-col>
+        <div class="text-block">
+          <a href="" target="_blank">Соглашение о продаже SBI</a>
+        </div>
+      </el-col>
+    </el-row>
+
+    <el-row :gutter="20" type="flex" class="row-bg" justify="center">
+      <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
           <el-tooltip class="item" effect="light" content="Project Github Repo" placement="top-start">
             <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/github.png" alt="github"></a>
@@ -92,7 +118,7 @@
         </div>
       </el-col>
 
-      <el-col :span="1">
+      <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
           <el-tooltip class="item" effect="light" content="Project Telegram Channel" placement="top-start">
             <a href="https://t.me/sbinvest" class="social-link" target="_blank">
@@ -102,7 +128,7 @@
         </div>
       </el-col>
 
-      <el-col :span="1">
+      <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
           <el-tooltip class="item" effect="light" content="Project Facebook Group" placement="top-start">
             <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/facebook.jpg" alt="github"></a>
@@ -110,7 +136,7 @@
         </div>
       </el-col>
 
-      <el-col :span="1">
+      <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
           <el-tooltip class="item" effect="light" content="Project Vkontakte Group" placement="top-start">
             <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/vkontakte.png" alt="github"></a>

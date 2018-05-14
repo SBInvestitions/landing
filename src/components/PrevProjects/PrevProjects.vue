@@ -90,7 +90,7 @@
         </el-row>
 
 
-        <el-row type="flex" class="row-bg projects hidden-lg-and-up" justify="space-around">
+        <el-row type="flex" class="row-bg projects hidden-lg-and-up hidden-xs-only" justify="space-around">
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
             <el-row class="round">
               <img src="./../../assets/projects/kalalam2.png" alt="kalalampi">
@@ -116,7 +116,7 @@
             </div>
           </el-col>
         </el-row>
-        <el-row type="flex" class="row-bg projects hidden-lg-and-up" justify="space-around">
+        <el-row type="flex" class="row-bg projects hidden-lg-and-up hidden-xs-only" justify="space-around">
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
             <div class="round">
               <img src="./../../assets/projects/muezer2.png" alt="muezerskoe">
@@ -142,7 +142,7 @@
             </div>
           </el-col>
         </el-row>
-        <el-row type="flex" class="row-bg projects hidden-lg-and-up" justify="space-around">
+        <el-row type="flex" class="row-bg projects hidden-lg-and-up hidden-xs-only" justify="space-around">
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
             <div class="round">
               <img src="./../../assets/projects/mavar2.png" alt="mavarskoe">
@@ -156,6 +156,83 @@
             </div>
           </el-col>
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
+            <div class="round">
+              <img src="./../../assets/projects/hakosel2.png" alt="hakosel">
+            </div>
+            <div class="divider"></div>
+            <div class="header">
+              Хаккосельское
+            </div>
+            <div class="description">
+              Прибыль ~ $1,000,000
+            </div>
+          </el-col>
+        </el-row>
+
+        <el-row class="row-bg projects hidden-sm-and-up" >
+          <el-col class="project" :span="24">
+
+            <el-row class="round">
+              <img src="./../../assets/projects/kalalam2.png" alt="kalalampi">
+            </el-row>
+            <el-row class="divider"></el-row>
+            <el-row class="header">
+              Гранитдомдорстрой
+            </el-row>
+            <el-row class="description">
+              Прибыль ~ $1,200,000
+            </el-row>
+
+          </el-col>
+          <el-col class="project" :span="24">
+            <div class="round">
+              <img src="./../../assets/projects/petrogranit2.png" alt="petrogranit">
+            </div>
+            <div class="divider"></div>
+            <div class="header">
+              Петрогранит
+            </div>
+            <div class="description">
+              Прибыль ~ $1,500,000
+            </div>
+          </el-col>
+          <el-col class="project" :span="24">
+            <div class="round">
+              <img src="./../../assets/projects/muezer2.png" alt="muezerskoe">
+            </div>
+            <div class="divider"></div>
+            <div class="header">
+              Муезерский гранит
+            </div>
+            <div class="description">
+              Прибыль ~ $1,000,000
+            </div>
+          </el-col>
+          <el-col class="project" :span="24">
+            <div class="round">
+              <img src="./../../assets/projects/hakosel2.png" alt="sever-stroi">
+            </div>
+            <div class="divider"></div>
+            <div class="header">
+              Север-Строй
+            </div>
+            <div class="description">
+              <span class="red">Убыток ~ $500,000</span>
+            </div>
+          </el-col>
+          <el-col class="project" :span="24">
+            <div class="round">
+              <img src="./../../assets/projects/mavar2.png" alt="mavarskoe">
+            </div>
+            <div class="divider"></div>
+            <div class="header">
+              Маварское месторождение
+            </div>
+            <div class="description">
+              Прибыль ~ $500,000
+            </div>
+          </el-col>
+          <el-col class="project" :span="24">
             <div class="round">
               <img src="./../../assets/projects/hakosel2.png" alt="hakosel">
             </div>

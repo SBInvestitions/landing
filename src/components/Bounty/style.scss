@@ -33,7 +33,10 @@
 
 }
 @media (max-width: 768px) {
-
+  .bounty {
+    background-size: 700%;
+    padding-bottom: 150px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

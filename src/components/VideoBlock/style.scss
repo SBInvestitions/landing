@@ -112,6 +112,21 @@
     }
   }
 }
+@media (max-width: 768px) {
+  iframe {
+    height: 140px !important;
+    width: 100% !important;
+  }
+  .video {
+    padding-left: 0 !important;
+    background-size: 100% !important;
+  }
+  .idea {
+    .text-block {
+      text-align: center !important;
+    }
+  }
+}
 
 @media (max-width: 1024px) {
   .about-company {

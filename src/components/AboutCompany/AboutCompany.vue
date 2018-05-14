@@ -12,13 +12,13 @@
               </el-row>
 
               <el-row class="block-row">
-                <el-col :span="12" class="idea left">
+                <el-col :xs="22" :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("aboutCompany.text.1") }}</p>
                     <p>{{ $t("aboutCompany.text.2") }}</p>
                   </div>
                 </el-col>
-                <el-col :span="12" class="gif right">
+                <el-col :xs="24" :span="12" class="gif right">
                   <video autoplay loop id="video-gif-1" width="80%" height="60%">
                     <source src="./../../assets/videos/1.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/1_1.gif" />
@@ -27,13 +27,13 @@
               </el-row>
 
               <el-row class="block-row">
-                <el-col :span="12" class="gif left">
+                <el-col :xs="24" :span="12" class="gif left">
                   <video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/2-2.gif" />
                   </video>
                 </el-col>
-                <el-col :span="12" class="idea right">
+                <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("aboutCompany.text.3") }}</p>
                     <p>{{ $t("aboutCompany.text.4") }} <strong>{{ $t("aboutCompany.text.5") }}</strong></p>
@@ -42,14 +42,14 @@
               </el-row>
 
               <el-row class="block-row">
-                <el-col :span="12" class="idea left">
+                <el-col :xs="22" :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("aboutCompany.text.6") }} <strong>{{ $t("aboutCompany.text.7") }}</strong>{{ $t("aboutCompany.text.8") }}<strong>{{ $t("aboutCompany.text.18") }}</strong></p>
                     <p>{{ $t("aboutCompany.text.9") }}<strong>{{ $t("aboutCompany.text.17") }}</strong>{{ $t("aboutCompany.text.10") }}</p>
                     <p>{{ $t("aboutCompany.text.11") }}</p>
                   </div>
                 </el-col>
-                <el-col :span="12" class="gif right">
+                <el-col :xs="24" :span="12" class="gif right">
                   <video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
                     <source src="./../../assets/videos/3.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/3.gif" />
@@ -58,13 +58,13 @@
               </el-row>
 
               <el-row class="block-row">
-                <el-col :span="12" class="gif left">
+                <el-col :xs="24" :span="12" class="gif left">
                   <video autoplay="autoplay" loop="loop" id="video-gif-4" width="80%" height="60%">
                     <source src="./../../assets/videos/4.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/4.gif" />
                   </video>
                 </el-col>
-                <el-col :span="12" class="idea right">
+                <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("aboutCompany.text.12") }}<strong>{{ $t("aboutCompany.text.13") }}</strong></p>
                     <p>{{ $t("aboutCompany.text.14") }}<strong>{{ $t("aboutCompany.text.15") }}</strong>{{ $t("aboutCompany.text.16") }}</p>

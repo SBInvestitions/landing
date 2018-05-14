@@ -18,3 +18,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .clients {
+
+    .client {
+      .logo {
+        img {
+          width: 150px !important;
+        }
+      }
+    }
+  }
+}
