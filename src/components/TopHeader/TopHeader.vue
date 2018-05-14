@@ -35,7 +35,7 @@
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
 
-                    <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="timer">
+                    <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="timer">
                       <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
                         <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
@@ -48,17 +48,14 @@
                       </el-row>
                     </el-col>
 
-                    <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
+                    <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
                       <div class="h4">2,500,000</div>
                     </el-col>
-
-                    <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
+                    <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
                       <div class="h4">20%</div>
                     </el-col>
-
-
                     <el-col :span="24" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
                         <div class="line"></div>
