@@ -130,3 +130,27 @@
     padding: 0 5px !important;
   }
 }
+
+@media (max-width: 1200px) {
+  .main-menu.small {
+    .menu-row {
+      background: transparent !important;
+      .el-menu-item {
+        color: black !important;
+      }
+    }
+  }
+  .menu-row {
+    width: auto;
+    background: transparent;
+    .el-menu--collapse {
+      display: none;
+    }
+  }
+  .el-icon-sb-invest {
+    padding: 30px !important;
+    background-position: center !important;
+    background-size: 50px !important;
+    background-repeat: no-repeat !important;
+  }
+}

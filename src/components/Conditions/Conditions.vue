@@ -36,7 +36,7 @@
                     </el-row>
 
                     <el-row class="graph-block" :gutter="20">
-                      <el-col :xs="{span: 20, offset: 2}" :sm="{span: 10, offset: 1}" :md="12" :lg="12" :xl="12">
+                      <el-col :xs="{span: 20, offset: 2}" :sm="{span: 10, offset: 1}" :md="11" :lg="11" :xl="11">
                         <div class="grid-content bg-purple graph-left-block">
                           <div class="graph-left" id="graph-left">
                             <div class="top top-1">{{ $t("conditions.text.2") }}</div>
@@ -50,7 +50,7 @@
                           </div>
                         </div>
                       </el-col>
-                      <el-col :xs="{span: 20, offset: 2}" :sm="10" :md="12" :lg="12" :xl="12">
+                      <el-col :xs="{span: 20, offset: 2}" :sm="10" :md="11" :lg="11" :xl="11">
                         <div class="grid-content bg-purple graph-right-block" >
                           <div class="graph-right" id="graph-right">
                             <div class="top top-1">{{ $t("conditions.text.14") }}</div>

@@ -1,7 +1,8 @@
 <template>
   <div id="main-menu" class="main-menu">
     <el-row type="flex" class="row-bg menu-row" justify="center">
-      <el-menu :default-active="activeIndex" class="el-menu-sbi" mode="horizontal" @select="handleSelect">
+
+      <el-menu :default-active="activeIndex" class="el-menu-sbi hidden-md-and-down" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">
           <a tabindex="1">
             <i class="el-icon-sb-invest hidden-lg-and-up"></i>
@@ -10,25 +11,21 @@
         </el-menu-item>
         <el-menu-item index="2">
           <a tabindex="2">
-            <i class="el-icon-tickets hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.daico") }}</span>
           </a>
         </el-menu-item>
         <el-menu-item index="3">
           <a tabindex="3">
-            <i class="el-icon-date hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.chronology") }}</span>
           </a>
         </el-menu-item>
         <el-menu-item index="4">
           <a tabindex="4">
-            <i class="el-icon-service hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.team") }}</span>
           </a>
         </el-menu-item>
         <el-menu-item index="5">
           <a tabindex="5">
-            <i class="el-icon-goods hidden-lg-and-up"></i>
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
@@ -54,6 +51,55 @@
         </el-menu-item>
       </el-menu>
 
+      <el-menu default-active="2" class="hidden-lg-and-up el-menu-vertical" @select="handleSelect" :collapse="isCollapse">
+        <el-menu-item index="1">
+          <a tabindex="1">
+            <span slot="title" class="">{{ $t("home.menu.about") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="2">
+          <a tabindex="2">
+            <span slot="title" class="">{{ $t("home.menu.daico") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="3">
+          <a tabindex="3">
+            <span slot="title" class="">{{ $t("home.menu.chronology") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="4">
+          <a tabindex="4">
+            <span slot="title" class="">{{ $t("home.menu.team") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="5">
+          <a tabindex="5">
+            <span slot="title" class="">{{ $t("home.menu.bonuses") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="7" class="lang">
+          <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
+          <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
+        </el-menu-item>
+        <el-menu-item index="7" class="sign-in">
+          <a href="/login" v-if="!user.id">
+            <span slot="title">{{ $t("home.menu.logIn") }}</span>
+          </a>
+          <a href="/account" v-if="user.id">
+            <span slot="title">{{ $t("home.menu.account") }}</span>
+          </a>
+        </el-menu-item>
+        <el-menu-item index="6" class="white-paper">
+          <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
+            <span slot="title">{{ $t("home.menu.proporsal") }}</span>
+          </a>
+          <a target="_blank"  href="https://sbinvest.pro/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
+            <span slot="title">{{ $t("home.menu.proporsal") }}</span>
+          </a>
+        </el-menu-item>
+      </el-menu>
+      <i class="el-icon-sb-invest hidden-lg-and-up" role="button" v-on:click="changeMenuView"></i>
+
     </el-row>
   </div>
 </template>
@@ -76,6 +122,15 @@
       ...mapActions({
         getUser: 'user/LOAD'
       }),
+      changeMenuView (event) {
+        this.isCollapse = !this.isCollapse;
+      },
+      handleOpen (key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose (key, keyPath) {
+        console.log(key, keyPath);
+      },
       scrollTo (position, element) {
         console.log('position', position);
         /* window.scroll({
