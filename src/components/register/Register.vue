@@ -27,8 +27,10 @@
                 </el-checkbox>
               </el-form-item>
 
-              <el-dialog title="Shipping address" :visible.sync="dialogUserAgreeVisible">
-                <div class="text-block">Text</div>
+              <el-dialog v-bind:title="$t('register.text.13')" :visible.sync="dialogUserAgreeVisible">
+                <div class="text-block">
+                  <user-agreement />
+                </div>
                 <span slot="footer" class="dialog-footer">
                   <el-button @click="closeDialog">Cancel</el-button>
                   <el-button type="primary" @click="confirmDialog">Confirm</el-button>
@@ -41,8 +43,10 @@
                 </el-checkbox>
               </el-form-item>
 
-              <el-dialog title="Shipping address" :visible.sync="dialogPersonalDataVisible">
-                <div class="text-block">Text</div>
+              <el-dialog v-bind:title="$t('register.text.14')" :visible.sync="dialogPersonalDataVisible">
+                <div class="text-block">
+                  <personal-data />
+                </div>
                 <span slot="footer" class="dialog-footer">
                   <el-button @click="closeDialog">Cancel</el-button>
                   <el-button type="primary" @click="confirmDialog">Confirm</el-button>
@@ -69,12 +73,14 @@
   import { mapGetters } from 'vuex';
   import auth from '../../api/auth';
   import theme from '../../theme';
+  import UserAgreement from './../UserAgreement/UserAgreement.vue';
+  import PersonalData from './../PersonalData/PersonalData.vue';
 
   export default {
     name: 'Register',
     data () {
       const validatePass = (rule, value, callback) => {
-        console.log('t', this.$t('register.text.11'));
+        // console.log('t', this.$t('register.text.11'));
         if (value === '') {
           callback(new Error('Please input the password'));
         } else {
@@ -171,6 +177,10 @@
           this.credentials.userAgree = true;
         }
       }
+    },
+    components: {
+      'user-agreement': UserAgreement,
+      'personal-data': PersonalData
     }
   };
 </script>

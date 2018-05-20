@@ -133,3 +133,9 @@ h2 {
 a {
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .el-dialog {
+    width: 100% !important;
+  }
+}

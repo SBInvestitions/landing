@@ -249,6 +249,12 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .top-header {
+    margin-top: 2rem !important;
+  }
+}
 /*
 @media (max-width: 1280px) {
   .sbi-scale-container {

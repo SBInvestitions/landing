@@ -29,10 +29,10 @@
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="7" class="lang">
+        <!--<el-menu-item index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
-        </el-menu-item>
+        </el-menu-item>-->
         <el-menu-item index="7" class="sign-in">
           <a href="/login" v-if="!user.id">
             <span slot="title">{{ $t("home.menu.logIn") }}</span>
@@ -41,7 +41,7 @@
             <span slot="title">{{ $t("home.menu.account") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="6" class="white-paper">
+        <el-menu-item index="8" class="white-paper">
           <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
@@ -77,18 +77,6 @@
             <span slot="title" class="">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="7" class="lang">
-          <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
-          <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
-        </el-menu-item>
-        <el-menu-item index="7" class="sign-in">
-          <a href="/login" v-if="!user.id">
-            <span slot="title">{{ $t("home.menu.logIn") }}</span>
-          </a>
-          <a href="/account" v-if="user.id">
-            <span slot="title">{{ $t("home.menu.account") }}</span>
-          </a>
-        </el-menu-item>
         <el-menu-item index="6" class="white-paper">
           <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
@@ -97,8 +85,23 @@
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
         </el-menu-item>
+        <!--<el-menu-item index="7" class="lang">
+          <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
+          <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
+        </el-menu-item>-->
+        <el-menu-item index="8" class="sign-in">
+          <a href="/login" v-if="!user.id">
+            <span slot="title">{{ $t("home.menu.logIn") }}</span>
+          </a>
+          <a href="/account" v-if="user.id">
+            <span slot="title">{{ $t("home.menu.account") }}</span>
+          </a>
+        </el-menu-item>
       </el-menu>
-      <i class="el-icon-sb-invest hidden-lg-and-up" role="button" v-on:click="changeMenuView"></i>
+      <div class="menu-icon hidden-lg-and-up" role="button" v-on:click="changeMenuView">
+        <i class="el-icon-sb-invest"></i>
+        <span>{{ $t("home.menu.menuIcon") }}</span>
+      </div>
 
     </el-row>
   </div>
@@ -126,22 +129,22 @@
         this.isCollapse = !this.isCollapse;
       },
       handleOpen (key, keyPath) {
-        console.log(key, keyPath);
+        // console.log(key, keyPath);
       },
       handleClose (key, keyPath) {
-        console.log(key, keyPath);
+        // console.log(key, keyPath);
       },
       scrollTo (position, element) {
-        console.log('position', position);
-        /* window.scroll({
+        // console.log('position', position);
+        window.scroll({
           top: position,
           left: 0,
           behavior: 'smooth'
-        }); */
+        });
         element.scrollIntoView({ behavior: 'smooth' });
       },
       handleSelect (key, keyPath) {
-        console.log(key, keyPath);
+        // console.log(key, keyPath);
         let block = null;
         let offset = null;
         switch (key) {
