@@ -19,19 +19,21 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                  <video autoplay loop id="video-gif-1" width="80%" height="60%">
+                 <!-- <video autoplay loop id="video-gif-1" width="80%" height="60%">
                     <source src="./../../assets/videos/1.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/1_1.gif" />
-                  </video>
+                  </video>-->
+                  <img src="./../../assets/videos/1s.gif" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
+                 <!-- <video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/2-2.gif" />
-                  </video>
+                  </video>-->
+                  <img src="./../../assets/videos/2s.gif" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -50,19 +52,21 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
+                 <!-- <video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
                     <source src="./../../assets/videos/3.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/3.gif" />
-                  </video>
+                  </video>-->
+                  <img src="./../../assets/videos/3s.gif" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                  <video autoplay="autoplay" loop="loop" id="video-gif-4" width="80%" height="60%">
+                  <!--<video autoplay="autoplay" loop="loop" id="video-gif-4" width="80%" height="60%">
                     <source src="./../../assets/videos/4.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/4.gif" />
-                  </video>
+                  </video>-->
+                  <img src="./../../assets/videos/4s.gif" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
