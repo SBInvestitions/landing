@@ -53,7 +53,7 @@
         <el-row type="flex" class="row-bg projects hidden-md-and-down" justify="space-around">
           <el-col class="project" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
             <div class="round">
-              <img src="./../../assets/projects/hakosel2.png" alt="sever-stroi">
+              <img src="./../../assets/projects/sever2.png" alt="sever-stroi">
             </div>
             <div class="divider"></div>
             <div class="header">
@@ -131,7 +131,7 @@
           </el-col>
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
             <div class="round">
-              <img src="./../../assets/projects/hakosel2.png" alt="sever-stroi">
+              <img src="./../../assets/projects/sever2.png" alt="sever-stroi">
             </div>
             <div class="divider"></div>
             <div class="header">
@@ -210,7 +210,7 @@
           </el-col>
           <el-col class="project" :span="24">
             <div class="round">
-              <img src="./../../assets/projects/hakosel2.png" alt="sever-stroi">
+              <img src="./../../assets/projects/sever2.png" alt="sever-stroi">
             </div>
             <div class="divider"></div>
             <div class="header">
