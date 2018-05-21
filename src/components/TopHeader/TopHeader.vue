@@ -51,11 +51,11 @@
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
-                      <div class="h4">2,500,000</div>
+                      <div class="h4">$41,000</div>
                     </el-col>
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
-                      <div class="h4">20%</div>
+                      <div class="h4">60%</div>
                     </el-col>
                     <el-col :span="24" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
@@ -88,26 +88,49 @@
               <el-col :span="24">
                 <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
-                    <el-col :span="24" class="before-ico">
-                      <span class="header">{{ $t("topHeader.text.11") }}</span>
+
+                    <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="timer">
+                      <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
-                        {{ $t("topHeader.text.12") }}
-                      </el-row>
-                      <el-row class="h4">
-                        <el-col :span="4" :offset="1" class="scale days">-<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale hours">-<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale minutes">-<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
-                        <el-col :span="2" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale seconds">-<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                        <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        <el-col :span="1" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
+                        <el-col :span="1" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
+                        <el-col :span="1" class="scale points">:</el-col>
+                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
+
+                    <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
+                      <span class="header">{{ $t("topHeader.text.5") }}</span>
+                      <div class="h4">$41,000</div>
+                    </el-col>
+                    <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
+                      <span class="header">{{ $t("topHeader.text.13") }}</span>
+                      <div class="h4">60%</div>
+                    </el-col>
                     <el-col :span="24" class="scale-line-block">
-                      <div id="scale-line-2" class="scale-line">
+                      <div id="scale-line-1" class="scale-line">
                         <div class="line"></div>
                       </div>
                     </el-col>
+
+                    <el-col :span="24" class="comment-block">
+                      <div class="start">
+                        <header>0</header>
+                        <span>{{ $t("topHeader.text.14") }}</span>
+                      </div>
+                      <div class="pre-ico">
+                        <header>$116 000</header>
+                        <span>{{ $t("topHeader.text.15") }}</span>
+                      </div>
+                      <div class="hard-cap">
+                        <header>$1 M</header>
+                        <span>{{ $t("topHeader.text.17") }}</span>
+                      </div>
+                    </el-col>
+
                   </el-row>
                 </div>
               </el-col>
@@ -122,13 +145,13 @@
 
 <script>
   import moment from 'moment';
-  import { getStarted } from './../../samples/web3Lib';
+  // import { getStarted } from './../../samples/web3Lib';
 
   export default {
     name: 'TopHeader',
     data () {
       return {
-        date: moment([2018, 3, 20]),
+        date: moment([2018, 6, 1]),
         isIcoStarted: false,
         before: {
           days: 0,
@@ -152,7 +175,7 @@
         };
       },
       async icoStarted () {
-        this.isIcoStarted = await getStarted();
+        // this.isIcoStarted = await getStarted();
       }
     },
     mounted () {
