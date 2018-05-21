@@ -37,7 +37,7 @@
                   <el-row :gutter="20">
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="timer">
-                      <span class="header">{{ $t("topHeader.text.6") }}</span>
+                      <span class="header">{{ $t("topHeader.text.11") }}</span>
                       <el-row class="h4">
                         <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
                         <el-col :span="1" class="scale points">:</el-col>
@@ -51,7 +51,7 @@
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
-                      <div class="h4">$41,000</div>
+                      <div class="h4">$0</div>
                     </el-col>
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
@@ -59,7 +59,7 @@
                     </el-col>
                     <el-col :span="24" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
-                        <div class="line"></div>
+                        <div class="line" ref="line" v-bind:style="lineStyles"></div>
                       </div>
                     </el-col>
 
@@ -104,7 +104,7 @@
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
-                      <div class="h4">$41,000</div>
+                      <div class="h4">$0</div>
                     </el-col>
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
@@ -145,6 +145,7 @@
 
 <script>
   import moment from 'moment';
+  import Vue from 'vue';
   // import { getStarted } from './../../samples/web3Lib';
 
   export default {
@@ -158,7 +159,8 @@
           hours: 0,
           minutes: 0,
           seconds: 0
-        }
+        },
+        lineStyles: {}
       };
     },
     methods: {
@@ -176,12 +178,19 @@
       },
       async icoStarted () {
         // this.isIcoStarted = await getStarted();
+      },
+      matchWidth () {
+        const width = this.$refs.line.clientWidth;
+        console.log('width', width);
+        Vue.set(this.lineStyles, 'width', 0);
       }
     },
     mounted () {
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
       }, 1000);
+      // check the line width
+      this.matchWidth();
     },
     beforeDestroy () {
       clearInterval(this.timer);
