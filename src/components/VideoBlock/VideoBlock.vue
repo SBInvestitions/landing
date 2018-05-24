@@ -18,18 +18,62 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="video right">
-                  <iframe width="90%" height="370px" id="video-background-1" src="https://www.youtube.com/embed/ZP3DXmDJ-xk?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="90%" height="370px" id="video-background-1" src="https://www.youtube.com/embed/ZP3DXmDJ-xk?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
               </el-row>
 
               <el-row class="video-row">
                 <el-col :xs="24" :span="12" class="video left">
-                  <iframe width="90%" height="370px" id="video-background-2" src="https://www.youtube.com/embed/d005PC3zqVA?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="90%" height="370px" id="video-background-2" src="https://www.youtube.com/embed/d005PC3zqVA?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
                 <el-col :xs="24" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("videoBlock.text.3") }}</p>
                     <p>{{ $t("videoBlock.text.4") }}</p>
+                  </div>
+                </el-col>
+              </el-row>
+
+              <el-row class="video-row row-bg">
+                <el-col :xs="24" :span="12" class="idea left">
+                  <div class="grid-content bg-purple-light text-block">
+                    <p>{{ $t("videoBlock.text.5") }}</p>
+                  </div>
+                </el-col>
+                <el-col :xs="24" :span="12" class="video right">
+                  <iframe width="90%" height="370px" id="video-background-3" src="https://www.youtube.com/embed/2Dcn4t-Nw20?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                </el-col>
+              </el-row>
+
+              <el-row class="video-row">
+                <el-col :xs="24" :span="12" class="video left">
+                  <iframe width="90%" height="370px" id="video-background-4" src="https://www.youtube.com/embed/s1bJEtKmZI4?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                </el-col>
+                <el-col :xs="24" :span="12" class="idea right">
+                  <div class="grid-content bg-purple-light text-block">
+                    <p>{{ $t("videoBlock.text.6") }}</p>
+                  </div>
+                </el-col>
+              </el-row>
+
+              <el-row class="video-row row-bg">
+                <el-col :xs="24" :span="12" class="idea left">
+                  <div class="grid-content bg-purple-light text-block">
+                    <p>{{ $t("videoBlock.text.7") }}</p>
+                  </div>
+                </el-col>
+                <el-col :xs="24" :span="12" class="video right">
+                  <iframe width="90%" height="370px" id="video-background-5" src="https://www.youtube.com/embed/shwQ5AaTpZA?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                </el-col>
+              </el-row>
+
+              <el-row class="video-row">
+                <el-col :xs="24" :span="12" class="video left">
+                  <iframe width="90%" height="370px" id="video-background-6" src="https://www.youtube.com/embed/tmhEB_1z7AY?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                </el-col>
+                <el-col :xs="24" :span="12" class="idea right">
+                  <div class="grid-content bg-purple-light text-block">
+                    <p>{{ $t("videoBlock.text.8") }}</p>
                   </div>
                 </el-col>
               </el-row>

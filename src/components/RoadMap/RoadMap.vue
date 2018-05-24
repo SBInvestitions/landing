@@ -6,8 +6,8 @@
           <el-col class="road-map-header" :xs="22" :sm="22" :md="20" :lg="16" :xl="16">
             <h2>{{ $t("roadMap.text.1") }}</h2>
             <div class="text-block">
-              <p>Каждый этап завершается ростом цены SBI.</p>
-              <p>В конце каждой продажи месторождений осуществляется обратный выкуп SBI по указанной в графике цене.</p>
+              <p>{{ $t("roadMap.text.9") }}</p>
+              <p>{{ $t("roadMap.text.10") }}</p>
             </div>
           </el-col>
         </el-row>
@@ -19,10 +19,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 30 июня 2018 года
+              {{ $t("roadMap.text.12") }}
             </div>
             <div class="description">
-              PreICO со скидкой 60%
+              {{ $t("roadMap.text.13") }}
             </div>
             <div class="price">1 SBI = $0.02</div>
           </el-col>
@@ -31,7 +31,7 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 августа 2018 года
+              {{ $t("roadMap.text.14") }}
             </div>
             <div class="description">
               ICO
@@ -43,10 +43,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 января 2019 года
+              {{ $t("roadMap.text.15") }}
             </div>
             <div class="description">
-              Получение лицензий на разведку
+              {{ $t("roadMap.text.16") }}
             </div>
             <div class="price">1 SBI = $0.053</div>
           </el-col>
@@ -55,10 +55,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 июля 2020 года
+              {{ $t("roadMap.text.17") }}
             </div>
             <div class="description">
-              Защита запасов блочного камня
+              {{ $t("roadMap.text.18") }}
             </div>
             <div class="price">1 SBI = $0.21</div>
           </el-col>
@@ -67,10 +67,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 30 июня 2021 года
+              {{ $t("roadMap.text.19") }}
             </div>
             <div class="description">
-              Предпродажная подготовка
+              {{ $t("roadMap.text.20") }}
             </div>
             <div class="price">1 SBI = $0.24</div>
           </el-col>
@@ -79,10 +79,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              до 31 декабря 2021 года
+              {{ $t("roadMap.text.21") }}
             </div>
             <div class="description">
-              Продажа месторождений и обратный выкуп SBI
+              {{ $t("roadMap.text.22") }}
             </div>
             <div class="price">1 SBI = $0.27</div>
           </el-col>
@@ -95,10 +95,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 30 июня 2018 года
+              {{ $t("roadMap.text.23") }}
             </div>
             <div class="description">
-              PreICO со скидкой 60%
+              {{ $t("roadMap.text.24") }}
             </div>
             <div class="price">1 SBI = $0.02</div>
           </el-col>
@@ -107,7 +107,7 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 августа 2018 года
+              {{ $t("roadMap.text.25") }}
             </div>
             <div class="description">
               ICO
@@ -119,10 +119,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 января 2019 года
+              {{ $t("roadMap.text.26") }}
             </div>
             <div class="description">
-              Получение лицензий на разведку
+              {{ $t("roadMap.text.27") }}
             </div>
             <div class="price">1 SBI = $0.053</div>
           </el-col>
@@ -134,10 +134,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 июля 2020 года
+              {{ $t("roadMap.text.28") }}
             </div>
             <div class="description">
-              Защита запасов блочного камня
+              {{ $t("roadMap.text.11") }}
             </div>
             <div class="price">1 SBI = $0.21</div>
           </el-col>
@@ -146,10 +146,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 30 июня 2021 года
+              {{ $t("roadMap.text.29") }}
             </div>
             <div class="description">
-              Предпродажная подготовка
+              {{ $t("roadMap.text.30") }}
             </div>
             <div class="price">1 SBI = $0.24</div>
           </el-col>
@@ -158,10 +158,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              до 31 декабря 2021 года
+              {{ $t("roadMap.text.31") }}
             </div>
             <div class="description">
-              Продажа месторождений и обратный выкуп SBI
+              {{ $t("roadMap.text.32") }}
             </div>
             <div class="price">1 SBI = $0.27</div>
           </el-col>
@@ -174,10 +174,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 30 июня 2018 года
+              {{ $t("roadMap.text.33") }}
             </div>
             <div class="description">
-              PreICO со скидкой 60%
+              {{ $t("roadMap.text.34") }}
             </div>
             <div class="price">1 SBI = $0.02</div>
           </el-col>
@@ -186,7 +186,7 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 августа 2018 года
+              {{ $t("roadMap.text.35") }}
             </div>
             <div class="description">
               ICO
@@ -201,10 +201,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 января 2019 года
+              {{ $t("roadMap.text.36") }}
             </div>
             <div class="description">
-              Получение лицензий на разведку
+              {{ $t("roadMap.text.37") }}
             </div>
             <div class="price">1 SBI = $0.053</div>
           </el-col>
@@ -213,10 +213,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 31 июля 2020 года
+              {{ $t("roadMap.text.38") }}
             </div>
             <div class="description">
-              Защита запасов блочного камня
+              {{ $t("roadMap.text.39") }}
             </div>
             <div class="price">1 SBI = $0.21</div>
           </el-col>
@@ -228,10 +228,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              До 30 июня 2021 года
+              {{ $t("roadMap.text.40") }}
             </div>
             <div class="description">
-              Предпродажная подготовка
+              {{ $t("roadMap.text.41") }}
             </div>
             <div class="price">1 SBI = $0.24</div>
           </el-col>
@@ -240,10 +240,10 @@
             <div class="round"></div>
             <div class="vertical-line"></div>
             <div class="header">
-              до 31 декабря 2021 года
+              {{ $t("roadMap.text.42") }}
             </div>
             <div class="description">
-              Продажа месторождений и обратный выкуп SBI
+              {{ $t("roadMap.text.43") }}
             </div>
             <div class="price">1 SBI = $0.27</div>
           </el-col>

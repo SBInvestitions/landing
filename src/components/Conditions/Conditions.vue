@@ -12,22 +12,22 @@
 
                     <el-row class="conditions-block" :gutter="20">
                       <div class="text-block">
-                        <p>После продажи и обратного выкупа SBI, оставшуюся часть прибыли мы</p>
-                        <p>Планируем направить на дальнейшие проекты по согласованию с оставшимися держателями SBI</p>
+                        <p>{{ $t("conditions.text.24") }}</p>
+                        <p>{{ $t("conditions.text.25") }}</p>
                       </div>
                     </el-row>
                     <el-row class="pre-sale-block" :gutter="20">
                       <el-col :span="12">
-                        Цена на preICO: <strong>1 SBI = $0.02</strong> (скидка 60%)
+                        {{ $t("conditions.text.26") }}<strong>{{ $t("conditions.text.27") }}</strong>{{ $t("conditions.text.28") }}
                       </el-col>
                       <el-col :span="12">
-                        Даты preICO: <strong>01.06.18 - 30.06.18</strong>
+                        {{ $t("conditions.text.29") }}<strong>01.06.18 - 30.06.18</strong>
                       </el-col>
                     </el-row>
                     <el-row class="sale-block" :gutter="20">
                       <el-col :span="12">
-                        <p>Цена на ICO: <strong>1 SBI = $0.052</strong></p>
-                        <p>Даты ICO: <strong>01.07.18 - 31.08.18</strong></p>
+                        <p>{{ $t("conditions.text.30") }}<strong>1 SBI = $0.052</strong></p>
+                        <p>{{ $t("conditions.text.31") }}<strong>01.07.18 - 31.08.18</strong></p>
                       </el-col>
                       <el-col :span="12">
                         <p>Soft-Cap: <strong>-</strong></p>
