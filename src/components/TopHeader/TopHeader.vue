@@ -21,7 +21,7 @@
                   <div class="divider"></div>
                   <h2>ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
                   <h3>{{ $t("topHeader.text.3") }}</h3>
-                  <el-button class="invest" round>{{ $t("topHeader.text.4") }}</el-button>
+                  <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
                 </div>
               </el-col>
             </el-row>
@@ -175,6 +175,9 @@
           minutes,
           seconds
         };
+      },
+      goTo () {
+        this.$router.push({ path: 'register' });
       },
       async icoStarted () {
         // this.isIcoStarted = await getStarted();

@@ -53,6 +53,12 @@
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .bounty {
+    padding-bottom: 8rem;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1400px) {
   .bounty {
     background-size: 130%;

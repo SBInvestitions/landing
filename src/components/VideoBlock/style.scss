@@ -120,6 +120,10 @@
   .video {
     padding-left: 0 !important;
     background-size: 100% !important;
+
+    &.left {
+      padding-left: 0 !important;
+    }
   }
   .idea {
     .text-block {
@@ -132,6 +136,14 @@
   .about-company {
     .image-block {
       padding: 0 5rem 0 5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .video {
+    &.left {
+      padding-left: 2rem !important;
     }
   }
 }

@@ -116,7 +116,7 @@
     name: 'MainMenu',
     data () {
       return {
-        isCollapse: false,
+        isCollapse: true,
         activeIndex: '1',
         activeIndex2: '1'
       };
@@ -136,11 +136,8 @@
       },
       scrollTo (position, element) {
         // console.log('position', position);
-        window.scroll({
-          top: position,
-          left: 0,
-          behavior: 'smooth'
-        });
+        // window.scroll({ top: position, left: 0, behavior: 'smooth' })
+        // window.scroll({ top: position, left: 0, behavior: 'smooth' });
         element.scrollIntoView({ behavior: 'smooth' });
       },
       handleSelect (key, keyPath) {
