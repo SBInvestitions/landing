@@ -4,7 +4,7 @@
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
           <el-col class="projects-header" :xs="24" :sm="24" :md="20" :lg="16" :xl="16">
-            <h2>Наши прошлые проекты</h2>
+            <h2>{{ $t("prevProjects.text.1") }}</h2>
           </el-col>
         </el-row>
         <el-row type="flex" class="row-bg stages-middle-line" justify="space-around"></el-row>
@@ -17,10 +17,10 @@
             </el-row>
             <el-row class="divider"></el-row>
             <el-row class="header">
-              Гранитдомдорстрой
+              {{ $t("prevProjects.text.2") }}
             </el-row>
             <el-row class="description">
-              Прибыль ~ $1,200,000
+              {{ $t("prevProjects.text.3") }} ~ $1,200,000
             </el-row>
 
           </el-col>
@@ -30,10 +30,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Петрогранит
+              {{ $t("prevProjects.text.4") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,500,000
+              {{ $t("prevProjects.text.3") }} ~ $1,500,000
             </div>
           </el-col>
           <el-col class="project" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
@@ -42,10 +42,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Муезерский гранит
+              {{ $t("prevProjects.text.5") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,000,000
+              {{ $t("prevProjects.text.3") }} ~ $1,000,000
             </div>
           </el-col>
         </el-row>
@@ -57,10 +57,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Север-Строй
+              {{ $t("prevProjects.text.6") }}
             </div>
             <div class="description">
-              <span class="red">Убыток ~ $500,000</span>
+              <span class="red">{{ $t("prevProjects.text.7") }} ~ $500,000</span>
             </div>
           </el-col>
           <el-col class="project" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
@@ -69,10 +69,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Маварское месторождение
+              {{ $t("prevProjects.text.8") }}
             </div>
             <div class="description">
-              Прибыль ~ $500,000
+              {{ $t("prevProjects.text.3") }} ~ $500,000
             </div>
           </el-col>
           <el-col class="project" :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
@@ -81,10 +81,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Хаккосельское
+              {{ $t("prevProjects.text.9") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,000,000
+              {{ $t("prevProjects.text.3") }} ~ $1,000,000
             </div>
           </el-col>
         </el-row>
@@ -97,10 +97,10 @@
             </el-row>
             <el-row class="divider"></el-row>
             <el-row class="header">
-              Гранитдомдорстрой
+              {{ $t("prevProjects.text.2") }}
             </el-row>
             <el-row class="description">
-              Прибыль ~ $1,200,000
+              {{ $t("prevProjects.text.3") }} ~ $1,200,000
             </el-row>
           </el-col>
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
@@ -109,10 +109,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Петрогранит
+              {{ $t("prevProjects.text.4") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,500,000
+              {{ $t("prevProjects.text.3") }} ~ $1,500,000
             </div>
           </el-col>
         </el-row>
@@ -123,10 +123,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Муезерский гранит
+              {{ $t("prevProjects.text.5") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,000,000
+              {{ $t("prevProjects.text.3") }} ~ $1,000,000
             </div>
           </el-col>
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
@@ -135,10 +135,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Север-Строй
+              {{ $t("prevProjects.text.6") }}
             </div>
             <div class="description">
-              <span class="red">Убыток ~ $500,000</span>
+              <span class="red">{{ $t("prevProjects.text.7") }} ~ $500,000</span>
             </div>
           </el-col>
         </el-row>
@@ -149,10 +149,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Маварское месторождение
+              {{ $t("prevProjects.text.8") }}
             </div>
             <div class="description">
-              Прибыль ~ $500,000
+              {{ $t("prevProjects.text.3") }} ~ $500,000
             </div>
           </el-col>
           <el-col class="project" :xs="8" :sm="12" :md="10" :lg="8" :xl="8">
@@ -161,10 +161,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Хаккосельское
+              {{ $t("prevProjects.text.9") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,000,000
+              {{ $t("prevProjects.text.3") }} ~ $1,000,000
             </div>
           </el-col>
         </el-row>
@@ -177,10 +177,10 @@
             </el-row>
             <el-row class="divider"></el-row>
             <el-row class="header">
-              Гранитдомдорстрой
+              {{ $t("prevProjects.text.2") }}
             </el-row>
             <el-row class="description">
-              Прибыль ~ $1,200,000
+              {{ $t("prevProjects.text.3") }} ~ $1,200,000
             </el-row>
 
           </el-col>
@@ -190,10 +190,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Петрогранит
+              {{ $t("prevProjects.text.4") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,500,000
+              {{ $t("prevProjects.text.3") }} ~ $1,500,000
             </div>
           </el-col>
           <el-col class="project" :span="24">
@@ -202,10 +202,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Муезерский гранит
+              {{ $t("prevProjects.text.5") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,000,000
+              {{ $t("prevProjects.text.3") }} ~ $1,000,000
             </div>
           </el-col>
           <el-col class="project" :span="24">
@@ -214,10 +214,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Север-Строй
+              {{ $t("prevProjects.text.6") }}
             </div>
             <div class="description">
-              <span class="red">Убыток ~ $500,000</span>
+              <span class="red">{{ $t("prevProjects.text.7") }} ~ $500,000</span>
             </div>
           </el-col>
           <el-col class="project" :span="24">
@@ -226,10 +226,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Маварское месторождение
+              {{ $t("prevProjects.text.8") }}
             </div>
             <div class="description">
-              Прибыль ~ $500,000
+              {{ $t("prevProjects.text.3") }} ~ $500,000
             </div>
           </el-col>
           <el-col class="project" :span="24">
@@ -238,10 +238,10 @@
             </div>
             <div class="divider"></div>
             <div class="header">
-              Хаккосельское
+              {{ $t("prevProjects.text.9") }}
             </div>
             <div class="description">
-              Прибыль ~ $1,000,000
+              {{ $t("prevProjects.text.3") }} ~ $1,000,000
             </div>
           </el-col>
         </el-row>
