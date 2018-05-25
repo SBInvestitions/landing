@@ -19,21 +19,21 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                 <!-- <video autoplay loop id="video-gif-1" width="80%" height="60%">
+                  <!--<video autoplay loop id="video-gif-1" width="80%" height="60%">
                     <source src="./../../assets/videos/1.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/1_1.gif" />
+                    <img src="./../../assets/videos/1s.gif" />
                   </video>-->
-                  <img src="./../../assets/videos/1s.gif" />
+                  <img v-lazy="gif1" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                 <!-- <video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
+                  <!--<video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/2-2.gif" />
+                    <img src="./../../assets/videos/2s.gif" />
                   </video>-->
-                  <img src="./../../assets/videos/2s.gif" />
+                  <img v-lazy="gif2" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -52,11 +52,11 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                 <!-- <video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
+                  <!--<video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
                     <source src="./../../assets/videos/3.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/3.gif" />
+                    <img src="./../../assets/videos/3s.gif" />
                   </video>-->
-                  <img src="./../../assets/videos/3s.gif" />
+                  <img v-lazy="gif3" />
                 </el-col>
               </el-row>
 
@@ -64,9 +64,9 @@
                 <el-col :xs="24" :span="12" class="gif left">
                   <!--<video autoplay="autoplay" loop="loop" id="video-gif-4" width="80%" height="60%">
                     <source src="./../../assets/videos/4.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/4.gif" />
+                    <img src="./../../assets/videos/4s.gif" />
                   </video>-->
-                  <img src="./../../assets/videos/4s.gif" />
+                  <img v-lazy="gif4" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -93,6 +93,10 @@
     name: 'AboutCompany',
     data () {
       return {
+        gif1: '//sbinvest.pro/assets/videos/1s.gif',
+        gif2: '//sbinvest.pro/assets/videos/2s.gif',
+        gif3: '//sbinvest.pro/assets/videos/3s.gif',
+        gif4: '//sbinvest.pro/assets/videos/4s.gif'
       };
     }
   };

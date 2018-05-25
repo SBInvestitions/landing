@@ -1,9 +1,8 @@
 export default {
   home: {
-    lang: 'en',
     menu: {
       about: 'About',
-      daico: 'conditions DAICO',
+      daico: 'Conditions',
       chronology: 'Road Map',
       team: 'Team',
       bonuses: 'Bounty',
@@ -11,7 +10,8 @@ export default {
       proporsal: 'White Paper',
       logIn: 'Log in',
       news: 'News',
-      account: 'Account'
+      account: 'Account',
+      menuIcon: 'Menu'
     }
   },
   aboutCompany: {
