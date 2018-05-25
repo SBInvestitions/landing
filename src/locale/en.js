@@ -15,6 +15,11 @@ export default {
     }
   },
   aboutCompany: {
+    text: {
+      0: 'What is our business?',
+      1: 'Control over investments',
+      2: 'New business opportunities'
+    },
     theProblem: {
       0: 'The Goal',
       1: 'Currently, there is a growing speculative demand for ready-made deposits of block granite in the Russian Federation market due to the lack of quality stone.',

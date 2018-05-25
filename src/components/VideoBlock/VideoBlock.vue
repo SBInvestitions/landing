@@ -29,7 +29,6 @@
                 <el-col :xs="24" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("videoBlock.text.3") }}</p>
-                    <p>{{ $t("videoBlock.text.4") }}</p>
                   </div>
                 </el-col>
               </el-row>

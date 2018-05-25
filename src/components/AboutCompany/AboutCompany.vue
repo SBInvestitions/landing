@@ -23,7 +23,8 @@
                     <source src="./../../assets/videos/1.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/1s.gif" />
                   </video>-->
-                  <img v-lazy="gif1" />
+                  <!--<img v-lazy="gif1" />-->
+                  <iframe width="90%" height="370px" id="video-background-1" src="https://www.youtube.com/embed/jnEJpHWxTKQ?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
               </el-row>
 
@@ -33,7 +34,8 @@
                     <source src="./../../assets/videos/2.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/2s.gif" />
                   </video>-->
-                  <img v-lazy="gif2" />
+                  <!--<img v-lazy="gif2" />-->
+                  <iframe width="90%" height="370px" id="video-background-2" src="https://www.youtube.com/embed/dOVD3XaKHB8?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -56,7 +58,8 @@
                     <source src="./../../assets/videos/3.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/3s.gif" />
                   </video>-->
-                  <img v-lazy="gif3" />
+                  <!--<img v-lazy="gif3" />-->
+                  <iframe width="90%" height="370px" id="video-background-3" src="https://www.youtube.com/embed/LpszfNW-LQk?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
               </el-row>
 
@@ -66,7 +69,8 @@
                     <source src="./../../assets/videos/4.mp4" type="video/mp4" />
                     <img src="./../../assets/videos/4s.gif" />
                   </video>-->
-                  <img v-lazy="gif4" />
+                  <!--<img v-lazy="gif4" />-->
+                  <iframe width="90%" height="370px" id="video-background-4" src="https://www.youtube.com/embed/vrhFUgIdOLU?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -93,11 +97,47 @@
     name: 'AboutCompany',
     data () {
       return {
-        gif1: '//sbinvest.pro/assets/videos/1s.gif',
+        gif1: 'https://sbinvest.pro/assets/videos/1s.gif',
         gif2: '//sbinvest.pro/assets/videos/2s.gif',
         gif3: '//sbinvest.pro/assets/videos/3s.gif',
         gif4: '//sbinvest.pro/assets/videos/4s.gif'
       };
+    },
+    methods: {
+      setVideoHeight: function (video) {
+        const windowWidth = video.offsetWidth;
+        // console.log('windowWidth', windowWidth);
+        // video.style.width = '500px';
+        video.style.height = `${windowWidth * 0.56}px`;
+      },
+      vidRescale: function () {
+        const video1 = document.getElementById('video-background-1');
+        const video2 = document.getElementById('video-background-2');
+        const video3 = document.getElementById('video-background-3');
+        const video4 = document.getElementById('video-background-4');
+        if (video1) {
+          this.setVideoHeight(video1);
+        }
+        if (video2) {
+          this.setVideoHeight(video2);
+        }
+        if (video3) {
+          this.setVideoHeight(video3);
+        }
+        if (video4) {
+          this.setVideoHeight(video4);
+        }
+
+        /* function setVideoHeight (video) {
+         const windowWidth = video.offsetWidth;
+         console.log('windowWidth', windowWidth);
+         // video.style.width = '500px';
+         video.style.height = `${windowWidth * 0.5625}px`;
+         } */
+      }
+    },
+    mounted () {
+      this.vidRescale();
     }
   };
 </script>
