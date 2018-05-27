@@ -6,24 +6,24 @@
       </el-header>
       <el-main class="main-block">
         <el-row type="flex" align="middle" class="row-bg" justify="center">
-          <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+          <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="16">
             <div class="grid-content bg-purple">
               <el-card class="box-card block-card">
 
-                <el-row type="flex" align="middle" class="row-bg" justify="center">
-                  <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+                <el-row class="row-bg">
+                  <el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="18">
                     <div class="grid-content bg-purple">
-                      <h1>{{ $t("account.text.1") }} {{user.firstName}} {{user.lastName}}</h1>
+                      <h1>{{ $t("account.text.1") }}<span v-if="user.firstName">, {{user.firstName}} {{user.lastName}}</span></h1>
                     </div>
                   </el-col>
-                  <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+                  <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
                     <div class="grid-content bg-purple">
-                      <el-row type="flex" align="middle" class="row-bg rates" justify="end">
-                        <el-col :span="4" class="rate" v-loading="!rate.sbiRate">
+                      <el-row class="row-bg rates">
+                        <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="4" class="rate" v-loading="!rate.sbiRate">
                           <div class="rate-sym">SBI / ETH</div>
                           <div class="rate-num">{{ rate.sbiRate }}</div>
                         </el-col>
-                        <el-col :span="4" class="rate">
+                        <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="4" class="rate">
                           <div class="rate-sym">SBI / RUB</div>
                           <div class="rate-num">1</div>
                         </el-col>
@@ -49,16 +49,16 @@
                         </el-button>
                       </el-tooltip>
                     </div>
-                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
+                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input-number @change="onChangeRub" :step="1000" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
+                        <el-input-number @change="onChangeRub" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
                       </el-form-item>
                     </el-form>
 
-                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="400px">
+                    <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.4')">
                         <el-input-number @change="onChangeEth" :min="1" :max="22800000" tabIndex="2" v-model="rate.ethCount"></el-input-number>
                       </el-form-item>
@@ -100,23 +100,22 @@
                         <el-input v-if="!wallet.address || walletEditing" v-model="wallet.address"></el-input>
                         <span v-if="wallet.address && !walletEditing" class="address">{{wallet.address}}</span>
 
-                        <el-tooltip v-if="wallet.address && !walletEditing" content="$t('account.text.36')" placement="top" effect="light">
+                        <el-tooltip v-if="wallet.address && !walletEditing" v-bind:content="$t('account.text.36')" placement="top" effect="light">
                           <el-button size="mini" type="primary" icon="el-icon-edit" circle @click="onEditWallet"></el-button>
                         </el-tooltip>
 
-                        <el-tooltip v-if="wallet.address && !walletEditing" content="$t('account.text.37')" placement="top" effect="light">
+                        <el-tooltip v-if="wallet.address && !walletEditing" v-bind:content="$t('account.text.37')" placement="top" effect="light">
                           <el-button size="mini" type="danger" icon="el-icon-delete" circle @click="onRemoveWallet"></el-button>
                         </el-tooltip>
-
                       </el-form-item>
-                    </el-form>
-                    <el-form ref="form" :inline="true" label-position="left" class="metaForm" :model="wallet">
+
                       <el-form-item v-if="!wallet.address || walletEditing">
-                        <el-tooltip content="Сохранить" placement="right" effect="light">
+                        <el-tooltip v-bind:content="$t('account.text.38')" placement="right" effect="light">
                           <el-button type="success" icon="el-icon-check" circle @click="onSubmit"></el-button>
                         </el-tooltip>
                       </el-form-item>
-
+                    </el-form>
+                    <el-form ref="form" :inline="true" label-position="left" class="metaForm" :model="wallet">
                       <el-form-item v-if="wallet.address" v-bind:label="$t('account.text.10')">
                         <el-tag type="info">{{ wallet.balance }} SBI</el-tag>
                       </el-form-item>
@@ -143,7 +142,7 @@
                   <el-tab-pane v-bind:label="$t('account.text.7')">
                     <div class="text-block">
                       <strong>{{ $t('account.text.31') }}</strong>
-                      <el-tooltip content="Копировать" placement="top" effect="light">
+                      <el-tooltip content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
                             class="copy-button"
                             type="success"
@@ -155,7 +154,7 @@
                       </el-tooltip>
                       <p>{{ $t('account.text.32') }} <strong>{{ $t('account.text.33') }}</strong></p>
                       <p>{{ $t('account.text.34') }}
-                        <el-tooltip content="Копировать" placement="top" effect="light">
+                        <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                           <el-button
                               class="copy-button"
                               type="success"
@@ -289,7 +288,7 @@
     },
     mounted: function () {
       // calculate started params
-      this.calculateRub(1000);
+      // this.calculateRub(1000);
       this.calculateEth(1);
 
       getAccount().then((address) => {

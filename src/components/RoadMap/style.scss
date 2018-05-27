@@ -18,6 +18,7 @@
       position: absolute;
       width: 100%;
       bottom: -30px;
+      font-size: 20px;
     }
   }
 
@@ -144,7 +145,8 @@
 @media (min-width: 1200px) and (max-width: 1400px) {
   .road-map {
     height: 600px;
-    background-size: 130%
+    background-size: 130%;
+    padding-bottom: 8rem;
   }
 }
 

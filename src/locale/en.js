@@ -14,17 +14,52 @@ export default {
       menuIcon: 'Menu'
     }
   },
+  videoBlock: {
+    text: {
+      1: 'Video',
+      2: 'In this video, analyst and programmer Konstantin and CEO Alexander will talk about our project and answer questions from a journalist',
+      3: 'Here we show you one of the numerous Petrozavodsk stone processing shops, as well as a large granite deposit, from quadrocopter',
+      4: '',
+      5: 'CEO на нашем участке отчитывается о результатах поисковых работ',
+      6: 'Геолог берет образцы камня для определения изготовления плиток',
+      7: 'Общий план участка',
+      8: 'Выходы габбро-диабаза по всей территории участка. Низкая трещеноватость, дорога подходит прямо на участок'
+    }
+  },
+  prevProjects: {
+    text: {
+      1: 'Our previous projects',
+      2: 'GranitDomStroi',
+      3: 'The profit',
+      4: 'Petrogranit',
+      5: 'Muezerski-granit',
+      6: 'Sever-Stroy',
+      7: 'The Lesion',
+      8: 'Mavarskoe place',
+      9: 'Hakkoselskoe'
+    }
+  },
   aboutCompany: {
-    theProblem: {
-      0: 'The Goal',
-      1: 'Currently, there is a growing speculative demand for ready-made deposits of block granite in the Russian Federation market due to the lack of quality stone.',
-      2: 'We want to partially meet this demand, receiving multiple returns for us and our investors.',
-      3: 'Along the way, we want to deal with the following problems:',
-      4: '1. The bowels of the Russian Federation, with all their wealth, belong to the people (according to the law) and are distributed by the state. In fact, only major businessmen and officials have access to them. And the further, the richer the rich become, the poorer the poor.',
-      5: 'With the help of the blockchain, we want to enable small and medium-sized investors to participate in the process of using the people`s wealth and get a profit from it.',
-      6: '2. By attracting a wide range of possible investors and facilitating communication between the participants in the process, automation of allocation of investments and profits, we want to increase the efficiency and reduce the time of search and collection of investments for our project, then applying the model for any subsoil use project in Russia.',
-      7: '3. In the life cycle of the field there are multiple changes of owners. We want to create an information and document base on the deposits of this and the following projects in the detachment, which in future will make it easier for potential buyers to make the right decisions on buying and selling, transferring rights, pledge and other activities related to the project`s fields.',
-      8: 'The using of blockchain technology will make it possible to work more efficiently in the market, ensuring a qualitative and quantitative breakthrough in the entire sphere of subsoil use in Russia.'
+    text: {
+      0: 'How we make money?',
+      1: 'We are registering a pioneer company.',
+      2: 'Using our experience and knowledge, we find a site with deposits of block stone, draw up a license for subsoil use for 25 years, conduct geological exploration, obtain samples of stone and sell a company with a license to large investors ready to develop the deposit.',
+      3: 'One large investor bears the project risks in stable financing and reduces the number of deposits for sale.',
+      4: 'By attracting a large number of investors, we make the project more flexible and stable, and also increase the amount of work and',
+      5: 'the added value of a dollar invested grows at times!',
+      6: 'We give our investors the opportunity to participate in the management of project financing',
+      7: 'at each stage',
+      8: ' and by this ',
+      9: 'Working on the project, we create ',
+      10: ' on sites of subsurface resources offered to buyers and products.',
+      11: 'In addition to our plots, the fields offered for sale, as well as the products of any companies and individuals, will be included there.',
+      12: 'Naturally, they will have to pass our or any other independent examination and assessment. The results of the examination, like the ratings of experts, ',
+      13: 'will be stored in the blockchain.',
+      14: 'Any interested market participant, around the world, ',
+      15: 'using SBI tokens ',
+      16: ', will be able to obtain information, assessment or put the necessary information in the database.',
+      17: 'completely open and honest database',
+      18: 'reduce risks.'
     },
     using: {
       1: 'About Project',
@@ -50,10 +85,13 @@ export default {
     text: {
       1: 'Bounties',
       2: 'We have provided additional bonuses for strategic partners in the amount of 3,200,000 SBI.',
-      3: 'To become a strategic partner, you need to purchase more than 1,000,000 SBI inclusively.',
-      4: 'Each strategic partner will be paid an additional 100,000 SBI for each million purchased by him.',
-      5: 'Anyone who purchases more than 2,000,000 SBI will be included in the founders of Invest Technologies, a company that owns deposits,',
-      6: 'at will and subject to the availability of citizenship of the Russian Federation.'
+      3: 'To become a strategic partner, you need to purchase more than',
+      4: 'inclusively.',
+      5: 'Each strategic partner will be paid an additional',
+      6: 'for each purchased by him',
+      7: 'Anyone who purchases more than',
+      8: 'will be included in the founders of Invest Technologies, a company that owns deposits',
+      9: 'at will and subject to the availability of citizenship of the Russian Federation.'
     }
   },
   clients: {
@@ -66,16 +104,16 @@ export default {
       1: 'ICO Conditions',
       2: 'Distribution of funds',
       3: 'Mining - ',
-      4: '$286,000',
+      4: '$790,000.00',
       5: 'Marketing - ',
-      6: '$36,000',
+      6: '$100,000.00',
       7: 'Administrative costs -',
-      8: '$39,000',
+      8: '$40,000.00',
       9: 'Legal costs - ',
-      10: '$28,600',
+      10: '$25,000.00',
       11: 'Audit and Security - ',
-      12: '$18,000',
-      13: 'Total required $408,000 of investment',
+      12: '$16,700.00',
+      13: 'Total required $1,000,000.00 of investment',
       14: 'Distribution of SBI',
       15: 'Main Sale - ',
       16: '22,800,000 SBI.',
@@ -86,27 +124,66 @@ export default {
       21: 'Bounty, Promo - ',
       22: '2,000,000 SBI.',
       23: 'Total 40,000,000 SBI.',
-      24: 'After the sale of the fields and the SBI redemption, we plan to use tokens to work on new projects.'
+      24: 'After the sale and repurchase of SBI, the remainder of the profit we',
+      25: 'We plan to forward it to further projects in coordination with the remaining holders of SBI',
+      26: 'Price for preICO: ',
+      27: '1 SBI = $0.02',
+      28: ' (discount 60%)',
+      29: 'PreICO dates: ',
+      30: 'ICO price: ',
+      31: 'ICO dates: '
     }
   },
   footerBlock: {
     text: {
-      1: 'In accordance with the law on the subsoil of the Russian Federation, the powers to distribute the local resources, the so-called publicly available minerals, belong to the authority of the Republic of Karelia.',
-      2: 'Local laws and regulations on the distribution of rights to use subsoil plots established the right of the discoverer of the deposit (also established in the Law on Mineral Resources of the Russian Federation) to obtain a license for subsoil use without holding an auction (competition).',
-      3: 'Based on these laws and bylaws, we submit applications to the Ministry of Natural Resources and Ecology of the Republic of Karelia to obtain a license for the extraction of mineral resources.',
-      4: 'We must understand that we bear all the risks associated with the presence-absence of mineral resources on our site and for a pioneering work we must do a large amount of work to confirm our data of the commission of the Ministry.'
+      1: 'All rights reserved'
     }
   },
   roadMap: {
     text: {
-      1: 'Project road map',
-      2: 'Our Project has 2 stages:',
+      1: 'Project Road Map',
+      2: 'The project has 2 main stages:',
       3: '1. Geological study (search and evaluation stage).',
       4: '2. Exploration and extraction of facing stone.',
       5: 'After the end of each stage, the value of the target asset-deposits will increase.',
-      6: 'Geologically studied field on average in the market is worth $270,000. The cost of 4 deposits, respectively, $1,000,000.',
-      7: 'The explored deposit with samples of mined stone blocks, which prove the high quality of raw materials, costs more than $1,400,000 on the market.',
-      8: 'Thus, the final cost of the target asset will be more than $5,700,000, providing an 8-fold increase in the value of the SBI token.'
+      6: 'Geologically studied field on average in the market is worth $230,000.00. The cost of 8 deposits, respectively, $1,840,000.00.',
+      7: 'The explored deposit with samples of mined stone blocks, which prove the high quality of raw materials, costs more than $1,300,000.00 on the market.',
+      8: 'Thus, the final cost of the target asset will be more than $10,400,000.00, providing an 8-fold increase in the value of the SBI token.',
+      9: 'Each stage ends with an increase in the price of SBI.',
+      10: 'At the end of each sale of the fields, SBI is redeemed at the price indicated in the chart.',
+      11: 'Protection of stocks of block stone',
+      12: 'Until June 30, 2018',
+      13: 'PreICO with 60% discount',
+      14: 'By August 31, 2018',
+      15: 'Until January 31, 2019',
+      16: 'Obtaining exploration licenses',
+      17: 'Until 31 July 2020',
+      18: 'Protection of stocks of block stone',
+      19: 'Until June 30, 2021',
+      20: 'Pre-sale preparation',
+      21: 'until December 31, 2021',
+      22: 'Sale of deposits and redemption of SBI',
+      23: 'Until June 30, 2018',
+      24: 'PreICO with 60% discount',
+      25: 'By August 31, 2018',
+      26: 'Until January 31, 2019',
+      27: 'Obtaining exploration licenses',
+      28: 'Until 31 July 2020',
+      29: 'Until June 30, 2021',
+      30: 'Pre-sale preparation',
+      31: 'until December 31, 2021',
+      32: 'Sale of deposits and redemption of SBI',
+      33: 'Until June 30, 2018',
+      34: 'PreICO with 60% discount',
+      35: 'Until August 31, 2018',
+      36: 'Until January 31, 2019',
+      37: 'Obtaining exploration licenses',
+      38: 'Until 31 July 2020',
+      39: 'Protection of stocks of block stone',
+      40: 'Until June 30, 2021',
+      41: 'Pre-sale preparation',
+      42: 'until December 31, 2021',
+      43: 'Sale of deposits and redemption of SBI'
     }
   },
   roadMapLine: {
@@ -157,7 +234,7 @@ export default {
       6: 'Chief engineer-planner, land surveyor',
       7: 'Pozdnikin Konstantin',
       8: 'Javascript, solidity developer, analyst',
-      9: 'Mukhin Arseny',
+      9: 'Mukhin Arsenii',
       10: 'Lead javascript developer',
       11: 'Luzgin Sergey',
       12: 'Engineer, administrator.',
@@ -168,25 +245,24 @@ export default {
   },
   topHeader: {
     text: {
-      1: 'The project of development and sale of deposits of block stone',
-      2: 'on the Ethereum block-platform',
-      3: '8-X profit, full control over investments',
-      4: 'register',
+      1: 'High-yield investment in operating business',
+      111: 'with minimal risk',
+      2: ' on the Ethereum block-platform',
+      3: '5 - 10 times profit, full control over investments',
+      4: 'Invest',
       5: 'Funds raised',
-      6: 'Current discount ends in',
+      6: 'Before the end of the discount',
       7: 'days',
       8: 'hours',
       9: 'minutes',
       10: 'seconds',
-      11: 'BEFORE THE ICO START',
+      11: 'BEFORE THE ICO',
       12: 'SOON WILL BE KNOWN',
       13: 'Current discount',
       14: 'Start',
-      15: 'First Deposit',
-      16: 'Second Deposit',
-      17: 'Third Deposti',
-      18: 'Fourth Deposit',
-      19: 'Deposit marketplace'
+      15: 'PreICO',
+      16: 'SoftCap',
+      17: 'HardCap'
     }
   },
   login: {

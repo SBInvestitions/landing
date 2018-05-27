@@ -100,7 +100,72 @@
 }
 .el-collapse-item__header {
   font-size: 18px;
+  height: auto !important;
 }
 .copy-button {
   margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .account {
+    .header-block {
+      height: auto !important;
+    }
+    .block-card {
+      margin-top: 0;
+      padding: 5px !important;
+    }
+    .el-tabs {
+      margin-top: 1rem;
+    }
+    .el-tabs__content {
+      padding: 5px !important;
+    }
+    .el-tab-pane {
+
+      button {
+        width: 100%;
+        margin: 10px 0 0 0;
+        font-size: 6px;
+      }
+    }
+
+    .el-form-item__label {
+      width: 100% !important;
+    }
+    .el-form-item__content {
+      margin-left: 0 !important;
+    }
+    .el-collapse-item__header {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .account {
+
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .account {
+
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .account {
+
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .account {
+
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+
 }
