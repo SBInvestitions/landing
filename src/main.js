@@ -31,7 +31,7 @@ base.install(Vue);
 
 let v;
 export const i18n = new VueI18n({
-  locale: 'ru',
+  locale: 'en',
   messages
 });
 

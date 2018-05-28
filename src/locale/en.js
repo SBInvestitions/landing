@@ -245,7 +245,7 @@ export default {
   },
   topHeader: {
     text: {
-      1: 'High-yield investment in operating business',
+      1: 'High-profit investment in operating business',
       111: 'with minimal risk',
       2: ' on the Ethereum block-platform',
       3: '5 - 10 times profit, full control over investments',

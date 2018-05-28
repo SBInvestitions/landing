@@ -29,10 +29,10 @@
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <!--<el-menu-item index="6" class="lang">
+        <el-menu-item v-on:click="changeLocation" index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
-        </el-menu-item>-->
+        </el-menu-item>
         <el-menu-item index="7" class="sign-in">
           <a href="/login" v-if="!user.id">
             <span slot="title">{{ $t("home.menu.logIn") }}</span>
@@ -77,7 +77,7 @@
             <span slot="title" class="">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="6" class="white-paper">
+        <el-menu-item index="7" class="white-paper">
           <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
@@ -85,10 +85,10 @@
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
         </el-menu-item>
-        <!--<el-menu-item index="7" class="lang">
+        <el-menu-item v-on:click="changeLocation" role="button" index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
-        </el-menu-item>-->
+        </el-menu-item>
         <el-menu-item index="8" class="sign-in">
           <a href="/login" v-if="!user.id">
             <span slot="title">{{ $t("home.menu.logIn") }}</span>
@@ -128,17 +128,14 @@
       changeMenuView (event) {
         this.isCollapse = !this.isCollapse;
       },
-      handleOpen (key, keyPath) {
-        // console.log(key, keyPath);
-      },
-      handleClose (key, keyPath) {
-        // console.log(key, keyPath);
-      },
       scrollTo (position, element) {
         // console.log('position', position);
         // window.scroll({ top: position, left: 0, behavior: 'smooth' })
         // window.scroll({ top: position, left: 0, behavior: 'smooth' });
         element.scrollIntoView({ behavior: 'smooth' });
+      },
+      changeLocation () {
+        this.$i18n.locale = (this.$i18n.locale === 'ru') ? 'en' : 'ru';
       },
       handleSelect (key, keyPath) {
         // console.log(key, keyPath);
@@ -148,27 +145,31 @@
           case '1':
             block = document.getElementById('about-company');
             offset = block.offsetTop;
+            this.scrollTo(offset, block);
             break;
           case '2':
             block = document.getElementById('conditions');
             offset = block.offsetTop;
+            this.scrollTo(offset, block);
             break;
           case '3':
             block = document.getElementById('road-map');
             offset = block.offsetTop;
+            this.scrollTo(offset, block);
             break;
           case '4':
             block = document.getElementById('team');
             offset = block.offsetTop;
+            this.scrollTo(offset, block);
             break;
           case '5':
             block = document.getElementById('bounty');
             offset = block.offsetTop;
+            this.scrollTo(offset, block);
             break;
           default:
             break;
         }
-        this.scrollTo(offset, block);
       }
     },
     computed: {
