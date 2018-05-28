@@ -20,22 +20,20 @@
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
                   <!--<video autoplay loop id="video-gif-1" width="80%" height="60%">
-                    <source src="./../../assets/videos/1.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/1s.gif" />
+                    <source :src="video1" type="video/mp4" />
+                    <img v-lazy="gif1" />
                   </video>-->
-                  <!--<img v-lazy="gif1" />-->
-                  <iframe width="90%" height="370px" id="video-background-1" src="https://www.youtube.com/embed/jnEJpHWxTKQ?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                  <img :src="gif1" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                  <!--<video autoplay="autoplay" loop="loop" id="video-gif-2" width="80%" height="60%">
-                    <source src="./../../assets/videos/2.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/2s.gif" />
+                  <!--<video autoplay loop id="video-gif-2" width="80%" height="60%">
+                    <source :src="video2" type="video/mp4" />
+                    <img v-lazy="gif2" />
                   </video>-->
-                  <!--<img v-lazy="gif2" />-->
-                  <iframe width="90%" height="370px" id="video-background-2" src="https://www.youtube.com/embed/dOVD3XaKHB8?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                  <img :src="gif2" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -54,23 +52,21 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                  <!--<video autoplay="autoplay" loop="loop" id="video-gif-3" width="80%" height="60%">
-                    <source src="./../../assets/videos/3.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/3s.gif" />
+                  <!--<video autoplay loop id="video-gif-3" width="80%" height="60%">
+                    <source :src="video3" type="video/mp4" />
+                    <img v-lazy="gif3" />
                   </video>-->
-                  <!--<img v-lazy="gif3" />-->
-                  <iframe width="90%" height="370px" id="video-background-3" src="https://www.youtube.com/embed/LpszfNW-LQk?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                  <img :src="gif3" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                  <!--<video autoplay="autoplay" loop="loop" id="video-gif-4" width="80%" height="60%">
-                    <source src="./../../assets/videos/4.mp4" type="video/mp4" />
-                    <img src="./../../assets/videos/4s.gif" />
+                  <!--<video autoplay loop id="video-gif-4" width="80%" height="60%">
+                    <source :src="video4" type="video/mp4" />
+                    <img v-lazy="gif4" />
                   </video>-->
-                  <!--<img v-lazy="gif4" />-->
-                  <iframe width="90%" height="370px" id="video-background-4" src="https://www.youtube.com/embed/vrhFUgIdOLU?modestbranding=0&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
+                  <img :src="gif4" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -92,18 +88,26 @@
 
 <script>
   import 'element-ui/lib/theme-chalk/display.css';
+  import gif1 from './../../assets/videos/1s.gif';
+  import gif2 from './../../assets/videos/2s.gif';
+  import gif3 from './../../assets/videos/3s.gif';
+  import gif4 from './../../assets/videos/4s.gif';
 
   export default {
     name: 'AboutCompany',
     data () {
       return {
-        gif1: 'https://sbinvest.pro/assets/videos/1s.gif',
-        gif2: '//sbinvest.pro/assets/videos/2s.gif',
-        gif3: '//sbinvest.pro/assets/videos/3s.gif',
-        gif4: '//sbinvest.pro/assets/videos/4s.gif'
+        gif1: gif1,
+        gif2: gif2,
+        gif3: gif3,
+        gif4: gif4,
+        video1: '//sbinvest.pro/assets/videos/1.mp4',
+        video2: '//sbinvest.pro/assets/videos/2.mp4',
+        video3: '//sbinvest.pro/assets/videos/3.mp4',
+        video4: '//sbinvest.pro/assets/videos/4.mp4'
       };
-    },
-    methods: {
+    }
+    /* methods: {
       setVideoHeight: function (video) {
         const windowWidth = video.offsetWidth;
         // console.log('windowWidth', windowWidth);
@@ -128,16 +132,16 @@
           this.setVideoHeight(video4);
         }
 
-        /* function setVideoHeight (video) {
+        /!* function setVideoHeight (video) {
          const windowWidth = video.offsetWidth;
          console.log('windowWidth', windowWidth);
          // video.style.width = '500px';
          video.style.height = `${windowWidth * 0.5625}px`;
-         } */
+         } *!/
       }
     },
     mounted () {
       this.vidRescale();
-    }
+    } */
   };
 </script>

@@ -3,7 +3,7 @@
   background-image: url('./../../assets/svg/road-back.svg');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100% 70%;
+  background-size: 130%;
   padding-top: 3rem;
   margin-top: 2rem;
   padding-bottom: 3rem;
@@ -164,7 +164,7 @@
           color: #333;
           z-index: 1;
           width: 3px;
-          height: 595px;
+          // height: 595px;
           float: left;
         }
       }
@@ -200,7 +200,7 @@
           color: #333;
           z-index: 1;
           width: 3px;
-          height: 545px;
+          // height: 545px;
           float: left;
         }
       }
@@ -275,19 +275,19 @@
         height: 180px !important;
       }
       &::before {
-        height: 600px !important;
+        // height: 600px !important;
       }
     }
   }
   .graph-right-block {
-    height: 450px !important;
+    height: auto !important;
 
     .graph-right {
       .graph-svg {
         height: 170px !important;
       }
       &::before {
-        height: 485px !important;
+        // height: 485px !important;
       }
     }
   }

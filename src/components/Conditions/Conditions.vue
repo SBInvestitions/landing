@@ -38,7 +38,7 @@
                     <el-row class="graph-block" :gutter="20">
                       <el-col :xs="{span: 20, offset: 2}" :sm="{span: 10, offset: 1}" :md="11" :lg="11" :xl="11">
                         <div class="grid-content bg-purple graph-left-block">
-                          <div class="graph-left" id="graph-left">
+                          <div class="graph-left" id="graph-left" ref="left" v-bind:style="leftStyles">
                             <div class="top top-1">{{ $t("conditions.text.2") }}</div>
                             <div class="graph-svg" />
                             <div class="top top-2">{{ $t("conditions.text.3") }}<strong>{{ $t("conditions.text.4") }}</strong></div>
@@ -52,7 +52,7 @@
                       </el-col>
                       <el-col :xs="{span: 20, offset: 2}" :sm="10" :md="11" :lg="11" :xl="11">
                         <div class="grid-content bg-purple graph-right-block" >
-                          <div class="graph-right" id="graph-right">
+                          <div class="graph-right" id="graph-right" ref="right" v-bind:style="rightStyles">
                             <div class="top top-1">{{ $t("conditions.text.14") }}</div>
                             <div class="graph-svg" />
                             <div class="top top-2">{{ $t("conditions.text.15") }}<strong>{{ $t("conditions.text.16") }}</strong></div>
@@ -78,24 +78,31 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
+  // import Vue from 'vue';
   export default {
     name: 'Conditions',
+    data () {
+      return {
+        leftStyles: {},
+        rightStyles: {}
+      };
+    },
     methods: {
-      lineRescale: function () {
-        const left = document.getElementById('graph-left');
-        const right = document.getElementById('graph-right');
-        if (left) {
-          const leftHeight = left.offsetHeight;
-          left.pseudoStyle('before', 'height', `${leftHeight - 35}px !important`, 'left-class');
-        }
-        if (right) {
-          const rightHeight = right.offsetHeight;
-          right.pseudoStyle('before', 'height', `${rightHeight - 35}px !important`, 'right-class');
-        }
+      matchWidth () {
+        const left = this.$refs.left;
+        const right = this.$refs.right;
+        const leftHeight = left.offsetHeight;
+        const rightHeight = right.offsetHeight;
+        left.pseudoStyle('before', 'height', `${leftHeight - 65}px !important`, 'left-class');
+        right.pseudoStyle('before', 'height', `${rightHeight - 45}px !important`, 'right-class');
+        console.log('leftHeight', leftHeight);
+        // Vue.set(this.leftStyles, 'width', 0);
+        // Vue.set(this.rightStyles, 'width', 0);
       }
     },
     mounted () {
-      this.lineRescale();
+      // this.lineRescale();
+      this.matchWidth();
     }
   };
 </script>

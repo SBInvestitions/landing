@@ -137,9 +137,8 @@
       scrollTo (position, element) {
         // console.log('position', position);
         // window.scroll({ top: position, left: 0, behavior: 'smooth' })
-        //
-        element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
-        window.scroll({ top: position, left: 0, behavior: 'smooth' });
+        // window.scroll({ top: position, left: 0, behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth' });
       },
       handleSelect (key, keyPath) {
         // console.log(key, keyPath);
