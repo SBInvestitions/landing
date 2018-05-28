@@ -3,7 +3,7 @@ import VueI18n from 'vue-i18n';
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
 import VueClipboard from 'vue-clipboard2';
-import VueLazyload from 'vue-lazyload';
+// import VueLazyload from 'vue-lazyload';
 
 import 'element-ui/lib/theme-chalk/index.css';
 import locale from 'element-ui/lib/locale/lang/en';
@@ -14,18 +14,18 @@ import App from './App';
 import messages from './locale/messages';
 
 Vue.use(VueI18n);
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
 Vue.use(ElementUI, { locale });
 Vue.use(VueResource);
 Vue.use(VueI18n);
 Vue.use(VueClipboard);
 
-Vue.use(VueLazyload, {
+/* Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: '//sbinvest.pro/assets/videos/loading.gif',
   loading: '//sbinvest.pro/assets/videos/loading.gif',
   attempt: 1
-});
+}); */
 
 base.install(Vue);
 
