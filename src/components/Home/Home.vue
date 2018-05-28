@@ -5,7 +5,7 @@
       <top-header/>
     </div>
     <div class="main-block">
-      <about-company />
+      <about-company v-if="showAbout" />
       <conditions />
       <road-map />
       <team />
@@ -46,11 +46,15 @@
     data () {
       return {
         position: null,
-        scrolled: false
+        scrolled: false,
+        showAbout: false
       };
     },
     mounted: function () {
       document.addEventListener('scroll', this.onScroll, true);
+      setTimeout(() => {
+        this.showAbout = true;
+      }, 1000);
     },
     methods: {
       onScroll: function (e) {

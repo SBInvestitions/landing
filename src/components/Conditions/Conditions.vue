@@ -93,9 +93,9 @@
         const right = this.$refs.right;
         const leftHeight = left.offsetHeight;
         const rightHeight = right.offsetHeight;
-        left.pseudoStyle('before', 'height', `${leftHeight - 65}px !important`, 'left-class');
+        left.pseudoStyle('before', 'height', `${leftHeight - 45}px !important`, 'left-class');
         right.pseudoStyle('before', 'height', `${rightHeight - 45}px !important`, 'right-class');
-        console.log('leftHeight', leftHeight);
+        // console.log('leftHeight', leftHeight);
         // Vue.set(this.leftStyles, 'width', 0);
         // Vue.set(this.rightStyles, 'width', 0);
       }

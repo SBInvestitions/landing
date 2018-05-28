@@ -250,135 +250,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .top-header {
-    margin-top: 2rem !important;
-  }
-}
-/*
-@media (max-width: 1280px) {
-  .sbi-scale-container {
-    height: 200px !important;
-    .scale-row {
-      padding-top: 30px !important;
-
-      .rized, .discount {
-        .header {
-          font-size: 17px !important;
-        }
-        .h4 {
-          font-size: 20px !important;
-        }
-      }
-    }
-  }
-}
-@media (max-width: 1024px) {
-  .scale-line-block {
-
-  }
-}
-@media (min-width: 1024px) {
-  .sbi-scale-container {
-    width: 60%;
-  }
-}
-@media (min-width: 1280px) {
-
-}
-@media (max-width: 1024px) {
-
-  .sbi-logo-container {
-    margin-top: 0 !important;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .sbi-logo-container {
-    margin-top: 5rem !important;
-  }
-
-  .sbi-scale-container {
-    width: 100%;
-    .scale-row {
-      padding-top: 60px !important;
-
-      .header {
-        font-size: 12px !important;
-      }
-
-      .scale-line-block {
-        padding-top: 10px !important;
-      }
-    }
-
-    h4, .h4 {
-      font-size: 18px !important;
-      margin: 10px;
-
-      .scale {
-        display: block;
-        float: left;
-        .value {
-          position: relative;
-          font-size: 10px;
-          top: -5px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  .sbi-logo {
-    margin-top: 30px !important;
-  }
-  h1 {
-    font-size: 18px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  .sbi-text-container {
-    h3 {
-      font-size: 16px !important;
-    }
-  }
-  .top-header {
-    // height: 510px;
-
-    .top-top {
-      // height: 300px
-    }
-    .top-bottom {
-      // height: 240px;
-
-      .sbi-scale-container {
-        margin-top: 7vh !important;
-      }
-    }
-  }
-
-  .sbi-scale-container {
-    h4, h4 {
-      font-size: 16px !important;
-
-      .scale {
-        .value {
-          font-size: 9px !important;
-        }
-      }
-    }
-
-    .scale-line {
-      width: 90% !important;
-      margin: 0 auto !important;
-    }
-  }
-}
-*/
-
 .videoContainer {
   position: absolute;
   overflow: hidden;
@@ -405,6 +276,9 @@
 }
 
 @media (max-width: 768px) {
+  .top-header {
+    margin-top: 0 !important;
+  }
   .sbi-scale-container {
     width: 90% !important;
     margin-top: 290px !important;
