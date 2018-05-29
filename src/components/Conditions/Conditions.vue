@@ -21,7 +21,7 @@
                         {{ $t("conditions.text.26") }}<strong>{{ $t("conditions.text.27") }}</strong>{{ $t("conditions.text.28") }}
                       </el-col>
                       <el-col :span="12">
-                        {{ $t("conditions.text.29") }}<strong>01.06.18 - 30.06.18</strong>
+                        {{ $t("conditions.text.29") }}<strong>15.06.18 - 30.06.18</strong>
                       </el-col>
                     </el-row>
                     <el-row class="sale-block" :gutter="20">
