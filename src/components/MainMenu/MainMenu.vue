@@ -130,9 +130,8 @@
       },
       scrollTo (position, element) {
         // console.log('position', position);
-        // window.scroll({ top: position, left: 0, behavior: 'smooth' })
-        // window.scroll({ top: position, left: 0, behavior: 'smooth' });
         element.scrollIntoView({ behavior: 'smooth' });
+        window.scroll({ top: position, left: 0, behavior: 'smooth' });
       },
       changeLocation () {
         this.$i18n.locale = (this.$i18n.locale === 'ru') ? 'en' : 'ru';

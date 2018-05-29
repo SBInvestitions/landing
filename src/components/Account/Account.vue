@@ -287,12 +287,12 @@
       this.getUser();
       this.getWallet();
       this.getRates();
+      // rubCount * rubSbiRate
+      const rubSbiCount = 1000 * 1;
+      this.onChangeRub(rubSbiCount, 0);
+      this.onChangeEth(1, 0);
     },
     mounted: function () {
-      // calculate started params
-      // this.calculateRub(1000);
-      this.calculateEth(1);
-
       getAccount().then((address) => {
         this.metamaskAddress = address;
         if (!this.metamaskAddress) {
