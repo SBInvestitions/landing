@@ -19,11 +19,11 @@
                   <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
                     <div class="grid-content bg-purple">
                       <el-row class="row-bg rates">
-                        <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="4" class="rate" v-loading="!rate.sbiRate">
+                        <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="rate" v-loading="!rate.sbiRate">
                           <div class="rate-sym">SBI / ETH</div>
                           <div class="rate-num">{{ rate.sbiRate }}</div>
                         </el-col>
-                        <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="4" class="rate">
+                        <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="rate">
                           <div class="rate-sym">SBI / RUB</div>
                           <div class="rate-num">1</div>
                         </el-col>
@@ -51,7 +51,7 @@
                     </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input-number @change="onChangeRub" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
+                        <el-input type="number" @change="onChangeRub" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
@@ -142,7 +142,7 @@
                   <el-tab-pane v-bind:label="$t('account.text.7')">
                     <div class="text-block">
                       <strong>{{ $t('account.text.31') }}</strong>
-                      <el-tooltip content="$t('account.text.15')" placement="top" effect="light">
+                      <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
                             class="copy-button"
                             type="success"
@@ -191,17 +191,17 @@
     },
     data () {
       return {
-        walletBalance: null,
+        walletBalance: 0,
         metamaskAddress: null,
-        metamaskBalance: null,
-        sbiEthRate: null,
+        metamaskBalance: 0,
+        sbiEthRate: 0,
         editRate: {
-          rubRate: null,
-          ethRate: null,
-          rubCount: null,
-          ethCount: null,
-          sbiRubCount: null,
-          sbiEthCount: null
+          rubRate: 0,
+          ethRate: 0,
+          rubCount: 0,
+          ethCount: 0,
+          sbiRubCount: 0,
+          sbiEthCount: 0
         },
         activeNames: ['0'],
         sberbank: '4276250010832871',

@@ -342,9 +342,10 @@ export default {
       32: 'Recipient',
       33: 'Konstantin Evgenievich P',
       34: 'For comment',
-      35: 'I will contact you, create a purse for you and transfer the SBI to it.',
+      35: 'I will contact you, create a wallet for you and transfer the SBI to it.',
       36: 'Edit',
-      37: 'Delete'
+      37: 'Delete',
+      38: 'Save'
     }
   }
 };
