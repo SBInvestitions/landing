@@ -51,7 +51,8 @@
                     </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">
-                        <el-input type="number" @change="onChangeRub" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input>
+                        <!--@change="onChangeRub"-->
+                        <el-input-number @change="onChangeRub" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
@@ -60,6 +61,7 @@
 
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.4')">
+                        <!--@change="onChangeEth"-->
                         <el-input-number @change="onChangeEth" :min="1" :max="22800000" tabIndex="2" v-model="rate.ethCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">

@@ -5,13 +5,13 @@ import { getSBIRate } from './../../../samples/web3Lib';
 const state = {
   loading: null,
   rate: {
-    sbiRate: null,
-    rubRate: null,
-    ethRate: null,
+    sbiRate: 0,
+    rubRate: 0,
+    ethRate: 0,
     rubCount: 1,
     ethCount: 1,
-    sbiRubCount: null,
-    sbiEthCount: null
+    sbiRubCount: 0,
+    sbiEthCount: 0
   }
 };
 
@@ -29,12 +29,12 @@ const mutations = {
     state.loading = loading;
   },
   [types.CLEAR_ALL_DATA] (state) {
-    state.rubRate = null;
-    state.ethRate = null;
-    state.rubCount = null;
-    state.ethCount = null;
-    state.sbiRubCount = null;
-    state.sbiEthCount = null;
+    state.rubRate = 0;
+    state.ethRate = 0;
+    state.rubCount = 0;
+    state.ethCount = 0;
+    state.sbiRubCount = 0;
+    state.sbiEthCount = 0;
   },
   [types.SET_SBI_RUB] (state, value) {
     const rubCount = value || getters.rate(state).rubCount;
