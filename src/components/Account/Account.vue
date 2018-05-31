@@ -21,11 +21,11 @@
                       <el-row class="row-bg rates">
                         <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="rate" v-loading="!rate.sbiRate">
                           <div class="rate-sym">SBI / ETH</div>
-                          <div class="rate-num">{{ rate.sbiRate }}</div>
+                          <div class="rate-num">{{ rate.ethRate / 0.02 || 0 }}</div>
                         </el-col>
                         <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="rate">
                           <div class="rate-sym">SBI / RUB</div>
-                          <div class="rate-num">1</div>
+                          <div class="rate-num">{{ 1 / (rate.rubRate * 0.02)  }}</div>
                         </el-col>
                       </el-row>
                     </div>
@@ -38,7 +38,7 @@
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
                     <div class="text-block">
                       <strong>{{ $t("account.text.14") }}</strong>
-                      <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
+                      <!--<el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
                             class="copy-button"
                             type="success"
@@ -47,12 +47,13 @@
                             v-clipboard:error="onError">
                           0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45
                         </el-button>
-                      </el-tooltip>
+                      </el-tooltip>-->
+                      {{ $t("topHeader.text.12") }}
                     </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">
                         <!--@change="onChangeRub"-->
-                        <el-input-number @change="onChangeRub" :min="1000" :max="22800000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
+                        <el-input-number @change="onChangeRub" :min="0" :step="1000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
@@ -62,7 +63,7 @@
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.4')">
                         <!--@change="onChangeEth"-->
-                        <el-input-number @change="onChangeEth" :min="1" :max="22800000" tabIndex="2" v-model="rate.ethCount"></el-input-number>
+                        <el-input-number @change="onChangeEth" :min="0" tabIndex="2" v-model="rate.ethCount"></el-input-number>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiEthCount }}</el-tag>
@@ -197,14 +198,6 @@
         metamaskAddress: null,
         metamaskBalance: 0,
         sbiEthRate: 0,
-        editRate: {
-          rubRate: 0,
-          ethRate: 0,
-          rubCount: 0,
-          ethCount: 0,
-          sbiRubCount: 0,
-          sbiEthCount: 0
-        },
         activeNames: ['0'],
         sberbank: '4276250010832871',
         crowdsaleAddress: '0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45',
@@ -239,7 +232,7 @@
         this.walletEditing = false;
         getBalance(this.wallet.address).then((balance) => {
           this.wallet.balance = balance;
-          console.log('this.wallet.balanc', this.wallet.balance);
+          console.log('this.wallet.balance', this.wallet.balance);
         });
       },
       onEditWallet () {
@@ -261,11 +254,9 @@
         });
       },
       onChangeRub (newVal, prevVal) {
-        console.log('onChange value', newVal, prevVal);
         this.calculateRub(newVal);
       },
       onChangeEth (newVal, prevVal) {
-        console.log('onChange value', newVal, prevVal);
         this.calculateEth(newVal);
       }
     },
@@ -278,19 +269,13 @@
         wallet: 'account/wallet'
       }),
       rate: function () {
-        this.editRate = this.$store.getters['rate/rate'];
-        console.log('this.editRate', this.editRate);
-        return this.editRate;
+        return this.$store.getters['rate/rate'];
       }
     },
     created: function () {
       this.getUser();
       this.getWallet();
       this.getRates();
-      // rubCount * rubSbiRate
-      const rubSbiCount = 1000 * 1;
-      this.onChangeRub(rubSbiCount, 0);
-      this.onChangeEth(1, 0);
     },
     mounted: function () {
       getAccount().then((address) => {

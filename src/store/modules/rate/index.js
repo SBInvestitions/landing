@@ -8,8 +8,8 @@ const state = {
     sbiRate: 0,
     rubRate: 0,
     ethRate: 0,
-    rubCount: 1,
-    ethCount: 1,
+    rubCount: 0,
+    ethCount: 0,
     sbiRubCount: 0,
     sbiEthCount: 0
   }
@@ -21,9 +21,10 @@ const mutations = {
     state.rate.rubRate = data.rub;
     state.rate.ethRate = data.eth;
     state.rate.sbiRate = data.rate;
-    state.sbiRubCount = rate.rubCount;
-    state.sbiEthCount = parseInt(rate.ethCount * Number(data.rub) * Number(data.eth));
-    // console.log('state.sbiEthCount', state.sbiEthCount);
+    // rubCount / data.rub = dollarCount, sbiCount = dollarCount / 0.02
+    state.sbiRubCount = parseInt(rate.rubCount / (Number(data.rub) * 0.02));
+    // ethCount * data.eth = dollarCount, sbiEthCount = dollarCount / 0.02
+    state.sbiEthCount = parseInt(rate.ethCount * (Number(data.eth) / 0.02));
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
@@ -37,13 +38,14 @@ const mutations = {
     state.sbiEthCount = 0;
   },
   [types.SET_SBI_RUB] (state, value) {
-    const rubCount = value || getters.rate(state).rubCount;
-    state.rate = { ...state.rate, sbiRubCount: rubCount };
+    const rate = getters.rate(state);
+    state.rate.sbiRubCount = parseInt(value / (Number(rate.rubRate) * 0.02));// value || getters.rate(state).rubCount;
+    state.rate.sbiEthCount = 0;
   },
   [types.SET_SBI_ETH] (state, value) {
     const rate = getters.rate(state);
-    rate.sbiEthCount = parseInt(value * Number(rate.rubRate) * Number(rate.ethRate));
-    state.rate = { ...state.rate, sbiEthCount: rate.sbiEthCount };
+    state.rate.sbiEthCount = parseInt(value * (Number(rate.ethRate) / 0.02));
+    state.rate.sbiRubCount = 0;
   }
 };
 
