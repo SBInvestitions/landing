@@ -13,7 +13,6 @@ const state = {
 
 const mutations = {
   [types.LOAD] (state, data) {
-    console.log('auth.user:', data);
     state.id = data._id;
     state.firstName = data.name;
     state.lastName = data.secondName;
@@ -53,6 +52,9 @@ const actions = {
   },
   [types.SET_LOADING] ({ commit }, loading) {
     commit(types.SET_LOADING, loading);
+  },
+  [types.CLEAR_ALL_DATA] ({ commit }) {
+    commit(types.CLEAR_ALL_DATA);
   },
   [types.CONFIRM] ({ commit }, token) {
     commit(types.SET_LOADING, true);

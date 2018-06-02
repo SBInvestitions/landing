@@ -14,9 +14,8 @@
             {{ $t("account.menu.2") }}
           </router-link>
         </el-menu-item> -->
-        <el-menu-item index="3">
+        <el-menu-item v-if="user.id" index="3">
           <router-link to="/account">
-            <i class="el-icon-goods"></i>
             {{ $t("account.menu.3") }}
           </router-link>
         </el-menu-item>
@@ -26,10 +25,15 @@
             {{ $t("account.menu.4") }}
           </router-link>
         </el-menu-item> -->
-        <el-menu-item index="5">
-          <router-link to="/logout">
+       <!-- <el-menu-item v-if="user.id" index="5">
+          <a @click="logout()">
             <i class="el-icon-close"></i>
             {{ $t("account.menu.5") }}
+          </a>
+        </el-menu-item> -->
+        <el-menu-item  v-if="!user.id" index="5">
+          <router-link to="/login">
+            {{ $t("account.menu.6") }}
           </router-link>
         </el-menu-item>
       </el-menu>
@@ -40,6 +44,7 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
+  import { mapActions, mapGetters } from 'vuex';
   export default {
     name: 'AccountMenu',
     methods: {
@@ -47,9 +52,19 @@
         return {
         };
       },
-      handleSelect (key, keyPath) {
-        console.log(key, keyPath);
-      }
+      handleSelect (/* key, keyPath */) {},
+      ...mapActions({
+        getUser: 'user/LOAD',
+        logout: 'user/CLEAR_ALL_DATA'
+      })
+    },
+    computed: {
+      ...mapGetters({
+        user: 'user/user'
+      })
+    },
+    created: function () {
+      this.getUser();
     }
   };
 </script>

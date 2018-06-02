@@ -13,9 +13,9 @@
           </el-row>
           <el-row type="flex" class="row-bg confirm-container" justify="center">
             <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" v-loading="loading">
-              <h2>Подтверждение регистрации</h2>
-              <p v-if="confirmation === 'success'">Регистрация успешно подтверждена. Теперь вы можете <a href="/login">войти</a></p>
-              <p v-if="confirmation === 'error'">Проблемы с подтверждением регистрации</p>
+              <h2>{{ $t("confirm.text.1") }}</h2>
+              <p v-if="confirmation === 'success'">{{ $t("confirm.text.2") }} <a href="/login">{{ $t("confirm.text.3") }}</a></p>
+              <p v-if="confirmation === 'error'">{{ $t("confirm.text.4") }}</p>
             </el-col>
           </el-row>
         </el-card>

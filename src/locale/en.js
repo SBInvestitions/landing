@@ -20,10 +20,10 @@ export default {
       2: 'In this video, analyst and programmer Konstantin and CEO Alexander will talk about our project and answer questions from a journalist',
       3: 'Here we show you one of the numerous Petrozavodsk stone processing shops, as well as a large granite deposit, from quadrocopter',
       4: '',
-      5: 'CEO на нашем участке отчитывается о результатах поисковых работ',
-      6: 'Геолог берет образцы камня для определения изготовления плиток',
-      7: 'Общий план участка',
-      8: 'Выходы габбро-диабаза по всей территории участка. Низкая трещеноватость, дорога подходит прямо на участок'
+      5: 'The CEO on our site reports on the results of the search operations',
+      6: 'Geologist takes samples of stone to determine the manufacture of tiles',
+      7: 'General plan of the site',
+      8: 'Outputs of gabbro-diabase throughout the site. Low friction, the road is right on the site'
     }
   },
   prevProjects: {
@@ -249,7 +249,7 @@ export default {
       111: 'with minimal risk',
       2: ' on the Ethereum block-platform',
       3: '5 - 10 times profit, full control over investments',
-      4: 'Invest',
+      4: 'Participate',
       5: 'Funds raised',
       6: 'Before the end of the discount',
       7: 'days',
@@ -271,7 +271,10 @@ export default {
       2: 'Login',
       3: 'Password',
       4: 'Log-in',
-      5: 'Create Account'
+      5: 'Create Account',
+      6: 'Forgot password?',
+      7: 'Enter email',
+      8: 'Restore password'
     }
   },
   register: {
@@ -305,10 +308,11 @@ export default {
       2: 'News',
       3: 'Account',
       4: 'Help',
-      5: 'Logout'
+      5: 'Logout',
+      6: 'Login'
     },
     text: {
-      1: 'Hello, ',
+      1: 'Hello',
       2: 'Preliminary estimate',
       3: 'Enter RUB amount you want to invest',
       4: 'Enter ETH amount you want to invest',
@@ -346,6 +350,14 @@ export default {
       36: 'Edit',
       37: 'Delete',
       38: 'Save'
+    }
+  },
+  confirm: {
+    text: {
+      1: 'Confirmation of registration',
+      2: 'Registration was successfully confirmed. Now you can',
+      3: 'login',
+      4: ''
     }
   }
 };

@@ -8,4 +8,10 @@
     width: 100%;
     margin-top: 70px;
   }
+
+  .text-block {
+    &.center {
+      text-align: center;
+    }
+  }
 }

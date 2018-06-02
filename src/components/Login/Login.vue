@@ -18,19 +18,23 @@
               <el-form-item class="bottom-line">
                 <el-button class="sbi-button-link" type="text" @click="onRegister">{{ $t("login.text.5") }}</el-button>
               </el-form-item>
+              <!--
               <el-form-item class="bottom-line">
-                <el-button class="sbi-button-link" type="text" @click="onForgotPassword">Забыли пароль?</el-button>
+                <el-button class="sbi-button-link" type="text" @click="onForgotPassword">{{ $t("login.text.6") }}</el-button>
               </el-form-item>
+              -->
             </el-form>
 
+            <!--
             <el-form v-if="forgotPassword" v-loading="loading" label-width="170px" class="login" @keyup.enter.native="restore" :label-position="labelPosition">
-              <el-form-item label="Введите email">
+              <el-form-item v-bind:label="$t('login.text.7')">
                 <el-input type="text" v-model="emailRestore"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button class="button sbi-button" type="primary" @click="restore()">Восстановить</el-button>
+                <el-button class="button sbi-button" type="primary" @click="restore()">{{ $t("login.text.8") }}</el-button>
               </el-form-item>
             </el-form>
+            -->
           </el-card>
         </div>
       </el-col>

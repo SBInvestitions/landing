@@ -110,15 +110,25 @@
         </div>
       </el-col>
 
+     <!-- <el-col :xs="4" :span="1">
+        <div class="grid-content bg-purple">
+          <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/facebook.jpg" alt="facebook"></a>
+        </div>
+      </el-col>-->
+
+      <!--<el-col :xs="4" :span="1">
+        <div class="grid-content bg-purple">
+          <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/vkontakte.png" alt="vkontakte"></a>
+        </div>
+      </el-col>-->
       <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
-          <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/facebook.jpg" alt="github"></a>
+          <a href="https://www.instagram.com/sbinvestitions/" class="social-link" target="_blank"><img src="./../../assets/socail/instagram.png" alt="instagram"></a>
         </div>
       </el-col>
-
       <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
-          <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/vkontakte.png" alt="github"></a>
+          <a href="https://www.youtube.com/channel/UCXrK81VbNIS1PF80xVjJukA/" class="social-link" target="_blank"><img src="./../../assets/socail/youtube.png" alt="youtube"></a>
         </div>
       </el-col>
     </el-row>

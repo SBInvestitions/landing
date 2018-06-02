@@ -152,7 +152,7 @@
     name: 'TopHeader',
     data () {
       return {
-        date: moment([2018, 6, 1]),
+        date: moment([2018, 5, 15]),
         isIcoStarted: false,
         before: {
           days: 0,

@@ -1,20 +1,22 @@
 <template>
   <div id="not-found" class="not-found">
     <el-container class="news-container">
-      <div class="header-block">
+      <el-header class="header-block">
         <account-menu />
-      </div>
-      <div class="main-block">
+      </el-header>
+      <el-main class="main-block">
         <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
           <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
             <div class="grid-content bg-purple">
               <el-card class="box-card block-card">
-                <h1>404 Страница не найдена. Page Not Found.</h1>
+                <div class="text-block center">
+                  <h1>404 Page Not Found. Страница не найдена.</h1>
+                </div>
               </el-card>
             </div>
           </el-col>
         </el-row>
-      </div>
+      </el-main>
     </el-container>
   </div>
 </template>
