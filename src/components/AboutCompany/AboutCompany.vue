@@ -11,7 +11,7 @@
                 </el-col>
               </el-row>
 
-              <el-row class="block-row">
+             <el-row class="block-row">
                 <el-col :xs="22" :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
                     <p>{{ $t("aboutCompany.text.1") }}</p>
@@ -19,21 +19,19 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                  <!--<video autoplay loop id="video-gif-1" width="80%" height="60%">
-                    <source :src="video1" type="video/mp4" />
-                    <img v-lazy="gif1" />
-                  </video>-->
-                  <img :src="gif1" />
+                  <a v-if="!showVideo1" rel="button" @click="showVideoByIndex(1)">
+                    <img :src="img3" />
+                  </a>
+                  <img v-if="showVideo1" :src="gif1" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                  <!--<video autoplay loop id="video-gif-2" width="80%" height="60%">
-                    <source :src="video2" type="video/mp4" />
-                    <img v-lazy="gif2" />
-                  </video>-->
-                  <img :src="gif2" />
+                  <a v-if="!showVideo2" rel="button" @click="showVideoByIndex(2)">
+                    <img :src="img2" />
+                  </a>
+                  <img v-if="showVideo2" :src="gif2" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -52,21 +50,19 @@
                   </div>
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
-                  <!--<video autoplay loop id="video-gif-3" width="80%" height="60%">
-                    <source :src="video3" type="video/mp4" />
-                    <img v-lazy="gif3" />
-                  </video>-->
-                  <img :src="gif3" />
+                  <a v-if="!showVideo3" rel="button" @click="showVideoByIndex(3)">
+                    <img :src="img3" />
+                  </a>
+                  <img v-if="showVideo3" :src="gif3" />
                 </el-col>
               </el-row>
 
               <el-row class="block-row">
                 <el-col :xs="24" :span="12" class="gif left">
-                  <!--<video autoplay loop id="video-gif-4" width="80%" height="60%">
-                    <source :src="video4" type="video/mp4" />
-                    <img v-lazy="gif4" />
-                  </video>-->
-                  <img :src="gif4" />
+                  <a v-if="!showVideo4" rel="button" @click="showVideoByIndex(4)">
+                    <img :src="img4" />
+                  </a>
+                  <img v-if="showVideo4" :src="gif4" />
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea right">
                   <div class="grid-content bg-purple-light text-block">
@@ -92,6 +88,10 @@
   import gif2 from './../../assets/videos/2s.gif';
   import gif3 from './../../assets/videos/3s.gif';
   import gif4 from './../../assets/videos/4s.gif';
+  import img1 from './../../assets/videos/v1.jpg';
+  import img2 from './../../assets/videos/v2.jpg';
+  import img3 from './../../assets/videos/v3.jpg';
+  import img4 from './../../assets/videos/v4.jpg';
 
   export default {
     name: 'AboutCompany',
@@ -101,11 +101,35 @@
         gif2: gif2,
         gif3: gif3,
         gif4: gif4,
+        img1: img1,
+        img2: img2,
+        img3: img3,
+        img4: img4,
         video1: '//sbinvest.pro/assets/videos/1.mp4',
         video2: '//sbinvest.pro/assets/videos/2.mp4',
         video3: '//sbinvest.pro/assets/videos/3.mp4',
-        video4: '//sbinvest.pro/assets/videos/4.mp4'
+        video4: '//sbinvest.pro/assets/videos/4.mp4',
+        showVideo1: false,
+        showVideo2: false,
+        showVideo3: false,
+        showVideo4: false
       };
+    },
+    methods: {
+      showVideoByIndex: function (index) {
+        if (index === 1) {
+          this.showVideo1 = true;
+        }
+        if (index === 2) {
+          this.showVideo2 = true;
+        }
+        if (index === 3) {
+          this.showVideo3 = true;
+        }
+        if (index === 4) {
+          this.showVideo4 = true;
+        }
+      }
     }
     /* methods: {
       setVideoHeight: function (video) {
