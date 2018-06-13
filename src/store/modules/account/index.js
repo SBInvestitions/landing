@@ -45,7 +45,7 @@ const actions = {
       });
     }
   },
-  [cTypes.CREATE_WALLET] ({ commit, state }, address) {
+  [cTypes.CREATE_WALLET] ({ commit, state, dispatch }, address) {
     commit(types.SET_LOADING, true);
     if (!state.wallet.address) {
       account.postWallet({ address }).then((data) => {

@@ -20,7 +20,7 @@
                 </el-col>
                 <el-col :xs="24" :span="12" class="gif right">
                   <a v-if="!showVideo1" rel="button" @click="showVideoByIndex(1)">
-                    <img :src="img3" />
+                    <img :src="img1" />
                   </a>
                   <img v-if="showVideo1" :src="gif1" />
                 </el-col>
