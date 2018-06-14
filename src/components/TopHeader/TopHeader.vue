@@ -104,7 +104,7 @@
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
-                      <div class="h4">$0</div>
+                      <div class="h4">${{ contractFundsBalance }}</div>
                     </el-col>
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
@@ -194,10 +194,11 @@
       },
       async getContractFundsBalance () {
         this.contractFundsBalance = await getFundsBalance();
-        const line = this.$refs.line;
+        console.log('this.contractFundsBalance', this.contractFundsBalance);
+        // const line = this.$refs.line;
         const currentPercentBalance = `${(this.contractFundsBalance * 100 / 1831).toFixed(0)}%`;
         Vue.set(this.lineStyles, 'width', currentPercentBalance);
-      },
+      }
     },
     mounted () {
       window.setInterval(() => {

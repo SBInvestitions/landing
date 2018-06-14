@@ -18,7 +18,7 @@ const state = {
 
 const mutations = {
   [types.LOAD] (state, data) {
-    const rate = getters.rate(state);
+    // const rate = getters.rate(state);
     state.rate.rubRate = data.rub;
     state.rate.ethRate = data.eth;
     state.rate.sbiPreRate = data.rate.preicoTokenRate; // icoTokenRate
