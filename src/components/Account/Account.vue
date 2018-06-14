@@ -259,9 +259,11 @@
         });
       },
       onChangeRub (newVal, prevVal) {
+        console.log('calculateRub');
         this.calculateRub(newVal);
       },
       onChangeEth (newVal, prevVal) {
+        console.log('calculateEth');
         this.calculateEth(newVal);
       }
     },
