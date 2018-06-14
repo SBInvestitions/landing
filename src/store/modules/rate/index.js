@@ -41,7 +41,6 @@ const mutations = {
   },
   [types.SET_SBI_RUB] (state, value) {
     const rate = getters.rate(state);
-    console.log('rate', rate);
     state.rate.sbiRubCount = parseInt((value * Number(rate.sbiPreRate)) / (Number(rate.rubRate) * Number(rate.ethRate)));// value || getters.rate(state).rubCount;
     state.rate.sbiEthCount = 0;
   },
