@@ -43,7 +43,8 @@ export const getStarted = async () => {
     web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
   }
   const sbiCrowdsaleContract = web3.eth.contract(crowdsaleAbi).at(sbiCrowdsaleAddress); // eslint-disable-line no-undef
-  return (await sbiCrowdsaleContract.isICOActive());
+  const data = await sbiCrowdsaleContract.isICOActive();
+  return data;
 };
 
 export const getFundsBalance = async () => {
@@ -55,8 +56,6 @@ export const getFundsBalance = async () => {
   const data = await web3.eth.getBalance(sbiCrowdsaleAddress);
   return data['c'][0];
 };
-
-
 
 export default {
   getAccount,
