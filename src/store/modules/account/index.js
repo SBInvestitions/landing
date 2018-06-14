@@ -14,7 +14,6 @@ const mutations = {
       address: data.walletAddress,
       balance: data.balance / 10000
     };
-    console.log('data', data, 'state.wallet', state.wallet);
   },
   [cTypes.CREATE_WALLET] (state, data) {
     state.wallet = data;

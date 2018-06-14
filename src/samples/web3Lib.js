@@ -1,6 +1,9 @@
 import tokenAbi from './tokenAbi.json';
 import crowdsaleAbi from './crawdsaleAbi.json';
 
+const sbiCrowdsaleAddress = '0xE01bA6C593003B0EdcD43b7839a7c36b00a44dfC';
+const sbiTokenAddress = '0xf47fcf487177a1f39c4c4f26da5cf762d02bf2ca';
+
 export const getAccount = async () => {
   if (typeof web3 !== 'undefined' && typeof Web3 !== 'undefined') {
     // Use Mist/MetaMask's provider
@@ -16,7 +19,6 @@ export const getBalance = async (defaultAcc) => {
   if (!defaultAcc) {
     return null;
   }
-  const sbiTokenAddress = '0xf47fcf487177a1f39c4c4f26da5cf762d02bf2ca';
   const sbiTokenContract = web3.eth.contract(tokenAbi).at(sbiTokenAddress); // eslint-disable-line no-undef
   const data = await sbiTokenContract.balanceOf(defaultAcc);
   return data['c'][0];
@@ -28,19 +30,38 @@ export const getSBIRate = async () => {
     console.log('No web3? You should consider trying MetaMask!');
     web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
   }
-  const sbiCrowdsaleAddress = '0x693bb391F6E2cB3C9B8d6A261916C662f9c86A45';
   const sbiCrowdsaleContract = web3.eth.contract(crowdsaleAbi).at(sbiCrowdsaleAddress); // eslint-disable-line no-undef
-  const data = await sbiCrowdsaleContract.tokensPerEth.call();
-  return data['c'][0];
+  const icoTokenRate = await sbiCrowdsaleContract.tokensPerEth.call();
+  const preicoTokenRate = 27314; // await sbiCrowdsaleContract.preicoTokensPerEth.call();
+  return { icoTokenRate: icoTokenRate['c'][0], preicoTokenRate };
 };
 
 export const getStarted = async () => {
-  return false;
+  const definedWeb3 = await getAccount();
+  if (!definedWeb3) {
+    console.log('No web3? You should consider trying MetaMask!');
+    web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
+  }
+  const sbiCrowdsaleContract = web3.eth.contract(crowdsaleAbi).at(sbiCrowdsaleAddress); // eslint-disable-line no-undef
+  return (await sbiCrowdsaleContract.isICOActive());
 };
+
+export const getFundsBalance = async () => {
+  const definedWeb3 = await getAccount();
+  if (!definedWeb3) {
+    console.log('No web3? You should consider trying MetaMask!');
+    web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
+  }
+  const data = await web3.eth.getBalance(sbiCrowdsaleAddress);
+  return data['c'][0];
+};
+
+
 
 export default {
   getAccount,
   getBalance,
   getSBIRate,
-  getStarted
+  getStarted,
+  getFundsBalance
 };

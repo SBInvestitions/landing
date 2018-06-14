@@ -59,7 +59,7 @@
                     </el-col>
                     <el-col :span="24" class="scale-line-block">
                       <div id="scale-line" class="scale-line">
-                        <div class="line" ref="line" v-bind:style="lineStyles"></div>
+                        <div class="line"></div>
                       </div>
                     </el-col>
 
@@ -92,13 +92,13 @@
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="timer">
                       <span class="header">{{ $t("topHeader.text.6") }}</span>
                       <el-row class="h4">
-                        <el-col :span="4" :offset="1" class="scale days">{{ before.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
+                        <el-col :span="4" :offset="1" class="scale days">{{ beforeDiscount.days }}<span class="value">{{ $t("topHeader.text.7") }}</span></el-col>
                         <el-col :span="1" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale hours">{{ before.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
+                        <el-col :span="4" class="scale hours">{{ beforeDiscount.hours }}<span class="value">{{ $t("topHeader.text.8") }}</span></el-col>
                         <el-col :span="1" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale minutes">{{ before.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
+                        <el-col :span="4" class="scale minutes">{{ beforeDiscount.minutes }}<span class="value">{{ $t("topHeader.text.9") }}</span></el-col>
                         <el-col :span="1" class="scale points">:</el-col>
-                        <el-col :span="4" class="scale seconds">{{ before.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
+                        <el-col :span="4" class="scale seconds">{{ beforeDiscount.seconds }}<span class="value">{{ $t("topHeader.text.10") }}</span></el-col>
                       </el-row>
                     </el-col>
 
@@ -112,7 +112,7 @@
                     </el-col>
                     <el-col :span="24" class="scale-line-block">
                       <div id="scale-line-1" class="scale-line">
-                        <div class="line"></div>
+                        <div ref="line" class="line" v-bind:style="lineStyles"></div>
                       </div>
                     </el-col>
 
@@ -146,15 +146,24 @@
 <script>
   import moment from 'moment';
   import Vue from 'vue';
-  // import { getStarted } from './../../samples/web3Lib';
+  import { getStarted, getFundsBalance } from './../../samples/web3Lib';
 
   export default {
     name: 'TopHeader',
     data () {
       return {
         date: moment([2018, 5, 15]),
+        dateICOStart: moment.unix(1530403200),
+        dateICOEnd: moment.unix(1535759940),
         isIcoStarted: false,
+        contractFundsBalance: 0,
         before: {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        },
+        beforeDiscount: {
           days: 0,
           hours: 0,
           minutes: 0,
@@ -180,20 +189,24 @@
         this.$router.push({ path: 'register' });
       },
       async icoStarted () {
-        // this.isIcoStarted = await getStarted();
+        this.isIcoStarted = await getStarted();
+        console.log('dateICOStart', this.dateICOStart);
       },
-      matchWidth () {
-        const width = this.$refs.line.clientWidth;
-        console.log('width', width);
-        Vue.set(this.lineStyles, 'width', 0);
-      }
+      async getContractFundsBalance () {
+        this.contractFundsBalance = await getFundsBalance();
+        const line = this.$refs.line;
+        const currentPercentBalance = `${(this.contractFundsBalance * 100 / 1831).toFixed(0)}%`;
+        Vue.set(this.lineStyles, 'width', currentPercentBalance);
+      },
     },
     mounted () {
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
+        this.beforeDiscount = this.changeTime(this.dateICOStart);
       }, 1000);
       // check the line width
-      this.matchWidth();
+      this.icoStarted();
+      this.getContractFundsBalance();
     },
     beforeDestroy () {
       clearInterval(this.timer);

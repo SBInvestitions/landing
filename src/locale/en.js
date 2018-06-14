@@ -325,7 +325,7 @@ export default {
       11: 'Please, enter your wallet address',
       12: 'The amount of SBI you get',
       13: 'Your ethereum wallet address',
-      14: 'Contract sale address',
+      14: 'Contract sale address. Please, send eth here!',
       15: 'Click to copy',
       16: 'For investors wishing to invest $35 000 and more',
       17: 'You, or your representative with the citizenship of the Russian Federation, can join the founders of our company',
@@ -349,7 +349,8 @@ export default {
       35: 'I will contact you, create a wallet for you and transfer the SBI to it.',
       36: 'Edit',
       37: 'Delete',
-      38: 'Save'
+      38: 'Save',
+      39: 'SBI token address. Do not send ether to it. Only for information.',
     }
   },
   confirm: {
