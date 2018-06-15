@@ -360,5 +360,10 @@ export default {
       3: 'login',
       4: ''
     }
+  },
+  security: {
+    text: {
+      1: 'There is a security issue, we working on resolving it. Any questions? Write to '
+    }
   }
 };
