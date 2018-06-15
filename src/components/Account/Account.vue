@@ -41,8 +41,8 @@
                       <strong>{{ $t("account.text.39") }} {{ tokenAddress }}</strong>
                     </div>
                     <div class="text-block">
-                      <span class="header">{{ $t("security.text.1") }}<a href="mailto:invest@sbinvest.pro">invest@sbinvest.pro</a></span>
-                     <!-- <strong>{{ $t("account.text.14") }}</strong>
+                      <!--<span class="header">{{ $t("security.text.1") }}<a href="mailto:invest@sbinvest.pro">invest@sbinvest.pro</a></span>-->
+                      <strong>{{ $t("account.text.14") }}</strong>
                       <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
                             class="copy-button"
@@ -52,8 +52,8 @@
                             v-clipboard:error="onError">
                           {{ crowdsaleAddress }}
                         </el-button>
-                      </el-tooltip>-->
-                      <!--{{ $t("topHeader.text.12") }}-->
+                      </el-tooltip>
+                    <!--  {{ $t("topHeader.text.12") }} -->
                     </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">

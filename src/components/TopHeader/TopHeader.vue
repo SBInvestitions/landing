@@ -86,7 +86,7 @@
           <div v-if="isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
               <el-col :span="24">
-                <!--<div class="grid-content bg-purple-light">
+                <div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="timer">
@@ -104,7 +104,7 @@
 
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="rized">
                       <span class="header">{{ $t("topHeader.text.5") }}</span>
-                      <div class="h4">${{ contractFundsBalance }}</div>
+                      <div class="h4">{{ contractFundsBalance }} ETH</div>
                     </el-col>
                     <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="discount">
                       <span class="header">{{ $t("topHeader.text.13") }}</span>
@@ -132,12 +132,12 @@
                     </el-col>
 
                   </el-row>
-                </div>-->
-                <div class="grid-content bg-purple-light">
+                </div>
+                <!--<div class="grid-content bg-purple-light">
                   <el-row :gutter="20">
                     <h1 class="header">{{ $t("security.text.1") }}<a href="mailto:invest@sbinvest.pro">invest@sbinvest.pro</a></h1>
                   </el-row>
-                </div>
+                </div>-->
               </el-col>
             </el-row>
           </div>
@@ -198,7 +198,7 @@
         console.log('dateICOStart', this.dateICOStart);
       },
       async getContractFundsBalance () {
-        this.contractFundsBalance = await getFundsBalance();
+        this.contractFundsBalance = (await getFundsBalance()) / 10000;
         // const line = this.$refs.line;
         const currentPercentBalance = `${(this.contractFundsBalance * 100 / 1831).toFixed(0)}%`;
         Vue.set(this.lineStyles, 'width', currentPercentBalance);
