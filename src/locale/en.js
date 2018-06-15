@@ -350,7 +350,7 @@ export default {
       36: 'Edit',
       37: 'Delete',
       38: 'Save',
-      39: 'SBI token address. Do not send ether to it. Only for information.',
+      39: 'SBI token address. Do not send ether to it. Only for information.'
     }
   },
   confirm: {
