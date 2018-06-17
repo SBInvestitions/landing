@@ -360,5 +360,10 @@ export default {
       3: 'войти',
       4: 'Problems with confirming registration'
     }
+  },
+  security: {
+    text: {
+      1: 'Мы обнаружили попытку взлома. Работаем над усилением безопасности. Есть вопросы? Пишите на '
+    }
   }
 };
