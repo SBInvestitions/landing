@@ -130,7 +130,7 @@
           this.showVideo4 = true;
         }
       }
-    }
+    },
     /* methods: {
       setVideoHeight: function (video) {
         const windowWidth = video.offsetWidth;
@@ -163,9 +163,21 @@
          video.style.height = `${windowWidth * 0.5625}px`;
          } *!/
       }
-    },
+    }, */
     mounted () {
-      this.vidRescale();
-    } */
+      // this.vidRescale();
+      setTimeout(() => {
+        this.showVideo1 = true;
+      }, 500);
+      setTimeout(() => {
+        this.showVideo2 = true;
+      }, 1000);
+      setTimeout(() => {
+        this.showVideo3 = true;
+      }, 1500);
+      setTimeout(() => {
+        this.showVideo4 = true;
+      }, 2000);
+    }
   };
 </script>

@@ -75,7 +75,7 @@
     }
   }
   .top-bottom {
-    background: url('./../../assets/svg/wave-pure2.svg');
+    // background: url('./../../assets/svg/wave-pure2.svg');
     background-size: cover;
     height: 680px;
 
@@ -117,7 +117,7 @@
           top: 50px;
 
           header {
-            color: white;
+            color: #5e6ba2;
             font-weight: bold;
             font-size: 22px;
           }
@@ -129,7 +129,7 @@
             width: 2px;
             height: 45px;
             display: block;
-            background-image: linear-gradient(white 5px, transparent 3px);
+            background-image: linear-gradient(#5e6ba2 5px, transparent 3px);
             background-position: right;
             background-size: 2px 8px;
             background-repeat: repeat-y;
@@ -193,7 +193,7 @@
         margin: 0 auto;
         width: 100%;
         font-weight: bold;
-        color: white;
+        color: #5e6ba2;
 
         .scale {
           display: block;
