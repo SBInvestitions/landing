@@ -41,6 +41,7 @@
                       <strong>{{ $t("account.text.39") }} {{ tokenAddress }}</strong>
                     </div>
                     <div class="text-block">
+                      <!--<span class="header">{{ $t("security.text.1") }}<a href="mailto:invest@sbinvest.pro">invest@sbinvest.pro</a></span>-->
                       <strong>{{ $t("account.text.14") }}</strong>
                       <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
@@ -52,12 +53,12 @@
                           {{ crowdsaleAddress }}
                         </el-button>
                       </el-tooltip>
-                      <!--{{ $t("topHeader.text.12") }}-->
+                    <!--  {{ $t("topHeader.text.12") }} -->
                     </div>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">
                         <!--@change="onChangeRub"-->
-                        <el-input-number @change="onChangeRub" :min="0" :step="1000" tabIndex="1" v-model="rate.rubCount"></el-input-number>
+                        <el-input @change="onChangeRub" :min="0" :step="1000" tabIndex="1" v-model="rate.rubCount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiRubCount }}</el-tag>
@@ -67,7 +68,7 @@
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.4')">
                         <!--@change="onChangeEth"-->
-                        <el-input-number @change="onChangeEth" :min="0" tabIndex="2" v-model="rate.ethCount"></el-input-number>
+                        <el-input @change="onChangeEth" :min="0" tabIndex="2" v-model="rate.ethCount"></el-input>
                       </el-form-item>
                       <el-form-item v-bind:label="$t('account.text.12')">
                         <el-tag type="info">{{ rate.sbiEthCount }}</el-tag>
