@@ -2,7 +2,7 @@
 
 ### **Frontend** ###
 
- vue, elementIo, web3
+ vue.js, vuex.js, element.io, web3.js
 
 ### **Backend** ###
 
