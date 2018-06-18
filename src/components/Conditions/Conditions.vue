@@ -1,8 +1,7 @@
 <template>
   <div id="conditions" class="conditions">
     <div class="videoContainer hidden-sm-and-down">
-      <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
-    </div>
+      <iframe src="https://www.youtube-nocookie.com/embed/J3vj8LaJDtQ?controls=0&rel=0&autoplay=1&start=10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
     <el-row class="conditions-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">

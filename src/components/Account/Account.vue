@@ -260,11 +260,11 @@
         });
       },
       onChangeRub (newVal, prevVal) {
-        console.log('calculateRub');
+        // console.log('calculateRub');
         this.calculateRub(newVal);
       },
       onChangeEth (newVal, prevVal) {
-        console.log('calculateEth');
+        // console.log('calculateEth');
         this.calculateEth(newVal);
       }
     },
@@ -277,7 +277,7 @@
         wallet: 'account/wallet'
       }),
       rate: function () {
-        console.log('rate === ', this.$store.getters['rate/rate']);
+        // console.log('rate === ', this.$store.getters['rate/rate']);
         return this.$store.getters['rate/rate'];
       }
     },

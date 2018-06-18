@@ -196,7 +196,7 @@
       },
       async icoStarted () {
         this.isIcoStarted = await getStarted();
-        console.log('dateICOStart', this.dateICOStart);
+        // console.log('dateICOStart', this.dateICOStart);
       },
       async getContractFundsBalance () {
         this.contractFundsBalance = (await getFundsBalance()) / 10000;
@@ -208,11 +208,10 @@
         this.position = e;
         if (this.$refs.topHeader) {
           const topHeaderOffsetTop = this.$refs.topHeader.getBoundingClientRect().top;
-          const topHeaderOffsetHeight = this.$refs.topHeader.getBoundingClientRect().height;
-          console.log('topHeaderOffsetTop', topHeaderOffsetTop, 'topHeaderOffsetHeight', topHeaderOffsetHeight);
+          // console.log('topHeaderOffsetTop', topHeaderOffsetTop, 'topHeaderOffsetHeight', topHeaderOffsetHeight);
           const color = 1 - Math.abs(topHeaderOffsetTop / 500);
           Vue.set(this.headerStyle, 'background', `rgba(255, 255, 255, ${Math.abs(color)})`);
-          console.log('color', color);
+          // console.log('color', color);
         }
       }
     },
