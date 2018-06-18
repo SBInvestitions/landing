@@ -35,7 +35,7 @@
 
               <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
                 <div class="grid-content bg-purple">
-                  <a href="https://t.me/sbinvest" class="social-link" target="_blank">
+                  <a href="https://t.me/joinchat/DY1Upw822WC1LcPgmEAtzw" class="social-link" target="_blank">
                     <img src="./../../assets/socail/f-telegram.png" alt="telegram channel">
                   </a>
                 </div>

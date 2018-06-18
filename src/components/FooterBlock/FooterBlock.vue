@@ -104,7 +104,7 @@
 
       <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
-          <a href="https://t.me/sbinvest" class="social-link" target="_blank">
+          <a href="https://t.me/joinchat/DY1Upw822WC1LcPgmEAtzw" class="social-link" target="_blank">
             <img src="./../../assets/socail/f-telegram.png" alt="telegram channel">
           </a>
         </div>
