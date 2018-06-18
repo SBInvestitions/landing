@@ -1,7 +1,7 @@
 <template>
   <div v-bind:style="blockFrameStyles" id="conditions" class="conditions">
     <div ref="videoBackground" class="videoContainer hidden-sm-and-down">
-      <iframe  v-bind:style="frameStyles" src="https://www.youtube-nocookie.com/embed/J3vj8LaJDtQ?controls=0&rel=0&autoplay=1&start=10&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
+      <iframe  height="60%" width="100%" v-bind:style="frameStyles" src="https://www.youtube-nocookie.com/embed/J3vj8LaJDtQ?controls=0&rel=0&autoplay=1&start=10&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
     <el-row class="conditions-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
@@ -107,7 +107,11 @@
         const frameHeigth = `${windowWidth * 0.563}px`;
         Vue.set(this.frameStyles, 'width', frameWidth);
         Vue.set(this.frameStyles, 'height', frameHeigth);
-        Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${offsetHeight}px`);
+        if ((windowWidth * 0.563) < offsetHeight) {
+          Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${frameHeigth}`);
+        } else {
+          Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${offsetHeight}px`);
+        }
       },
       vidRescale: function () {
         const video = this.$refs.videoBackground;
