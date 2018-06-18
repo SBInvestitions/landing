@@ -84,7 +84,7 @@ export default {
   bounty: {
     text: {
       1: 'Bounties',
-      2: 'We have provided additional bonuses for strategic partners in the amount of 3,200,000 SBI.',
+      2: 'We have provided additional bonuses for strategic partners in the amount of',
       3: 'To become a strategic partner, you need to purchase more than',
       4: 'inclusively.',
       5: 'Each strategic partner will be paid an additional',

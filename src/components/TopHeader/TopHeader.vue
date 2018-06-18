@@ -1,5 +1,5 @@
 <template>
-    <div id="top-header" class="top-header">
+    <div id="top-header" class="top-header" ref="topHeader" v-bind:style="headerStyle">
       <!-- <div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
@@ -174,7 +174,8 @@
           minutes: 0,
           seconds: 0
         },
-        lineStyles: {}
+        lineStyles: {},
+        headerStyle: {}
       };
     },
     methods: {
@@ -202,9 +203,21 @@
         // const line = this.$refs.line;
         const currentPercentBalance = `${(this.contractFundsBalance * 100 / 1831).toFixed(0)}%`;
         Vue.set(this.lineStyles, 'width', currentPercentBalance);
+      },
+      onScroll: function (e) {
+        this.position = e;
+        if (this.$refs.topHeader) {
+          const topHeaderOffsetTop = this.$refs.topHeader.getBoundingClientRect().top;
+          const topHeaderOffsetHeight = this.$refs.topHeader.getBoundingClientRect().height;
+          console.log('topHeaderOffsetTop', topHeaderOffsetTop, 'topHeaderOffsetHeight', topHeaderOffsetHeight);
+          const color = 1 - Math.abs(topHeaderOffsetTop / 500);
+          Vue.set(this.headerStyle, 'background', `rgba(255, 255, 255, ${Math.abs(color)})`);
+          console.log('color', color);
+        }
       }
     },
     mounted () {
+      document.addEventListener('scroll', this.onScroll, true);
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
         this.beforeDiscount = this.changeTime(this.dateICOStart);
@@ -215,6 +228,7 @@
     },
     beforeDestroy () {
       clearInterval(this.timer);
+      document.addEventListener('scroll', this.onScroll, true);
     }
   };
 </script>

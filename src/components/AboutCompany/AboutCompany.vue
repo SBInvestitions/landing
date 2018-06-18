@@ -18,7 +18,7 @@
                     <p>{{ $t("aboutCompany.text.2") }}</p>
                   </div>
                 </el-col>
-                <el-col :xs="24" :span="12" class="gif right">
+                <el-col :xs="24" :span="12" class="gif right" ref="video1">
                   <a v-if="!showVideo1" rel="button" @click="showVideoByIndex(1)">
                     <img :src="img1" />
                   </a>
@@ -27,7 +27,7 @@
               </el-row>
 
               <el-row class="block-row">
-                <el-col :xs="24" :span="12" class="gif left">
+                <el-col :xs="24" :span="12" class="gif left" ref="video2">
                   <a v-if="!showVideo2" rel="button" @click="showVideoByIndex(2)">
                     <img :src="img2" />
                   </a>
@@ -49,7 +49,7 @@
                     <p>{{ $t("aboutCompany.text.11") }}</p>
                   </div>
                 </el-col>
-                <el-col :xs="24" :span="12" class="gif right">
+                <el-col :xs="24" :span="12" class="gif right" ref="video3">
                   <a v-if="!showVideo3" rel="button" @click="showVideoByIndex(3)">
                     <img :src="img3" />
                   </a>
@@ -58,7 +58,7 @@
               </el-row>
 
               <el-row class="block-row">
-                <el-col :xs="24" :span="12" class="gif left">
+                <el-col :xs="24" :span="12" class="gif left" ref="video4">
                   <a v-if="!showVideo4" rel="button" @click="showVideoByIndex(4)">
                     <img :src="img4" />
                   </a>
@@ -129,6 +129,33 @@
         if (index === 4) {
           this.showVideo4 = true;
         }
+      },
+      onScroll: function (e) {
+        this.position = e;
+        if (this.$refs.video1) {
+          const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
+          if (video1Offset <= 300 && !this.showVideo1) {
+            this.showVideo1 = true;
+          }
+        }
+        if (this.$refs.video2) {
+          const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
+          if (video1Offset <= 300 && !this.showVideo2) {
+            this.showVideo2 = true;
+          }
+        }
+        if (this.$refs.video3) {
+          const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
+          if (video1Offset <= 300 && !this.showVideo3) {
+            this.showVideo3 = true;
+          }
+        }
+        if (this.$refs.video4) {
+          const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
+          if (video1Offset <= 300 && !this.showVideo4) {
+            this.showVideo4 = true;
+          }
+        }
       }
     },
     /* methods: {
@@ -165,19 +192,10 @@
       }
     }, */
     mounted () {
-      // this.vidRescale();
-      setTimeout(() => {
-        this.showVideo1 = true;
-      }, 500);
-      setTimeout(() => {
-        this.showVideo2 = true;
-      }, 1000);
-      setTimeout(() => {
-        this.showVideo3 = true;
-      }, 1500);
-      setTimeout(() => {
-        this.showVideo4 = true;
-      }, 2000);
+      document.addEventListener('scroll', this.onScroll, true);
+    },
+    beforeDestroy: function () {
+      document.removeEventListener('scroll', this.onScroll, true);
     }
   };
 </script>

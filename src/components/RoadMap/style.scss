@@ -1,16 +1,7 @@
 .road-map {
   text-align: center;
   // background-image: url('./../../assets/svg/back-road-map-rounds.svg');
-
-  background: rgba(96,108,164,1);
-  background: -moz-linear-gradient(left, rgba(96,108,164,1) 0%, rgba(96,108,164,1) 0%, rgba(115,125,177,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(96,108,164,1)), color-stop(0%, rgba(96,108,164,1)), color-stop(100%, rgba(115,125,177,1)));
-  background: -webkit-linear-gradient(left, rgba(96,108,164,1) 0%, rgba(96,108,164,1) 0%, rgba(115,125,177,1) 100%);
-  background: -o-linear-gradient(left, rgba(96,108,164,1) 0%, rgba(96,108,164,1) 0%, rgba(115,125,177,1) 100%);
-  background: -ms-linear-gradient(left, rgba(96,108,164,1) 0%, rgba(96,108,164,1) 0%, rgba(115,125,177,1) 100%);
-  background: linear-gradient(to right, rgba(96,108,164,1) 0%, rgba(96,108,164,1) 0%, rgba(115,125,177,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606ca4', endColorstr='#737db1', GradientType=1 );
-
+  background: linear-gradient(to right, #0491f8 0%, #21a6c8 33%, #51cb76 66%, #96fe02 100%);
   background-repeat: no-repeat;
   background-position: top center;
   // background-size: 100% 70%;

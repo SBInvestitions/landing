@@ -44,7 +44,7 @@
                 </el-col>
               </el-row>
 
-              <el-row class="video-row">
+              <!--<el-row class="video-row">
                 <el-col :xs="24" :span="12" class="video left">
                   <iframe width="90%" height="370px" id="video-background-4" src="https://www.youtube.com/embed/s1bJEtKmZI4?modestbranding=1&autoplay=0&controls=1&fs=0&rel=0&showinfo=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
                 </el-col>
@@ -75,7 +75,7 @@
                     <p>{{ $t("videoBlock.text.8") }}</p>
                   </div>
                 </el-col>
-              </el-row>
+              </el-row>-->
             </div>
           </el-col>
         </el-row>

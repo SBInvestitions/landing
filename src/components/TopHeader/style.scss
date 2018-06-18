@@ -1,7 +1,7 @@
 .top-header {
   position: relative;
   height: 1080px;
-  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 1);
 
   .divider {
     width: 25%;
@@ -117,7 +117,7 @@
           top: 50px;
 
           header {
-            color: #5e6ba2;
+            color: #0c64ac;
             font-weight: bold;
             font-size: 22px;
           }
@@ -193,7 +193,7 @@
         margin: 0 auto;
         width: 100%;
         font-weight: bold;
-        color: #5e6ba2;
+        color: #0c64ac;
 
         .scale {
           display: block;

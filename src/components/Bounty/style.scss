@@ -1,13 +1,15 @@
 .bounty {
   text-align: center;
-  background-image: url('./../../assets/svg/back-road-map-rounds.svg');
+  // background-image: url('./../../assets/svg/back-road-map-rounds.svg');
+  // background: linear-gradient(#4897be, #606aa3);
+  background: linear-gradient(to right, #4897be 0%, #1a7dae 33%, #2f8a97 66%, #145d83 100%);
   background-repeat: no-repeat;
   background-position: top center;
   // background-size: 100% 70%;
   background-size: 100%;
   padding-top: 3rem;
   margin-top: 0;
-  padding-bottom: 20rem;
+  padding-bottom: 12rem;
   margin-bottom: 2rem;
 
   h2 {
@@ -53,11 +55,11 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1280px) {
+/* @media (min-width: 1200px) and (max-width: 1280px) {
   .bounty {
     padding-bottom: 8rem;
   }
-}
+} */
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   .bounty {
