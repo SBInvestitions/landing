@@ -1,7 +1,7 @@
 <template>
   <div id="conditions" class="conditions">
-    <div class="videoContainer hidden-sm-and-down">
-      <iframe ref="videoBackground" src="https://www.youtube-nocookie.com/embed/J3vj8LaJDtQ?controls=0&rel=0&autoplay=1&start=10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
+    <div ref="videoBackground" class="videoContainer hidden-sm-and-down">
+      <iframe  v-bind:style="frameStyles" src="https://www.youtube-nocookie.com/embed/J3vj8LaJDtQ?controls=0&rel=0&autoplay=1&start=10" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
     <el-row class="conditions-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
@@ -80,13 +80,14 @@
 <style lang="scss" src="./style.scss" scoped></style>
 
 <script>
-  // import Vue from 'vue';
+  import Vue from 'vue';
   export default {
     name: 'Conditions',
     data () {
       return {
         leftStyles: {},
-        rightStyles: {}
+        rightStyles: {},
+        frameStyles: {},
       };
     },
     methods: {
@@ -97,15 +98,14 @@
         const rightHeight = right.offsetHeight;
         left.pseudoStyle('before', 'height', `${leftHeight - 45}px !important`, 'left-class');
         right.pseudoStyle('before', 'height', `${rightHeight - 45}px !important`, 'right-class');
-        // console.log('leftHeight', leftHeight);
-        // Vue.set(this.leftStyles, 'width', 0);
-        // Vue.set(this.rightStyles, 'width', 0);
       },
       setVideoHeight: function (video) {
-        const windowWidth = video.offsetWidth;
-        // console.log('windowWidth', windowWidth);
-        // video.style.width = '500px';
-        video.style.height = `${windowWidth * 0.56}px`;
+        const windowWidth = this.$refs.videoBackground.offsetWidth;
+        console.log('windowWidth', windowWidth);
+        // video.style.width = `${windowWidth}px`;
+        // video.style.height = `${windowWidth * 0.56}px`;
+        Vue.set(this.frameStyles, 'width', `${windowWidth}px`);
+        Vue.set(this.frameStyles, 'height', `${windowWidth * 0.563}px`);
       },
       vidRescale: function () {
         const video = this.$refs.videoBackground;
@@ -116,6 +116,7 @@
     },
     mounted () {
       // this.lineRescale();
+      this.vidRescale();
       this.matchWidth();
     }
   };
