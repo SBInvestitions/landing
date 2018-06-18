@@ -37,11 +37,7 @@
 
                   <!--Предварительная оценка-->
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
-                    <!--<div class="text-block">
-                      <span>{{ $t("account.text.39") }} <strong>{{ tokenAddress }}</strong></span>
-                    </div>-->
                     <div class="text-block">
-                      <!--<span class="header">{{ $t("security.text.1") }}<a href="mailto:invest@sbinvest.pro">invest@sbinvest.pro</a></span>-->
                       <strong>{{ $t("account.text.14") }}</strong>
                       <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
