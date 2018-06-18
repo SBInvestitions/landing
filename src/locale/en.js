@@ -249,7 +249,7 @@ export default {
       111: 'with minimal risk',
       2: ' on the Ethereum block-platform',
       3: '5 - 10 times profit, full control over investments',
-      4: 'Participate',
+      4: 'BUY TOKENS',
       5: 'Funds raised',
       6: 'Before the end of the discount',
       7: 'days',
@@ -325,7 +325,7 @@ export default {
       11: 'Please, enter your wallet address',
       12: 'The amount of SBI you get',
       13: 'Your ethereum wallet address',
-      14: 'Contract sale address. Please, send eth here!',
+      14: 'Contract sale address:',
       15: 'Click to copy',
       16: 'For investors wishing to invest $35 000 and more',
       17: 'You, or your representative with the citizenship of the Russian Federation, can join the founders of our company',
@@ -350,7 +350,9 @@ export default {
       36: 'Edit',
       37: 'Delete',
       38: 'Save',
-      39: 'SBI token address. Do not send ether to it. Only for information.'
+      39: 'SBI token address. Only for information.',
+      40: 'Do not send ether to it.',
+      41: 'For the purchase of SBI, send ETH to the address of the sales contract. It will automatically transfer the number of SBIs to you according to the ICO conditions.'
     }
   },
   confirm: {

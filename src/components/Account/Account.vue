@@ -37,9 +37,9 @@
 
                   <!--Предварительная оценка-->
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
-                    <div class="text-block">
-                      <strong>{{ $t("account.text.39") }} {{ tokenAddress }}</strong>
-                    </div>
+                    <!--<div class="text-block">
+                      <span>{{ $t("account.text.39") }} <strong>{{ tokenAddress }}</strong></span>
+                    </div>-->
                     <div class="text-block">
                       <!--<span class="header">{{ $t("security.text.1") }}<a href="mailto:invest@sbinvest.pro">invest@sbinvest.pro</a></span>-->
                       <strong>{{ $t("account.text.14") }}</strong>
@@ -53,8 +53,14 @@
                           {{ crowdsaleAddress }}
                         </el-button>
                       </el-tooltip>
+                      <p>{{ $t("account.text.41") }}</p>
                     <!--  {{ $t("topHeader.text.12") }} -->
                     </div>
+                    <el-collapse v-model="activeNames1" @change="handleChange">
+                      <el-collapse-item v-bind:title="$t('account.text.39')" name="1">
+                        <span>{{ $t("account.text.40") }} <strong>{{ tokenAddress }}</strong></span>
+                      </el-collapse-item>
+                    </el-collapse>
                     <el-form :inline="true" label-position="left" ref="form" class="ownForm" :model="rate" label-width="100%">
                       <el-form-item v-bind:label="$t('account.text.3')">
                         <!--@change="onChangeRub"-->
@@ -76,7 +82,7 @@
                     </el-form>
 
                     <div class="text-block">
-                      <el-collapse v-model="activeNames" @change="handleChange">
+                      <el-collapse v-model="activeNames2" @change="handleChange">
                         <el-collapse-item v-bind:title="$t('account.text.16')" name="1">
                           <div>{{ $t('account.text.17') }}</div>
                           <div>{{ $t('account.text.18') }}<strong>+7-921-450-66-73 / (8142) 59-20-33</strong></div>
@@ -203,7 +209,8 @@
         metamaskAddress: null,
         metamaskBalance: 0,
         sbiEthRate: 0,
-        activeNames: ['0'],
+        activeNames1: ['0'],
+        activeNames2: ['0'],
         sberbank: '4276250010832871',
         tokenAddress: '0xF47fcf487177a1f39c4c4F26dA5cf762d02bf2cA',
         crowdsaleAddress: '0xE01bA6C593003B0EdcD43b7839a7c36b00a44dfC',
