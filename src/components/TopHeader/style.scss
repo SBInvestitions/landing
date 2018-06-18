@@ -3,6 +3,13 @@
   height: 1080px;
   background: rgba(255, 255, 255, 1);
 
+  .social {
+    margin-top: 50px;
+    .el-col {
+      text-align: center;
+    }
+  }
+
   .divider {
     width: 25%;
     height: 1px;

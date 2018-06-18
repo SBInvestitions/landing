@@ -25,6 +25,42 @@
                 </div>
               </el-col>
             </el-row>
+
+            <el-row :gutter="20" type="flex" class="row-bg social" justify="center">
+              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+                <div class="grid-content bg-purple">
+                  <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/f-github.png" alt="github"></a>
+                </div>
+              </el-col>
+
+              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+                <div class="grid-content bg-purple">
+                  <a href="https://t.me/sbinvest" class="social-link" target="_blank">
+                    <img src="./../../assets/socail/f-telegram.png" alt="telegram channel">
+                  </a>
+                </div>
+              </el-col>
+
+              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+                <div class="grid-content bg-purple">
+                  <a href="https://www.youtube.com/channel/UCXrK81VbNIS1PF80xVjJukA/" class="social-link" target="_blank"><img src="./../../assets/socail/f-youtube.png" alt="youtube"></a>
+                </div>
+              </el-col>
+
+              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+                <div class="grid-content bg-purple">
+                  <a href="https://twitter.com/ABelonogov" class="social-link" target="_blank">
+                    <img src="./../../assets/socail/f-twitter.png" alt="twitter">
+                  </a>
+                </div>
+              </el-col>
+
+              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+                <div class="grid-content bg-purple">
+                  <a href="https://www.instagram.com/sbinvestitions/" class="social-link" target="_blank"><img src="./../../assets/socail/f-instagram.png" alt="instagram"></a>
+                </div>
+              </el-col>
+            </el-row>
           </div>
         </el-col>
       </el-row>
@@ -143,6 +179,7 @@
           </div>
         </el-col>
       </el-row>
+
     </div>
 </template>
 
