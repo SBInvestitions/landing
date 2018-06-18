@@ -88,7 +88,7 @@
         leftStyles: {},
         rightStyles: {},
         frameStyles: {},
-        blockFrameStyles: {},
+        blockFrameStyles: {}
       };
     },
     methods: {
@@ -107,7 +107,7 @@
         const frameHeigth = `${windowWidth * 0.563}px`;
         Vue.set(this.frameStyles, 'width', frameWidth);
         Vue.set(this.frameStyles, 'height', frameHeigth);
-        Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${offsetHeight}px`)
+        Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${offsetHeight}px`);
       },
       vidRescale: function () {
         const video = this.$refs.videoBackground;
