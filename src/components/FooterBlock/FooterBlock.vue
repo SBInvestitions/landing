@@ -126,6 +126,12 @@
 
       <el-col :xs="4" :span="1">
         <div class="grid-content bg-purple">
+          <a href="mailto:invest@sbinvest.pro" target="_top" class="social-link"><img src="./../../assets/socail/f-mail.png" alt="mail"></a>
+        </div>
+      </el-col>
+
+      <el-col :xs="4" :span="1">
+        <div class="grid-content bg-purple">
           <a href="https://www.instagram.com/sbinvestitions/" class="social-link" target="_blank"><img src="./../../assets/socail/f-instagram.png" alt="instagram"></a>
         </div>
       </el-col>

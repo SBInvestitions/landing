@@ -27,6 +27,7 @@
             </el-row>
 
             <el-row :gutter="20" type="flex" class="row-bg social" justify="center">
+
               <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
                 <div class="grid-content bg-purple">
                   <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/f-github.png" alt="github"></a>
@@ -52,6 +53,12 @@
                   <a href="https://twitter.com/ABelonogov" class="social-link" target="_blank">
                     <img src="./../../assets/socail/f-twitter.png" alt="twitter">
                   </a>
+                </div>
+              </el-col>
+
+              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+                <div class="grid-content bg-purple">
+                  <a href="mailto:invest@sbinvest.pro" target="_top" class="social-link"><img src="./../../assets/socail/f-mail.png" alt="mail"></a>
                 </div>
               </el-col>
 
