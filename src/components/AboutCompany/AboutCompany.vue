@@ -134,25 +134,25 @@
         this.position = e;
         if (this.$refs.video1) {
           const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
-          if (video1Offset <= 300 && !this.showVideo1) {
+          if (video1Offset <= 500 && !this.showVideo1) {
             this.showVideo1 = true;
           }
         }
         if (this.$refs.video2) {
           const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
-          if (video1Offset <= 300 && !this.showVideo2) {
+          if (video1Offset <= 500 && !this.showVideo2) {
             this.showVideo2 = true;
           }
         }
         if (this.$refs.video3) {
           const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
-          if (video1Offset <= 300 && !this.showVideo3) {
+          if (video1Offset <= 500 && !this.showVideo3) {
             this.showVideo3 = true;
           }
         }
         if (this.$refs.video4) {
           const video1Offset = this.$refs.video1.$el.getBoundingClientRect().top;
-          if (video1Offset <= 300 && !this.showVideo4) {
+          if (video1Offset <= 500 && !this.showVideo4) {
             this.showVideo4 = true;
           }
         }
