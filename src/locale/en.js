@@ -274,7 +274,8 @@ export default {
       5: 'Create Account',
       6: 'Forgot password?',
       7: 'Enter email',
-      8: 'Restore password'
+      8: 'Restore password',
+      9: 'Home'
     }
   },
   register: {

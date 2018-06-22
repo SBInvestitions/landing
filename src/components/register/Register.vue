@@ -4,10 +4,14 @@
       <el-col :xs="24" :sm="20" :md="12" :lg="8" :xl="6">
         <div class="grid-content bg-purple">
           <el-card class="box-card">
+            <router-link to="/">
+              <i class="el-icon-sb-invest"></i>
+              {{ $t("login.text.9") }}
+            </router-link>
             <h3 class="header">{{ $t("register.text.1") }}</h3>
             <el-form v-loading="loading" label-width="170px" class="login" :rules="rules" :model="credentials" ref="credentials" :label-position="labelPosition">
               <el-form-item prop="email" v-bind:label="$t('register.text.2')">
-                <el-input type="text" v-model="credentials.email"></el-input>
+                <el-input type="email" v-model="credentials.email"></el-input>
               </el-form-item>
               <el-form-item prop="pass" v-bind:label="$t('register.text.3')">
                 <el-input type="password" v-model="credentials.pass"></el-input>
