@@ -6,6 +6,7 @@
       <el-row>
         <el-col :span="24" class="top-top">
           <div class="grid-content bg-purple-dark">
+
             <el-row type="flex" class="row-bg sbi-logo-container" justify="space-around">
               <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
@@ -26,15 +27,15 @@
               </el-col>
             </el-row>
 
-            <el-row :gutter="20" type="flex" class="row-bg social" justify="center">
+            <el-row type="flex" class="row-bg social" justify="center">
 
-              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+              <el-col :xs="4" :span="1">
                 <div class="grid-content bg-purple">
                   <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/f-github.png" alt="github"></a>
                 </div>
               </el-col>
 
-              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+              <el-col :xs="4" :span="1">
                 <div class="grid-content bg-purple">
                   <a href="https://t.me/joinchat/DY1Upw822WC1LcPgmEAtzw" class="social-link" target="_blank">
                     <img src="./../../assets/socail/f-telegram.png" alt="telegram channel">
@@ -42,13 +43,13 @@
                 </div>
               </el-col>
 
-              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+              <el-col :xs="4" :span="1">
                 <div class="grid-content bg-purple">
                   <a href="https://www.youtube.com/channel/UCXrK81VbNIS1PF80xVjJukA/" class="social-link" target="_blank"><img src="./../../assets/socail/f-youtube.png" alt="youtube"></a>
                 </div>
               </el-col>
 
-              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+              <el-col :xs="4" :span="1">
                 <div class="grid-content bg-purple">
                   <a href="https://twitter.com/ABelonogov" class="social-link" target="_blank">
                     <img src="./../../assets/socail/f-twitter.png" alt="twitter">
@@ -56,13 +57,13 @@
                 </div>
               </el-col>
 
-              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+              <el-col :xs="4" :span="1">
                 <div class="grid-content bg-purple">
                   <a href="mailto:invest@sbinvest.pro" target="_top" class="social-link"><img src="./../../assets/socail/f-mail.png" alt="mail"></a>
                 </div>
               </el-col>
 
-              <el-col :xs="3" :sm="2" :md="1" :lg="1" :xl="1">
+              <el-col :xs="4" :span="1">
                 <div class="grid-content bg-purple">
                   <a href="https://www.instagram.com/sbinvestitions/" class="social-link" target="_blank"><img src="./../../assets/socail/f-instagram.png" alt="instagram"></a>
                 </div>
