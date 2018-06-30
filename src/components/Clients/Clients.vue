@@ -13,7 +13,7 @@
                       <div class="clients">
                         <div class="client">
                           <div class="logo">
-                            <a target="_blank" href="client.link"><img :src="client.src" alt="client.alt"></a>
+                            <a target="_blank" href="client.link"><img :src="client.src" alt="client.alt"><p>{{ client.alt }}</p></a>
                           </div>
                         </div>
                       </div>
@@ -54,31 +54,38 @@
           }, {
             id: 2,
             link: 'http://petrokam.pro',
-            src: petrokam
+            src: petrokam,
+            alt: 'PetroKam'
           }, {
             id: 3,
             link: 'http://nerudtrade.ru',
-            src: scheben
+            src: scheben,
+            alt: 'Crushed stone of Karelia'
           }, {
             id: 4,
             link: 'http://www.fsk-ees.ru/about/affiliates/mes_north_west/news/',
-            src: fskEs
+            src: fskEs,
+            alt: 'FSK ES'
           }, {
             id: 5,
             link: 'http://www.oaokondopoga.ru/',
-            src: kondopoga
+            src: kondopoga,
+            alt: 'OAO Kondopoga',
           }, {
             id: 6,
             link: 'href="http://pks-vodokanal.ru/"',
-            src: vodokanal
+            src: vodokanal,
+            alt: 'PKS Vodokanal'
           }, {
             id: 7,
             link: 'http://www.karel-kamen.com/',
-            src: karelkamen
+            src: karelkamen,
+            alt: 'KarelStone'
           }, {
             id: 8,
             link: 'http://www.storaensopack.com.ru/',
-            src: storaenso
+            src: storaenso,
+            alt: 'StoraEnso'
           }
         ]
       };
