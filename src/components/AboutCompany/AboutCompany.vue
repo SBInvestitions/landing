@@ -3,7 +3,7 @@
     <el-row class="about-company-row">
       <el-col :span="24" class="top-bottom">
         <el-row type="flex" class="row-bg" justify="space-around">
-          <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="16">
+          <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="20">
             <div class="grid-content bg-purple-light">
               <el-row>
                 <el-col :span="24" class="header">
@@ -158,39 +158,6 @@
         }
       }
     },
-    /* methods: {
-      setVideoHeight: function (video) {
-        const windowWidth = video.offsetWidth;
-        // console.log('windowWidth', windowWidth);
-        // video.style.width = '500px';
-        video.style.height = `${windowWidth * 0.56}px`;
-      },
-      vidRescale: function () {
-        const video1 = document.getElementById('video-background-1');
-        const video2 = document.getElementById('video-background-2');
-        const video3 = document.getElementById('video-background-3');
-        const video4 = document.getElementById('video-background-4');
-        if (video1) {
-          this.setVideoHeight(video1);
-        }
-        if (video2) {
-          this.setVideoHeight(video2);
-        }
-        if (video3) {
-          this.setVideoHeight(video3);
-        }
-        if (video4) {
-          this.setVideoHeight(video4);
-        }
-
-        /!* function setVideoHeight (video) {
-         const windowWidth = video.offsetWidth;
-         console.log('windowWidth', windowWidth);
-         // video.style.width = '500px';
-         video.style.height = `${windowWidth * 0.5625}px`;
-         } *!/
-      }
-    }, */
     mounted () {
       document.addEventListener('scroll', this.onScroll, true);
     },

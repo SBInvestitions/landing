@@ -258,7 +258,7 @@
       },
       onCopy () {
         this.$message({
-          message: 'Вы скопировали!',
+          message: this.$t('account.text.42'),
           type: 'success'
         });
       },
