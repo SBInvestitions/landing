@@ -10,10 +10,11 @@
                 <el-carousel :interval="4000" type="card" height="200px">
                   <el-carousel-item v-for="client in clients" :key="client.id">
                     <div class="grid-content bg-purple">
+
                       <div class="clients">
                         <div class="client">
                           <div class="logo">
-                            <a target="_blank" href="client.link"><img :src="client.src" alt="client.alt"><p>{{ client.alt }}</p></a>
+                            <a target="_blank" v-bind:href="client.link"><img :src="client.src" alt="client.alt"><p>{{ client.alt }}</p></a>
                           </div>
                         </div>
                       </div>
@@ -70,7 +71,7 @@
             id: 5,
             link: 'http://www.oaokondopoga.ru/',
             src: kondopoga,
-            alt: 'OAO Kondopoga',
+            alt: 'OAO Kondopoga'
           }, {
             id: 6,
             link: 'href="http://pks-vodokanal.ru/"',
