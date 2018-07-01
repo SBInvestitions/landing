@@ -38,14 +38,14 @@ const mutations = {
   [types.SET_SBI_RUB] (state, value) {
     console.log('state.sbiRubCount');
     const rate = getters.rate(state);
-    const sbiRubCount = parseInt((value * Number(rate.sbiPreRate)) / (Number(rate.rubRate) * Number(rate.ethRate))) || getters.rate(state).rubCount;// value || getters.rate(state).rubCount;
+    const sbiRubCount = parseInt((value * Number(rate.sbiRate)) / (Number(rate.rubRate) * Number(rate.ethRate))) || getters.rate(state).rubCount;// value || getters.rate(state).rubCount;
     const sbiEthCount = 0;
     state.rate = { ...state.rate, sbiRubCount: sbiRubCount, sbiEthCount };
   },
   [types.SET_SBI_ETH] (state, value) {
     console.log('state.sbiEthCount');
     const rate = getters.rate(state);
-    const sbiEthCount = parseInt(value * (Number(rate.sbiPreRate)));
+    const sbiEthCount = parseInt(value * (Number(rate.sbiRate)));
     const sbiRubCount = 0;
     state.rate = { ...state.rate, sbiRubCount, sbiEthCount };
   }

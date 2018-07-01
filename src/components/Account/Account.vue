@@ -22,11 +22,11 @@
                       <el-row class="row-bg rates">
                         <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="rate" v-loading="!rate.sbiRate">
                           <div class="rate-sym">SBI / ETH</div>
-                          <div class="rate-num">{{ rate.sbiPreRate }}</div>
+                          <div class="rate-num">{{ rate.sbiRate }} / 1</div>
                         </el-col>
                         <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="rate">
                           <div class="rate-sym">SBI / RUB</div>
-                          <div class="rate-num">{{ (1 * rate.sbiPreRate) / (rate.rubRate * rate.ethRate)  }}</div>
+                          <div class="rate-num">{{ ((1 * rate.sbiRate) / (rate.rubRate * rate.ethRate)).toFixed(2)  }} / 1</div>
                         </el-col>
                       </el-row>
                     </div>
