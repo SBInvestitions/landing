@@ -13,8 +13,8 @@
                 <el-row class="row-bg">
                   <el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="18">
                     <div class="grid-content bg-purple">
-                      <h1>{{ $t("account.text.1") }}<span v-if="user.firstName">, {{user.firstName}} {{user.lastName}}</span><span v-if="!user.firstName">, dear participant!</span>
-                      </h1>
+                      <header>{{ $t("account.text.1") }}<span v-if="user.firstName">, {{user.firstName}} {{user.lastName}}</span><span v-if="!user.firstName">, dear participant!</span>
+                      </header>
                     </div>
                   </el-col>
                   <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">

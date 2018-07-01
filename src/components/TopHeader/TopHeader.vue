@@ -22,7 +22,18 @@
                   <div class="divider"></div>
                   <h2>ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
                   <h3>{{ $t("topHeader.text.3") }}</h3>
+<!--
                   <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
+-->
+                  <span class="buy">For the purchase of SBI, send ETH to the address of the sales contract</span>
+                  <el-button
+                          class="invest"
+                          type="success"
+                          v-clipboard:copy="crowdsaleAddress"
+                          v-clipboard:success="onCopy"
+                          v-clipboard:error="onError">
+                    {{ crowdsaleAddress }}
+                  </el-button>
                 </div>
               </el-col>
             </el-row>
@@ -220,7 +231,8 @@
           seconds: 0
         },
         lineStyles: {},
-        headerStyle: {}
+        headerStyle: {},
+        crowdsaleAddress: '0xE01bA6C593003B0EdcD43b7839a7c36b00a44dfC'
       };
     },
     methods: {
@@ -258,6 +270,15 @@
           Vue.set(this.headerStyle, 'background', `rgba(255, 255, 255, ${Math.abs(color)})`);
           // console.log('color', color);
         }
+      },
+      onCopy () {
+        this.$message({
+          message: this.$t('account.text.42'),
+          type: 'success'
+        });
+      },
+      onError: () => {
+        alert('Failed to copy texts');
       }
     },
     mounted () {

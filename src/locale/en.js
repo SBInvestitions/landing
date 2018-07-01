@@ -271,7 +271,7 @@ export default {
       2: 'Login',
       3: 'Password',
       4: 'Log-in',
-      5: 'Create Account',
+      5: 'Or Create Account',
       6: 'Forgot password?',
       7: 'Enter email',
       8: 'Restore password',
