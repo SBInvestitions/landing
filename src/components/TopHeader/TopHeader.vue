@@ -25,7 +25,7 @@
 <!--
                   <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
 -->
-                  <span class="buy">For the purchase of SBI, send ETH to the address of the sales contract</span>
+                  <p class="buy">For the purchase of SBI, send ETH to the address of the sales contract</p>
                   <el-button
                           class="invest"
                           type="success"
