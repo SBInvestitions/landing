@@ -282,6 +282,12 @@
   }
 }
 
+@media (max-width: 450px) {
+  .el-button.invest {
+    font-size: 10px !important;
+  }
+}
+
 @media (max-width: 768px) {
 
   .social {
