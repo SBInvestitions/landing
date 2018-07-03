@@ -369,5 +369,22 @@ export default {
     text: {
       1: 'There is a security issue, we working on resolving it. Any questions? Write to '
     }
+  },
+  whoWeAre: {
+    text: {
+      1: 'About us',
+      2: 'We are employees of the Group of Companies "Technology":',
+      3: 'Invest-Technology, LLC ',
+      4: 'Eco-Technology, LLC ',
+      5: 'Uniq-Art, LLC ',
+      6: 'Our Licenses and Certificates:',
+      7: 'Certificate of registration of Invest-Technology LLC',
+      8: 'Certificate of registration in the tax of Invest-Technology LLC',
+      9: 'Certificate of registration of Eco-Technology LLC',
+      10: 'Certificate of registration in the tax of Eco-Technology LLC',
+      11: 'Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.',
+      12: 'Our contact information:',
+      13: 'Certificate of membership in SRO'
+    }
   }
 };
