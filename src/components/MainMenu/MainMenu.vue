@@ -142,7 +142,7 @@
         let offset = null;
         switch (key) {
           case '1':
-            block = document.getElementById('about-company');
+            block = document.getElementById('who-we-are');
             offset = block.offsetTop;
             this.scrollTo(offset, block);
             break;

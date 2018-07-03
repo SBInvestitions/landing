@@ -5,6 +5,7 @@
       <top-header/>
     </div>
     <div class="main-block">
+      <who-we-are />
       <about-company />
       <conditions />
       <road-map />
@@ -37,6 +38,7 @@
   import Clients from './../Clients/Clients.vue';
   import FooterBlock from './../FooterBlock/FooterBlock.vue';
   import VideoBlock from './../VideoBlock/VideoBlock.vue';
+  import WhoWeAre from './../WhoWeAre/WhoWeAre.vue';
 
   export default {
     name: 'Home',
@@ -76,7 +78,8 @@
       'faq': Faq,
       'footer-block': FooterBlock,
       'prev-projects': PrevProjects,
-      'video-block': VideoBlock
+      'video-block': VideoBlock,
+      'who-we-are': WhoWeAre
     }
   };
 </script>
