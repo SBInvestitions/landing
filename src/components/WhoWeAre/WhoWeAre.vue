@@ -25,15 +25,16 @@
                     </ul>
                     <el-collapse v-model="activeNames" @change="handleChange">
                       <el-collapse-item title="Our Licenses and Certificates:" name="1">
-                        <ul>
-                          <li>Certificate of registration of Invest-Technology LLC</li>
-                          <li>Certificate of registration in the tax of Invest-Technology LLC</li>
-                          <li>Certificate of registration of Eco-Technology LLC</li>
-                          <li>Certificate of registration in the tax of Eco-Technology LLC</li>
-                          <li>Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.</li>
+                        <ul class="list-of-certificates">
+                          <li><a target="_blank" href="https://sbinvest.pro/documents/invest2.pdf" download>Certificate of registration of Invest-Technology LLC</a></li>
+                          <li><a target="_blank" href="https://sbinvest.pro/documents/invest1.pdf" download>Certificate of registration in the tax of Invest-Technology LLC</a></li>
+                          <li><a target="_blank" href="https://sbinvest.pro/documents/eco2.pdf" download>Certificate of registration of Eco-Technology LLC</a></li>
+                          <li><a target="_blank" href="https://sbinvest.pro/documents/eco1.pdf" download>Certificate of registration in the tax of Eco-Technology LLC</a></li>
+                          <li<a target="_blank" href="https://sbinvest.pro/documents/eco3.pdf" download>>Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.</a></li>
                         </ul>
                       </el-collapse-item>
                     </el-collapse>
+                    <header>Our contact information:</header>
                   </div>
                 </el-col>
               </el-row>
@@ -54,7 +55,7 @@
     data () {
       return {
         teamImage: teamImage,
-        activeNames: ['1']
+        activeNames: ['0']
       };
     },
     methods: {
