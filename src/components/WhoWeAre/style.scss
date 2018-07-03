@@ -4,6 +4,29 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 
+  header {
+    font-weight: bold;
+  }
+
+  .el-collapse {
+
+    .el-collapse-item {
+
+      .el-collapse-item__content {
+        font-size: 1rem;
+      }
+      .el-collapse-item__content {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .group-list {
+    a {
+      font-size: 22px;
+    }
+  }
+
   .gif {
     padding-top: 1rem;
     background-repeat: no-repeat;

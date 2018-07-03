@@ -17,22 +17,23 @@
                 </el-col>
                 <el-col :xs="22" :span="12" class="idea left">
                   <div class="grid-content bg-purple-light text-block">
-                    <p>We are employees of the Group of Companies "Technology":</p>
-                    <ul>
-                      <li>Invest-Technology, LLC</li>
-                      <li>Eco-Technology, LLC</li>
-                      <li>Uniq-Art, LLC</li>
+                    <header>We are employees of the Group of Companies "Technology":</header>
+                    <ul class="group-list">
+                      <li>Invest-Technology, LLC <a href=""><i class="el-icon-location"></i></a></li>
+                      <li>Eco-Technology, LLC <a href=""><i class="el-icon-location"></i></a></li>
+                      <li>Uniq-Art, LLC <a href=""><i class="el-icon-location"></i></a></li>
                     </ul>
-                    <p>Our primary Office</p>
-                    <p>Our secondary Office</p>
-                    <p>Our Licenses and Certificates:</p>
-                    <ul>
-                      <li>Certificate of registration of Invest-Technology LLC</li>
-                      <li>Certificate of registration in the tax of Invest-Technology LLC</li>
-                      <li>Certificate of registration of Eco-Technology LLC</li>
-                      <li>Certificate of registration in the tax of Eco-Technology LLC</li>
-                      <li>Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.</li>
-                    </ul>
+                    <el-collapse v-model="activeNames" @change="handleChange">
+                      <el-collapse-item title="Our Licenses and Certificates:" name="1">
+                        <ul>
+                          <li>Certificate of registration of Invest-Technology LLC</li>
+                          <li>Certificate of registration in the tax of Invest-Technology LLC</li>
+                          <li>Certificate of registration of Eco-Technology LLC</li>
+                          <li>Certificate of registration in the tax of Eco-Technology LLC</li>
+                          <li>Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.</li>
+                        </ul>
+                      </el-collapse-item>
+                    </el-collapse>
                   </div>
                 </el-col>
               </el-row>
@@ -52,8 +53,14 @@
     name: 'WhoWeAre',
     data () {
       return {
-        teamImage: teamImage
+        teamImage: teamImage,
+        activeNames: ['1']
       };
+    },
+    methods: {
+      handleChange (val) {
+        console.log(val);
+      }
     }
   };
 </script>
