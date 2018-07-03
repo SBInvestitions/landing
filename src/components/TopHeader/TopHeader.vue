@@ -6,7 +6,6 @@
       <el-row>
         <el-col :span="24" class="top-top">
           <div class="grid-content bg-purple-dark">
-
             <el-row type="flex" class="row-bg sbi-logo-container" justify="space-around">
               <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
@@ -22,18 +21,7 @@
                   <div class="divider"></div>
                   <h2>ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
                   <h3>{{ $t("topHeader.text.3") }}</h3>
-<!--
                   <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
--->
-                  <p class="buy">For the purchase of SBI, send ETH to the address of the sales contract</p>
-                  <el-button
-                          class="invest"
-                          type="success"
-                          v-clipboard:copy="crowdsaleAddress"
-                          v-clipboard:success="onCopy"
-                          v-clipboard:error="onError">
-                    {{ crowdsaleAddress }}
-                  </el-button>
                 </div>
               </el-col>
             </el-row>
