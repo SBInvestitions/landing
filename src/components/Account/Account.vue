@@ -80,13 +80,13 @@
                     <div class="text-block">
                       <el-collapse v-model="activeNames2" @change="handleChange">
                         <el-collapse-item v-bind:title="$t('account.text.16')" name="1">
-                          <div>{{ $t('account.text.17') }}</div>
-                          <div>{{ $t('account.text.18') }}<strong>+7-921-450-66-73 / (8142) 59-20-33</strong></div>
+                          <p><strong>{{ $t('account.text.17') }}</strong></p>
+                          <p>{{ $t('account.text.18') }}<strong>+7-921-450-66-73 / (8142) 33-20-04</strong></p>
                           <div>
                             <h3>{{ $t('account.text.19') }}</h3>
                             <p>{{ $t('account.text.20') }}</p>
                             <p>{{ $t('account.text.21') }}</p>
-                            <p>{{ $t('account.text.22') }} (814 2) 592033</p>
+                            <p>{{ $t('account.text.22') }} (814)2 33-20-04</p>
                             <p>e-mail: invest@sbinvest.pro</p>
                             <p>{{ $t('account.text.23') }} 81898419</p>
                             <p>{{ $t('account.text.24') }} 1071001012917</p>

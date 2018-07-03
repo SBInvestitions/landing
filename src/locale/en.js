@@ -329,7 +329,7 @@ export default {
       14: 'Contract sale address:',
       15: 'Click to copy',
       16: 'For investors wishing to invest $35 000 and more',
-      17: 'You, or your representative with the citizenship of the Russian Federation, can join the founders of our company',
+      17: 'You can join the founders of our company',
       18: 'Please, connect to us by phone: ',
       19: 'Requisites of LLC "Invest -Technologies"',
       20: 'Limited Liability Company "Invest -Technologies"',

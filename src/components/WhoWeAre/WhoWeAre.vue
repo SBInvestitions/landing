@@ -19,22 +19,27 @@
                   <div class="grid-content bg-purple-light text-block">
                     <header>We are employees of the Group of Companies "Technology":</header>
                     <ul class="group-list">
-                      <li>Invest-Technology, LLC <a href=""><i class="el-icon-location"></i></a></li>
-                      <li>Eco-Technology, LLC <a href=""><i class="el-icon-location"></i></a></li>
-                      <li>Uniq-Art, LLC <a href=""><i class="el-icon-location"></i></a></li>
+                      <li>Invest-Technology, LLC <a target="_blank" href="https://goo.gl/maps/behQLrm7gbF2"><i class="el-icon-location"></i></a></li>
+                      <li>Eco-Technology, LLC <a target="_blank" href="https://goo.gl/maps/behQLrm7gbF2"><i class="el-icon-location"></i></a></li>
+                      <li>Uniq-Art, LLC <a target="_blank" href="https://goo.gl/maps/Z9sUWR5zL2Q2"><i class="el-icon-location"></i></a></li>
                     </ul>
                     <el-collapse v-model="activeNames" @change="handleChange">
-                      <el-collapse-item title="Our Licenses and Certificates:" name="1">
+                      <el-collapse-item class="certificates-collapse" title="Our Licenses and Certificates:" name="1">
                         <ul class="list-of-certificates">
                           <li><a target="_blank" href="https://sbinvest.pro/documents/invest2.pdf" download>Certificate of registration of Invest-Technology LLC</a></li>
                           <li><a target="_blank" href="https://sbinvest.pro/documents/invest1.pdf" download>Certificate of registration in the tax of Invest-Technology LLC</a></li>
                           <li><a target="_blank" href="https://sbinvest.pro/documents/eco2.pdf" download>Certificate of registration of Eco-Technology LLC</a></li>
                           <li><a target="_blank" href="https://sbinvest.pro/documents/eco1.pdf" download>Certificate of registration in the tax of Eco-Technology LLC</a></li>
-                          <li<a target="_blank" href="https://sbinvest.pro/documents/eco3.pdf" download>>Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.</a></li>
+                          <li><a target="_blank" href="https://sbinvest.pro/documents/eco3.pdf" download>Licenses for engineering, geodetic, engineering-geological, engineering-hydrometeorological, engineering-ecological, engineering-geotechnical surveys.</a></li>
                         </ul>
                       </el-collapse-item>
                     </el-collapse>
-                    <header>Our contact information:</header>
+                    <div class="contacts">
+                      <header>Our contact information:</header>
+                      <p><i class="el-icon-phone"></i> 8 (814)2 33-20-04</p>
+                      <p><i class="el-icon-mobile-phone"></i> +7 (921) 450-66-73</p>
+                      <p><i class="el-icon-message"></i><a href="mailto:invest@sbinvest.pro"> invest@sbinvest.pro</a></p>
+                    </div>
                   </div>
                 </el-col>
               </el-row>

@@ -2,22 +2,28 @@
   padding-top: 3rem;
   margin-top: 2rem;
   padding-bottom: 3rem;
-  margin-bottom: 2rem;
+
+  .contacts {
+    header {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .list-of-certificates {
+    font-size: 1rem;
+  }
 
   header {
     font-weight: bold;
   }
 
-  .el-collapse {
+  .el-collapse:first-child:first-child {
+    font-size: 1rem !important;
 
-    .el-collapse-item {
-      .el-collapse-item__header {
-        font-size: 1rem;
-      }
-      .el-collapse-item__content {
-        font-size: 1rem;
-      }
-    }
   }
 
   .group-list {
