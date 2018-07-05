@@ -230,7 +230,7 @@ export default {
       2: 'CEO. Businessman, ecologist, maecenas',
       3: 'Pyrozhenko Gennady',
       4: 'Geologist, discoverer of deposits in Karelia',
-      5: 'Gliarianov Anton',
+      5: 'Glariantov Anton',
       6: 'Chief engineer-planner, land surveyor',
       7: 'Pozdnikin Konstantin',
       8: 'Javascript, solidity developer, analyst',
