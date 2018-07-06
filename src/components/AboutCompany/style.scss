@@ -4,8 +4,26 @@
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 
+
+  .el-carousel {
+    &__button {
+
+    }
+
+    .text-block {
+      padding-right: 50px;
+      padding-left: 10px;
+      text-align: justify;
+    }
+  }
+
   .block-row {
     margin-bottom: 5rem;
+    font-size: 18px;
+    height: 500px;
+    display: table-cell;
+    vertical-align: bottom;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -27,7 +45,7 @@
     background-size: 80%;
     img {
       position: relative;
-      width: 80%;
+      width: 100%;
     }
   }
 
@@ -52,11 +70,7 @@
     }
   }
 
-  .el-carousel {
-    background: url('./../../assets/svg/slider.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+
 
   .svg {
     display: flex;

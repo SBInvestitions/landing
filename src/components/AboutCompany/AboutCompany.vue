@@ -11,66 +11,23 @@
                 </el-col>
               </el-row>
 
-             <el-row class="block-row">
-                <el-col :xs="22" :span="12" class="idea left">
-                  <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.text.1") }}</p>
-                    <p>{{ $t("aboutCompany.text.2") }}</p>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :span="12" class="gif right" ref="video1">
-                  <a v-if="!showVideo1" rel="button" @click="showVideoByIndex(1)">
-                    <img :src="img1" />
-                  </a>
-                  <img v-if="showVideo1" :src="gif1" />
-                </el-col>
-              </el-row>
+              <el-carousel :interval="10000" height="600px">
+                <el-carousel-item v-for="video in videos" :key="video.id">
+                  <el-row class="block-row">
+                    <el-col :xs="22" :span="12" class="idea left">
+                      <div class="grid-content bg-purple-light text-block">
+                        <p>{{ video.text1 }}</p>
+                        <p>{{ video.text2 }}</p>
+                        <p v-if="video.text3">{{ video.text3 }}</p>
+                      </div>
+                    </el-col>
 
-              <el-row class="block-row">
-                <el-col :xs="24" :span="12" class="gif left" ref="video2">
-                  <a v-if="!showVideo2" rel="button" @click="showVideoByIndex(2)">
-                    <img :src="img2" />
-                  </a>
-                  <img v-if="showVideo2" :src="gif2" />
-                </el-col>
-                <el-col :xs="22" :span="12" class="idea right">
-                  <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.text.3") }}</p>
-                    <p>{{ $t("aboutCompany.text.4") }} <strong>{{ $t("aboutCompany.text.5") }}</strong></p>
-                  </div>
-                </el-col>
-              </el-row>
-
-              <el-row class="block-row">
-                <el-col :xs="22" :span="12" class="idea left">
-                  <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.text.6") }} <strong>{{ $t("aboutCompany.text.7") }}</strong>{{ $t("aboutCompany.text.8") }}<strong>{{ $t("aboutCompany.text.18") }}</strong></p>
-                    <p>{{ $t("aboutCompany.text.9") }}<strong>{{ $t("aboutCompany.text.17") }}</strong>{{ $t("aboutCompany.text.10") }}</p>
-                    <p>{{ $t("aboutCompany.text.11") }}</p>
-                  </div>
-                </el-col>
-                <el-col :xs="24" :span="12" class="gif right" ref="video3">
-                  <a v-if="!showVideo3" rel="button" @click="showVideoByIndex(3)">
-                    <img :src="img3" />
-                  </a>
-                  <img v-if="showVideo3" :src="gif3" />
-                </el-col>
-              </el-row>
-
-              <el-row class="block-row">
-                <el-col :xs="24" :span="12" class="gif left" ref="video4">
-                  <a v-if="!showVideo4" rel="button" @click="showVideoByIndex(4)">
-                    <img :src="img4" />
-                  </a>
-                  <img v-if="showVideo4" :src="gif4" />
-                </el-col>
-                <el-col :xs="22" :span="12" class="idea right">
-                  <div class="grid-content bg-purple-light text-block">
-                    <p>{{ $t("aboutCompany.text.12") }}<strong>{{ $t("aboutCompany.text.13") }}</strong></p>
-                    <p>{{ $t("aboutCompany.text.14") }}<strong>{{ $t("aboutCompany.text.15") }}</strong>{{ $t("aboutCompany.text.16") }}</p>
-                  </div>
-                </el-col>
-              </el-row>
+                    <el-col :xs="24" :span="12" class="gif right" ref="video1">
+                      <img :src="video.src" />
+                    </el-col>
+                  </el-row>
+                </el-carousel-item>
+              </el-carousel>
 
             </div>
           </el-col>
@@ -81,7 +38,13 @@
 </template>
 
 <style lang="scss" src="./style.scss" scoped></style>
+<style>
+  .el-carousel__button {
+    background-color: #6872a9;
+    height: 5px !important;
+  }
 
+</style>
 <script>
   import 'element-ui/lib/theme-chalk/display.css';
   import gif1 from './../../assets/videos/1s.gif';
@@ -112,7 +75,39 @@
         showVideo1: false,
         showVideo2: false,
         showVideo3: false,
-        showVideo4: false
+        showVideo4: false,
+        videos: [
+          {
+            id: 1,
+            link: '//sbinvest.pro/assets/videos/1.mp4',
+            src: gif1,
+            alt: 'we invest',
+            text1: this.$t('aboutCompany.text.1'),
+            text2: this.$t('aboutCompany.text.2')
+          }, {
+            id: 2,
+            link: '//sbinvest.pro/assets/videos/2.mp4',
+            src: gif2,
+            alt: 'few investors',
+            text1: this.$t('aboutCompany.text.3'),
+            text2: `${this.$t('aboutCompany.text.4')} ${this.$t('aboutCompany.text.5')}`
+          }, {
+            id: 3,
+            link: '//sbinvest.pro/assets/videos/3.mp4',
+            src: gif3,
+            alt: 'voting',
+            text1: `${this.$t('aboutCompany.text.6')} ${this.$t('aboutCompany.text.7')} ${this.$t('aboutCompany.text.8')} ${this.$t('aboutCompany.text.18')}`,
+            text2: `${this.$t('aboutCompany.text.9')} ${this.$t('aboutCompany.text.17')} ${this.$t('aboutCompany.text.10')}`,
+            text3: this.$t('aboutCompany.text.11')
+          }, {
+            id: 4,
+            link: '//sbinvest.pro/assets/videos/4.mp4',
+            src: gif4,
+            alt: 'all the world',
+            text1: `${this.$t('aboutCompany.text.12')} ${this.$t('aboutCompany.text.13')}`,
+            text2: `${this.$t('aboutCompany.text.14')} ${this.$t('aboutCompany.text.15')} ${this.$t('aboutCompany.text.16')}`
+          }
+        ]
       };
     },
     methods: {
