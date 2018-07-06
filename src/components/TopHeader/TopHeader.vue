@@ -6,13 +6,14 @@
       <el-row>
         <el-col :span="24" class="top-top">
           <div class="grid-content bg-purple-dark">
-            <!--<el-row type="flex" class="row-bg sbi-logo-container" justify="space-around">
-              <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1">
+            <el-row type="flex" class="row-bg sbi-logo-container" justify="left">
+              <el-col :span="5" :offset="2">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
                   <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
+                  <span>SBInvestitions</span>
                 </div>
               </el-col>
-            </el-row>-->
+            </el-row>
             <el-row type="flex" class="row-bg sbi-text-container" justify="space-around">
               <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="16">
                 <div class="grid-content bg-purple-light">
@@ -259,7 +260,7 @@
           const topHeaderOffsetTop = this.$refs.topHeader.getBoundingClientRect().top;
           // console.log('topHeaderOffsetTop', topHeaderOffsetTop, 'topHeaderOffsetHeight', topHeaderOffsetHeight);
           const color = 1 - Math.abs(topHeaderOffsetTop / 500);
-          if (color > 0) {
+          if (color >= 0) {
             Vue.set(this.headerStyle, 'background', `rgba(255, 255, 255, ${Math.abs(color)})`);
           }
           // console.log('color', color);
