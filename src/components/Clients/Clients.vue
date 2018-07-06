@@ -74,7 +74,7 @@
             alt: 'OAO Kondopoga'
           }, {
             id: 6,
-            link: 'http://pks-vodokanal.ru/"',
+            link: 'http://pks-vodokanal.ru/',
             src: vodokanal,
             alt: 'PKS Vodokanal'
           }, {
