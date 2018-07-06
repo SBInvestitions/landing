@@ -245,10 +245,10 @@ export default {
   },
   topHeader: {
     text: {
-      1: 'High-profit investments in a fully legal and operating business',
-      111: 'with minimal risk',
+      1: 'The first project in Russia to jointly develop the wealth of the earth`s subsoils',
+      111: 'This is just workhorse business',
       2: ' on the Ethereum blockchain platform',
-      3: '5-10-times profit, with full control over investments',
+      3: ' 5 - 10 - X profit, in 3 year',
       4: 'BUY TOKENS',
       5: 'Funds raised',
       6: 'Discount still valid for:',

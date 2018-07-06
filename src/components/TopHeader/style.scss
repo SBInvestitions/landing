@@ -1,7 +1,10 @@
 .top-header {
   position: relative;
   height: 1080px;
-  background: rgba(255, 255, 255, 1);
+  background-image: url('./../../assets/svg/full_earth.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: 95% 40% !important;
+  background-size: 40% !important;
 
   .social {
     margin-top: 50px;
@@ -13,7 +16,7 @@
   .divider {
     width: 25%;
     height: 1px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     background: black;
   }
@@ -28,7 +31,7 @@
     }
 
     .sbi-logo-container {
-      margin-top: 8rem;
+      margin-top: 15%;
 
       .sbi-logo {
         width: 100%;
@@ -36,11 +39,13 @@
     }
 
     .sbi-text-container {
-      text-align: center;
+      text-align: left;
+      margin-top: 15%;
 
       h1 {
         // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
-        font-weight: 600;
+        font-weight: 500;
+        font-size: 22px;
       }
       h2 {
         // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
@@ -49,6 +54,10 @@
           color: #0465ac;
         }
         margin-bottom: 0.5rem;
+
+        &.h2 {
+          font-size: 16px;
+        }
       }
 
       h3 {
@@ -288,13 +297,22 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .social {
     margin-top: 18px !important;
   }
   .top-header {
     margin-top: 0 !important;
+    background-position: 95% 37% !important;
+
+    .top-top .sbi-text-container {
+      margin-top: 30%;
+      margin-bottom: 110px;
+      h3 {
+        font-size: 18px;
+      }
+    }
   }
   .sbi-scale-container {
     width: 90% !important;
@@ -330,6 +348,14 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  .top-header {
+    margin-top: 0 !important;
+    background-position: 95% 37% !important;
+
+    .social {
+      margin-top: 225px;
+    }
+  }
   .sbi-scale-container {
     width: 90% !important;
   }

@@ -6,66 +6,70 @@
       <el-row>
         <el-col :span="24" class="top-top">
           <div class="grid-content bg-purple-dark">
-            <el-row type="flex" class="row-bg sbi-logo-container" justify="space-around">
+            <!--<el-row type="flex" class="row-bg sbi-logo-container" justify="space-around">
               <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
                   <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
                 </div>
               </el-col>
-            </el-row>
+            </el-row>-->
             <el-row type="flex" class="row-bg sbi-text-container" justify="space-around">
               <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="16">
                 <div class="grid-content bg-purple-light">
                   <h1>{{ $t("topHeader.text.1") }}</h1>
                   <h2>{{ $t("topHeader.text.111") }}</h2>
                   <div class="divider"></div>
-                  <h2>ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
+                  <h2 class="h2">ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
                   <h3>{{ $t("topHeader.text.3") }}</h3>
                   <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
                 </div>
               </el-col>
             </el-row>
 
-            <el-row type="flex" class="row-bg social" justify="center">
+            <el-row type="flex" class="row-bg" justify="space-around">
+              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="16">
+                <el-row type="flex" class="row-bg social" justify="left">
 
-              <el-col :xs="4" :span="1">
-                <div class="grid-content bg-purple">
-                  <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/f-github.png" alt="github"></a>
-                </div>
-              </el-col>
+                <el-col :xs="4" :span="1">
+                  <div class="grid-content bg-purple">
+                    <a href="https://github.com/SBInvestitions" class="social-link" target="_blank"><img src="./../../assets/socail/f-github.png" alt="github"></a>
+                  </div>
+                </el-col>
 
-              <el-col :xs="4" :span="1">
-                <div class="grid-content bg-purple">
-                  <a href="https://t.me/joinchat/DY1Upw822WC1LcPgmEAtzw" class="social-link" target="_blank">
-                    <img src="./../../assets/socail/f-telegram.png" alt="telegram channel">
-                  </a>
-                </div>
-              </el-col>
+                <el-col :xs="4" :span="1">
+                  <div class="grid-content bg-purple">
+                    <a href="https://t.me/joinchat/DY1Upw822WC1LcPgmEAtzw" class="social-link" target="_blank">
+                      <img src="./../../assets/socail/f-telegram.png" alt="telegram channel">
+                    </a>
+                  </div>
+                </el-col>
 
-              <el-col :xs="4" :span="1">
-                <div class="grid-content bg-purple">
-                  <a href="https://www.youtube.com/channel/UCXrK81VbNIS1PF80xVjJukA/" class="social-link" target="_blank"><img src="./../../assets/socail/f-youtube.png" alt="youtube"></a>
-                </div>
-              </el-col>
+                <el-col :xs="4" :span="1">
+                  <div class="grid-content bg-purple">
+                    <a href="https://www.youtube.com/channel/UCXrK81VbNIS1PF80xVjJukA/" class="social-link" target="_blank"><img src="./../../assets/socail/f-youtube.png" alt="youtube"></a>
+                  </div>
+                </el-col>
 
-              <el-col :xs="4" :span="1">
-                <div class="grid-content bg-purple">
-                  <a href="https://twitter.com/ABelonogov" class="social-link" target="_blank">
-                    <img src="./../../assets/socail/f-twitter.png" alt="twitter">
-                  </a>
-                </div>
-              </el-col>
+                <el-col :xs="4" :span="1">
+                  <div class="grid-content bg-purple">
+                    <a href="https://twitter.com/ABelonogov" class="social-link" target="_blank">
+                      <img src="./../../assets/socail/f-twitter.png" alt="twitter">
+                    </a>
+                  </div>
+                </el-col>
 
-              <el-col :xs="4" :span="1">
-                <div class="grid-content bg-purple">
-                  <a href="mailto:invest@sbinvest.pro" target="_top" class="social-link"><img src="./../../assets/socail/f-mail.png" alt="mail"></a>
-                </div>
-              </el-col>
+                <el-col :xs="4" :span="1">
+                  <div class="grid-content bg-purple">
+                    <a href="mailto:invest@sbinvest.pro" target="_top" class="social-link"><img src="./../../assets/socail/f-mail.png" alt="mail"></a>
+                  </div>
+                </el-col>
 
-              <el-col :xs="4" :span="1">
-                <div class="grid-content bg-purple">
-                  <a href="https://www.instagram.com/sbinvestitions/" class="social-link" target="_blank"><img src="./../../assets/socail/f-instagram.png" alt="instagram"></a>
-                </div>
+                <el-col :xs="4" :span="1">
+                  <div class="grid-content bg-purple">
+                    <a href="https://www.instagram.com/sbinvestitions/" class="social-link" target="_blank"><img src="./../../assets/socail/f-instagram.png" alt="instagram"></a>
+                  </div>
+                </el-col>
+            </el-row>
               </el-col>
             </el-row>
           </div>
@@ -255,7 +259,9 @@
           const topHeaderOffsetTop = this.$refs.topHeader.getBoundingClientRect().top;
           // console.log('topHeaderOffsetTop', topHeaderOffsetTop, 'topHeaderOffsetHeight', topHeaderOffsetHeight);
           const color = 1 - Math.abs(topHeaderOffsetTop / 500);
-          Vue.set(this.headerStyle, 'background', `rgba(255, 255, 255, ${Math.abs(color)})`);
+          if (color > 0) {
+            Vue.set(this.headerStyle, 'background', `rgba(255, 255, 255, ${Math.abs(color)})`);
+          }
           // console.log('color', color);
         }
       },
