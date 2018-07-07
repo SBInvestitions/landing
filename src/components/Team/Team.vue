@@ -9,7 +9,7 @@
         </el-row>
         <el-row type="flex" class="row-bg stages-middle-line" justify="space-around"></el-row>
 
-        <el-row type="flex" class="row-bg road-map-stages hidden-lg-and-down" justify="space-around">
+        <el-row type="flex" class="row-bg road-map-stages hidden-md-and-down" justify="space-around">
           <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
             <div class="ava">
               <img src="./../../assets/avas/pirozhenko.png" alt="Pirozhenko">
@@ -91,24 +91,12 @@
               {{ $t("team.text.12") }}
             </div>
             <a href="https://vk.com/sysoff" class="social-link" target="_blank">
-              <img src="./../../assets/socail/f-vkontakte.png" alt="vkontakte profile">
-            </a>
-          </el-col>
-          <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
-            <div class="ava">
-              <img src="./../../assets/avas/ignatieva.png" alt="Ignatieva">
-            </div>
-            <div class="name">{{ $t("team.text.13") }}</div>
-            <div class="text">
-              {{ $t("team.text.14") }}
-            </div>
-            <a href="https://vk.com/mandy_yeagle" class="social-link" target="_blank">
               <img src="./../../assets/socail/f-vkontakte.png" alt="vkontakte profile">
             </a>
           </el-col>
         </el-row>
 
-        <el-row type="flex" class="row-bg road-map-stages hidden-xl-only hidden-xs-only" justify="space-around">
+        <el-row type="flex" class="row-bg road-map-stages hidden-lg-and-up hidden-xs-only" justify="space-around">
           <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
             <div class="ava">
               <img src="./../../assets/avas/belonogov.png" alt="Belonogov">
@@ -150,27 +138,9 @@
               </a>
             </div>
           </el-col>
-          <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
-            <div class="ava">
-              <img src="./../../assets/avas/pozdnikin.png" alt="Pozdnikin">
-            </div>
-            <div class="name">{{ $t("team.text.7") }}</div>
-            <div class="text">
-              {{ $t("team.text.8") }}
-            </div>
-            <a href="https://www.facebook.com/profile.php?id=100010511285400" class="social-link" target="_blank">
-              <img src="./../../assets/socail/f-facebook.png" alt="facebook profile">
-            </a>
-            <a href="https://vk.com/ponyman" class="social-link" target="_blank">
-              <img src="./../../assets/socail/f-vkontakte.png" alt="vkontakte profile">
-            </a>
-            <a href="https://www.linkedin.com/in/konstantin-pozdnikin-90929a111/" class="social-link" target="_blank">
-              <img src="./../../assets/socail/f-linkedin.png" alt="linkedin profile">
-            </a>
-          </el-col>
         </el-row>
         <p></p>
-        <el-row type="flex" class="row-bg road-map-stages hidden-xl-only hidden-xs-only" justify="space-around">
+        <el-row type="flex" class="row-bg road-map-stages hidden-lg-and-up hidden-xs-only" justify="space-around">
           <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
             <div class="ava"><img src="./../../assets/avas/mukhin.png" alt="Mukhin"></div>
             <div class="name">{{ $t("team.text.9") }}</div>
@@ -198,14 +168,20 @@
           </el-col>
           <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
             <div class="ava">
-              <img src="./../../assets/avas/ignatieva.png" alt="Ignatieva">
+              <img src="./../../assets/avas/pozdnikin.png" alt="Pozdnikin">
             </div>
-            <div class="name">{{ $t("team.text.13") }}</div>
+            <div class="name">{{ $t("team.text.7") }}</div>
             <div class="text">
-              {{ $t("team.text.14") }}
+              {{ $t("team.text.8") }}
             </div>
-            <a href="https://vk.com/mandy_yeagle" class="social-link" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100010511285400" class="social-link" target="_blank">
+              <img src="./../../assets/socail/f-facebook.png" alt="facebook profile">
+            </a>
+            <a href="https://vk.com/ponyman" class="social-link" target="_blank">
               <img src="./../../assets/socail/f-vkontakte.png" alt="vkontakte profile">
+            </a>
+            <a href="https://www.linkedin.com/in/konstantin-pozdnikin-90929a111/" class="social-link" target="_blank">
+              <img src="./../../assets/socail/f-linkedin.png" alt="linkedin profile">
             </a>
           </el-col>
         </el-row>
@@ -292,18 +268,6 @@
               {{ $t("team.text.12") }}
             </div>
             <a href="https://vk.com/sysoff" class="social-link" target="_blank">
-              <img src="./../../assets/socail/f-vkontakte.png" alt="vkontakte profile">
-            </a>
-          </el-col>
-          <el-col class="team-block" :xs="24" :sm="6" :md="3" :lg="3" :xl="3">
-            <div class="ava">
-              <img src="./../../assets/avas/ignatieva.png" alt="Ignatieva">
-            </div>
-            <div class="name">{{ $t("team.text.13") }}</div>
-            <div class="text">
-              {{ $t("team.text.14") }}
-            </div>
-            <a href="https://vk.com/mandy_yeagle" class="social-link" target="_blank">
               <img src="./../../assets/socail/f-vkontakte.png" alt="vkontakte profile">
             </a>
           </el-col>
