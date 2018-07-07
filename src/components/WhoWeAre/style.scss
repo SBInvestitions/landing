@@ -3,6 +3,18 @@
   margin-top: 2rem;
   padding-bottom: 3rem;
 
+  i {
+    margin-right: 10px;
+  }
+
+  .idea {
+    .text-block {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
   .contacts {
     header {
       margin-top: 1rem;
@@ -27,8 +39,12 @@
   }
 
   .group-list {
+    padding-left: 1rem;
+    li {
+      list-style-type: none;
+    }
     a {
-      font-size: 22px;
+      font-size: 16px;
     }
   }
 

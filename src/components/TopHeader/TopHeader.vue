@@ -15,7 +15,7 @@
               </el-col>
             </el-row>
             <el-row type="flex" class="row-bg sbi-text-container" justify="space-around">
-              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="16">
+              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="20">
                 <div class="grid-content bg-purple-light">
                   <h1>{{ $t("topHeader.text.1") }}</h1>
                   <h2>{{ $t("topHeader.text.111") }}</h2>
@@ -28,7 +28,7 @@
             </el-row>
 
             <el-row type="flex" class="row-bg" justify="space-around">
-              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="16">
+              <el-col :xs="{span: 23, offset: 1}" :sm="24" :md="20" :lg="20" :xl="20">
                 <el-row type="flex" class="row-bg social" justify="left">
 
                 <el-col :xs="4" :span="1">
