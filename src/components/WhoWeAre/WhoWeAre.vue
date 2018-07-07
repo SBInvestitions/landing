@@ -20,7 +20,7 @@
                     <header>{{ $t('whoWeAre.text.2') }}</header>
                     <ul class="group-list">
                       <li><a target="_blank" href="https://goo.gl/maps/behQLrm7gbF2"><i class="el-icon-location"></i>{{ $t('whoWeAre.text.3') }}</a></li>
-                      <li><a target="_blank" href="https://goo.gl/maps/behQLrm7gbF2"><i class="el-icon-location"></i>{{ $t('whoWeAre.text.4') }}</a></li>
+                      <li><a target="_blank" href="https://goo.gl/maps/GDrJgETyy8n"><i class="el-icon-location"></i>{{ $t('whoWeAre.text.4') }}</a></li>
                       <li><a target="_blank" href="https://goo.gl/maps/Z9sUWR5zL2Q2"><i class="el-icon-location"></i>{{ $t('whoWeAre.text.5') }}</a></li>
                     </ul>
                     <el-collapse v-model="activeNames" @change="handleChange">
