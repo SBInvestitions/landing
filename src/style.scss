@@ -64,7 +64,7 @@ h2 {
       color: black;
       text-transform: uppercase;
       font-weight: 400;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.41);
+      text-shadow: #485185;
 
       a:active {
         border: none;
@@ -147,4 +147,16 @@ a {
 
 .el-collapse-item__header {
   font-size: 1rem;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }

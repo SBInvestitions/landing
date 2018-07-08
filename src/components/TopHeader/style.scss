@@ -1,12 +1,42 @@
 .top-header {
   position: relative;
   height: 1080px;
-  background-image: url('./../../assets/svg/full_earth.svg') !important;
+  // background-image: url('./../../assets/svg/full_earth.svg') !important;
+  // background-image: url('./../../assets/videos/main.gif') !important;
+
   background-repeat: no-repeat !important;
-  background-position: 95% 40% !important;
-  background-size: 40% !important;
+  // background-position: 95% 40% !important;
+  // background-size: 40% !important;
+  background-position: 200px -30px !important;
+  background-size: 99% !important;
+
   background: rgb(255, 255, 255);
 
+  .left-text {
+    transition: opacity 3s ease;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  .videoContainer {
+    img {
+      margin: 0 auto;
+      display: block;
+      top: -5px;
+      right: 155px;
+      position: absolute;
+      width: 1280px;
+
+      &.moved {
+        transition: all 5s ease;
+        top: -5px;
+        right: -135px;
+      }
+    }
+  }
 
 
   .social {
@@ -16,12 +46,16 @@
     }
   }
 
-  .divider {
-    width: 26rem;
-    height: 1px;
-    margin: 0;
-    padding: 0;
-    background: black;
+  .divided {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: black;
+      color: black;
+    }
   }
 
   .top-top {
@@ -310,8 +344,12 @@
   .social {
     margin-top: 18px !important;
   }
+  .divider {
+
+  }
   .top-header {
     margin-top: 0 !important;
+    background-size: 80% !important;
     background-position: 95% 37% !important;
 
     .top-top .sbi-text-container {
@@ -357,7 +395,7 @@
 @media (min-width: 768px) and (max-width: 992px) {
   .top-header {
     margin-top: 0 !important;
-    background-position: 95% 37% !important;
+    // background-position: 95% 37% !important;
 
     .social {
       margin-top: 225px;
@@ -393,7 +431,8 @@
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   .top-header {
-    background-position: 95% 25% !important;
+    // background-position: 95% 25% !important;
+
     .timer {
       .header {
         font-size: 20px !important;
@@ -410,7 +449,7 @@
 @media (max-width: 1500px){
   .top-header {
     .top-top .sbi-text-container h1 {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }

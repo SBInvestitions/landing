@@ -1,7 +1,15 @@
 .main-menu {
   transition: all .3s ease;
 
+  &.show {
+    .menu-row {
+      transition: opacity 3s ease;
+      opacity: 1;
+    }
+  }
+
   .menu-row {
+    opacity: 0;
 
     .menu-icon {
       width: 84px;
@@ -103,7 +111,7 @@
     }
 
     .menu-row {
-      background: #383838;
+      background: #4e5a8e;
 
       .el-menu-item {
         color: white;
@@ -118,7 +126,7 @@
 
           &.is-active {
             color: black;
-            border-bottom: 1px solid white;
+            // border-bottom: 1px solid white;
           }
         }
       }
@@ -132,6 +140,10 @@
 
   .el-menu-sbi {
 
+    .el-menu-item {
+      border-bottom: none;
+    }
+
     .el-menu--horizontal {
       margin: 0 auto!important;
     }
@@ -139,7 +151,7 @@
     .white-paper {
 
       span {
-        background-color: #565858;
+        background-color: #86c0b0;
         border-radius: 30px;
         color: white;
         padding: 10px 30px;

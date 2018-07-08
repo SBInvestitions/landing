@@ -1,21 +1,21 @@
 <template>
   <el-container class="home">
     <div class="header-block" id="header-block">
-      <main-menu v-bind:class="{ 'small': scrolled }" />
-      <top-header/>
+      <main-menu v-bind:class="{ 'show': show }" />
+      <top-header />
     </div>
-    <div class="main-block">
+    <div class="main-block" v-show="show">
       <who-we-are />
       <about-company />
       <conditions />
       <road-map />
       <team />
-      <video-block />
+      <!--<video-block />-->
       <prev-projects />
       <bounty />
       <clients />
     </div>
-    <el-footer>
+    <el-footer v-show="show">
       <footer-block />
     </el-footer>
   </el-container>
@@ -48,7 +48,8 @@
     data () {
       return {
         position: null,
-        scrolled: false
+        scrolled: false,
+        show: false
       };
     },
     methods: {
@@ -63,7 +64,7 @@
       }
     },
     beforeDestroy: function () {
-      document.removeEventListener('scroll', this.onScroll, true);
+      // document.removeEventListener('scroll', this.onScroll, true);
     },
     components: {
       'main-menu': MainMenu,
@@ -80,6 +81,12 @@
       'prev-projects': PrevProjects,
       'video-block': VideoBlock,
       'who-we-are': WhoWeAre
+    },
+    mounted () {
+      setTimeout(() => {
+        this.show = true;
+      }, 3000);
+      // document.addEventListener('scroll', this.onScroll, true);
     }
   };
 </script>
