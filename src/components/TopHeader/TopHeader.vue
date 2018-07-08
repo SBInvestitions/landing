@@ -3,7 +3,7 @@
       <!-- <div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
-      <div class="videoContainer hidden-sm-and-down">
+      <div class="gif-container hidden-sm-and-down">
           <img v-bind:class="{ 'moved': moved }" src="./../../assets/videos/hpp.gif" @load="loaded" alt="main">
       </div>
       <el-row>
