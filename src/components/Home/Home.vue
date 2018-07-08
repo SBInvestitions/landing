@@ -1,10 +1,10 @@
 <template>
   <el-container class="home">
     <div class="header-block" id="header-block">
-      <main-menu v-bind:class="{ 'show': show }" />
+      <main-menu v-bind:class="{ 'show': showMenu }" />
       <top-header />
     </div>
-    <div class="main-block" v-show="show">
+    <div class="main-block" v-if="showBody">
       <who-we-are />
       <about-company />
       <conditions />
@@ -15,7 +15,7 @@
       <bounty />
       <clients />
     </div>
-    <el-footer v-show="show">
+    <el-footer v-show="showBody">
       <footer-block />
     </el-footer>
   </el-container>
@@ -49,7 +49,8 @@
       return {
         position: null,
         scrolled: false,
-        show: false
+        showMenu: false,
+        showBody: false
       };
     },
     methods: {
@@ -84,7 +85,10 @@
     },
     mounted () {
       setTimeout(() => {
-        this.show = true;
+        this.showBody = true;
+      }, 5000);
+      setTimeout(() => {
+        this.showMenu = true;
       }, 3000);
       // document.addEventListener('scroll', this.onScroll, true);
     }

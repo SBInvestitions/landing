@@ -1,19 +1,19 @@
 <template>
-  <div id="top-header" class="top-header" ref="topHeader" v-bind:style="headerStyle">
+  <div id="top-header" v-bind:class="{'show': showHeader }" class="top-header" ref="topHeader" v-bind:style="headerStyle">
       <!-- <div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
       <div class="gif-container hidden-sm-and-down">
-          <img v-bind:class="{ 'moved': moved }" src="./../../assets/videos/hpp.gif" @load="loaded" alt="main">
+          <img v-bind:class="{ 'moved': moved }" src="./../../assets/videos/hwhite2.gif" @load="loaded" alt="main">
       </div>
       <el-row>
         <el-col :span="24" class="top-top">
           <div v-bind:class="{'show': showText}" class="left-text grid-content bg-purple-dark">
             <el-row type="flex" class="row-bg sbi-logo-container" justify="left">
-              <el-col :span="5" :offset="2">
+              <el-col :span="6" :offset="2">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
                   <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
-                  <span>SBInvestitions</span>
+                  <span>Subsoil Blockchain Investitions</span>
                 </div>
               </el-col>
             </el-row>
@@ -228,7 +228,8 @@
         crowdsaleAddress: '0xE01bA6C593003B0EdcD43b7839a7c36b00a44dfC',
         src: '//sbinvest.pro/assets/documents/h3.mov',
         showText: false,
-        moved: false
+        moved: false,
+        showHeader: false
       };
     },
     methods: {
@@ -236,8 +237,11 @@
         console.log('loaded');
         setTimeout(() => {
           this.showText = true;
-        }, 4000);
+        }, 3000);
         this.moved = true;
+        setTimeout(() => {
+          this.showHeader = true;
+        }, 3000);
       },
       changeTime: (date) => {
         const days = moment(date).diff(moment(), 'days');

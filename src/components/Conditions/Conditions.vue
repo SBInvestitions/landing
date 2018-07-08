@@ -100,23 +100,24 @@
         left.pseudoStyle('before', 'height', `${leftHeight - 45}px !important`, 'left-class');
         right.pseudoStyle('before', 'height', `${rightHeight - 45}px !important`, 'right-class');
       },
-      setVideoHeight: function (video) {
+      setVideoHeight: function () {
         const windowWidth = this.$refs.videoBackground.offsetWidth;
         const offsetHeight = this.$refs.videoBackground.offsetHeight;
-        const frameWidth = `${windowWidth}px`;
-        const frameHeigth = `${windowWidth * 0.563}px`;
-        Vue.set(this.frameStyles, 'width', frameWidth);
-        Vue.set(this.frameStyles, 'height', frameHeigth);
-        if ((windowWidth * 0.563) < offsetHeight) {
-          Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${frameHeigth}`);
-        } else {
-          Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${offsetHeight}px`);
+        if (windowWidth) {
+          const frameWidth = `${windowWidth}px`;
+          const frameHeigth = `${windowWidth * 0.563}px`;
+          Vue.set(this.frameStyles, 'width', frameWidth);
+          Vue.set(this.frameStyles, 'height', frameHeigth);
+          if ((windowWidth * 0.563) < offsetHeight) {
+            Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${frameHeigth}`);
+          } else {
+            Vue.set(this.blockFrameStyles, 'backgroundSize', `${frameWidth} ${offsetHeight}px`);
+          }
         }
       },
       vidRescale: function () {
-        const video = this.$refs.videoBackground;
-        if (video) {
-          this.setVideoHeight(video);
+        if (this.$refs.videoBackground) {
+          this.setVideoHeight();
         }
       }
     },

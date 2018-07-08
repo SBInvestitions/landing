@@ -143,6 +143,9 @@ a {
   .el-dialog {
     width: 100% !important;
   }
+  .el-collapse-item__header {
+    height: auto !important;
+  }
 }
 
 .el-collapse-item__header {

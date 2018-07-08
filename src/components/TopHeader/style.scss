@@ -1,16 +1,12 @@
 .top-header {
   position: relative;
   height: 1080px;
-  // background-image: url('./../../assets/svg/full_earth.svg') !important;
-  // background-image: url('./../../assets/videos/main.gif') !important;
-
   background-repeat: no-repeat !important;
-  // background-position: 95% 40% !important;
-  // background-size: 40% !important;
-  background-position: 200px -30px !important;
-  background-size: 99% !important;
-
-  background: rgb(255, 255, 255);
+  background: rgb(78, 90, 142);
+  &.show {
+    transition: background 1s ease;
+    background: rgb(255, 255, 255);
+  }
 
   .left-text {
     transition: opacity 3s ease;
@@ -33,7 +29,7 @@
       &.moved {
         transition: all 5s ease;
         top: -5px;
-        right: -135px;
+        right: -160px;
       }
     }
   }
@@ -351,6 +347,7 @@
     margin-top: 0 !important;
     background-size: 80% !important;
     background-position: 95% 37% !important;
+    background-image: url('./../../assets/svg/full_earth.svg') !important;
 
     .top-top .sbi-text-container {
       margin-bottom: 110px;
