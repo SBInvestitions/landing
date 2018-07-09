@@ -232,7 +232,7 @@
         moved: false,
         showHeader: false,
         gifMainImage: new Image(),
-        showGif: false,
+        showGif: false
       };
     },
     methods: {

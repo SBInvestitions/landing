@@ -20,17 +20,17 @@
 
   .gif-container {
     img {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       display: block;
-      top: -5px;
+      top: -30px;
       right: 25%;
       position: absolute;
 
       &.moved {
         transition: all 5s ease;
-        top: -5px;
-        right: 0;
+        top: -30px;
+        right: -10%;
       }
     }
   }
