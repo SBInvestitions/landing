@@ -86,7 +86,7 @@
     mounted () {
       setTimeout(() => {
         this.showBody = true;
-      }, 5000);
+      }, 6000);
       setTimeout(() => {
         this.showMenu = true;
       }, 3000);
