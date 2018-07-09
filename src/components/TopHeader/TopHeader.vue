@@ -1,5 +1,6 @@
 <template>
   <div id="top-header" v-bind:class="{'show': showHeader }" class="top-header" ref="topHeader" v-bind:style="headerStyle">
+    <div class="top-header-inner" v-loading="!showGif">
       <!-- <div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
@@ -191,8 +192,8 @@
           </div>
         </el-col>
       </el-row>
-
     </div>
+  </div>
 </template>
 
 <style lang="scss" src="./style.scss" scoped></style>
