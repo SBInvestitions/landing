@@ -4,7 +4,7 @@
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
       <div class="gif-container hidden-sm-and-down">
-          <img v-bind:class="{ 'moved': moved }" src="./../../assets/videos/hwhite2.gif" @load="loaded" alt="main">
+          <img v-bind:class="{ 'moved': moved }" :src="gifMainImage.src" @load="loaded" alt="main">
       </div>
       <el-row>
         <el-col :span="24" class="top-top">
@@ -201,6 +201,7 @@
   import moment from 'moment';
   import Vue from 'vue';
   import { getStarted, getFundsBalance } from './../../samples/web3Lib';
+  import gifMain from './../../assets/videos/hwhite2.gif';
 
   export default {
     name: 'TopHeader',
@@ -229,12 +230,12 @@
         src: '//sbinvest.pro/assets/documents/h3.mov',
         showText: false,
         moved: false,
-        showHeader: false
+        showHeader: false,
+        gifMainImage: new Image()
       };
     },
     methods: {
       loaded () {
-        console.log('loaded');
         setTimeout(() => {
           this.showText = true;
         }, 3000);
@@ -292,6 +293,8 @@
     },
     mounted () {
       document.addEventListener('scroll', this.onScroll, true);
+      // preload gif
+      this.gifMainImage.src = gifMain;
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
         this.beforeDiscount = this.changeTime(this.dateICOStart);

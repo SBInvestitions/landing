@@ -15,7 +15,6 @@
               <span class="round"></span>
               <p><span>{{ $t("bounty.text.7") }} 2.000.000,00 SBI</span></p>
               <p>{{ $t("bounty.text.8") }}</p>
-              <p>{{ $t("bounty.text.9") }}</p>
             </div>
           </el-col>
         </el-row>

@@ -3,6 +3,7 @@
   height: 1080px;
   background-repeat: no-repeat !important;
   background: rgb(78, 90, 142);
+
   &.show {
     transition: background 1s ease;
     background: rgb(255, 255, 255);
@@ -19,17 +20,17 @@
 
   .gif-container {
     img {
+      width: 80%;
       margin: 0 auto;
       display: block;
       top: -5px;
-      right: 155px;
+      right: 25%;
       position: absolute;
-      width: 1280px;
 
       &.moved {
         transition: all 5s ease;
         top: -5px;
-        right: -160px;
+        right: 0;
       }
     }
   }
@@ -447,6 +448,40 @@
   .top-header {
     .top-top .sbi-text-container h1 {
       font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .gif-container {
+    img {
+      margin: 0 auto;
+      display: block;
+      top: -5px !important;
+      right: 155px !important;
+      position: absolute;
+      width: 1280px !important;
+
+      &.moved {
+        transition: all 5s ease;
+        top: -5px !important;
+        right: -160px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .gif-container {
+    img {
+      width: 1280px !important;
+      top: 160px !important;
+      right: 0 !important;
+
+      &.moved {
+        top: 160px !important;
+        right: -160px !important;
+      }
     }
   }
 }

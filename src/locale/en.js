@@ -86,12 +86,11 @@ export default {
       1: 'Bounties',
       2: 'We have provided additional bonuses for strategic partners in the amount of',
       3: 'To become a strategic partner, you need to purchase more than',
-      4: 'inclusively.',
+      4: 'inclusively',
       5: 'Each strategic partner will be paid an additional',
       6: 'for each purchased',
       7: 'Anyone who purchases more than',
-      8: 'will become one of the founders of Invest Technologies, a company that owns the deposits.',
-      9: 'This is optional, yet requires the availability of the Russian citizenship.'
+      8: 'will become one of the founders of Invest Technologies, a company that owns the deposits'
     }
   },
   clients: {
