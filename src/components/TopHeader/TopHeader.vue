@@ -1,11 +1,14 @@
 <template>
   <div id="top-header" v-bind:class="{'show': showHeader }" class="top-header" ref="topHeader" v-bind:style="headerStyle">
     <div class="top-header-inner" v-loading="!showGif">
-      <!-- <div class="videoContainer hidden-sm-and-down">
+      <!--<div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
       <div class="gif-container hidden-sm-and-down">
           <img v-if="showGif" v-bind:class="{ 'moved': moved }" :src="gifMainImage.src" @load="loaded" alt="main">
+        <!--<video autoplay width="1280px" height="800px">
+          <source v-bind:class="{ 'moved': moved }" src="./../../assets/videos/hwhite.mp4" type="video/mp4">
+        </video>-->
       </div>
       <el-row>
         <el-col :span="24" class="top-top">
@@ -238,10 +241,10 @@
     },
     methods: {
       loaded () {
+        this.moved = true;
         setTimeout(() => {
           this.showText = true;
         }, 3000);
-        this.moved = true;
         setTimeout(() => {
           this.showHeader = true;
         }, 3000);
@@ -297,11 +300,13 @@
         this.showGif = true;
       }
     },
-    mounted () {
-      document.addEventListener('scroll', this.onScroll, true);
+    created: function () {
       // preload gif
       this.gifMainImage.src = gifMain;
       this.gifMainImage.onload = this.gifLoadedEvent();
+    },
+    mounted () {
+      document.addEventListener('scroll', this.onScroll, true);
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
         this.beforeDiscount = this.changeTime(this.dateICOStart);
