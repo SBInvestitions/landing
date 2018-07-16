@@ -205,10 +205,13 @@
   import moment from 'moment';
   import Vue from 'vue';
   import { getStarted, getFundsBalance } from './../../samples/web3Lib';
-  import gifMain from './../../assets/videos/hwhite2.gif';
 
   export default {
     name: 'TopHeader',
+    props: {
+      gifMainImage: HTMLImageElement,
+      showGif: Boolean
+    },
     data () {
       return {
         date: moment([2018, 5, 15]),
@@ -234,9 +237,7 @@
         src: '//sbinvest.pro/assets/documents/h3.mov',
         showText: false,
         moved: false,
-        showHeader: false,
-        gifMainImage: new Image(),
-        showGif: false
+        showHeader: false
       };
     },
     methods: {
@@ -294,16 +295,7 @@
       },
       onError: () => {
         alert('Failed to copy texts');
-      },
-      gifLoadedEvent () {
-        console.log('gifLoadedEvent');
-        this.showGif = true;
       }
-    },
-    created: function () {
-      // preload gif
-      this.gifMainImage.src = gifMain;
-      this.gifMainImage.onload = this.gifLoadedEvent();
     },
     mounted () {
       document.addEventListener('scroll', this.onScroll, true);

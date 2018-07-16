@@ -2,7 +2,7 @@
   <el-container class="home">
     <div class="header-block" id="header-block">
       <main-menu v-bind:class="{ 'show': showMenu }" />
-      <top-header />
+      <top-header v-bind:showGif="showGif" v-bind:gifMainImage="gifMainImage"/>
     </div>
     <div class="main-block" v-if="showBody">
       <who-we-are />
@@ -39,6 +39,7 @@
   import FooterBlock from './../FooterBlock/FooterBlock.vue';
   import VideoBlock from './../VideoBlock/VideoBlock.vue';
   import WhoWeAre from './../WhoWeAre/WhoWeAre.vue';
+  import gifMain from './../../assets/videos/hwhite2.gif';
 
   export default {
     name: 'Home',
@@ -50,7 +51,9 @@
         position: null,
         scrolled: false,
         showMenu: false,
-        showBody: false
+        showBody: false,
+        showGif: false,
+        gifMainImage: new Image()
       };
     },
     methods: {
@@ -62,6 +65,10 @@
         const scrollTop = window.scrollY;
         this.scrolled = scrollTop > 40;
         // console.log('position', this.position, 'scrollTop', scrollTop, 'headerOffset', headerOffset);
+      },
+      gifLoadedEvent () {
+        console.log('gifLoadedEvent');
+        this.showGif = true;
       }
     },
     beforeDestroy: function () {
@@ -82,6 +89,11 @@
       'prev-projects': PrevProjects,
       'video-block': VideoBlock,
       'who-we-are': WhoWeAre
+    },
+    created: function () {
+      // preload gif
+      this.gifMainImage.src = gifMain;
+      this.gifMainImage.onload = this.gifLoadedEvent();
     },
     mounted () {
       setTimeout(() => {
