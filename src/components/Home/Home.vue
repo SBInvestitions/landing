@@ -69,6 +69,12 @@
       gifLoadedEvent () {
         console.log('gifLoadedEvent');
         this.showGif = true;
+        setTimeout(() => {
+          this.showBody = true;
+        }, 6000);
+        setTimeout(() => {
+          this.showMenu = true;
+        }, 3500);
       }
     },
     beforeDestroy: function () {
@@ -94,15 +100,6 @@
       // preload gif
       this.gifMainImage.src = gifMain;
       this.gifMainImage.onload = this.gifLoadedEvent();
-    },
-    mounted () {
-      setTimeout(() => {
-        this.showBody = true;
-      }, 6000);
-      setTimeout(() => {
-        this.showMenu = true;
-      }, 3000);
-      // document.addEventListener('scroll', this.onScroll, true);
     }
   };
 </script>

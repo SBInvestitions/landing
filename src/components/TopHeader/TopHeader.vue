@@ -14,7 +14,7 @@
         <el-col :span="24" class="top-top">
           <div v-bind:class="{'show': showText}" class="left-text grid-content bg-purple-dark">
             <el-row type="flex" class="row-bg sbi-logo-container" justify="left">
-              <el-col :span="6" :offset="2">
+              <el-col :span="7" :offset="2">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
                   <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
                   <span>Subsoil Blockchain Investitions</span>
