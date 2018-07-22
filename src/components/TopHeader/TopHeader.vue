@@ -32,7 +32,7 @@
                   <el-form :inline="true" :model="formInline" class="subscribe-form">
                     <div class="form-item">
                       <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable></input>
-                      <el-button class="subscribe" type="primary" @click="onSubmit" roind>Subscribe</el-button>
+                      <button id="submit-button" @mouseleave="mouseLeave" @mouseover="mouseOver" class="el-button subscribe" type="primary" @click="onSubmit" roind>Subscribe</button>
                     </div>
                   </el-form>
                 </div>
@@ -251,6 +251,12 @@
       };
     },
     methods: {
+      mouseOver: function () {
+        console.log('hover!');
+      },
+      mouseLeave: function () {
+        console.log('leave!');
+      },
       onSubmit () {
         console.log('submit!');
       },
@@ -312,6 +318,7 @@
     },
     mounted () {
       document.addEventListener('scroll', this.onScroll, true);
+
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
         this.beforeDiscount = this.changeTime(this.dateICOStart);

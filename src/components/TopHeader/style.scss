@@ -12,7 +12,7 @@
         margin: 0!important;
         display: inline-block;
         background-color: #44b9a0;
-        border-radius: 50px;
+        border-radius: 100px;
         padding: 5px;
 
         &.submit {
@@ -21,14 +21,23 @@
         }
 
         .email-input {
-          display: inline-block;
-          border-radius: 50px !important;
+          border-radius: 100px !important;
           font-size: 16px !important;
-          padding: 10px;
           border: none;
+          display: inline-block;
+          width: 0;
+          padding: 0;
+          transition: all .3s ease;
 
           &:focus {
             outline: none;
+          }
+        }
+
+        &:hover, &:focus {
+          .email-input {
+            width: auto;
+            padding: 10px;
           }
         }
 
@@ -41,6 +50,7 @@
           font-weight: 300;
           background-color: #44b9a0;
           border: none;
+          color: white;
 
           /*&:hover {
             background: #0d8bbc;
