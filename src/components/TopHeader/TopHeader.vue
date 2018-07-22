@@ -30,7 +30,7 @@
                   <!--<el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>-->
 
                   <el-form :inline="true" :model="formInline" class="subscribe-form">
-                    <div class="form-item">
+                    <div class="form-item" v-bind:class="{ 'submit': toSubmit }">
                       <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable></input>
                       <button id="submit-button" @mouseleave="mouseLeave" @mouseover="mouseOver" class="el-button subscribe" type="primary" @click="onSubmit" roind>Subscribe</button>
                     </div>
@@ -224,6 +224,7 @@
         formInline: {
           email: ''
         },
+        toSubmit: false,
         date: moment([2018, 5, 15]),
         dateICOStart: moment.unix(1530403200),
         dateICOEnd: moment.unix(1535759940),
@@ -252,10 +253,12 @@
     },
     methods: {
       mouseOver: function () {
-        console.log('hover!');
+        // console.log('hover!');
+        this.toSubmit = true;
       },
       mouseLeave: function () {
-        console.log('leave!');
+        // console.log('leave!');
+        this.toSubmit = false;
       },
       onSubmit () {
         console.log('submit!');

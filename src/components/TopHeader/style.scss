@@ -16,18 +16,23 @@
         padding: 5px;
 
         &.submit {
-          background: #0d8bbc;
-          box-shadow: 0 0 5px #0d8bbc;
+          background: #4e5a8d;
+          box-shadow: 0 0 5px #4e5a8d;
+          transition: all .2s ease;
+
+          button {
+            background: #4e5a8d;
+          }
         }
 
         .email-input {
           border-radius: 100px !important;
-          font-size: 16px !important;
+          font-size: 16px;
           border: none;
           display: inline-block;
           width: 0;
           padding: 0;
-          transition: all .3s ease;
+          transition: all .2s ease;
 
           &:focus {
             outline: none;
@@ -45,7 +50,7 @@
           text-transform: uppercase;
           display: inline-block;
           margin: 0!important;
-          font-size: 16px !important;
+          font-size: 16px;
           border-radius: 50px !important;
           font-weight: 300;
           background-color: #44b9a0;
@@ -390,6 +395,25 @@
 @media (max-width: 450px) {
   .el-button.invest {
     font-size: 10px !important;
+  }
+
+  .top-header {
+    .top-header-inner {
+
+      .subscribe-form {
+
+        .form-item {
+
+          .email-input {
+            font-size: 14px !important;
+          }
+
+          button {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
   }
 }
 
