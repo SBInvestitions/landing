@@ -27,7 +27,14 @@
                   <h1>{{ $t("topHeader.text.1") }}</h1>
                   <h2 class="h2">ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
                   <h3>{{ $t("topHeader.text.3") }}</h3>
-                  <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
+                  <!--<el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>-->
+
+                  <el-form :inline="true" :model="formInline" class="subscribe-form">
+                    <div class="form-item">
+                      <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable></input>
+                      <el-button class="subscribe" type="primary" @click="onSubmit" roind>Subscribe</el-button>
+                    </div>
+                  </el-form>
                 </div>
               </el-col>
             </el-row>
@@ -214,6 +221,9 @@
     },
     data () {
       return {
+        formInline: {
+          email: ''
+        },
         date: moment([2018, 5, 15]),
         dateICOStart: moment.unix(1530403200),
         dateICOEnd: moment.unix(1535759940),
@@ -241,6 +251,9 @@
       };
     },
     methods: {
+      onSubmit () {
+        console.log('submit!');
+      },
       loaded () {
         this.moved = true;
         setTimeout(() => {
