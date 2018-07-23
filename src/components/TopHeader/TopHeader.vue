@@ -211,6 +211,7 @@
 <script>
   import moment from 'moment';
   import Vue from 'vue';
+  import emailApi from './../../api/email';
   import { getStarted, getFundsBalance } from './../../samples/web3Lib';
 
   export default {
@@ -252,6 +253,20 @@
       };
     },
     methods: {
+      onSubmit: function (e) {
+        e.preventDefault();
+        if (this.formInline.email && this.validEmail(this.formInline.email)) {
+          console.log('submit!');
+          this.toSubmit = true;
+          emailApi.postEmail(this.formInline.email).then(() => {
+            return true;
+          });
+        }
+      },
+      validEmail: function (email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line
+        return re.test(email);
+      },
       mouseOver: function () {
         // console.log('hover!');
         this.toSubmit = true;
@@ -259,9 +274,6 @@
       mouseLeave: function () {
         // console.log('leave!');
         this.toSubmit = false;
-      },
-      onSubmit () {
-        console.log('submit!');
       },
       loaded () {
         this.moved = true;
