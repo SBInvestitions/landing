@@ -23,14 +23,14 @@
       width: 90%;
       margin: 0 auto;
       display: block;
-      top: -30px;
+      top: -25px;
       right: 18%;
       position: absolute;
 
       &.moved {
         transition: all 5s ease;
-        top: -30px;
-        right: -10%;
+        top: -25px;
+        right: -5%;
       }
     }
   }
