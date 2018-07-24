@@ -1,5 +1,5 @@
 <template>
-  <div id="login" class="login">
+  <div v-loading="!imageLoaded" id="login" class="login">
     <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
       <el-col :xs="24" :sm="20" :md="12" :lg="8" :xl="6">
         <div class="grid-content bg-purple">
@@ -51,6 +51,7 @@
 <script>
   import { mapGetters } from 'vuex';
   import auth from '../../api/auth';
+  import topBack from './../../assets/top-back.jpg';
 
   export default {
     name: 'Login',
@@ -64,13 +65,20 @@
         },
         emailRestore: '',
         loggingIn: false,
-        error: ''
+        error: '',
+        imageLoaded: false,
+        topBack: new Image()
       };
     },
     computed: {
       ...mapGetters({
         loading: ['user/loading']
       })
+    },
+    created: function () {
+      // preload gif
+      this.topBack.src = topBack;
+      this.topBack.onload = this.imageLoadedEvent();
     },
     methods: {
       submit () {
@@ -99,6 +107,11 @@
         auth.restore(this.emailRestore, 'account').then(() => {
           this.loggingIn = false;
         });
+      },
+
+      imageLoadedEvent () {
+        console.log('image loaded');
+        this.imageLoaded = true;
       }
     }
   };

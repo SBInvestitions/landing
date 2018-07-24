@@ -1,17 +1,20 @@
 <template>
   <div id="top-header" v-bind:class="{'show': showHeader }" class="top-header" ref="topHeader" v-bind:style="headerStyle">
     <div class="top-header-inner" v-loading="!showGif">
-      <!-- <div class="videoContainer hidden-sm-and-down">
+      <!--<div class="videoContainer hidden-sm-and-down">
         <iframe id="video-background" src="https://www.youtube.com/embed/J3vj8LaJDtQ?modestbranding=1&autoplay=1&controls=0&fs=0&rel=0&showinfo=0&disablekb=1&start=10" frameborder="0" allowfullscreen></iframe>
       </div> -->
       <div class="gif-container hidden-sm-and-down">
           <img v-if="showGif" v-bind:class="{ 'moved': moved }" :src="gifMainImage.src" @load="loaded" alt="main">
+        <!--<video autoplay width="1280px" height="800px">
+          <source v-bind:class="{ 'moved': moved }" src="./../../assets/videos/hwhite.mp4" type="video/mp4">
+        </video>-->
       </div>
       <el-row>
         <el-col :span="24" class="top-top">
           <div v-bind:class="{'show': showText}" class="left-text grid-content bg-purple-dark">
             <el-row type="flex" class="row-bg sbi-logo-container" justify="left">
-              <el-col :span="6" :offset="2">
+              <el-col :span="7" :offset="2">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
                   <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
                   <span>Subsoil Blockchain Investitions</span>
@@ -24,7 +27,14 @@
                   <h1>{{ $t("topHeader.text.1") }}</h1>
                   <h2 class="h2">ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
                   <h3>{{ $t("topHeader.text.3") }}</h3>
-                  <el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>
+                  <!--<el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>-->
+
+                  <el-form :inline="true" :model="formInline" class="subscribe-form">
+                    <div class="form-item" v-bind:class="{ 'submit': toSubmit }">
+                      <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable></input>
+                      <button id="submit-button" @mouseleave="mouseLeave" @mouseover="mouseOver" class="el-button subscribe" type="primary" @click="onSubmit" roind>Subscribe</button>
+                    </div>
+                  </el-form>
                 </div>
               </el-col>
             </el-row>
@@ -201,13 +211,21 @@
 <script>
   import moment from 'moment';
   import Vue from 'vue';
+  import emailApi from './../../api/email';
   import { getStarted, getFundsBalance } from './../../samples/web3Lib';
-  import gifMain from './../../assets/videos/hwhite2.gif';
 
   export default {
     name: 'TopHeader',
+    props: {
+      gifMainImage: HTMLImageElement,
+      showGif: Boolean
+    },
     data () {
       return {
+        formInline: {
+          email: ''
+        },
+        toSubmit: false,
         date: moment([2018, 5, 15]),
         dateICOStart: moment.unix(1530403200),
         dateICOEnd: moment.unix(1535759940),
@@ -231,17 +249,37 @@
         src: '//sbinvest.pro/assets/documents/h3.mov',
         showText: false,
         moved: false,
-        showHeader: false,
-        gifMainImage: new Image(),
-        showGif: false
+        showHeader: false
       };
     },
     methods: {
+      onSubmit: function (e) {
+        e.preventDefault();
+        if (this.formInline.email && this.validEmail(this.formInline.email)) {
+          console.log('submit!');
+          this.toSubmit = true;
+          emailApi.postEmail(this.formInline.email).then(() => {
+            return true;
+          });
+        }
+      },
+      validEmail: function (email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line
+        return re.test(email);
+      },
+      mouseOver: function () {
+        // console.log('hover!');
+        this.toSubmit = true;
+      },
+      mouseLeave: function () {
+        // console.log('leave!');
+        this.toSubmit = false;
+      },
       loaded () {
+        this.moved = true;
         setTimeout(() => {
           this.showText = true;
         }, 3000);
-        this.moved = true;
         setTimeout(() => {
           this.showHeader = true;
         }, 3000);
@@ -291,17 +329,11 @@
       },
       onError: () => {
         alert('Failed to copy texts');
-      },
-      gifLoadedEvent () {
-        console.log('gifLoadedEvent');
-        this.showGif = true;
       }
     },
     mounted () {
       document.addEventListener('scroll', this.onScroll, true);
-      // preload gif
-      this.gifMainImage.src = gifMain;
-      this.gifMainImage.onload = this.gifLoadedEvent();
+
       window.setInterval(() => {
         this.before = this.changeTime(this.date);
         this.beforeDiscount = this.changeTime(this.dateICOStart);
