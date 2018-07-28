@@ -1,7 +1,7 @@
 <template>
   <div id="top-header" v-bind:class="{'show': showHeader }" class="top-header" ref="topHeader" v-bind:style="headerStyle">
     <div class="top-header-inner" v-loading="!showWorld">
-      <div class="gif-container hidden-sm-and-down">
+      <div class="gif-container">
           <img v-if="showWorld" v-bind:class="{ 'moved': moved }" :src="worldImage.src" @load="loaded" alt="main">
       </div>
       <el-row>

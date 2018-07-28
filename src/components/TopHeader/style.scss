@@ -553,15 +553,23 @@
 }
 
 @media (max-width: 1024px) {
+  .sbi-logo-container {
+
+  }
   .gif-container {
     img {
-      width: 1280px !important;
-      top: 160px !important;
-      right: 0 !important;
+      margin: 0 auto;
+      display: block;
+      top: 100px !important;
+      right: 20% !important;
+      position: absolute;
+      width: 500px !important;
 
       &.moved {
-        top: 160px !important;
-        right: -160px !important;
+        transition: all 5s ease;
+        top: 250px !important;
+        right: -80px !important;
+        width: 500px !important;
       }
     }
   }
