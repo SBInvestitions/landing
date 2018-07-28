@@ -3,9 +3,9 @@ import store from './../store';
 import { API_PATH } from './../config';
 
 export default {
-  postEmail (params) {
-    console.log('params', params);
-    return Vue.http.post(`${API_PATH}/v1/subscribe`, params)
+  postEmail (email) {
+    console.log('email', email);
+    return Vue.http.post(`${API_PATH}/v1/subscribe`, { email })
       .then((response) => {
         return response.body;
       })
