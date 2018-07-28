@@ -31,7 +31,7 @@
 
                   <el-form :inline="true" :model="formInline" class="subscribe-form">
                     <div class="form-item" v-bind:class="{ 'submit': toSubmit }">
-                      <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable></input>
+                      <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable />
                       <button id="submit-button" @mouseleave="mouseLeave" @mouseover="mouseOver" class="el-button subscribe" type="primary" @click="onSubmit" roind>Subscribe</button>
                     </div>
                   </el-form>
@@ -256,7 +256,7 @@
       onSubmit: function (e) {
         e.preventDefault();
         if (this.formInline.email && this.validEmail(this.formInline.email)) {
-          console.log('submit!');
+          console.log('submit!', this.formInline.email);
           this.toSubmit = true;
           emailApi.postEmail(this.formInline.email).then(() => {
             return true;

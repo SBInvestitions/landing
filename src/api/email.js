@@ -4,6 +4,7 @@ import { API_PATH } from './../config';
 
 export default {
   postEmail (params) {
+    console.log('params', params);
     return Vue.http.post(`${API_PATH}/v1/subscribe`, params)
       .then((response) => {
         return response.body;
