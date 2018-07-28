@@ -2,7 +2,7 @@
   <el-container class="home">
     <div class="header-block" id="header-block">
       <main-menu v-bind:class="{ 'show': showMenu }" />
-      <top-header v-bind:showGif="showGif" v-bind:gifMainImage="gifMainImage"/>
+      <top-header v-bind:showWorld="showWorld" v-bind:worldImage="worldImage"/>
     </div>
     <div class="main-block" v-if="showBody">
       <who-we-are />
@@ -39,7 +39,8 @@
   import FooterBlock from './../FooterBlock/FooterBlock.vue';
   import VideoBlock from './../VideoBlock/VideoBlock.vue';
   import WhoWeAre from './../WhoWeAre/WhoWeAre.vue';
-  import gifMain from './../../assets/videos/hwhite2.gif';
+  // import gifMain from './../../assets/videos/hwhite2.gif';
+  import worldImage from './../../assets/svg/full_earth.svg';
 
   export default {
     name: 'Home',
@@ -52,8 +53,8 @@
         scrolled: false,
         showMenu: false,
         showBody: false,
-        showGif: false,
-        gifMainImage: new Image()
+        showWorld: false,
+        worldImage: new Image()
       };
     },
     methods: {
@@ -67,8 +68,7 @@
         // console.log('position', this.position, 'scrollTop', scrollTop, 'headerOffset', headerOffset);
       },
       gifLoadedEvent () {
-        console.log('gifLoadedEvent');
-        this.showGif = true;
+        this.showWorld = true;
         setTimeout(() => {
           this.showBody = true;
         }, 6000);
@@ -98,8 +98,8 @@
     },
     created: function () {
       // preload gif
-      this.gifMainImage.src = gifMain;
-      this.gifMainImage.onload = this.gifLoadedEvent();
+      this.worldImage.src = worldImage;
+      this.worldImage.onload = this.gifLoadedEvent();
     }
   };
 </script>
