@@ -82,17 +82,17 @@
 
   .gif-container {
     img {
-      width: 600px;
+      width: 800px;
       margin: 0 auto;
       display: block;
-      top: -25px;
-      right: 18%;
+      top: 100px;
+      right: 27%;
       position: absolute;
 
       &.moved {
         transition: all 5s ease;
-        top: -25px;
-        right: -5%;
+        top: 100px;
+        right: 0;
       }
     }
   }

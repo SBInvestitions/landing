@@ -253,6 +253,16 @@
           console.log('submit!', this.formInline.email);
           this.toSubmit = true;
           emailApi.postEmail(this.formInline.email).then(() => {
+
+            const h = this.$createElement;
+            this.$message({
+              message: h('p', null, [
+                h('span', null, 'Thank you for subscribing to us!'),
+                h('i', { style: 'color: teal' }, 'We will keep you updated with our news!')
+              ]),
+              type: 'success'
+            });
+
             return true;
           });
         }
