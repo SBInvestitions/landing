@@ -253,7 +253,6 @@
           console.log('submit!', this.formInline.email);
           this.toSubmit = true;
           emailApi.postEmail(this.formInline.email).then(() => {
-
             const h = this.$createElement;
             this.$message({
               message: h('p', null, [
