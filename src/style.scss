@@ -91,23 +91,27 @@ h2 {
 .sbi-button {
   font-size: 21px;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.478431);
-  border: 1px solid black;
+  background: #6771a9;
+  border: 1px solid #6771a9;
   color: white;
   font-weight: 300;
   margin-top: 1rem;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.67);
-    border-color: black;
+    background: #7dbb49;
+    border-color: #7dbb49;
   }
   &:active, &:focus {
     background: #7dbb49;
-    border-color: black;
+    border-color: #7dbb49;
   }
 }
 .sbi-button-link {
-  color: #7dbb49;
+  color: #6771a9;
+
+  &:hover {
+    color: #7dbb49;
+  }
 }
 .register, .login {
   .el-form-item__error {

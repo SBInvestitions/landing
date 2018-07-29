@@ -285,7 +285,7 @@
         }, 3000);
         setTimeout(() => {
           this.showHeader = true;
-        }, 3000);
+        }, 1000);
       },
       changeTime: (date) => {
         const days = moment(date).diff(moment(), 'days');

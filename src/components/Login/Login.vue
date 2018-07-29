@@ -6,7 +6,7 @@
           <el-card class="box-card">
             <router-link to="/">
               <i class="el-icon-sb-invest"></i>
-              {{ $t("login.text.9") }}
+              <span>{{ $t("login.text.9") }}</span>
             </router-link>
             <h3 class="header">{{ $t("login.text.1") }}</h3>
             <el-form v-if="!forgotPassword" v-loading="loading" label-width="170px" class="login" @keyup.enter.native="submit" :label-position="labelPosition">
