@@ -20,7 +20,6 @@
                 <div class="grid-content bg-purple-light">
                   <h1>{{ $t("topHeader.text.1") }}</h1>
                   <h2 class="h2">ICO (<a target="_blank" href="https://cointelegraph.com/explained/what-is-a-daico-explained">DAICO</a>) {{ $t("topHeader.text.2") }}</h2>
-                  <h3>{{ $t("topHeader.text.3") }}</h3>
                   <!--<el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>-->
 
                   <el-form :inline="true" :model="formInline" class="subscribe-form">
