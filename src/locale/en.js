@@ -352,7 +352,7 @@ export default {
       38: 'Save',
       39: 'SBI token address. Only for information.',
       40: 'Do not send ether to it.',
-      41: 'For the purchase of SBI, send ETH to the address of the sales contract. It will automatically transfer the number of SBIs to you according to the ICO conditions.',
+      41: 'For the purchase of SBI, send ETH to the address of the sales contract. It will automatically transfer the number of SBI to you according to the ICO conditions.',
       42: 'Copied'
     }
   },

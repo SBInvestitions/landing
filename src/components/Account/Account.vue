@@ -38,6 +38,8 @@
                   <!--Предварительная оценка-->
                   <el-tab-pane class="tab-item" v-bind:label="$t('account.text.2')">
                     <div class="text-block">
+                      <el-card class="box-card">
+
                       <strong>{{ $t("account.text.14") }}</strong>
                       <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
                         <el-button
@@ -51,6 +53,7 @@
                       </el-tooltip>
                       <p>{{ $t("account.text.41") }}</p>
                     <!--  {{ $t("topHeader.text.12") }} -->
+                      </el-card>
                     </div>
                     <el-collapse v-model="activeNames1" @change="handleChange">
                       <el-collapse-item v-bind:title="$t('account.text.39')" name="1">
@@ -148,36 +151,6 @@
                     </el-row>
                   </el-tab-pane>
 
-                  <!--Иное-->
-                  <el-tab-pane v-bind:label="$t('account.text.7')">
-                    <div class="text-block">
-                      <strong>{{ $t('account.text.31') }}</strong>
-                      <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
-                        <el-button
-                            class="copy-button"
-                            type="success"
-                            v-clipboard:copy="sberbank"
-                            v-clipboard:success="onCopy"
-                            v-clipboard:error="onError">
-                          4276 2500 1083 2871
-                        </el-button>
-                      </el-tooltip>
-                      <p>{{ $t('account.text.32') }} <strong>{{ $t('account.text.33') }}</strong></p>
-                      <p>{{ $t('account.text.34') }}
-                        <el-tooltip v-bind:content="$t('account.text.15')" placement="top" effect="light">
-                          <el-button
-                              class="copy-button"
-                              type="success"
-                              v-clipboard:copy="user.id"
-                              v-clipboard:success="onCopy"
-                              v-clipboard:error="onError">
-                            {{ user.id }}
-                          </el-button>
-                        </el-tooltip>
-                      </p>
-                      <p>{{ $t('account.text.35') }}</p>
-                    </div>
-                  </el-tab-pane>
                 </el-tabs>
               </el-card>
             </div>
