@@ -18,25 +18,25 @@
             <div class="number">1</div>
             <div class="round"></div>
             <div class="vertical-line"></div>
-            <div class="header">
+            <!--<div class="header">
               {{ $t("roadMap.text.12") }}
             </div>
             <div class="description">
               {{ $t("roadMap.text.13") }}
             </div>
-            <div class="price">1 SBI = $0.02</div>
+            <div class="price">1 SBI = $0.02</div>-->
           </el-col>
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">2</div>
             <div class="round"></div>
             <div class="vertical-line"></div>
-            <div class="header">
+            <!--<div class="header">
               {{ $t("roadMap.text.14") }}
             </div>
             <div class="description">
               ICO
             </div>
-            <div class="price">1 SBI = $0.052</div>
+            <div class="price">1 SBI = $0.052</div>-->
           </el-col>
           <el-col class="stage" :xs="8" :sm="8" :md="8" :lg="8" :xl="6">
             <div class="number">3</div>

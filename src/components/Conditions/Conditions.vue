@@ -20,19 +20,19 @@
                     </el-row>
                     <el-row class="pre-sale-block" :gutter="20">
                       <el-col :span="12">
-                        {{ $t("conditions.text.26") }}<strong>{{ $t("conditions.text.27") }}</strong>{{ $t("conditions.text.28") }}
+                        {{ $t("conditions.text.26") }}<!--<strong>{{ $t("conditions.text.27") }}</strong>{{ $t("conditions.text.28") }}--> -
                       </el-col>
                       <el-col :span="12">
-                        {{ $t("conditions.text.29") }}<strong>15.06.18 - 30.06.18</strong>
+                        {{ $t("conditions.text.29") }}<!--<strong>15.06.18 - 30.06.18</strong>--> -
                       </el-col>
                     </el-row>
                     <el-row class="sale-block" :gutter="20">
                       <el-col :span="12">
-                        <p>{{ $t("conditions.text.30") }}<strong>1 SBI = $0.052</strong></p>
-                        <p>{{ $t("conditions.text.31") }}<strong>01.07.18 - 31.08.18</strong></p>
+                        <p>{{ $t("conditions.text.30") }}<!--<strong>1 SBI = $0.052</strong>--> -</p>
+                        <p>{{ $t("conditions.text.31") }}<!--<strong>01.07.18 - 31.08.18</strong>--> -</p>
                       </el-col>
                       <el-col :span="12">
-                        <p>Soft-Cap: <strong>-</strong></p>
+                        <p>Soft-Cap: <strong>$250,000.00</strong></p>
                         <p>Hard-Cap: <strong>$1,000,000.00</strong></p>
                       </el-col>
                     </el-row>

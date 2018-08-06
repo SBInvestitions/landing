@@ -102,7 +102,7 @@ export default {
     text: {
       1: 'ICO Conditions',
       2: 'Distribution of funds',
-      3: 'Mining - ',
+      3: 'Development - ',
       4: '$790,000.00',
       5: 'Marketing - ',
       6: '$100,000.00',
