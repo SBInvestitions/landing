@@ -24,6 +24,13 @@ h2 {
   font-family: Helvetica, "Helvetica Neue", "PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 
+#google_translate_element {
+  position: fixed;
+  right: 120px;
+  top: 18px;
+  z-index: 1000;
+}
+
 .header {
   text-align: center;
 }

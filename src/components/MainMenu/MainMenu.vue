@@ -29,10 +29,10 @@
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item v-on:click="changeLocation" index="6" class="lang">
+        <!--<el-menu-item v-on:click="changeLocation" index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
-        </el-menu-item>
+        </el-menu-item>-->
         <el-menu-item index="7" class="sign-in">
           <a href="/login" v-if="!user.id">
             <span slot="title">{{ $t("home.menu.logIn") }}</span>
@@ -85,10 +85,10 @@
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item v-on:click="changeLocation" role="button" index="6" class="lang">
+        <!--<el-menu-item v-on:click="changeLocation" role="button" index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
-        </el-menu-item>
+        </el-menu-item>-->
         <el-menu-item index="8" class="sign-in">
           <a href="/login" v-if="!user.id">
             <span slot="title">{{ $t("home.menu.logIn") }}</span>
