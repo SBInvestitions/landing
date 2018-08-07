@@ -30,6 +30,10 @@ h2 {
   top: 18px;
   z-index: 1000;
 }
+.goog-te-banner-frame {
+  top: calc(100% - 40px) !important;
+  bottom: 0 !important;
+}
 
 .header {
   text-align: center;
