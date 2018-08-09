@@ -301,9 +301,10 @@
       goTo () {
         this.$router.push({ path: 'register' });
       },
-      async icoStarted () {
-        this.isIcoStarted = await getStarted();
-        // console.log('dateICOStart', this.dateICOStart);
+      icoStarted () {
+        getStarted().then((res, err) => {
+          this.isIcoStarted = res;
+        });
       },
       async getContractFundsBalance () {
         this.contractFundsBalance = (await getFundsBalance()) / 10000;

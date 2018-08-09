@@ -164,7 +164,7 @@
 <style lang="scss" src="./style.scss"></style>
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import { getBalance, getAccount } from './../../samples/web3Lib';
+  import { getBalance, getAccount, safeWithdraw } from './../../samples/web3Lib';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
 
   export default {
@@ -204,7 +204,10 @@
         // console.log(key, keyPath);
       },
       handleClick (tab, event) {
-        // console.log(tab, event);
+        console.log('tab', event);
+        /* safeWithdraw().then((result) => {
+          console.log('result', result);
+        }); */
       },
       handleChange (val) {
         // console.log(val);
