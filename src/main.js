@@ -12,6 +12,8 @@ import store from './store';
 import base from './api/base';
 import App from './App';
 import messages from './locale/messages';
+// Basic Use - Covers most scenarios
+import { VueEditor } from "vue2-editor";
 
 Vue.use(VueI18n);
 Vue.config.productionTip = true;

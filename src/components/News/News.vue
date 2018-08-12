@@ -13,6 +13,7 @@
                   <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
                     <div class="grid-content bg-purple">
                       News {{news}}
+                      <vue-editor v-model="content"></vue-editor>
                     </div>
                   </el-col>
                 </el-row>
@@ -29,12 +30,14 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex';
+  import { VueEditor } from 'vue2-editor';
   // import MainMenu from './../MainMenu/MainMenu.vue';
   import AccountMenu from './../Account/components/AccountMenu/AccountMenu.vue';
   export default {
     name: 'News',
     components: {
-      'account-menu': AccountMenu
+      'account-menu': AccountMenu,
+      VueEditor
     },
     computed: {
       ...mapGetters({
@@ -49,6 +52,11 @@
     created: function () {
       console.log('getNews');
       this.getNews();
+    },
+    data () {
+      return {
+        content: '<h1>Some initial content</h1>'
+      };
     }
   };
 </script>
