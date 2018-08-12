@@ -13,7 +13,27 @@
                   <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
                     <div class="grid-content bg-purple">
                       News {{news}}
-                      <vue-editor v-model="content"></vue-editor>
+                      <el-form ref="form" :model="form" label-width="15%">
+                        <el-form-item label="Article name">
+                          <el-input type="text" v-model="form.name"></el-input>
+                        </el-form-item>
+                        <el-form-item label="Article description">
+                          <el-input type="textarea" v-model="form.description"></el-input>
+                        </el-form-item>
+                        <el-form-item label="Article image">
+                          <el-input type="file" v-model="form.authorImg"></el-input>
+                        </el-form-item>
+                        <el-form-item label="Article image description">
+                          <el-input type="text" v-model="form.authorAlt"></el-input>
+                        </el-form-item>
+                        <el-form-item label="Article text">
+                          <vue-editor v-model="form.text"></vue-editor>
+                        </el-form-item>
+                        <el-form-item>
+                          <el-button type="primary" @click="onSubmit">Create</el-button>
+                          <el-button>Cancel</el-button>
+                        </el-form-item>
+                      </el-form>
                     </div>
                   </el-col>
                 </el-row>
@@ -35,6 +55,20 @@
   import AccountMenu from './../Account/components/AccountMenu/AccountMenu.vue';
   export default {
     name: 'News',
+    data () {
+      return {
+        form: {
+          id: null,
+          name: '',
+          authorImg: '',
+          authorAlt: '',
+          text: '<h1>Some initial content</h1>',
+          description: '',
+          mainImg: '',
+          mainImgAlt: ''
+        }
+      };
+    },
     components: {
       'account-menu': AccountMenu,
       VueEditor
@@ -46,17 +80,16 @@
     },
     methods: {
       ...mapActions({
-        getNews: 'news/LOAD_NEWS'
-      })
+        getNews: 'news/LOAD_NEWS',
+        postArticle: 'news/POST_ARTICLE'
+      }),
+      onSubmit () {
+        this.postArticle(this.form);
+      }
     },
     created: function () {
       console.log('getNews');
       this.getNews();
-    },
-    data () {
-      return {
-        content: '<h1>Some initial content</h1>'
-      };
     }
   };
 </script>

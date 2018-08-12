@@ -41,13 +41,33 @@ const actions = {
   },
   [types.LOAD_ARTICLE] ({ commit }, articleId) {
     commit(types.SET_LOADING, true);
-    news.getSingleArticle(articleId).then(() => {
+    news.getSingleArticle(articleId).then((data) => {
       commit(types.SET_LOADING, false);
-      commit(types.LOAD_ARTICLE, 'success');
+      commit(types.LOAD_ARTICLE, data);
     }).catch(() => {
       commit(types.SET_LOADING, false);
       commit(types.LOAD_ARTICLE, 'error');
     });
+  },
+  [types.POST_ARTICLE] ({ commit }, article) {
+    commit(types.SET_LOADING, true);
+    if (article._id) {
+      news.putArticle(article).then(() => {
+        commit(types.SET_LOADING, false);
+        commit(types.POST_ARTICLE, 'success');
+      }).catch(() => {
+        commit(types.SET_LOADING, false);
+        commit(types.POST_ARTICLE, 'error');
+      });
+    } else {
+      news.postArticle(article).then(() => {
+        commit(types.SET_LOADING, false);
+        commit(types.POST_ARTICLE, 'success');
+      }).catch(() => {
+        commit(types.SET_LOADING, false);
+        commit(types.POST_ARTICLE, 'error');
+      });
+    }
   }
 };
 

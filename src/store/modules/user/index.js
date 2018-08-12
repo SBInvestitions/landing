@@ -17,7 +17,7 @@ const mutations = {
     state.firstName = data.name;
     state.lastName = data.secondName;
     state.email = data.email;
-    state.role = data.role[0].name;
+    state.role = data.role;
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
@@ -70,7 +70,13 @@ const actions = {
 
 const getters = {
   user: state => {
-    return { firstName: state.firstName, lastName: state.lastName, id: state.id, email: state.email };
+    return {
+      firstName: state.firstName,
+      lastName: state.lastName,
+      id: state.id,
+      email: state.email,
+      role: state.role
+    };
   },
   confirmation: state => state.confirmation,
   role: state => state.role,

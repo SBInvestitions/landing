@@ -1,8 +1,18 @@
 .news {
-  height: 100vh;
   background: url('./../../assets/top-back.jpg');
   background-size: cover;
   background-attachment: fixed;
+
+  .header-block {
+    padding: 0 !important;
+    .el-menu-item {
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+
 
   .main-block {
     width: 100%;
