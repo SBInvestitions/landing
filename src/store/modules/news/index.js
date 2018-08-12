@@ -24,15 +24,14 @@ const mutations = {
 
 const actions = {
   [types.LOAD_NEWS] ({ commit, state }, limit, offset) {
-    if (!state.id) {
-      commit(types.SET_LOADING, true);
-      news.getArticles(limit, offset).then((data) => {
-        commit(types.SET_LOADING, false);
-        commit(types.LOAD_NEWS, data);
-      }).catch((errorResponse) => {
-        commit(types.SET_LOADING, false);
-      });
-    }
+    commit(types.SET_LOADING, true);
+    console.log('getArticles r');
+    news.getArticles(limit, offset).then((data) => {
+      commit(types.SET_LOADING, false);
+      commit(types.LOAD_NEWS, data);
+    }).catch((errorResponse) => {
+      commit(types.SET_LOADING, false);
+    });
   },
   [types.SET_LOADING] ({ commit }, loading) {
     commit(types.SET_LOADING, loading);
