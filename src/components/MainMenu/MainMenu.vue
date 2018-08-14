@@ -41,14 +41,14 @@
             <span slot="title">{{ $t("home.menu.account") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="8" class="white-paper">
+        <!--<el-menu-item index="8" class="white-paper">
           <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
           <a target="_blank"  href="https://sbinvest.pro/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
-        </el-menu-item>
+        </el-menu-item>-->
       </el-menu>
 
       <el-menu default-active="2" class="hidden-lg-and-up el-menu-vertical" @select="handleSelect" :collapse="isCollapse">
@@ -77,14 +77,14 @@
             <span slot="title" class="">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
-        <el-menu-item index="7" class="white-paper">
+        <!--<el-menu-item index="7" class="white-paper">
           <a target="_blank" href="https://sbinvest.pro/documents/wp-ru.pdf" download v-if="this.$i18n.locale === 'ru'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
           <a target="_blank"  href="https://sbinvest.pro/documents/wp-en.pdf" download v-if="this.$i18n.locale === 'en'">
             <span slot="title">{{ $t("home.menu.proporsal") }}</span>
           </a>
-        </el-menu-item>
+        </el-menu-item>-->
         <!--<el-menu-item v-on:click="changeLocation" role="button" index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>
