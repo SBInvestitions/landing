@@ -6,14 +6,14 @@
       </el-header>
       <el-main class="main-block">
         <el-row type="flex" align="middle" class="row-bg" justify="center">
-          <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="16">
+          <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="22">
             <div class="grid-content bg-purple">
               <el-card class="box-card block-card">
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
-                  <el-col :xs="24" :sm="20" :md="18" :lg="18" :xl="16">
+                  <el-col :span="22">
                     <div class="grid-content bg-purple">
-                      News {{news}}
-                      <el-form ref="form" :model="form" label-width="15%">
+                      <el-form ref="form" :model="form" label-width="200px">
+                        <h2>Enter article information:</h2>
                         <el-form-item label="Article name">
                           <el-input type="text" v-model="form.name"></el-input>
                         </el-form-item>
@@ -21,10 +21,15 @@
                           <el-input type="textarea" v-model="form.description"></el-input>
                         </el-form-item>
                         <el-form-item label="Article image">
-                          <el-input type="file" v-model="form.authorImg"></el-input>
+                          <div class="file_upload">
+                            <mark v-if="!form.mainImg">File not selected</mark>
+                            <mark v-if="form.mainImg">{{form.mainImg}}</mark>
+                            <el-button class="button">Select file</el-button>
+                            <el-input class="file-input" type="file" v-model="form.mainImg"></el-input>
+                          </div>
                         </el-form-item>
                         <el-form-item label="Article image description">
-                          <el-input type="text" v-model="form.authorAlt"></el-input>
+                          <el-input type="text" v-model="form.mainImgAlt"></el-input>
                         </el-form-item>
                         <el-form-item label="Article text">
                           <vue-editor v-model="form.text"></vue-editor>
@@ -59,12 +64,10 @@
       return {
         form: {
           id: null,
-          name: '',
-          authorImg: '',
-          authorAlt: '',
+          name: 'Article name',
           text: '<h1>Some initial content</h1>',
-          description: '',
-          mainImg: '',
+          description: 'Article description',
+          mainImg: null,
           mainImgAlt: ''
         }
       };
