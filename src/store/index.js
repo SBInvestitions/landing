@@ -8,6 +8,7 @@ import user from './modules/user/';
 import rate from './modules/rate/';
 import account from './modules/account/';
 import errors from './modules/errors/';
+import news from './modules/news/';
 
 Vue.use(Vuex);
 
@@ -18,7 +19,8 @@ const store = new Vuex.Store({
     user,
     account,
     home,
-    rate
+    rate,
+    news
   },
   state,
   actions,

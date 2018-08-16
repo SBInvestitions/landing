@@ -24,6 +24,19 @@ h2 {
   font-family: Helvetica, "Helvetica Neue", "PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 
+.ql-snow {
+  .ql-picker-label {
+
+    &:before {
+      vertical-align: top;
+    }
+  }
+}
+
+.quillWrapper .ql-snow.ql-toolbar .ql-formats {
+  margin-right: 10px;
+}
+
 #google_translate_element {
   position: fixed;
   right: 120px;
