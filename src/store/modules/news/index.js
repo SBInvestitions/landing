@@ -9,7 +9,7 @@ const state = {
 
 const mutations = {
   [types.LOAD_NEWS] (state, data) {
-    state.news = data.news || null;
+    state.news = data.data ? data.data : null;
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
@@ -18,8 +18,13 @@ const mutations = {
     state.news = null;
     state.article = null;
     state.loading = false;
+  },
+  [types.LOAD_ARTICLE] (state, data) {
+    state.article = data.article || null;
+  },
+  [types.POST_ARTICLE] (state, data) {
+    state.loading = true;
   }
-
 };
 
 const actions = {
@@ -48,7 +53,7 @@ const actions = {
       commit(types.LOAD_ARTICLE, 'error');
     });
   },
-  [types.POST_ARTICLE] ({ commit }, article) {
+  [types.POST_ARTICLE] ({ commit, dispatch }, article) {
     commit(types.SET_LOADING, true);
     if (article._id) {
       news.putArticle(article).then(() => {
@@ -62,6 +67,7 @@ const actions = {
       news.postArticle(article).then(() => {
         commit(types.SET_LOADING, false);
         commit(types.POST_ARTICLE, 'success');
+        dispatch(types.LOAD_NEWS);
       }).catch(() => {
         commit(types.SET_LOADING, false);
         commit(types.POST_ARTICLE, 'error');

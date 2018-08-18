@@ -12,7 +12,19 @@
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
                   <el-col :span="22">
                     <div class="grid-content bg-purple">
-                      <el-form ref="form" :model="form" label-width="200px">
+                      <el-button size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
+
+                      <div v-if="!newArticle" class="articles">
+                        <div class="main-article">
+                          <header>{{ news[0].name }}</header>
+                          <img :src="news[0].mainImg">
+                          <div class="article-text">
+                            {{ news[0].text }}
+                          </div>
+                        </div>
+                      </div>
+
+                      <el-form v-if="newArticle" ref="form" :model="form" label-width="200px">
                         <h2>Enter article information:</h2>
                         <el-form-item label="Article name">
                           <el-input type="text" v-model="form.name"></el-input>
@@ -23,9 +35,9 @@
                         <el-form-item label="Article image">
                           <div class="file_upload">
                             <mark v-if="!form.mainImg">File not selected</mark>
-                            <mark v-if="form.mainImg">{{form.mainImg}}</mark>
-                            <el-button class="button">Select file</el-button>
-                            <el-input class="file-input" type="file" v-model="form.mainImg"></el-input>
+                            <img v-if="form.mainImgSrc" :src=form.mainImgSrc>
+                            <el-button v-if="!form.mainImgSrc" class="button">Select file</el-button>
+                            <input ref="myFile" v-on:change="handleChangeImage" class="file-input" type="file">
                           </div>
                         </el-form-item>
                         <el-form-item label="Article image description">
@@ -35,8 +47,8 @@
                           <vue-editor v-model="form.text"></vue-editor>
                         </el-form-item>
                         <el-form-item>
-                          <el-button type="primary" @click="onSubmit">Create</el-button>
-                          <el-button>Cancel</el-button>
+                          <el-button :disabled="!form.mainImg || !form.name || !form.text" type="primary" @click="onSubmit">Create</el-button>
+                          <el-button @click="onAddClick(false)">Cancel</el-button>
                         </el-form-item>
                       </el-form>
                     </div>
@@ -62,13 +74,15 @@
     name: 'News',
     data () {
       return {
+        newArticle: false,
         form: {
           id: null,
           name: 'Article name',
           text: '<h1>Some initial content</h1>',
           description: 'Article description',
           mainImg: null,
-          mainImgAlt: ''
+          mainImgAlt: '',
+          mainImgSrc: ''
         }
       };
     },
@@ -88,10 +102,25 @@
       }),
       onSubmit () {
         this.postArticle(this.form);
+      },
+      onAddClick (state) {
+        this.newArticle = state;
+      },
+      handleChangeImage (event) {
+        var file = event.target.files[0];
+        var reader = new FileReader();
+        reader.onloadend = function (upload) {
+          this.form.mainImg = upload.target.result;
+          this.form.mainImgSrc = reader.result;
+        }.bind(this);
+        if (file) {
+          reader.readAsDataURL(file);
+        } else {
+          this.form.mainImgSrc = '';
+        }
       }
     },
     created: function () {
-      console.log('getNews');
       this.getNews();
     }
   };

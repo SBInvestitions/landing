@@ -13,8 +13,8 @@
                 <el-row class="row-bg">
                   <el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="18">
                     <div class="grid-content bg-purple">
-                      <header>{{ $t("account.text.1") }}<span v-if="user.firstName">, {{user.firstName}} {{user.lastName}}</span><span v-if="!user.firstName">, dear participant!</span>
-                      </header>
+                      <header>SBInvestitions Platform</header>
+                      <header v-if="user.firstName">{{user.firstName}} {{user.lastName}}</header>
                     </div>
                   </el-col>
                   <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
@@ -164,7 +164,7 @@
 <style lang="scss" src="./style.scss"></style>
 <script>
   import { mapActions, mapGetters } from 'vuex';
-  import { getBalance, getAccount, safeWithdraw } from './../../samples/web3Lib';
+  import { getBalance, getAccount } from './../../samples/web3Lib';
   import AccountMenu from './components/AccountMenu/AccountMenu.vue';
 
   export default {
@@ -204,10 +204,7 @@
         // console.log(key, keyPath);
       },
       handleClick (tab, event) {
-        console.log('tab', event);
-        /* safeWithdraw().then((result) => {
-          console.log('result', result);
-        }); */
+        // console.log('tab', event);
       },
       handleChange (val) {
         // console.log(val);
