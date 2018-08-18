@@ -71,10 +71,10 @@
         this.showWorld = true;
         setTimeout(() => {
           this.showBody = true;
-        }, 6000);
+        }, 3500);
         setTimeout(() => {
           this.showMenu = true;
-        }, 3500);
+        }, 1000);
       }
     },
     beforeDestroy: function () {

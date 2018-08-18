@@ -8,29 +8,29 @@
             {{ $t("account.menu.1") }}
           </router-link>
         </el-menu-item>
-        <!-- <el-menu-item index="2">
+         <el-menu-item index="2">
           <router-link to="/news">
             <i class="el-icon-tickets"></i>
             {{ $t("account.menu.2") }}
           </router-link>
-        </el-menu-item> -->
+        </el-menu-item>
         <el-menu-item v-if="user.id" index="3">
           <router-link to="/account">
             {{ $t("account.menu.3") }}
           </router-link>
         </el-menu-item>
-        <!-- <el-menu-item index="4">
+         <el-menu-item index="4">
           <router-link to="/account">
             <i class="el-icon-service"></i>
             {{ $t("account.menu.4") }}
           </router-link>
-        </el-menu-item> -->
-       <!-- <el-menu-item v-if="user.id" index="5">
+        </el-menu-item>
+        <el-menu-item v-if="user.id" index="5">
           <a @click="logout()">
             <i class="el-icon-close"></i>
             {{ $t("account.menu.5") }}
           </a>
-        </el-menu-item> -->
+        </el-menu-item>
         <el-menu-item  v-if="!user.id" index="5">
           <router-link to="/login">
             {{ $t("account.menu.6") }}
@@ -54,7 +54,6 @@
       },
       handleSelect (/* key, keyPath */) {},
       ...mapActions({
-        getUser: 'user/LOAD',
         logout: 'user/CLEAR_ALL_DATA'
       })
     },
@@ -64,7 +63,6 @@
       })
     },
     created: function () {
-      this.getUser();
     }
   };
 </script>

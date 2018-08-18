@@ -4,7 +4,6 @@ import { API_PATH } from './../config';
 
 export default {
   getArticles () {
-    console.log('getArticles');
     return Vue.http.get(`${API_PATH}/v1/news`)
       .then((response) => {
         return response.body;

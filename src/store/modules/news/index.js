@@ -25,7 +25,6 @@ const mutations = {
 const actions = {
   [types.LOAD_NEWS] ({ commit, state }, limit, offset) {
     commit(types.SET_LOADING, true);
-    console.log('getArticles r');
     news.getArticles(limit, offset).then((data) => {
       commit(types.SET_LOADING, false);
       commit(types.LOAD_NEWS, data);

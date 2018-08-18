@@ -2,7 +2,7 @@
   <div id="top-header" v-bind:class="{'show': showHeader }" class="top-header" ref="topHeader" v-bind:style="headerStyle">
     <div class="top-header-inner" v-loading="!showWorld">
       <div class="gif-container">
-          <img v-if="showWorld" v-bind:class="{ 'moved': moved }" :src="worldImage.src" @load="loaded" alt="main">
+          <img v-if="showWorld" class="moved" :src="worldImage.src" @load="loaded" alt="main">
       </div>
       <el-row>
         <el-col :span="24" class="top-top">
@@ -279,12 +279,8 @@
       },
       loaded () {
         this.moved = true;
-        setTimeout(() => {
-          this.showText = true;
-        }, 3000);
-        setTimeout(() => {
-          this.showHeader = true;
-        }, 1000);
+        this.showText = true;
+        this.showHeader = true;
       },
       changeTime: (date) => {
         const days = moment(date).diff(moment(), 'days');
