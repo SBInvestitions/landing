@@ -12,17 +12,38 @@
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
                   <el-col :span="22">
                     <div class="grid-content bg-purple">
-                      <el-button size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
+                      <el-button class="add-button" size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
 
-                      <div v-if="!newArticle" class="articles">
-                        <div class="main-article">
-                          <header>{{ news[0].name }}</header>
-                          <img :src="news[0].mainImg">
-                          <div class="article-text">
-                            {{ news[0].text }}
-                          </div>
-                        </div>
-                      </div>
+                      <el-row v-if="!newArticle && news && news[0]" class="articles">
+                        <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" class="main-article">
+                          <img :src="'https://sbinvest.pro' + news[0].mainImg">
+                          <h2>{{ news[0].name }}</h2>
+                          <div class="article-text" v-html="news[0].text"></div>
+                        </el-col>
+                        <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="secondary-articles">
+                          <el-row v-if="news[1]">
+                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="secondary-article">
+                              <img :src="'https://sbinvest.pro' + news[1].mainImg">
+                              <h2>{{ news[1].name }}</h2>
+                              <div class="article-text" v-html="news[1].text"></div>
+                            </el-col>
+                          </el-row>
+                          <el-row v-if="news[2]">
+                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="secondary-article">
+                              <img :src="'https://sbinvest.pro' + news[2].mainImg">
+                              <h2>{{ news[2].name }}</h2>
+                              <div class="article-text" v-html="news[2].text"></div>
+                            </el-col>
+                          </el-row>
+                        </el-col>
+                      </el-row>
+                      <el-row v-for="(item, index) in news" :key="item._id">
+                        <el-col v-if="index !== 0 && index !== 1 && index !== 2" :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="other-articles">
+                          <img :src="'https://sbinvest.pro' + item.mainImg">
+                          <h2>{{ item.name }}</h2>
+                          <div class="article-text" v-html="item.text"></div>
+                        </el-col>
+                      </el-row>
 
                       <el-form v-if="newArticle" ref="form" :model="form" label-width="200px">
                         <h2>Enter article information:</h2>
@@ -102,6 +123,7 @@
       }),
       onSubmit () {
         this.postArticle(this.form);
+        this.newArticle = false;
       },
       onAddClick (state) {
         this.newArticle = state;
