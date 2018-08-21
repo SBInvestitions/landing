@@ -3,7 +3,15 @@ import news from '../../../api/news';
 
 const state = {
   loading: false,
-  article: null,
+  article: {
+    _id: null,
+    name: null,
+    text: null,
+    description: null,
+    mainImg: null,
+    mainImgAlt: null,
+    mainImgSrc: null
+  },
   news: []
 };
 
@@ -45,6 +53,7 @@ const actions = {
   },
   [types.LOAD_ARTICLE] ({ commit }, articleId) {
     commit(types.SET_LOADING, true);
+    console.log('LOAD_ARTICLE', articleId);
     news.getSingleArticle(articleId).then((data) => {
       commit(types.SET_LOADING, false);
       commit(types.LOAD_ARTICLE, data);

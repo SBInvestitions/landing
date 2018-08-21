@@ -3,6 +3,10 @@
   background-size: cover;
   background-attachment: fixed;
 
+  #google_translate_element {
+    position: fixed !important;
+  }
+
   .header-block {
     padding: 0 !important;
     .el-menu-item {

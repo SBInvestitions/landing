@@ -534,6 +534,9 @@
 }
 
 @media (min-width: 1025px) and (max-width: 1500px) {
+  .sbi-logo-container {
+    margin-top: 20% !important;
+  }
   .gif-container {
     img {
       margin: 0 auto;
@@ -546,7 +549,7 @@
       &.moved {
         transition: all 5s ease;
         top: 100px !important;
-        right: -80px !important;
+        right: 0 !important;
       }
     }
   }

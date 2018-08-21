@@ -42,6 +42,13 @@ const router = new Router({
       }
     },
     {
+      path: '/news/:id',
+      name: 'article',
+      component: function (resolve) {
+        require(['@/components/News/Article.vue'], resolve);
+      }
+    },
+    {
       path: '/account',
       name: 'account',
       beforeEnter: guardRoute,

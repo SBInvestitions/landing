@@ -244,9 +244,9 @@ export default {
   },
   topHeader: {
     text: {
-      1: 'The first project in Russia to jointly develop the wealth of the earth`s subsoils',
+      1: 'The first project in Russia to jointly develop',
       111: 'This is just workhorse business',
-      2: ' on the Ethereum blockchain platform',
+      2: 'the wealth of the earth`s subsoils',
       3: ' 5 - 10 - X profit, in 3 year',
       4: 'BUY TOKENS',
       5: 'Funds raised',

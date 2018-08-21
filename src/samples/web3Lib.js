@@ -57,9 +57,7 @@ export const safeWithdraw = async () => {
   // Call a function of the contract:
   const gasLimit = 3000000;
   const gasPrice = 50000000000;
-  console.log('sbiCrowdsaleContract', sbiCrowdsaleContract);
   const result = await sbiCrowdsaleContract.safeWithdrawal({ from: definedWeb3, gasLimit: gasLimit, gasPrice: gasPrice });
-  console.log('safeWithdraw', result);
   return result;
 };
 
@@ -72,7 +70,6 @@ export const getSBIRate = async () => {
   const sbiCrowdsaleContract = web3.eth.contract(crowdsaleAbi).at(sbiCrowdsaleAddress); // eslint-disable-line no-undef
   const icoTokenRate = await sbiCrowdsaleContract.tokensPerEth.call();
   const preicoTokenRate = 27314; // await sbiCrowdsaleContract.preicoTokensPerEth.call();
-  console.log('getSBIRate', icoTokenRate);
   return { icoTokenRate: icoTokenRate['c'][0], preicoTokenRate };
 };
 
@@ -84,7 +81,6 @@ export const getStarted = async () => {
   }
   const sbiCrowdsaleContract = web3.eth.contract(crowdsaleAbi).at(sbiCrowdsaleAddress); // eslint-disable-line no-undef
   const data = await sbiCrowdsaleContract.isICOActive();
-  console.log('isICOActive', data);
   return data;
 };
 
