@@ -20,15 +20,15 @@
                           <div class="article-text" v-html="news[0].text"></div>
                         </el-col>
                         <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="secondary-articles">
-                          <el-row v-if="news[1]">
-                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="secondary-article">
+                          <el-row v-if="news[1]" class="secondary-article">
+                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                               <img :src="'https://sbinvest.pro' + news[1].mainImg">
                               <h2><a :href="'/news/' + news[1]._id">{{ news[1].name }}</a></h2>
                               <div class="article-text" v-html="news[1].text"></div>
                             </el-col>
                           </el-row>
-                          <el-row v-if="news[2]">
-                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="secondary-article">
+                          <el-row v-if="news[2]" class="secondary-article">
+                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                               <img :src="'https://sbinvest.pro' + news[2].mainImg">
                               <h2><a :href="'/news/' + news[2]._id">{{ news[2].name }}</a></h2>
                               <div class="article-text" v-html="news[2].text"></div>
@@ -36,11 +36,18 @@
                           </el-row>
                         </el-col>
                       </el-row>
-                      <el-row v-if="!newArticle && news && index !== 0 && index !== 1 && index !== 2 && news[3]" v-for="(item, index) in news" :key="item._id">
-                        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="other-articles">
-                          <img :src="'https://sbinvest.pro' + item.mainImg">
-                          <h2><a :href="'/news/' + item._id">{{ item.name }}</a></h2>
-                          <div class="article-text" v-html="item.text"></div>
+
+                      <el-row class="other-articles">
+                        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="articles-block">
+                          <div class="article"
+                               v-for="(item, index) in news"
+                               v-if="!newArticle && news && index !== 0 && index !== 1 && index !== 2 && news[3]"
+                               :key="item._id"
+                          >
+                            <img :src="'https://sbinvest.pro' + item.mainImg">
+                            <h2><a :href="'/news/' + item._id">{{ item.name }}</a></h2>
+                            <div class="article-text" v-html="item.text"></div>
+                          </div>
                         </el-col>
                       </el-row>
 
