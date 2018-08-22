@@ -15,9 +15,9 @@
                                             <el-breadcrumb separator="/">
                                                 <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
                                                 <el-breadcrumb-item :to="{ path: '/news' }">News</el-breadcrumb-item>
-                                                <el-breadcrumb-item>{{ $route.params.id }}</el-breadcrumb-item>
+                                                <el-breadcrumb-item v-if="article.name">{{ article.name }}</el-breadcrumb-item>
                                             </el-breadcrumb>
-                                            <div class="actions-block">
+                                            <div v-if="user.role === 'admin' || user.role === 'redactor'" class="actions-block">
                                                 <el-button class="add-button" size="mini" type="primary" icon="el-icon-edit" circle @click="onEditClick()"></el-button>
                                                 <el-button class="add-button" size="mini" type="danger" icon="el-icon-delete" circle @click="onDeleteClick()"></el-button>
                                             </div>
@@ -25,6 +25,7 @@
                                                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="main-article">
                                                     <img :src="'https://sbinvest.pro' + article.mainImg">
                                                     <h2>{{ article.name }}</h2>
+                                                    <span class="date">{{ article.dateCreate | moment("dddd, MMMM Do YYYY")  }}</span>
                                                     <div class="article-text" v-html="article.text"></div>
                                                 </el-col>
                                             </el-row>
@@ -96,7 +97,8 @@
     },
     computed: {
       ...mapGetters({
-        article: 'news/article'
+        article: 'news/article',
+        user: 'user/user'
       })
     },
     methods: {

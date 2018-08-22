@@ -28,7 +28,7 @@ const mutations = {
     state.loading = false;
   },
   [types.LOAD_ARTICLE] (state, data) {
-    state.article = data.article || null;
+    state.article = data.data || null;
   },
   [types.POST_ARTICLE] (state, data) {
     state.loading = true;
@@ -53,7 +53,6 @@ const actions = {
   },
   [types.LOAD_ARTICLE] ({ commit }, articleId) {
     commit(types.SET_LOADING, true);
-    console.log('LOAD_ARTICLE', articleId);
     news.getSingleArticle(articleId).then((data) => {
       commit(types.SET_LOADING, false);
       commit(types.LOAD_ARTICLE, data);

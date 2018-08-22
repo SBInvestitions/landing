@@ -29,6 +29,15 @@
             <span slot="title" class="hidden-md-and-down">{{ $t("home.menu.bonuses") }}</span>
           </a>
         </el-menu-item>
+        <el-menu-item index="6">
+          <a tabindex="5">
+            <span slot="title" class="hidden-md-and-down">
+              <a href="/news">
+                {{ $t("home.menu.news") }}
+              </a>
+            </span>
+          </a>
+        </el-menu-item>
         <!--<el-menu-item v-on:click="changeLocation" index="6" class="lang">
           <span v-if="this.$i18n.locale === 'ru'" slot="title">En</span>
           <span v-if="this.$i18n.locale !== 'ru'" slot="title">Ru</span>

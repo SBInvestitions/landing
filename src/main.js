@@ -3,6 +3,7 @@ import VueI18n from 'vue-i18n';
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
 import VueClipboard from 'vue-clipboard2';
+import VueMoment from 'vue-moment';
 // import VueLazyload from 'vue-lazyload';
 
 import 'element-ui/lib/theme-chalk/index.css';
@@ -13,7 +14,6 @@ import base from './api/base';
 import App from './App';
 import messages from './locale/messages';
 // Basic Use - Covers most scenarios
-import { VueEditor } from "vue2-editor";
 
 Vue.use(VueI18n);
 Vue.config.productionTip = true;
@@ -21,6 +21,7 @@ Vue.use(ElementUI, { locale });
 Vue.use(VueResource);
 Vue.use(VueI18n);
 Vue.use(VueClipboard);
+Vue.use(VueMoment);
 
 /* Vue.use(VueLazyload, {
   preLoad: 1.3,

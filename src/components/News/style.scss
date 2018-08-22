@@ -7,6 +7,10 @@
     position: fixed !important;
   }
 
+  .el-card {
+    min-height: 1000px;
+  }
+
   .header-block {
     padding: 0 !important;
     .el-menu-item {
@@ -20,6 +24,19 @@
     margin-bottom: 10px;
   }
   .articles  {
+    margin-top: 10px;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    .date {
+      font-size: 12px;
+      color: gray;
+    }
+    .article-text {
+      padding: 10px 20px 10px 10px;
+      text-align: justify;
+    }
     img {
       width: 40%;
       float: left;
