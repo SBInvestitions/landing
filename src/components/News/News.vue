@@ -11,7 +11,17 @@
               <el-card class="box-card block-card">
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
                   <el-col :span="22">
-                    <el-button v-if="user && user.role && user.role[0].name === 'Admin' || user.role[0].name === 'Redactor'" class="add-button" size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
+                    {{ user.role }}
+                    <el-button v-if="user
+                    && user.role
+                    && (user.role[0].name === 'Admin' || user.role[0].name === 'Redactor')"
+                               class="add-button"
+                               size="mini"
+                               type="primary"
+                               icon="el-icon-plus"
+                               circle
+                               @click="onAddClick(true)">
+                    </el-button>
                     <div v-if="news && news.length === 1" class="grid-content bg-purple">
                       <el-row class="other-articles">
                         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="articles-block">

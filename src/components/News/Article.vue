@@ -17,11 +17,50 @@
                                                 <el-breadcrumb-item :to="{ path: '/news' }">News</el-breadcrumb-item>
                                                 <el-breadcrumb-item v-if="article.name">{{ article.name }}</el-breadcrumb-item>
                                             </el-breadcrumb>
-                                            <div v-if="user && user.role && user.role[0].name === 'Admin' || user.role[0].name === 'Redactor'" class="actions-block">
+                                            <div v-if="user
+                                            && user.role
+                                            && (user.role[0].name === 'Admin' || user.role[0].name === 'Redactor')" class="actions-block">
                                                 <el-button class="add-button" size="mini" type="primary" icon="el-icon-edit" circle @click="onEditClick()"></el-button>
                                                 <el-button class="add-button" size="mini" type="danger" icon="el-icon-delete" circle @click="onDeleteClick(article._id)"></el-button>
                                             </div>
                                             <el-row v-if="!newArticle && article" class="articles">
+                                                <social-sharing :url="'https://sbinvest.pro' + article.mainImg"
+                                                                :title="article.name"
+                                                                :description="article.description"
+                                                                :quote="article.description"
+                                                                hashtags="sbi,invest,ico,ethereum,bitcoin,granite,realestate"
+                                                                twitter-user="ABelonogov"
+                                                                inline-template>
+                                                    <div>
+                                                        <network network="email">
+                                                            <i class="fa fa-envelope"></i> Email
+                                                        </network>
+                                                        <network network="facebook">
+                                                            <i class="fa fa-facebook"></i> Facebook
+                                                        </network>
+                                                        <network network="linkedin">
+                                                            <i class="fa fa-linkedin"></i> LinkedIn
+                                                        </network>
+                                                        <network network="reddit">
+                                                            <i class="fa fa-reddit"></i> Reddit
+                                                        </network>
+                                                        <network network="telegram">
+                                                            <i class="fa fa-telegram"></i> Telegram
+                                                        </network>
+                                                        <network network="twitter">
+                                                            <i class="fa fa-twitter"></i> Twitter
+                                                        </network>
+                                                        <network network="vk">
+                                                            <i class="fa fa-vk"></i> VKontakte
+                                                        </network>
+                                                        <network network="weibo">
+                                                            <i class="fa fa-weibo"></i> Weibo
+                                                        </network>
+                                                        <network network="whatsapp">
+                                                            <i class="fa fa-whatsapp"></i> Whatsapp
+                                                        </network>
+                                                    </div>
+                                                </social-sharing>
                                                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="main-article">
                                                     <img :src="'https://sbinvest.pro' + article.mainImg">
                                                     <h2>{{ article.name }}</h2>
