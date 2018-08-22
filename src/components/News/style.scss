@@ -52,10 +52,14 @@
   }
   .secondary-article {
     padding: 1rem;
+
+    h2 {
+      font-size: 20px;
+    }
   }
 
   .other-articles {
-    margin-top: 1rem;
+    padding: 1rem;
   }
 
   .main-block {

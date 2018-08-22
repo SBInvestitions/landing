@@ -12,7 +12,7 @@
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
                   <el-col :span="22">
                     <div class="grid-content bg-purple">
-                      <el-button v-if="user.role === 'admin' || user.role === 'redactor'" class="add-button" size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
+                      <el-button v-if="user && user.role && user.role[0].name === 'Admin' || user.role[0].name === 'Redactor'" class="add-button" size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
                       <el-row v-if="!newArticle && news && news[0]" class="articles">
                         <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" class="main-article">
                           <img :src="'https://sbinvest.pro' + news[0].mainImg">

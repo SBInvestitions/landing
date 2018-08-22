@@ -1,7 +1,8 @@
 import * as types from './mutation-types';
 import users from '../../../api/users';
 
-const state = {
+
+const state = JSON.parse(localStorage.getItem('user')) || {
   loading: null,
   id: null,
   email: null,
@@ -10,7 +11,6 @@ const state = {
   role: null,
   confirmation: null
 };
-
 const mutations = {
   [types.LOAD] (state, data) {
     state.id = data._id;
@@ -18,6 +18,7 @@ const mutations = {
     state.lastName = data.secondName;
     state.email = data.email;
     state.role = data.role;
+    localStorage.setItem('user', JSON.stringify(state));
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
@@ -34,6 +35,7 @@ const mutations = {
     state.firstName = null;
     state.lastName = null;
     state.role = null;
+    localStorage.setItem('user', JSON.stringify(state));
   }
 
 };
