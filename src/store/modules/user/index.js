@@ -1,7 +1,6 @@
 import * as types from './mutation-types';
 import users from '../../../api/users';
 
-
 const state = JSON.parse(localStorage.getItem('user')) || {
   loading: null,
   id: null,

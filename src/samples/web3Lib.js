@@ -3,7 +3,7 @@ import crowdsaleAbi from './crawdsaleAbi.json';
 
 const Eth = require('ethjs-query');
 const EthContract = require('ethjs-contract');
-const eth = new Eth(web3.currentProvider);
+const eth = new Eth(web3.currentProvider); // eslint-disable-line
 const ethContract = new EthContract(eth);
 
 const sbiCrowdsaleAddress = '0xE01bA6C593003B0EdcD43b7839a7c36b00a44dfC';
@@ -90,9 +90,9 @@ export const getFundsBalance = async () => {
     console.log('No web3? You should consider trying MetaMask!');
     // web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/NL7tvR7ICNOBFEhccMbJ')); // eslint-disable-line no-undef
   }
-  const data = 0; // await web3.eth.getBalance(sbiCrowdsaleAddress);
-  console.log('getFundsBalance', data);
-  return data['c'][0];
+  const data = await web3.eth.getBalance(sbiCrowdsaleAddress); // eslint-disable-line
+  const balance = data && data['c'] ? data['c'][0] : 0;
+  return balance;
 };
 
 export default {

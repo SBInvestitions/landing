@@ -11,8 +11,19 @@
               <el-card class="box-card block-card">
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
                   <el-col :span="22">
-                    <div class="grid-content bg-purple">
-                      <el-button v-if="user && user.role && user.role[0].name === 'Admin' || user.role[0].name === 'Redactor'" class="add-button" size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
+                    <el-button v-if="user && user.role && user.role[0].name === 'Admin' || user.role[0].name === 'Redactor'" class="add-button" size="mini" type="primary" icon="el-icon-plus" circle @click="onAddClick(true)"></el-button>
+                    <div v-if="news && news.length === 1" class="grid-content bg-purple">
+                      <el-row class="other-articles">
+                        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="articles-block">
+                          <div class="article">
+                            <h2><a :href="'/news/' + news[0]._id">{{ news[0].name }}</a></h2>
+                            <img :src="'https://sbinvest.pro' + news[0].mainImg">
+                            <div class="article-text" v-html="news[0].text"></div>
+                          </div>
+                        </el-col>
+                      </el-row>
+                    </div>
+                    <div v-if="news && news.length > 1" class="grid-content bg-purple">
                       <el-row v-if="!newArticle && news && news[0]" class="articles">
                         <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" class="main-article">
                           <img :src="'https://sbinvest.pro' + news[0].mainImg">
@@ -50,35 +61,34 @@
                           </div>
                         </el-col>
                       </el-row>
-
-                      <el-form v-if="newArticle" ref="form" :model="form" label-width="200px">
-                        <h2>Enter article information:</h2>
-                        <el-form-item label="Article name">
-                          <el-input type="text" v-model="form.name"></el-input>
-                        </el-form-item>
-                        <el-form-item label="Article description">
-                          <el-input type="textarea" v-model="form.description"></el-input>
-                        </el-form-item>
-                        <el-form-item label="Article image">
-                          <div class="file_upload">
-                            <mark v-if="!form.mainImg">File not selected</mark>
-                            <img v-if="form.mainImgSrc" :src=form.mainImgSrc>
-                            <el-button v-if="!form.mainImgSrc" class="button">Select file</el-button>
-                            <input ref="myFile" v-on:change="handleChangeImage" class="file-input" type="file">
-                          </div>
-                        </el-form-item>
-                        <el-form-item label="Article image description">
-                          <el-input type="text" v-model="form.mainImgAlt"></el-input>
-                        </el-form-item>
-                        <el-form-item label="Article text">
-                          <vue-editor v-model="form.text"></vue-editor>
-                        </el-form-item>
-                        <el-form-item>
-                          <el-button :disabled="!form.mainImg || !form.name || !form.text" type="primary" @click="onSubmit">Create</el-button>
-                          <el-button @click="onAddClick(false)">Cancel</el-button>
-                        </el-form-item>
-                      </el-form>
                     </div>
+                    <el-form v-if="newArticle" ref="form" :model="form" label-width="200px">
+                      <h2>Enter article information:</h2>
+                      <el-form-item label="Article name">
+                        <el-input type="text" v-model="form.name"></el-input>
+                      </el-form-item>
+                      <el-form-item label="Article description">
+                        <el-input type="textarea" v-model="form.description"></el-input>
+                      </el-form-item>
+                      <el-form-item label="Article image">
+                        <div class="file_upload">
+                          <mark v-if="!form.mainImg">File not selected</mark>
+                          <img v-if="form.mainImgSrc" :src=form.mainImgSrc>
+                          <el-button v-if="!form.mainImgSrc" class="button">Select file</el-button>
+                          <input ref="myFile" v-on:change="handleChangeImage" class="file-input" type="file">
+                        </div>
+                      </el-form-item>
+                      <el-form-item label="Article image description">
+                        <el-input type="text" v-model="form.mainImgAlt"></el-input>
+                      </el-form-item>
+                      <el-form-item label="Article text">
+                        <vue-editor v-model="form.text"></vue-editor>
+                      </el-form-item>
+                      <el-form-item>
+                        <el-button :disabled="!form.mainImg || !form.name || !form.text" type="primary" @click="onSubmit">Create</el-button>
+                        <el-button @click="onAddClick(false)">Cancel</el-button>
+                      </el-form-item>
+                    </el-form>
                   </el-col>
                 </el-row>
               </el-card>

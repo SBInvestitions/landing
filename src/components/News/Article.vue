@@ -17,9 +17,9 @@
                                                 <el-breadcrumb-item :to="{ path: '/news' }">News</el-breadcrumb-item>
                                                 <el-breadcrumb-item v-if="article.name">{{ article.name }}</el-breadcrumb-item>
                                             </el-breadcrumb>
-                                            <div v-if="user.role === 'admin' || user.role === 'redactor'" class="actions-block">
+                                            <div v-if="user && user.role && user.role[0].name === 'Admin' || user.role[0].name === 'Redactor'" class="actions-block">
                                                 <el-button class="add-button" size="mini" type="primary" icon="el-icon-edit" circle @click="onEditClick()"></el-button>
-                                                <el-button class="add-button" size="mini" type="danger" icon="el-icon-delete" circle @click="onDeleteClick()"></el-button>
+                                                <el-button class="add-button" size="mini" type="danger" icon="el-icon-delete" circle @click="onDeleteClick(article._id)"></el-button>
                                             </div>
                                             <el-row v-if="!newArticle && article" class="articles">
                                                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="main-article">
@@ -104,7 +104,8 @@
     methods: {
       ...mapActions({
         getArticle: 'news/LOAD_ARTICLE',
-        putArticle: 'news/PUT_ARTICLE'
+        putArticle: 'news/POST_ARTICLE',
+        deleteArticle: 'news/DELETE_ARTICLE'
       }),
       onSubmit () {
         this.putArticle(this.form);
@@ -117,8 +118,8 @@
         this.newArticle = state;
         console.log('this.form', this.form);
       },
-      onDeleteClick (state) {
-        this.newArticle = state;
+      onDeleteClick (articleId) {
+        this.deleteArticle(articleId);
       },
       handleChangeImage (event) {
         const file = event.target.files[0];

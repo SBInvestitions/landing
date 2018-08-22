@@ -1,5 +1,6 @@
 import * as types from './mutation-types';
 import news from '../../../api/news';
+import router from './../../../router';
 
 const state = {
   loading: false,
@@ -32,6 +33,15 @@ const mutations = {
   },
   [types.POST_ARTICLE] (state, data) {
     state.loading = true;
+  },
+  [types.DELETE_ARTICLE] (state, data) {
+    state.loading = true;
+  },
+  [types.DELETE_ARTICLE_SUCCESS] (state, data) {
+    state.loading = false;
+    if (data === 'success') {
+      router.push({ path: '/news' });
+    }
   }
 };
 
@@ -81,6 +91,12 @@ const actions = {
         commit(types.POST_ARTICLE, 'error');
       });
     }
+  },
+  [types.DELETE_ARTICLE] ({ commit, dispatch }, articleId) {
+    news.deleteArticle(articleId).then(() => {
+      commit(types.DELETE_ARTICLE_SUCCESS, 'success');
+      dispatch(types.LOAD_NEWS);
+    });
   }
 };
 
