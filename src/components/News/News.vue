@@ -11,7 +11,6 @@
               <el-card class="box-card block-card">
                 <el-row type="flex" align="middle" class="row-bg login-container" justify="center">
                   <el-col :span="22">
-                    {{ user.role }}
                     <el-button v-if="user
                     && user.role
                     && (user.role[0].name === 'Admin' || user.role[0].name === 'Redactor')"

@@ -80,6 +80,21 @@ h2 {
   height: 24px;
 }
 
+.social {
+  display: block;
+  height: 50px;
+
+  img {
+    height: 40px;
+    margin-right: 5px;
+    vertical-align: top;
+
+    &:hover {
+      height: 45px;
+    }
+  }
+}
+
 .menu-row {
   width: 100%;
   background-color: white;

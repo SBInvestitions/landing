@@ -49,7 +49,11 @@ const createVue = () => {
     router,
     store,
     template: '<App/>',
-    components: { App }
+    components: { App },
+    created: function () {
+      // automatically set russian language based on navigator settings
+      // this.$i18n.locale = (navigator.language && navigator.language.indexOf('ru') !== -1) ? 'ru' : 'en';
+    }
   });
   console.log('Vue created!!', v);
 };

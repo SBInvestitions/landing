@@ -8,7 +8,6 @@
     position: fixed !important;
   }
 
-
   a {
     color: #5a6290;
   }
@@ -44,6 +43,14 @@
       padding: 10px 20px 10px 10px;
       text-align: justify;
     }
+    img {
+      width: 40%;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  .other-articles {
     img {
       width: 40%;
       float: left;
