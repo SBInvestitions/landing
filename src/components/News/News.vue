@@ -21,7 +21,7 @@
                                circle
                                @click="onAddClick(true)">
                     </el-button>
-                    <div v-if="news && news.length === 1" class="grid-content bg-purple">
+                    <div v-if="news && news.length === 1 && !newArticle" class="grid-content bg-purple">
                       <el-row class="other-articles">
                         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="articles-block">
                           <div class="article">
@@ -86,6 +86,7 @@
                           <el-button v-if="!form.mainImgSrc" class="button">Select file</el-button>
                           <input ref="myFile" v-on:change="handleChangeImage" class="file-input" type="file">
                         </div>
+                        <p><el-button type="danger" v-on:click="deleteImage" v-if="form.mainImgSrc" class="button">Delete file</el-button></p>
                       </el-form-item>
                       <el-form-item label="Article image description">
                         <el-input type="text" v-model="form.mainImgAlt"></el-input>
@@ -154,12 +155,17 @@
       onAddClick (state) {
         this.newArticle = state;
       },
+      deleteImage () {
+        this.form.mainImg = null;
+        this.form.mainImgAlt = '';
+        this.form.mainImgSrc = '';
+      },
       handleChangeImage (event) {
         const file = event.target.files[0];
         const reader = new FileReader();
         reader.onloadend = function (upload) {
           this.form.mainImg = upload.target.result;
-          this.form.mainImgSrc = reader.result;
+          // this.form.mainImgSrc = reader.result;
         }.bind(this);
         if (file) {
           reader.readAsDataURL(file);

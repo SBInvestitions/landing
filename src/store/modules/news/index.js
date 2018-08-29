@@ -42,6 +42,9 @@ const mutations = {
     if (data === 'success') {
       router.push({ path: '/news' });
     }
+  },
+  [types.DELETE_ARTICLE_ERROR] (state, data) {
+    state.loading = false;
   }
 };
 
@@ -96,6 +99,9 @@ const actions = {
     news.deleteArticle(articleId).then(() => {
       commit(types.DELETE_ARTICLE_SUCCESS, 'success');
       dispatch(types.LOAD_NEWS);
+    }).catch(() => {
+      commit(types.SET_LOADING, false);
+      commit(types.DELETE_ARTICLE_ERROR, 'error');
     });
   }
 };

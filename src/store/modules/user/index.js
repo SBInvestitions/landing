@@ -2,7 +2,7 @@ import * as types from './mutation-types';
 import users from '../../../api/users';
 
 const state = JSON.parse(localStorage.getItem('user')) || {
-  loading: null,
+  loading: false,
   id: null,
   email: null,
   firstName: null,
@@ -18,9 +18,6 @@ const mutations = {
     state.email = data.email;
     state.role = data.role;
     localStorage.setItem('user', JSON.stringify(state));
-  },
-  [types.SET_LOADING] (state, loading) {
-    state.loading = loading;
   },
   [types.SET_LOADING] (state, loading) {
     state.loading = loading;
@@ -49,6 +46,8 @@ const actions = {
       }).catch((errorResponse) => {
         commit(types.SET_LOADING, false);
       });
+    } else {
+      commit(types.SET_LOADING, false);
     }
   },
   [types.SET_LOADING] ({ commit }, loading) {
