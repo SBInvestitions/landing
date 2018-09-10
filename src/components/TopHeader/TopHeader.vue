@@ -81,7 +81,7 @@
       </el-row>
       <el-row>
         <el-col :span="24" class="top-bottom">
-          <div v-if="!isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
+          <div v-if="false" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
               <el-col :span="24">
                 <div class="grid-content bg-purple-light">
@@ -134,7 +134,7 @@
               </el-col>
             </el-row>
           </div>
-          <div v-if="!isIcoStarted" class="grid-content bg-purple-light sbi-scale-container">
+          <div v-if="false" class="grid-content bg-purple-light sbi-scale-container">
             <el-row type="flex" class="row-bg scale-row" justify="space-around">
               <el-col :span="24">
                 <div class="grid-content bg-purple-light">

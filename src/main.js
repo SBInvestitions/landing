@@ -5,7 +5,7 @@ import VueResource from 'vue-resource';
 import VueClipboard from 'vue-clipboard2';
 import VueMoment from 'vue-moment';
 import SocialSharing from 'vue-social-sharing';
-
+import YmapPlugin from 'vue-yandex-maps';
 // import VueLazyload from 'vue-lazyload';
 
 import 'element-ui/lib/theme-chalk/index.css';
@@ -25,6 +25,7 @@ Vue.use(VueI18n);
 Vue.use(VueClipboard);
 Vue.use(VueMoment);
 Vue.use(SocialSharing);
+Vue.use(YmapPlugin);
 
 /* Vue.use(VueLazyload, {
   preLoad: 1.3,
