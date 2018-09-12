@@ -25,7 +25,7 @@
                                             </div>
                                             <el-row v-if="!newArticle && article" class="articles ">
                                                 <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="main-article">
-                                                    <img :src="'https://sbinvest.pro' + article.mainImg">
+                                                    <img v-if="article.mainImg" :src="'https://sbinvest.pro' + article.mainImg">
                                                     <h2>{{ article.name }}</h2>
                                                     <social-sharing class="social" :url="'https://sbinvest.pro/news/' + article._id"
                                                                     :title="article.name"
@@ -98,22 +98,7 @@
                                         </div>
                                     </el-col>
                                 </el-row>
-
-                                <el-row>
-                                    <yandex-map
-                                        :coords="[62.3615, 32.2400]"
-                                        zoom="10"
-                                        style="width: 600px; height: 600px;"
-                                        :cluster-options="{
-    1: {clusterDisableClickZoom: true}
-  }"
-                                        :behaviors="['ruler']"
-                                        :controls="['trafficControl']"
-                                        :placemarks="placemarks"
-                                        map-type="hybrid"
-                                        @map-was-initialized="initMap"
-                                    ></yandex-map>
-                                </el-row>
+                              <deposits-map />
                             </el-card>
                         </div>
                     </el-col>
@@ -130,6 +115,7 @@
   import { VueEditor } from 'vue2-editor';
   // import MainMenu from './../MainMenu/MainMenu.vue';
   import AccountMenu from './../Account/components/AccountMenu/AccountMenu.vue';
+  import DepositsMap from '../DepositsMap/DepositsMap.vue';
   export default {
     name: 'News',
     data () {
@@ -143,76 +129,12 @@
           mainImg: null,
           mainImgAlt: null,
           mainImgSrc: null
-        },
-        placemarks: [
-          {
-            coords: [54.8, 39.8],
-            properties: {},
-            options: {},
-            clusterName: '1',
-            balloonTemplate: '<div>"Custom template"</div>'
-          }
-        ],
-        sites: [
-          {
-            id: 1,
-            name: 'Khauki',
-            points: ['32.2400', '62.3615', '32.2640', '62.3420', '32.2420', '62.3330', '32.2520', '62.3210', '32.2400', '62.3120', '32.2240', '62.3210', '32.2240', '62.3600', '32.2400', '62.3615'],
-            deposits: [
-              {
-                name: 'Khauki-1',
-                points: ['62.3620', '32.2351', '62.3540', '32.2440', '62.3540', '32.2253', '62.3600', '32.2253']
-              },
-              {
-                name: 'Khauki-2',
-                points: ['62.3505', '32.2535', '62.3440', '32.2604', '62.3434', '32.2554', '62.3452', '32.2500']
-              },
-              {
-                name: 'Khauki-3',
-                points: ['62.3435', '32.2611', '62.3416', '32.2638', '62.3353', '32.2520', '62.3421', '32.2539']
-              },
-              {
-                name: 'Khauki-4',
-                points: ['62.3415', '32.2253', '62.3420', '32.2220', '62.3345', '32.2410', '62.3340', '32.2330']
-              },
-              {
-                name: 'Khauki-5',
-                points: ['62.3356', '32.2231', '62.3404', '32.2257', '62.3339', '32.2322', '62.3333', '32.2243']
-              },
-              {
-                name: 'Khauki-6',
-                points: ['62.3328', '32.2245', '62.3339', '32.2336', '62.3313', '32.2336', '62.3313', '32.2245']
-              },
-              {
-                name: 'Khauki-7',
-                points: ['62.3250', '32.2240', '62.3250', '32.2320', '62.3210', '32.2320', '62.3230', '32.2240']
-              },
-              {
-                name: 'Khauki-8',
-                points: ['62.3300', '32.2324', '62.3300', '32.2400', '62.3230', '32.2410', '62.3210', '32.2410', '62.3210', '32.2340']
-              },
-              {
-                name: 'Khauki-9',
-                points: ['62.3310', '32.2409', '62.3310', '32.2442', '62.3330', '32.2452', '62.3220', '32.2420']
-              },
-              {
-                name: 'Khauki-10',
-                points: ['62.3155', '32.2350', '62.3150', '32.2440', '62.3120', '32.2400', '62.3135', '32.2340']
-              }
-            ]
-          },
-          {
-            id: 2,
-            name: 'Helga',
-            points: ['62.3530', '32.2507', '62.3530', '32.2600', '62.3500', '32.2620', '62.3450', '32.2600'],
-            deposits: [
-            ],
-          }
-        ]
+        }
       };
     },
     components: {
       'account-menu': AccountMenu,
+      'deposits-map': DepositsMap,
       VueEditor
     },
     computed: {
@@ -259,8 +181,6 @@
       }
     },
     created: function () {
-      console.log('this.$route.params.id', this.$route.params.id);
-      console.log('this.article', this.article);
       this.getArticle(this.$route.params.id);
     }
   };
