@@ -27,14 +27,14 @@
 
                       <ymap-marker
                           v-for="item in sites[0].deposits"
-                          :key="fruit"
+                          :key="item.id"
                           marker-id="1"
                           marker-type="polygon"
                           :coords="[item.points]"
                           hint-content="Hint content 1"
                           :marker-fill="{color: '#c4f2c5', opacity: 0.4}"
                           :marker-stroke="{color: '#5b6391', width: 5}"
-                          :balloon="{header: sites[1].name, body: sites[1].depositName, footer: `Area: ${sites[1].area}`}"
+                          :balloon="{header: item.name, body: item.depositName, footer: `Area: ${item.area}`}"
                           :icon="{color: 'green', glyph: 'cinema'}"
                           :callbacks="{click: onDepositClick()}"
                       ></ymap-marker>
@@ -83,6 +83,8 @@
               {
                 id: '1',
                 name: 'Khauki-1',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3620, 32.2351],
                   [62.3540, 32.2440],
@@ -93,6 +95,8 @@
               {
                 id: '2',
                 name: 'Khauki-2',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3505, 32.2535],
                   [62.3440, 32.2604],
@@ -103,6 +107,8 @@
               {
                 id: '3',
                 name: 'Khauki-3',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3435, 32.2611],
                   [62.3416, 32.2638],
@@ -113,6 +119,8 @@
               {
                 id: '4',
                 name: 'Khauki-4',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3415, 32.2253],
                   [62.3420, 32.2220],
@@ -123,6 +131,8 @@
               {
                 id: '5',
                 name: 'Khauki-5',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3356, 32.2231],
                   [62.3404, 32.2257],
@@ -133,6 +143,8 @@
               {
                 id: '6',
                 name: 'Khauki-6',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3328, 32.2245],
                   [62.3339, 32.2336],
@@ -143,6 +155,8 @@
               {
                 id: '7',
                 name: 'Khauki-7',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3250, 32.2240],
                   [62.3250, 32.2320],
@@ -153,6 +167,8 @@
               {
                 id: '8',
                 name: 'Khauki-8',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3300, 32.2324],
                   [62.3300, 32.2400],
@@ -164,6 +180,8 @@
               {
                 id: '9',
                 name: 'Khauki-9',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3310, 32.2409],
                   [62.3310, 32.2442],
@@ -174,6 +192,8 @@
               {
                 id: '10',
                 name: 'Khauki-10',
+                depositName: 'Block granite (gabbrodiabase)',
+                area: '',
                 points: [
                   [62.3155, 32.2350],
                   [62.3150, 32.2440],
