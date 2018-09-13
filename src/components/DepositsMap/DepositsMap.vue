@@ -14,21 +14,23 @@
                         @map-was-initialized="initMap"
                     >
                       <ymap-marker
-                          marker-id="1"
+                          v-for="item in sites"
+                          :key="item.id + '-site'"
+                          :marker-id="item.id + '-site'"
                           marker-type="polygon"
-                          :coords="[sites[1].points]"
-                          hint-content="Hint content 1"
+                          :coords="[item.points]"
+                          hint-content="Sites"
                           :marker-fill="{color: '#c4f2c5', opacity: 0.4}"
                           :marker-stroke="{color: '#5b6391', width: 5}"
-                          :balloon="{header: sites[1].name, body: sites[1].depositName, footer: `Area: ${sites[1].area}`}"
+                          :balloon="{header: item.name, body: item.depositName, footer: `Area: ${item.area}`}"
                           :icon="{color: 'green', glyph: 'cinema'}"
                           :callbacks="{click: onDepositClick()}"
                       ></ymap-marker>
 
                       <ymap-marker
                           v-for="item in sites[0].deposits"
-                          :key="item.id"
-                          marker-id="1"
+                          :key="item.id + 'deposit'"
+                          :marker-id="item.id + 'deposit'"
                           marker-type="polygon"
                           :coords="[item.points]"
                           hint-content="Hint content 1"
@@ -69,6 +71,8 @@
           {
             id: 1,
             name: 'Khauki',
+            area: '',
+            center: [],
             points: [
               [62.3615, 32.2400],
               [62.3420, 32.2640],
