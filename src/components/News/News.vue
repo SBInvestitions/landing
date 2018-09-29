@@ -27,7 +27,9 @@
                           <img :src="'https://sbinvest.pro' + news[0].mainImg">
                           <h2><a :href="'/news/' + news[0]._id">{{ news[0].name }}</a></h2>
                           <span class="date">{{ news[0].dateCreate | moment("dddd, MMMM Do YYYY")  }}</span>
-                          <div class="article-text" v-html="news[0].text"></div>
+                          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                            <div class="article-text" v-html="news[0].text"></div>
+                          </el-col>
                         </el-col>
                         <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="secondary-articles">
                           <el-row v-if="news[1]" class="secondary-article">
