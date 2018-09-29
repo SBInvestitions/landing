@@ -60,15 +60,39 @@
 
   .main-article {
     padding: 1rem;
+    height: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      -webkit-box-shadow: 0 0 1px black;
+      box-shadow: 0 0 1px black;
+    }
   }
   .secondary-articles {
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .secondary-article {
     padding: 1rem;
+    height: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      -webkit-box-shadow: 0 0 1px black;
+      box-shadow: 0 0 1px black;
+    }
 
     h2 {
-      font-size: 20px;
+      font-size: 15px;
+    }
+
+    .article-text {
+      font-size: 12px;
+      height: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

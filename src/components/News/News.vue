@@ -21,22 +21,12 @@
                                circle
                                @click="onAddClick(true)">
                     </el-button>
-                    <div v-if="news && news.length === 1 && !newArticle" class="grid-content bg-purple">
-                      <el-row class="other-articles">
-                        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="articles-block">
-                          <div class="article">
-                            <h2><a :href="'/news/' + news[0]._id">{{ news[0].name }}</a></h2>
-                            <img :src="'https://sbinvest.pro' + news[0].mainImg">
-                            <div class="article-text" v-html="news[0].text"></div>
-                          </div>
-                        </el-col>
-                      </el-row>
-                    </div>
-                    <div v-if="news && news.length > 1" class="grid-content bg-purple">
+                    <div class="grid-content bg-purple">
                       <el-row v-if="!newArticle && news && news[0]" class="articles">
                         <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" class="main-article">
                           <img :src="'https://sbinvest.pro' + news[0].mainImg">
                           <h2><a :href="'/news/' + news[0]._id">{{ news[0].name }}</a></h2>
+                          <span class="date">{{ news[0].dateCreate | moment("dddd, MMMM Do YYYY")  }}</span>
                           <div class="article-text" v-html="news[0].text"></div>
                         </el-col>
                         <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8" class="secondary-articles">
@@ -44,6 +34,9 @@
                             <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                               <img :src="'https://sbinvest.pro' + news[1].mainImg">
                               <h2><a :href="'/news/' + news[1]._id">{{ news[1].name }}</a></h2>
+                              <span class="date">{{ news[1].dateCreate | moment("dddd, MMMM Do YYYY")  }}</span>
+                            </el-col>
+                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                               <div class="article-text" v-html="news[1].text"></div>
                             </el-col>
                           </el-row>
@@ -51,6 +44,9 @@
                             <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                               <img :src="'https://sbinvest.pro' + news[2].mainImg">
                               <h2><a :href="'/news/' + news[2]._id">{{ news[2].name }}</a></h2>
+                              <span class="date">{{ news[2].dateCreate | moment("dddd, MMMM Do YYYY")  }}</span>
+                            </el-col>
+                            <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                               <div class="article-text" v-html="news[2].text"></div>
                             </el-col>
                           </el-row>
@@ -66,6 +62,7 @@
                           >
                             <img :src="'https://sbinvest.pro' + item.mainImg">
                             <h2><a :href="'/news/' + item._id">{{ item.name }}</a></h2>
+                            <span class="date">{{ item.dateCreate | moment("dddd, MMMM Do YYYY")  }}</span>
                             <div class="article-text" v-html="item.text"></div>
                           </div>
                         </el-col>
@@ -165,7 +162,7 @@
         const reader = new FileReader();
         reader.onloadend = function (upload) {
           this.form.mainImg = upload.target.result;
-          // this.form.mainImgSrc = reader.result;
+          this.form.mainImgSrc = reader.result;
         }.bind(this);
         if (file) {
           reader.readAsDataURL(file);

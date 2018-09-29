@@ -24,7 +24,7 @@
                                                 <el-button class="add-button" size="mini" type="danger" icon="el-icon-delete" circle @click="onDeleteClick(article._id)"></el-button>
                                             </div>
                                             <el-row v-if="!newArticle && article" class="articles ">
-                                                <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="main-article">
+                                                <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
                                                     <img v-if="article.mainImg" :src="'https://sbinvest.pro' + article.mainImg">
                                                     <h2>{{ article.name }}</h2>
                                                     <social-sharing class="social" :url="'https://sbinvest.pro/news/' + article._id"
@@ -98,7 +98,6 @@
                                         </div>
                                     </el-col>
                                 </el-row>
-                              <deposits-map />
                             </el-card>
                         </div>
                     </el-col>
@@ -115,7 +114,6 @@
   import { VueEditor } from 'vue2-editor';
   // import MainMenu from './../MainMenu/MainMenu.vue';
   import AccountMenu from './../Account/components/AccountMenu/AccountMenu.vue';
-  import DepositsMap from '../DepositsMap/DepositsMap.vue';
   export default {
     name: 'News',
     data () {
@@ -134,7 +132,6 @@
     },
     components: {
       'account-menu': AccountMenu,
-      'deposits-map': DepositsMap,
       VueEditor
     },
     computed: {
@@ -149,9 +146,6 @@
         putArticle: 'news/POST_ARTICLE',
         deleteArticle: 'news/DELETE_ARTICLE'
       }),
-      initMap () {
-
-      },
       onSubmit () {
         this.putArticle(this.form);
         this.newArticle = false;
@@ -181,6 +175,8 @@
       }
     },
     created: function () {
+      console.log('this.$route.params.id', this.$route.params.id);
+      console.log('this.article', this.article);
       this.getArticle(this.$route.params.id);
     }
   };
