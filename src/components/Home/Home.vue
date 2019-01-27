@@ -7,13 +7,23 @@
     <div class="main-block" v-if="showBody">
       <who-we-are />
       <about-company />
+<!--
       <conditions />
+-->
+<!--
       <road-map />
+-->
       <team />
       <!--<video-block />-->
+<!--
       <prev-projects />
+-->
+<!--
       <bounty />
+-->
+<!--
       <clients />
+-->
     </div>
     <el-footer v-show="showBody">
       <footer-block />

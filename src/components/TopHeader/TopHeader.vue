@@ -11,7 +11,7 @@
               <el-col :span="7" :offset="2">
                 <div class="grid-content bg-purple-light hidden-md-and-down">
                   <img src="./../../../src/assets/svg/logo-new.svg" class="sbi-logo" alt="sb-investitions">
-                  <span>Subsoil Blockchain Investitions</span>
+                  <span>Subsoil Blockchain Investments</span>
                 </div>
               </el-col>
             </el-row>
@@ -21,12 +21,14 @@
                   <h1>{{ $t("topHeader.text.1") }}<p>{{ $t("topHeader.text.2") }}</p></h1>
                   <!--<el-button class="invest" v-on:click="goTo('register')" round>{{ $t("topHeader.text.4") }}</el-button>-->
 
+<!--
                   <el-form :inline="true" :model="formInline" class="subscribe-form">
                     <div class="form-item" v-bind:class="{ 'submit': toSubmit }">
                       <input type="email" v-model="formInline.email" class="email-input" placeholder="Enter your email" clearable />
                       <button id="submit-button" @mouseleave="mouseLeave" @mouseover="mouseOver" class="el-button subscribe" type="primary" @click="onSubmit" roind>Subscribe</button>
                     </div>
                   </el-form>
+-->
                 </div>
               </el-col>
             </el-row>
